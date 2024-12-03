@@ -1,0 +1,4 @@
+{
+    "build_command": "cd nextjs-app && npm run build",
+    "start_command": "cd nextjs-app && npm run start"
+}
