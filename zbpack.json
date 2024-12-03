@@ -1,4 +1,4 @@
 {
-    "build_command": "cd nextjs-app && npm run build",
-    "start_command": "cd nextjs-app && npm run start"
+    "build_command": "cd nextjs-app && pnpm run build",
+    "start_command": "cd nextjs-app && pnpm run start"
 }
