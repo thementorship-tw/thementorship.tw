@@ -1,6 +1,8 @@
 {
     "private": true,
+    "packageManager": "pnpm@8.15.4",
     "scripts": {
+      "preinstall": "npx only-allow pnpm",
       "build": "cd nextjs-app && pnpm run build",
       "start": "cd nextjs-app && pnpm run start"
     },
