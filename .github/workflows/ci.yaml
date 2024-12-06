@@ -20,7 +20,7 @@ jobs:
       
       - uses: pnpm/action-setup@v2
         with:
-          version: 8.15.4
+          version: 9
 
       - name: Cache dependencies
         id: cache
@@ -28,7 +28,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/**/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
@@ -45,7 +45,7 @@ jobs:
       
       - uses: pnpm/action-setup@v2
         with:
-          version: 8.15.4
+          version: 9
 
       - name: Cache dependencies
         id: cache
@@ -53,7 +53,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/**/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
@@ -73,7 +73,7 @@ jobs:
       
       - uses: pnpm/action-setup@v2
         with:
-          version: 8.15.4
+          version: 9
 
       - name: Cache dependencies
         id: cache
@@ -81,8 +81,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-            ~/.cache/Cypress
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/**/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
