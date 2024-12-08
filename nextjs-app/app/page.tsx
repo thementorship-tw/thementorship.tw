@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+//eslint-disable-next-line
 export default async function Page() {
   return (
     <>
@@ -53,8 +54,7 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-10">
-      </div>
+      <div className="border-t border-gray-10"></div>
     </>
   );
 }
