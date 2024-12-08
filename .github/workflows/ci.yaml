@@ -1,0 +1,91 @@
+name: CI workflow
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches: '**'
+  workflow_dispatch:
+
+jobs:
+  init:
+    name: Initial Common Steps
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./nextjs-app/node_modules
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: cd nextjs-app && pnpm install --frozen-lockfile
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: init
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./nextjs-app/node_modules
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: cd nextjs-app && pnpm install --frozen-lockfile
+
+      - name: Build
+        run: cd nextjs-app && pnpm build
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs: init
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./nextjs-app/node_modules
+          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: cd nextjs-app && pnpm install --frozen-lockfile
+        
+      - name: Lint
+        run: cd nextjs-app && pnpm lint
