@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default async function Page() {
+export default async function HomePage() {
   return (
     <>
       <div className="bg-gradient-to-r from-red-200 from-0% via-white via-40%  relative">
@@ -53,8 +53,7 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-10">
-      </div>
+      <div className="border-t border-gray-10"></div>
     </>
   );
 }
