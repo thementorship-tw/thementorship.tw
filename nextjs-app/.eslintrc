@@ -12,4 +12,8 @@
   "parserOptions": {
     "projectService": true,
   },
+  "rules": {
+    "require-await": "off",
+    "@typescript-eslint/require-await": "off",
+  },
 }

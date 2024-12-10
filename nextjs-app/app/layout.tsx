@@ -16,7 +16,6 @@ const inter = Inter({
   display: "swap",
 });
 
-//eslint-disable-next-line
 export default async function RootLayout({
   children,
 }: {

@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-//eslint-disable-next-line
 export default async function Page() {
   return (
     <>
