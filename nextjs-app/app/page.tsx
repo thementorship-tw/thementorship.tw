@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { METADATA } from "@/constants/metadata";
+
+export const metadata: Metadata = {
+  title: `首頁 - ${METADATA.projectName}`,
+};
 
 export default async function HomePage() {
   return (
