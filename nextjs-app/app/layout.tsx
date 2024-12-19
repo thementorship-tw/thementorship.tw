@@ -1,14 +1,18 @@
 import "./globals.css";
+import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import { METADATA } from "@/constants/metadata";
 
-// TODO: Add metadata
-/**
- * Generate metadata for the page.
- * Learn more: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
- */
+export const metadata: Metadata = {
+  title: {
+    default: METADATA.projectName,
+    template: `%s - ${METADATA.projectName}`,
+  },
+  description: METADATA.projectDescription,
+};
 
 const inter = Inter({
   variable: "--font-inter",
