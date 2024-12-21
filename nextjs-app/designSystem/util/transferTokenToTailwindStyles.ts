@@ -43,6 +43,7 @@ const convertShadowProperty = (shadow: Record<string, CustomShadowValue>) => {
 
 const transferTokenToTailwindStyles = (token: TokenType) => {
   const {
+    fontSizes: fontSizesToken,
     fontWeights: fontWeightsToken,
     lineHeights: lineHeightsToken,
     radius: radiusToken,
@@ -50,6 +51,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     boxShadow: boxShadowToken,
   } = token;
 
+  const fontSize = convertProperty(fontSizesToken);
   const fontWeight = convertProperty(fontWeightsToken);
   const lineHeight = convertProperty(lineHeightsToken);
   const borderRadius = convertProperty(radiusToken);
@@ -57,6 +59,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
   const boxShadow = convertShadowProperty(boxShadowToken);
 
   return {
+    fontSize,
     fontWeight,
     lineHeight,
     borderRadius,
