@@ -19,13 +19,19 @@ const convertProperty = (property: Record<string, CustomStyleValue>) => {
 };
 
 const transferTokenToTailwindStyles = (token: TokenType) => {
-  const { fontWeights: fontWeightsToken, radius: radiusToken } = token;
+  const {
+    fontWeights: fontWeightsToken,
+    lineHeights: lineHeightsToken,
+    radius: radiusToken,
+  } = token;
 
   const fontWeight = convertProperty(fontWeightsToken);
+  const lineHeight = convertProperty(lineHeightsToken);
   const borderRadius = convertProperty(radiusToken);
 
   return {
     fontWeight,
+    lineHeight,
     borderRadius,
   };
 };
