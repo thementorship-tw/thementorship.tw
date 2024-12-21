@@ -23,16 +23,19 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     fontWeights: fontWeightsToken,
     lineHeights: lineHeightsToken,
     radius: radiusToken,
+    spacing: spacingToken,
   } = token;
 
   const fontWeight = convertProperty(fontWeightsToken);
   const lineHeight = convertProperty(lineHeightsToken);
   const borderRadius = convertProperty(radiusToken);
+  const spacing = convertProperty(spacingToken);
 
   return {
     fontWeight,
     lineHeight,
     borderRadius,
+    spacing,
   };
 };
 

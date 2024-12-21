@@ -3,7 +3,7 @@ import typography from "@tailwindcss/typography";
 import token from "./designSystem/data/token.json";
 import transferTokenToTailwindStyles from "./designSystem/util/transferTokenToTailwindStyles";
 
-const { fontWeight, lineHeight, borderRadius } =
+const { fontWeight, lineHeight, borderRadius, spacing } =
   transferTokenToTailwindStyles(token);
 
 export default {
@@ -17,6 +17,7 @@ export default {
     fontWeight,
     lineHeight,
     borderRadius,
+    spacing,
     extend: {},
   },
   future: {
