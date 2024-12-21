@@ -3,8 +3,15 @@ import typography from "@tailwindcss/typography";
 import token from "./designSystem/data/token.json";
 import transferTokenToTailwindStyles from "./designSystem/util/transferTokenToTailwindStyles";
 
-const { fontSize, fontWeight, lineHeight, borderRadius, spacing, boxShadow } =
-  transferTokenToTailwindStyles(token);
+const {
+  fontSize,
+  fontWeight,
+  lineHeight,
+  typography: typographyFromToken,
+  borderRadius,
+  spacing,
+  boxShadow,
+} = transferTokenToTailwindStyles(token);
 
 export default {
   content: ["./app/**/*.{ts,tsx}", "./sanity/**/*.{ts,tsx}"],
@@ -20,7 +27,11 @@ export default {
     borderRadius,
     spacing,
     boxShadow,
-    extend: {},
+    extend: {
+      fontSize: {
+        ...typographyFromToken,
+      },
+    },
   },
   future: {
     hoverOnlyWhenSupported: true,

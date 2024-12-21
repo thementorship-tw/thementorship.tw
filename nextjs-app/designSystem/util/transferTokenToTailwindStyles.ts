@@ -1,22 +1,10 @@
-import type { KeyValuePair } from "tailwindcss/types/config";
+import type { KeyValuePair, ThemeConfig } from "tailwindcss/types/config";
 import token from "../data/token.json";
 
 type TokenType = typeof token;
 
 interface CustomStyleValue {
   value: string;
-  type: string;
-}
-
-interface CustomShadowValue {
-  value: {
-    x: string;
-    y: string;
-    blur: string;
-    spread: string;
-    color: string;
-    type: string;
-  };
   type: string;
 }
 
@@ -30,7 +18,30 @@ const convertProperty = (property: Record<string, CustomStyleValue>) => {
   return result;
 };
 
-const convertShadowProperty = (shadow: Record<string, CustomShadowValue>) => {
+const convertTypographyProperty = (
+  typography: Record<
+    string,
+    TokenType["typography"][keyof TokenType["typography"]]
+  >
+) => {
+  const result: ThemeConfig["fontSize"] = {};
+
+  Object.keys(typography).forEach((key) => {
+    result[key] = [
+      typography[key].value.fontSize,
+      {
+        lineHeight: typography[key].value.lineHeight,
+        fontWeight: typography[key].value.fontWeight,
+      },
+    ];
+  });
+
+  return result;
+};
+
+const convertShadowProperty = (
+  shadow: Record<string, TokenType["boxShadow"][keyof TokenType["boxShadow"]]>
+) => {
   const result: KeyValuePair = {};
 
   Object.keys(shadow).forEach((key) => {
@@ -46,6 +57,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     fontSizes: fontSizesToken,
     fontWeights: fontWeightsToken,
     lineHeights: lineHeightsToken,
+    typography: typographyToken,
     radius: radiusToken,
     spacing: spacingToken,
     boxShadow: boxShadowToken,
@@ -54,6 +66,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
   const fontSize = convertProperty(fontSizesToken);
   const fontWeight = convertProperty(fontWeightsToken);
   const lineHeight = convertProperty(lineHeightsToken);
+  const typography = convertTypographyProperty(typographyToken);
   const borderRadius = convertProperty(radiusToken);
   const spacing = convertProperty(spacingToken);
   const boxShadow = convertShadowProperty(boxShadowToken);
@@ -62,6 +75,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     fontSize,
     fontWeight,
     lineHeight,
+    typography,
     borderRadius,
     spacing,
     boxShadow,
