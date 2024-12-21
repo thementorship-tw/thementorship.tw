@@ -16,6 +16,9 @@ const {
 export default {
   content: ["./app/**/*.{ts,tsx}", "./sanity/**/*.{ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       md: { min: "600px" },
       lg: { min: "840px" },

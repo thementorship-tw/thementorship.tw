@@ -1,59 +1,185 @@
-import Link from "next/link";
-
 export default async function HomePage() {
   return (
-    <>
-      <div className="bg-gradient-to-r from-red-200 from-0% via-white via-40%  relative">
-        <div className="bg-gradient-to-b from-white w-full h-40 absolute top-0"></div>
-        <div className="bg-gradient-to-t from-white w-full h-40 absolute bottom-0"></div>
-        <div className="container relative">
-          <div className="mx-auto max-w-2xl py-20 lg:max-w-4xl lg:px-12 text-center">
-            <div className="flex flex-col gap-4 items-center">
-              <div className=" text-md leading-6 prose uppercase">
-                A starter template for
-              </div>
-              <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black">
-                <Link className="text-red-500 " href="https://sanity.io/">
-                  Sanity
-                </Link>{" "}
-                +{" "}
-                <Link className="text-[#000] " href="https://nextjs.org/">
-                  Next.js
-                </Link>
-              </h1>
-            </div>
-            <div className="mt-6 space-y-6 prose sm:prose-lg md:prose-xl lg:prose-2xl text-gray-700">
-              <p>
-                This starter is a statically generated site that uses Next.js
-                for the frontend and Sanity to handle its content. It comes with
-                a standalone Sanity Studio that offers features like real-time
-                collaboration, instant side-by-side content previews, and
-                intuitive editing.
-              </p>
-            </div>
-            <div className="flex items-center flex-col gap-4">
-              {/* <GetStartedCode code="npm create sanity@latest" /> */}
-              <Link
-                href="https://www.sanity.io/docs"
-                className="inline-flex text-red-500 text-xs md:text-sm underline hover:text-gray-900"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sanity Documentation
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-4 h-4 ml-1 inline"
-                  fill="currentColor"
-                >
-                  <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V12L17.206 8.207L11.2071 14.2071L9.79289 12.7929L15.792 6.793L12 3H21Z"></path>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="border-t border-gray-10"></div>
-    </>
+    <div className="container py-[60px]">
+      <h1 className="text-h2">Demo for Using Design Tokens</h1>
+
+      <hr className="mb-10" />
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Breakpoints</h2>
+
+        <p>
+          Background color will change when the screen size is changed.
+          <br />
+          <span className="text-red-500">Try to change the screen size.</span>
+        </p>
+
+        <div className="w-[100px] h-[100px] bg-blue-500 md:bg-red-500 lg:bg-green-500 xl:bg-yellow-500"></div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Typography</h2>
+
+        <ol>
+          <li className="text-h1">H1</li>
+          <li className="text-h2">H2</li>
+          <li className="text-h3">H3</li>
+          <li className="text-h4">H4</li>
+          <li className="text-h5">H5</li>
+          <li className="text-h6">H6</li>
+          <li className="text-subtitle-lg">Subtitle-lg</li>
+          <li className="text-subtitle-md">Subtitle-md</li>
+          <li className="text-body-lg">Body-lg</li>
+          <li className="text-body-md">Body-md</li>
+          <li className="text-body-sm">Body-sm</li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Font Size</h2>
+
+        <ol>
+          <li className="text-1">Text-1</li>
+          <li className="text-2">Text-2</li>
+          <li className="text-3">Text-3</li>
+          <li className="text-4">Text-4</li>
+          <li className="text-5">Text-5</li>
+          <li className="text-6">Text-6</li>
+          <li className="text-7">Text-7</li>
+          <li className="text-8">Text-8</li>
+          <li className="text-9">Text-9</li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Font Weight</h2>
+
+        <ol>
+          <li className="font-bold">font-weight-bold</li>
+          <li className="font-medium">font-weight-medium</li>
+          <li className="font-regular">font-weight-regular</li>
+          <li className="font-light">font-weight-light</li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Line Height</h2>
+
+        <ol>
+          <li className="leading-1">line height 1</li>
+          <li className="leading-2">line height 2</li>
+          <li className="leading-3">line height 3</li>
+          <li className="leading-4">line height 4</li>
+          <li className="leading-5">line height 5</li>
+          <li className="leading-6">line height 6</li>
+          <li className="leading-7">line height 7</li>
+          <li className="leading-8">line height 8</li>
+          <li className="leading-9">line height 9</li>
+          <li className="leading-10">line height 10</li>
+          <li className="leading-11">line height 11</li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Spacing</h2>
+
+        <ol>
+          <li>
+            <p>space-1</p>
+            <div className="h-5 pl-1 bg-sky-400 inline-block"></div>
+          </li>
+          <li>
+            <p>space-2</p>
+            <div className="h-5 pl-2 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-3</p>
+            <div className="h-5 pl-3 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-4</p>
+            <div className="h-5 pl-4 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-5</p>
+            <div className="h-5 pl-5 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-6</p>
+            <div className="h-5 pl-6 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-7</p>
+            <div className="h-5 pl-7 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-8</p>
+            <div className="h-5 pl-8 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-9</p>
+            <div className="h-5 pl-9 bg-sky-400 inline-block "></div>
+          </li>
+          <li>
+            <p>space-10</p>
+            <div className="h-5 pl-10 bg-sky-400 inline-block "></div>
+          </li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Border Radius</h2>
+
+        <ol>
+          <li className="mb-6">
+            <p>rounded-1</p>
+            <div className="rounded-1 bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+          <li className="mb-6">
+            <p>rounded-2</p>
+            <div className="rounded-2 bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+          <li className="mb-6">
+            <p>rounded-3</p>
+            <div className="rounded-3 bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+          <li className="mb-6">
+            <p>rounded-4</p>
+            <div className="rounded-4 bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+          <li className="mb-6">
+            <p>rounded-circle</p>
+            <div className="rounded-circle bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+          <li className="mb-6">
+            <p>rounded-pill</p>
+            <div className="rounded-pill bg-blue-500 p-[50px] inline-block"></div>
+          </li>
+        </ol>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-h3 text-blue-600">Box Shadow</h2>
+
+        <ol>
+          <li className="mb-6">
+            <p>shadow-action</p>
+            <div className="shadow-action h-8 w-[200px] border-pink-100 border-4 "></div>
+          </li>
+          <li className="mb-6">
+            <p>shadow-fixed</p>
+            <div className="shadow-fixed h-8 w-[200px] border-pink-100 border-4"></div>
+          </li>
+          <li className="mb-6">
+            <p>shadow-raise</p>
+            <div className="shadow-raise h-8 w-[200px] border-pink-100 border-4"></div>
+          </li>
+          <li className="mb-6">
+            <p>shadow-overlay</p>
+            <div className="shadow-overlay h-8 w-[200px] border-pink-100 border-4"></div>
+          </li>
+        </ol>
+      </section>
+    </div>
   );
 }
