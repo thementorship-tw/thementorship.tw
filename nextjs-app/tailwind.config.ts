@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
-import token from "./designSystem/data/token.json";
-import transferTokenToTailwindStyles from "./designSystem/util/transferTokenToTailwindStyles";
+import token from "./design-system/data/token.json";
+import transferTokenToTailwindStyles from "./design-system/util/transferTokenToTailwindStyles";
 
 const {
   fontSize,
