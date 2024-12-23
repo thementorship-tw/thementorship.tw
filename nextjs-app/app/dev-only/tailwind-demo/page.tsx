@@ -1,4 +1,4 @@
-export default async function HomePage() {
+export default async function TailwindDemo() {
   return (
     <div className="container py-[60px]">
       <h1 className="text-h2">Demo for Using Design Tokens</h1>
