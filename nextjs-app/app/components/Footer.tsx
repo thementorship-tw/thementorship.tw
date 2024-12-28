@@ -1,23 +1,68 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-gray-100 border-t">
-      <div className="container">
-        <div className="flex flex-col items-center py-28 lg:flex-row">
-          <h3 className="mb-10 text-center text-4xl font-bold leading-tight tracking-tighter lg:mb-0 lg:w-1/2 lg:pr-4 lg:text-left lg:text-5xl">
-            Built with Sanity + Next.js.
-          </h3>
-          <div className="flex flex-col gap-3 items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
-            <a
-              href="https://github.com/sanity-io/sanity-template-nextjs-clean"
-              className="rounded-full flex gap-2 items-center bg-black hover:bg-red-500 focus:bg-cyan-500 py-3 px-6 text-white transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
-            <a href="https://nextjs.org/docs" className="mx-3 hover:underline">
-              Read Next.js Documentation
-            </a>
+    <footer className="relative w-full">
+      <div className="w-full [aspect-ratio:10.6/1] bg-[url('/images/footer-wave.png')] bg-no-repeat bg-center bg-[length:100%_100%]" />
+      <div className="bg-[#090E3E] w-full p-7">
+        <div className="flex flex-col items-center md:-mt-[74px]">
+          <Image
+            src="/images/program-logo-with-white-text.png"
+            alt="program-logo"
+            width={285}
+            height={60}
+          />
+          <div className="flex gap-5 mt-4 mb-9">
+            <Image
+              src="/images/medium-logo.png"
+              alt="medium-logo"
+              width={32}
+              height={32}
+              className="cursor-pointer"
+            />
+            <Image
+              src="/images/instagram-logo.png"
+              alt="instagram-logo"
+              width={32}
+              height={32}
+              className="cursor-pointer"
+            />
+            <Image
+              src="/images/linkedin-logo.png"
+              alt="linkedin-logo"
+              width={32}
+              height={32}
+              className="cursor-pointer"
+            />
+            <Image
+              src="/images/facebook-logo.png"
+              alt="facebook-logo"
+              width={32}
+              height={32}
+              className="cursor-pointer"
+            />
+            <Image
+              src="/images/email-logo.png"
+              alt="email-logo"
+              width={32}
+              height={32}
+              className="cursor-pointer"
+            />
+          </div>
+        </div>
+        <div className="border-t border-b border-[#7E7059] mb-5">test</div>
+        <div className="flex justify-between items-end min-h-[52px]">
+          <div className="flex-1" />
+          <p className="text-white text-center">
+            © MentorShip All Rights Reserved
+          </p>
+          <div className="flex-1 flex justify-end">
+            <Image
+              src="/images/deployed-on-zeabur.png"
+              alt="footer-logo"
+              width={194}
+              height={37}
+            />
           </div>
         </div>
       </div>
