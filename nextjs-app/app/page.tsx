@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { METADATA } from "@/constants/metadata";
+import StayUpdated from "@/app/components/pages/main/StayUpdated";
 
 export const metadata: Metadata = {
   title: `首頁 - ${METADATA.projectName}`,
@@ -7,8 +8,9 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   return (
-    <div className="container py-[60px]">
-      <h1 className="text-h2">Home Page</h1>
+    <div className="py-[60px]">
+      <div className="h-[100vh] bg-red-500"></div>
+      <StayUpdated />
     </div>
   );
 }

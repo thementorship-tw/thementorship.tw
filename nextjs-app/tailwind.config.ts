@@ -30,6 +30,16 @@ export default {
     borderRadius,
     spacing,
     boxShadow,
+    fontFamily: {
+      "eb-garamond": ["var(--font-eb-garamond)"],
+      sans: [
+        "Verdana",
+        "Helvetica",
+        "Microsoft JhengHei",
+        "Heiti TC",
+        "sans-serif",
+      ],
+    },
     extend: {
       fontSize: {
         ...typographyFromToken,
@@ -39,5 +49,6 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [typography],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [typography, require("tailwindcss-motion")],
 } satisfies Config;
