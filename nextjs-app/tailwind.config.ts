@@ -24,12 +24,6 @@ export default {
       lg: { min: "840px" },
       xl: { min: "1280px" },
     },
-    fontSize,
-    fontWeight,
-    lineHeight,
-    borderRadius,
-    spacing,
-    boxShadow,
     fontFamily: {
       "eb-garamond": ["var(--font-eb-garamond)"],
       sans: [
@@ -41,7 +35,13 @@ export default {
       ],
     },
     extend: {
+      fontWeight,
+      lineHeight,
+      borderRadius,
+      spacing,
+      boxShadow,
       fontSize: {
+        ...fontSize,
         ...typographyFromToken,
       },
     },

@@ -12,19 +12,24 @@ import BackToTopButton from "@/app/components/common/BackToTopButton";
 export default function Footer() {
   return (
     <footer className="relative w-full">
-      <div className="absolute right-7 top-5">
+      <div className="absolute right-7 -top-4 md:-top-ˊ">
         <BackToTopButton />
       </div>
-      <div className="w-full [aspect-ratio:10.6/1] bg-[url('/images/footer-wave.png')] bg-no-repeat bg-center bg-[length:100%_100%]" />
+      <div
+        className="w-full h-[136px]
+        bg-[url('/images/footer-wave.png')] 
+        bg-no-repeat bg-center
+        bg-[length:auto_100%] xl:bg-[length:100%_100%]"
+      />
       <div className="bg-[#090E3E] w-full p-7">
-        <div className="flex flex-col items-center md:-mt-[74px]">
+        <div className="flex flex-col items-center mt-[-76px]">
           <Image
             src="/images/program-logo-with-white-text.png"
             alt="program-logo"
             width={285}
             height={60}
           />
-          <div className="flex gap-5 mt-4 mb-9">
+          <div className="flex gap-5 mt-4 mb-10">
             <a
               href={MENTORSHIP_MEDIUM_URL}
               target="_blank"
@@ -86,22 +91,22 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="border-t border-b border-[#7E7059] mb-5 flex justify-center gap-8 py-6 text-white">
-          {PAGE_NAV_ITEMS.map((item) => (
+        <div className="border-t border-b border-[#7E7059] mb-5 hidden md:flex flex-wrap justify-center gap-8 py-6 text-white w-full">
+          {PAGE_NAV_ITEMS.map((item, idx) => (
             <NavItem
-              key={item.enTitle}
+              key={idx}
               href={item.href}
               enTitle={item.enTitle}
               zhTitle={item.zhTitle}
             />
           ))}
         </div>
-        <div className="flex justify-between items-end min-h-[52px]">
-          <div className="flex-1" />
-          <p className="text-white text-center text-body-md">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end min-h-[52px]">
+          <div className="hidden lg:block lg:flex-1" />
+          <p className="text-white text-center text-body-md mb-4 lg:mb-0 md:mt-8">
             © MentorShip All Rights Reserved
           </p>
-          <div className="flex-1 flex justify-end">
+          <div className="md:flex-1 md:flex md:justify-end md:items-end flex justify-center">
             <Image
               src="/images/deployed-on-zeabur.png"
               alt="footer-logo"

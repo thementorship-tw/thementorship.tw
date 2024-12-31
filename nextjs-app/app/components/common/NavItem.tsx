@@ -10,7 +10,7 @@ interface INavItemProps {
 const NavItem = ({ href, enTitle, zhTitle }: INavItemProps) => {
   const content = (
     <>
-      <h4 className="text-h4 font-eb-garamond">{enTitle}</h4>
+      <h4 className="text-h4 font-eb-garamond font-normal">{enTitle}</h4>
       <p className="text-body-md">{zhTitle}</p>
     </>
   );
