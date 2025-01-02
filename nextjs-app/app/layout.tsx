@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
+import { EB_Garamond } from "next/font/google";
+import Footer from "@/app/components/common/Footer";
+import Header from "@/app/components/common/Header";
 import { METADATA } from "@/constants/metadata";
 
 export const metadata: Metadata = {
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   description: METADATA.projectDescription,
 };
 
-const inter = Inter({
-  variable: "--font-inter",
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-eb-garamond",
 });
 
 export default async function RootLayout({
@@ -26,7 +26,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} bg-white text-black`}>
+    <html
+      lang="en"
+      className={`font-sans ${ebGaramond.variable} bg-white text-black`}
+    >
       <body>
         <section className="min-h-screen pt-24">
           <Header />
