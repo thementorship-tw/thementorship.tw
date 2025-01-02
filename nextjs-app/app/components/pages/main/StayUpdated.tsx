@@ -79,8 +79,10 @@ const StayUpdated = () => {
               rel="noopener noreferrer"
               className="border w-[156px] h-[92px] md:w-[212px] md:h-[212px] rounded-3 hover:bg-[#F8F5F2] transition-all duration-300 border-[#7E7059] flex items-center justify-center"
             >
-              <div className="flex flex-col items-center gap-4">
-                <span className="text-xl text-[#1F2630]">{link.name}</span>
+              <div className="flex flex-col items-center gap-2 md:gap-4">
+                <span className="text-xl font-semibold text-[#1F2630] font-['PingFang_TC']">
+                  {link.name}
+                </span>
                 <span className="text-3xl">{link.icon}</span>
               </div>
             </Link>
