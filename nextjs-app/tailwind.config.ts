@@ -24,14 +24,24 @@ export default {
       lg: { min: "840px" },
       xl: { min: "1280px" },
     },
-    fontSize,
-    fontWeight,
-    lineHeight,
-    borderRadius,
-    spacing,
-    boxShadow,
+    fontFamily: {
+      "eb-garamond": ["var(--font-eb-garamond)"],
+      sans: [
+        "Verdana",
+        "Helvetica",
+        "Microsoft JhengHei",
+        "Heiti TC",
+        "sans-serif",
+      ],
+    },
     extend: {
+      fontWeight,
+      lineHeight,
+      borderRadius,
+      spacing,
+      boxShadow,
       fontSize: {
+        ...fontSize,
         ...typographyFromToken,
       },
     },
@@ -39,5 +49,6 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [typography],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [typography, require("tailwindcss-motion")],
 } satisfies Config;
