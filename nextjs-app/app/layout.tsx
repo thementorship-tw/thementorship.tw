@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { EB_Garamond } from "next/font/google";
-import Footer from "@/app/components/common/Footer";
-import Header from "@/app/components/common/Header";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
 import { METADATA } from "@/constants/metadata";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { METADATA } from "@/constants/metadata";
-import StayUpdated from "@/app/components/pages/main/StayUpdated";
+import StayUpdated from "@/components/pages/main/StayUpdated";
 
 export const metadata: Metadata = {
   title: `首頁 - ${METADATA.projectName}`,

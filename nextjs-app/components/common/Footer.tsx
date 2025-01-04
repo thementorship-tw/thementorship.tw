@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavItem from "@/app/components/common/NavItem";
+import NavItem from "@/components/common/NavItem";
 import { PAGE_NAV_ITEMS } from "@/constants/page-nav-list";
 import {
   MENTORSHIP_MEDIUM_URL,
@@ -7,7 +7,7 @@ import {
   MENTORSHIP_LINKEDIN_URL,
   MENTORSHIP_FACEBOOK_URL,
 } from "@/constants/contact-info";
-import BackToTopButton from "@/app/components/common/BackToTopButton";
+import BackToTopButton from "@/components/common/BackToTopButton";
 
 export default function Footer() {
   return (
