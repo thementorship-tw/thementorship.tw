@@ -11,6 +11,7 @@ const {
   borderRadius,
   spacing,
   boxShadow,
+  colors,
 } = transferTokenToTailwindStyles(token);
 
 export default {
@@ -38,6 +39,7 @@ export default {
         "sans-serif",
       ],
     },
+    colors,
     extend: {
       fontWeight,
       lineHeight,

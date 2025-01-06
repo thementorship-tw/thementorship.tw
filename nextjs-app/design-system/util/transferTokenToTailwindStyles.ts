@@ -61,6 +61,11 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     radius: radiusToken,
     spacing: spacingToken,
     boxShadow: boxShadowToken,
+    white: colorWhiteToken,
+    black: colorBlackToken,
+    neutral: colorNeutralToken,
+    yellow: colorYellowToken,
+    blue: colorBlueToken,
   } = token;
 
   const fontSize = convertProperty(fontSizesToken);
@@ -71,6 +76,16 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
   const spacing = convertProperty(spacingToken);
   const boxShadow = convertShadowProperty(boxShadowToken);
 
+  const colors = {
+    transparent: "transparent",
+    current: "currentColor",
+    white: colorWhiteToken.value,
+    black: colorBlackToken.value,
+    neutral: convertProperty(colorNeutralToken),
+    yellow: convertProperty(colorYellowToken),
+    blue: convertProperty(colorBlueToken),
+  };
+
   return {
     fontSize,
     fontWeight,
@@ -79,6 +94,7 @@ const transferTokenToTailwindStyles = (token: TokenType) => {
     borderRadius,
     spacing,
     boxShadow,
+    colors,
   };
 };
 
