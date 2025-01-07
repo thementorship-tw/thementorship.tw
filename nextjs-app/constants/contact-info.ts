@@ -6,3 +6,5 @@ export const MENTORSHIP_LINKEDIN_URL =
 export const MENTORSHIP_FACEBOOK_URL =
   "https://www.facebook.com/thementorshiptaiwan";
 export const MENTORSHIP_EMAIL_ADDRESS = "thementorshiptaiwan@gmail.com";
+export const MENTORSHIP_EMAIL_ADDRESS_MAILTO =
+  "mailto:thementorshiptaiwan@gmail.com";

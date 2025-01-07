@@ -16,10 +16,10 @@ export default function BackToTopButton() {
       className="cursor-pointer transition-transform duration-300 hover:scale-110"
     >
       <Image
-        src="/images/back-to-top-compass.png"
+        src="/images/back-to-top.png"
         alt="back-to-top"
-        width={64}
-        height={86}
+        width={56}
+        height={80}
       />
     </button>
   );

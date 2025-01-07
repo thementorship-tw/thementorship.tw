@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { EB_Garamond } from "next/font/google";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
@@ -36,7 +35,6 @@ export default async function RootLayout({
           <main className="">{children}</main>
           <Footer />
         </section>
-        <SpeedInsights />
       </body>
     </html>
   );

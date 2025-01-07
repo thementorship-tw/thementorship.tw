@@ -4,11 +4,13 @@ import { default as MediumIcon } from "@/public/images/medium-logo.svg";
 import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
 import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
 import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
+import { default as EmailIcon } from "@/public/images/email-logo.svg";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,
   MENTORSHIP_LINKEDIN_URL,
   MENTORSHIP_MEDIUM_URL,
+  MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
 
 // Note: to change color of icon, here is the example class name: [&>path]:fill-[#fcba03]
@@ -32,6 +34,16 @@ const socialLinks = [
     name: "Facebook",
     icon: <FacebookIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_FACEBOOK_URL,
+  },
+  {
+    name: "Email",
+    icon: (
+      <EmailIcon
+        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
+        viewBox="0 0 48 49"
+      />
+    ),
+    href: MENTORSHIP_EMAIL_ADDRESS_MAILTO as string,
   },
 ];
 

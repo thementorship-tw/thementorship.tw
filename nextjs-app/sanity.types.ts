@@ -13,15 +13,15 @@
  */
 
 // Source: schema.json
-export interface SanityImagePaletteSwatch {
+export type SanityImagePaletteSwatch = {
   _type: "sanity.imagePaletteSwatch";
   background?: string;
   foreground?: string;
   population?: number;
   title?: string;
-}
+};
 
-export interface SanityImagePalette {
+export type SanityImagePalette = {
   _type: "sanity.imagePalette";
   darkMuted?: SanityImagePaletteSwatch;
   lightVibrant?: SanityImagePaletteSwatch;
@@ -30,16 +30,16 @@ export interface SanityImagePalette {
   dominant?: SanityImagePaletteSwatch;
   lightMuted?: SanityImagePaletteSwatch;
   muted?: SanityImagePaletteSwatch;
-}
+};
 
-export interface SanityImageDimensions {
+export type SanityImageDimensions = {
   _type: "sanity.imageDimensions";
   height?: number;
   width?: number;
   aspectRatio?: number;
-}
+};
 
-export interface SanityFileAsset {
+export type SanityFileAsset = {
   _id: string;
   _type: "sanity.fileAsset";
   _createdAt: string;
@@ -59,24 +59,24 @@ export interface SanityFileAsset {
   path?: string;
   url?: string;
   source?: SanityAssetSourceData;
-}
+};
 
-export interface Geopoint {
+export type Geopoint = {
   _type: "geopoint";
   lat?: number;
   lng?: number;
   alt?: number;
-}
+};
 
-export interface CallToAction {
+export type CallToAction = {
   _type: "callToAction";
   heading?: string;
   text?: string;
   buttonText?: string;
   link?: Link;
-}
+};
 
-export interface Link {
+export type Link = {
   _type: "link";
   linkType?: "href" | "page" | "post";
   href?: string;
@@ -93,22 +93,22 @@ export interface Link {
     [internalGroqTypeReferenceTo]?: "post";
   };
   openInNewTab?: boolean;
-}
+};
 
-export interface InfoSection {
+export type InfoSection = {
   _type: "infoSection";
   heading?: string;
   subheading?: string;
-  content?: {
-    children?: {
-      marks?: string[];
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
-    }[];
+    }>;
     style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
     listItem?: "bullet" | "number";
-    markDefs?: {
+    markDefs?: Array<{
       linkType?: "href" | "page" | "post";
       href?: string;
       page?: {
@@ -126,23 +126,23 @@ export interface InfoSection {
       openInNewTab?: boolean;
       _type: "link";
       _key: string;
-    }[];
+    }>;
     level?: number;
     _type: "block";
     _key: string;
-  }[];
-}
+  }>;
+};
 
-export type BlockContent = {
-  children?: {
-    marks?: string[];
+export type BlockContent = Array<{
+  children?: Array<{
+    marks?: Array<string>;
     text?: string;
     _type: "span";
     _key: string;
-  }[];
+  }>;
   style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
   listItem?: "bullet" | "number";
-  markDefs?: {
+  markDefs?: Array<{
     linkType?: "href" | "page" | "post";
     href?: string;
     page?: {
@@ -160,13 +160,13 @@ export type BlockContent = {
     openInNewTab?: boolean;
     _type: "link";
     _key: string;
-  }[];
+  }>;
   level?: number;
   _type: "block";
   _key: string;
-}[];
+}>;
 
-export interface Page {
+export type Page = {
   _id: string;
   _type: "page";
   _createdAt: string;
@@ -176,15 +176,17 @@ export interface Page {
   slug: Slug;
   heading: string;
   subheading?: string;
-  pageBuilder?: (| ({
+  pageBuilder?: Array<
+    | ({
         _key: string;
       } & CallToAction)
     | ({
         _key: string;
-      } & InfoSection))[];
-}
+      } & InfoSection)
+  >;
+};
 
-export interface Post {
+export type Post = {
   _id: string;
   _type: "post";
   _createdAt: string;
@@ -213,9 +215,9 @@ export interface Post {
     _weak?: boolean;
     [internalGroqTypeReferenceTo]?: "person";
   };
-}
+};
 
-export interface Person {
+export type Person = {
   _id: string;
   _type: "person";
   _createdAt: string;
@@ -235,39 +237,39 @@ export interface Person {
     alt?: string;
     _type: "image";
   };
-}
+};
 
-export interface Slug {
+export type Slug = {
   _type: "slug";
   current: string;
   source?: string;
-}
+};
 
-export interface Settings {
+export type Settings = {
   _id: string;
   _type: "settings";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
   title: string;
-  description?: {
-    children?: {
-      marks?: string[];
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
-    }[];
+    }>;
     style?: "normal";
     listItem?: never;
-    markDefs?: {
+    markDefs?: Array<{
       href: string;
       _type: "link";
       _key: string;
-    }[];
+    }>;
     level?: number;
     _type: "block";
     _key: string;
-  }[];
+  }>;
   ogImage?: {
     asset?: {
       _ref: string;
@@ -281,25 +283,25 @@ export interface Settings {
     metadataBase?: string;
     _type: "image";
   };
-}
+};
 
-export interface SanityImageCrop {
+export type SanityImageCrop = {
   _type: "sanity.imageCrop";
   top?: number;
   bottom?: number;
   left?: number;
   right?: number;
-}
+};
 
-export interface SanityImageHotspot {
+export type SanityImageHotspot = {
   _type: "sanity.imageHotspot";
   x?: number;
   y?: number;
   height?: number;
   width?: number;
-}
+};
 
-export interface SanityImageAsset {
+export type SanityImageAsset = {
   _id: string;
   _type: "sanity.imageAsset";
   _createdAt: string;
@@ -320,16 +322,16 @@ export interface SanityImageAsset {
   url?: string;
   metadata?: SanityImageMetadata;
   source?: SanityAssetSourceData;
-}
+};
 
-export interface SanityAssetSourceData {
+export type SanityAssetSourceData = {
   _type: "sanity.assetSourceData";
   name?: string;
   id?: string;
   url?: string;
-}
+};
 
-export interface SanityImageMetadata {
+export type SanityImageMetadata = {
   _type: "sanity.imageMetadata";
   location?: Geopoint;
   dimensions?: SanityImageDimensions;
@@ -338,43 +340,47 @@ export interface SanityImageMetadata {
   blurHash?: string;
   hasAlpha?: boolean;
   isOpaque?: boolean;
-}
+};
 
-export interface SanityAssistInstructionTask {
+export type SanityAssistInstructionTask = {
   _type: "sanity.assist.instructionTask";
   path?: string;
   instructionKey?: string;
   started?: string;
   updated?: string;
   info?: string;
-}
+};
 
-export interface SanityAssistTaskStatus {
+export type SanityAssistTaskStatus = {
   _type: "sanity.assist.task.status";
-  tasks?: ({
+  tasks?: Array<
+    {
       _key: string;
-    } & SanityAssistInstructionTask)[];
-}
+    } & SanityAssistInstructionTask
+  >;
+};
 
-export interface SanityAssistSchemaTypeAnnotations {
+export type SanityAssistSchemaTypeAnnotations = {
   _type: "sanity.assist.schemaType.annotations";
   title?: string;
-  fields?: ({
+  fields?: Array<
+    {
       _key: string;
-    } & SanityAssistSchemaTypeField)[];
-}
+    } & SanityAssistSchemaTypeField
+  >;
+};
 
-export interface SanityAssistOutputType {
+export type SanityAssistOutputType = {
   _type: "sanity.assist.output.type";
   type?: string;
-}
+};
 
-export interface SanityAssistOutputField {
+export type SanityAssistOutputField = {
   _type: "sanity.assist.output.field";
   path?: string;
-}
+};
 
-export interface SanityAssistInstructionContext {
+export type SanityAssistInstructionContext = {
   _type: "sanity.assist.instruction.context";
   reference: {
     _ref: string;
@@ -382,40 +388,41 @@ export interface SanityAssistInstructionContext {
     _weak?: boolean;
     [internalGroqTypeReferenceTo]?: "assist.instruction.context";
   };
-}
+};
 
-export interface AssistInstructionContext {
+export type AssistInstructionContext = {
   _id: string;
   _type: "assist.instruction.context";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
   title?: string;
-  context?: {
-    children?: {
-      marks?: string[];
+  context?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
-    }[];
+    }>;
     style?: "normal";
     listItem?: never;
     markDefs?: null;
     level?: number;
     _type: "block";
     _key: string;
-  }[];
-}
+  }>;
+};
 
-export interface SanityAssistInstructionUserInput {
+export type SanityAssistInstructionUserInput = {
   _type: "sanity.assist.instruction.userInput";
   message: string;
   description?: string;
-}
+};
 
-export type SanityAssistInstructionPrompt = {
-  children?: (| {
-        marks?: string[];
+export type SanityAssistInstructionPrompt = Array<{
+  children?: Array<
+    | {
+        marks?: Array<string>;
         text?: string;
         _type: "span";
         _key: string;
@@ -428,42 +435,47 @@ export type SanityAssistInstructionPrompt = {
       } & SanityAssistInstructionContext)
     | ({
         _key: string;
-      } & SanityAssistInstructionUserInput))[];
+      } & SanityAssistInstructionUserInput)
+  >;
   style?: "normal";
   listItem?: never;
   markDefs?: null;
   level?: number;
   _type: "block";
   _key: string;
-}[];
+}>;
 
-export interface SanityAssistInstructionFieldRef {
+export type SanityAssistInstructionFieldRef = {
   _type: "sanity.assist.instruction.fieldRef";
   path?: string;
-}
+};
 
-export interface SanityAssistInstruction {
+export type SanityAssistInstruction = {
   _type: "sanity.assist.instruction";
   prompt?: SanityAssistInstructionPrompt;
   icon?: string;
   title?: string;
   userId?: string;
   createdById?: string;
-  output?: (| ({
+  output?: Array<
+    | ({
         _key: string;
       } & SanityAssistOutputField)
     | ({
         _key: string;
-      } & SanityAssistOutputType))[];
-}
+      } & SanityAssistOutputType)
+  >;
+};
 
-export interface SanityAssistSchemaTypeField {
+export type SanityAssistSchemaTypeField = {
   _type: "sanity.assist.schemaType.field";
   path?: string;
-  instructions?: ({
+  instructions?: Array<
+    {
       _key: string;
-    } & SanityAssistInstruction)[];
-}
+    } & SanityAssistInstruction
+  >;
+};
 
 export type AllSanitySchemaTypes =
   | SanityImagePaletteSwatch
@@ -508,24 +520,24 @@ export type SettingsQueryResult = {
   _updatedAt: string;
   _rev: string;
   title: string;
-  description?: {
-    children?: {
-      marks?: string[];
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
-    }[];
+    }>;
     style?: "normal";
     listItem?: never;
-    markDefs?: {
+    markDefs?: Array<{
       href: string;
       _type: "link";
       _key: string;
-    }[];
+    }>;
     level?: number;
     _type: "block";
     _key: string;
-  }[];
+  }>;
   ogImage?: {
     asset?: {
       _ref: string;
@@ -548,7 +560,8 @@ export type GetPageQueryResult = {
   slug: Slug;
   heading: string;
   subheading: string | null;
-  pageBuilder: (| {
+  pageBuilder: Array<
+    | {
         _key: string;
         _type: "callToAction";
         heading?: string;
@@ -568,13 +581,13 @@ export type GetPageQueryResult = {
         _type: "infoSection";
         heading?: string;
         subheading?: string;
-        content?: {
-          children?: {
-            marks?: string[];
+        content?: Array<{
+          children?: Array<{
+            marks?: Array<string>;
             text?: string;
             _type: "span";
             _key: string;
-          }[];
+          }>;
           style?:
             | "blockquote"
             | "h1"
@@ -585,7 +598,7 @@ export type GetPageQueryResult = {
             | "h6"
             | "normal";
           listItem?: "bullet" | "number";
-          markDefs?: {
+          markDefs?: Array<{
             linkType?: "href" | "page" | "post";
             href?: string;
             page?: {
@@ -603,16 +616,17 @@ export type GetPageQueryResult = {
             openInNewTab?: boolean;
             _type: "link";
             _key: string;
-          }[];
+          }>;
           level?: number;
           _type: "block";
           _key: string;
-        }[];
-      })[] | null;
+        }>;
+      }
+  > | null;
 } | null;
 // Variable: allPostsQuery
 // Query: *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  coverImage,  "date": coalesce(date, _updatedAt),  "author": author->{firstName, lastName, picture},  }
-export type AllPostsQueryResult = {
+export type AllPostsQueryResult = Array<{
   _id: string;
   status: "draft" | "published";
   title: string | "Untitled";
@@ -647,10 +661,10 @@ export type AllPostsQueryResult = {
       _type: "image";
     };
   } | null;
-}[];
+}>;
 // Variable: morePostsQuery
 // Query: *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  coverImage,  "date": coalesce(date, _updatedAt),  "author": author->{firstName, lastName, picture},  }
-export type MorePostsQueryResult = {
+export type MorePostsQueryResult = Array<{
   _id: string;
   status: "draft" | "published";
   title: string | "Untitled";
@@ -685,20 +699,20 @@ export type MorePostsQueryResult = {
       _type: "image";
     };
   } | null;
-}[];
+}>;
 // Variable: postQuery
 // Query: *[_type == "post" && slug.current == $slug] [0] {    content[]{    ...,    markDefs[]{      ...,        link {      ...,      _type == "link" => {        "page": page->slug.current,        "post": post->slug.current        }      }    }  },      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  coverImage,  "date": coalesce(date, _updatedAt),  "author": author->{firstName, lastName, picture},  }
 export type PostQueryResult = {
-  content: {
-    children?: {
-      marks?: string[];
+  content: Array<{
+    children?: Array<{
+      marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
-    }[];
+    }>;
     style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
     listItem?: "bullet" | "number";
-    markDefs: {
+    markDefs: Array<{
       linkType?: "href" | "page" | "post";
       href?: string;
       page?: {
@@ -717,11 +731,11 @@ export type PostQueryResult = {
       _type: "link";
       _key: string;
       link: null;
-    }[] | null;
+    }> | null;
     level?: number;
     _type: "block";
     _key: string;
-  }[] | null;
+  }> | null;
   _id: string;
   status: "draft" | "published";
   title: string | "Untitled";
@@ -759,14 +773,14 @@ export type PostQueryResult = {
 } | null;
 // Variable: postPagesSlugs
 // Query: *[_type == "post" && defined(slug.current)]  {"slug": slug.current}
-export type PostPagesSlugsResult = {
+export type PostPagesSlugsResult = Array<{
   slug: string;
-}[];
+}>;
 // Variable: pagesSlugs
 // Query: *[_type == "page" && defined(slug.current)]  {"slug": slug.current}
-export type PagesSlugsResult = {
+export type PagesSlugsResult = Array<{
   slug: string;
-}[];
+}>;
 
 // Query TypeMap
 import "@sanity/client";
