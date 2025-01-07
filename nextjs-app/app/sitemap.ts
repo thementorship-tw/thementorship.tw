@@ -9,16 +9,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/`,
     },
     {
-      url: `${baseUrl}/introduction`,
-    },
-    {
-      url: `${baseUrl}/team`,
-    },
-    {
-      url: `${baseUrl}/core-values`,
-    },
-    {
       url: `${baseUrl}/faq`,
+    },
+    {
+      url: `${baseUrl}/program-rules`,
+    },
+    {
+      url: `${baseUrl}/about/overview`,
+    },
+    {
+      url: `${baseUrl}/about/philosophy`,
+    },
+    {
+      url: `${baseUrl}/about/team`,
     },
   ];
 }

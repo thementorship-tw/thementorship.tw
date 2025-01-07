@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "籌備團隊",
+  title: "團隊成員",
 };
 
 export default async function TeamPage() {
