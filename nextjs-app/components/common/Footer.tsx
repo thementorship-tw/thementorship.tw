@@ -11,24 +11,19 @@ import BackToTopButton from "@/components/common/BackToTopButton";
 export default function Footer() {
   return (
     <footer className="relative w-full">
-      <div className="absolute right-5">
+      <div className="absolute right-5 -top-[25px]">
         <BackToTopButton />
       </div>
-      <div
-        className="w-full h-[136px]
-        bg-[url('/images/footer-wave.png')] 
-        bg-no-repeat bg-center
-        bg-[length:auto_100%] xl:bg-[length:100%_100%]"
-      />
-      <div className="bg-[#090E3E] w-full p-7">
-        <div className="flex flex-col items-center mt-[-76px] border-b border-[#47515F] mb-4">
+      <div className="bg-blue-8 w-full p-7 pt-11">
+        <div className="flex flex-col items-center border-b border-neutral-8 mb-4">
           <Image
             src="/images/program-logo-with-white-text.png"
             alt="program-logo"
-            width={285}
-            height={60}
+            width={264}
+            height={50}
+            className="w-[187px] h-[40px] md:w-[264px] md:h-[50px]"
           />
-          <div className="flex gap-5 mt-4 pb-8">
+          <div className="flex gap-5 mt-5 pb-8">
             <a
               href={MENTORSHIP_MEDIUM_URL}
               target="_blank"
@@ -96,11 +91,13 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center lg:items-end min-h-[52px]">
+        <div className="flex flex-col lg:flex-row items-center min-h-11">
           <div className="hidden lg:block lg:flex-1" />
-          <p className="text-white text-center text-body-md mb-4 lg:mb-0">
-            © MentorShip All Rights Reserved
-          </p>
+          <div className="lg:flex-1 flex justify-center">
+            <p className="text-white text-center text-body-md mb-4 lg:mb-0">
+              © MentorShip All Rights Reserved
+            </p>
+          </div>
           <div className="md:flex-1 md:flex md:justify-end md:items-end flex justify-center">
             <Image
               src="/images/deployed-on-zeabur.png"

@@ -49,10 +49,12 @@ const socialLinks = [
 
 const StayUpdated = () => {
   return (
-    <section className="py-16">
+    <section className="pt-[72px] pb-[90px] md:py-[120px]">
       <div className="mx-auto text-center">
-        <h2 className="text-h4 text-[#7E7059]">關注第一手消息</h2>
-        <h3 className="text-[48px] leading-11 font-semibold font-eb-garamond mb-6 text-[#090E3E]">
+        <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2">
+          關注第一手消息
+        </h2>
+        <h3 className="text-h3-title md:text-h1-title font-eb-garamond mb-6 text-blue-8">
           Stay Updated
         </h3>
         <Image
@@ -60,7 +62,7 @@ const StayUpdated = () => {
           alt="title-symbol-line"
           width={57}
           height={5}
-          className="mx-auto mb-9"
+          className="mx-auto mb-6 md:mb-9"
         />
         <div className="flex flex-wrap justify-center gap-5">
           {socialLinks.map((link) => (
