@@ -16,13 +16,24 @@ export default function Footer() {
       </div>
       <div className="bg-blue-8 w-full p-7 pt-11">
         <div className="flex flex-col items-center border-b border-neutral-8 mb-4">
-          <Image
-            src="/images/program-logo-with-white-text.png"
-            alt="program-logo"
-            width={264}
-            height={50}
-            className="w-[187px] h-[40px] md:w-[264px] md:h-[50px]"
-          />
+          <div className="hidden md:block">
+            <Image
+              src="/images/program-logo-with-white-text-big.png"
+              alt="program-logo"
+              width={264}
+              height={50}
+              className="w-[264px] h-[50px]"
+            />
+          </div>
+          <div className="block md:hidden">
+            <Image
+              src="/images/program-logo-with-white-text.png"
+              alt="program-logo"
+              width={187}
+              height={40}
+              className="w-[187px] h-[40px]"
+            />
+          </div>
           <div className="flex gap-5 mt-5 pb-8">
             <a
               href={MENTORSHIP_MEDIUM_URL}
