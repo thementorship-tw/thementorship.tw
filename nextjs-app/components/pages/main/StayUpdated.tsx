@@ -39,7 +39,7 @@ const socialLinks = [
     name: "Email",
     icon: (
       <EmailIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
+        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full lg:w-10 lg:h-10"
         viewBox="0 0 48 49"
       />
     ),
@@ -62,25 +62,29 @@ const StayUpdated = () => {
           alt="title-symbol-line"
           width={57}
           height={5}
-          className="mx-auto mb-6 md:mb-9"
+          className="mx-auto mb-11"
         />
-        <div className="flex flex-wrap justify-center gap-5">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border w-[156px] h-[92px] md:w-[212px] md:h-[212px] rounded-3 hover:bg-[#F8F5F2] transition-all duration-300 border-[#7E7059] flex items-center justify-center"
-            >
-              <div className="flex flex-col items-center gap-2 md:gap-4">
-                <span className="text-xl font-semibold text-[#1F2630]">
-                  {link.name}
-                </span>
-                <span className="text-3xl">{link.icon}</span>
-              </div>
-            </Link>
-          ))}
+        <div className="w-full px-6 md:px-10">
+          <div className="flex flex-wrap gap-4 md:gap-7 justify-start md:justify-center">
+            {socialLinks.map((link, idx) => (
+              <Link
+                key={idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border h-[108px] lg:h-[212px] w-[calc(50%-6px)] md:w-[calc(33.333%-16px)] lg:w-[212px]
+                rounded-3 hover:bg-yellow-1 transition-all duration-300 
+                border-yellow-6 flex items-center justify-center"
+              >
+                <div className="flex flex-col items-center gap-2 lg:gap-4">
+                  <span className="text-h6 lg:text-h5 text-neutral-10 font-['PingFang_TC']">
+                    {link.name}
+                  </span>
+                  <span>{link.icon}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
