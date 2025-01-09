@@ -59,22 +59,22 @@ const Partners = () => {
           height={5}
           className="mx-auto mb-11"
         />
-        <div className="mx-auto w-fit">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-7">
+        <div className="w-full px-5 md:px-10 xl:px-[142px]">
+          <div className="flex flex-wrap gap-4 md:gap-7 justify-center">
             {programPartners.map((partner, idx) => (
               <a
                 key={idx}
                 href={partner.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-lg"
+                className="bg-white rounded-3 w-[calc(50%-6px)] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
               >
                 <Image
                   src={partner.imageSrc}
                   alt={`${partner.name} logo`}
                   width={324}
                   height={108}
-                  className="object-contain w-[165.5px] h-[108px] md:w-[324px] lg:w-[271px]"
+                  className="object-contain h-[108px] w-full"
                 />
               </a>
             ))}
