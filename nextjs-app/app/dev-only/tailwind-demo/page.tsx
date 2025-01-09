@@ -65,11 +65,17 @@ export default async function TailwindDemo() {
         <h2 className="text-h3 text-blue-6">Line Height</h2>
 
         <ol>
-          {Array.from({ length: 11 }, (_, i) => i + 1).map((lineHeight) => (
-            <li key={lineHeight} className={`leading-${lineHeight.toString()}`}>
-              line height {lineHeight}
-            </li>
-          ))}
+          <li className="leading-1">line height 1</li>
+          <li className="leading-2">line height 2</li>
+          <li className="leading-3">line height 3</li>
+          <li className="leading-4">line height 4</li>
+          <li className="leading-5">line height 5</li>
+          <li className="leading-6">line height 6</li>
+          <li className="leading-7">line height 7</li>
+          <li className="leading-8">line height 8</li>
+          <li className="leading-9">line height 9</li>
+          <li className="leading-10">line height 10</li>
+          <li className="leading-11">line height 11</li>
         </ol>
       </section>
 
@@ -77,14 +83,52 @@ export default async function TailwindDemo() {
         <h2 className="text-h3 text-blue-6">Spacing</h2>
 
         <ol>
-          {Array.from({ length: 11 }, (_, i) => i + 1).map((space) => (
-            <li key={`space-${space.toString()}`}>
-              <p>space-{space}</p>
-              <div
-                className={`h-5 pl-${space.toString()} bg-blue-4 inline-block`}
-              ></div>
+          <ul>
+            <li>
+              <p>space-1</p>
+              <div className="h-5 pl-1 bg-blue-4 inline-block"></div>
             </li>
-          ))}
+            <li>
+              <p>space-2</p>
+              <div className="h-5 pl-2 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-3</p>
+              <div className="h-5 pl-3 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-4</p>
+              <div className="h-5 pl-4 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-5</p>
+              <div className="h-5 pl-5 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-6</p>
+              <div className="h-5 pl-6 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-7</p>
+              <div className="h-5 pl-7 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-8</p>
+              <div className="h-5 pl-8 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-9</p>
+              <div className="h-5 pl-9 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-10</p>
+              <div className="h-5 pl-10 bg-blue-4 inline-block"></div>
+            </li>
+            <li>
+              <p>space-11</p>
+              <div className="h-5 pl-11 bg-blue-4 inline-block"></div>
+            </li>
+          </ul>
         </ol>
       </section>
 
@@ -92,14 +136,32 @@ export default async function TailwindDemo() {
         <h2 className="text-h3 text-blue-6">Border Radius</h2>
 
         <ol>
-          {["1", "2", "3", "4", "circle", "pill"].map((rounded) => (
-            <li key={rounded} className="mb-6">
-              <p>rounded-{rounded}</p>
-              <div
-                className={`rounded-${rounded} bg-yellow-3 p-[50px] inline-block`}
-              ></div>
+          <ul>
+            <li className="mb-6">
+              <p>rounded-1</p>
+              <div className="rounded-1 bg-yellow-3 p-11 inline-block"></div>
             </li>
-          ))}
+            <li className="mb-6">
+              <p>rounded-2</p>
+              <div className="rounded-2 bg-yellow-3 p-11 inline-block"></div>
+            </li>
+            <li className="mb-6">
+              <p>rounded-3</p>
+              <div className="rounded-3 bg-yellow-3 p-11 inline-block"></div>
+            </li>
+            <li className="mb-6">
+              <p>rounded-4</p>
+              <div className="rounded-4 bg-yellow-3 p-11 inline-block"></div>
+            </li>
+            <li className="mb-6">
+              <p>rounded-circle</p>
+              <div className="rounded-circle bg-yellow-3 p-11 inline-block"></div>
+            </li>
+            <li className="mb-6">
+              <p>rounded-pill</p>
+              <div className="rounded-pill bg-yellow-3 p-11 inline-block"></div>
+            </li>
+          </ul>
         </ol>
       </section>
 
