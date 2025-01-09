@@ -8,6 +8,14 @@ import {
 } from "@/constants/contact-info";
 import BackToTopButton from "@/components/common/BackToTopButton";
 
+export const SOCIAL_MEDIA_LINKS = [
+  { url: MENTORSHIP_MEDIUM_URL, icon: "medium" },
+  { url: MENTORSHIP_INSTAGRAM_URL, icon: "instagram" },
+  { url: MENTORSHIP_LINKEDIN_URL, icon: "linkedin" },
+  { url: MENTORSHIP_FACEBOOK_URL, icon: "facebook" },
+  { url: MENTORSHIP_EMAIL_ADDRESS_MAILTO, icon: "email" },
+] as const;
+
 export default function Footer() {
   return (
     <footer className="relative w-full">
@@ -35,71 +43,22 @@ export default function Footer() {
             />
           </div>
           <div className="flex gap-5 mt-5 pb-8">
-            <a
-              href={MENTORSHIP_MEDIUM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/medium-logo.png"
-                alt="medium-logo"
-                width={32}
-                height={32}
-                className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-              />
-            </a>
-            <a
-              href={MENTORSHIP_INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/instagram-logo.png"
-                alt="instagram-logo"
-                width={32}
-                height={32}
-                className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-              />
-            </a>
-            <a
-              href={MENTORSHIP_LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/linkedin-logo.png"
-                alt="linkedin-logo"
-                width={32}
-                height={32}
-                className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-              />
-            </a>
-            <a
-              href={MENTORSHIP_FACEBOOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/facebook-logo.png"
-                alt="facebook-logo"
-                width={32}
-                height={32}
-                className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-              />
-            </a>
-            <a
-              href={MENTORSHIP_EMAIL_ADDRESS_MAILTO}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/email-logo.png"
-                alt="email-logo"
-                width={32}
-                height={32}
-                className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-              />
-            </a>
+            {SOCIAL_MEDIA_LINKS.map(({ url, icon }) => (
+              <a
+                key={icon}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={`/images/${icon}-logo.png`}
+                  alt={`${icon}-logo`}
+                  width={32}
+                  height={32}
+                  className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
+                />
+              </a>
+            ))}
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center min-h-11">
