@@ -1,8 +1,10 @@
+import { FC, PropsWithChildren } from "react";
+
 type ButtonVariant = "filled" | "outline";
 
 type ButtonColor = "blue" | "golden";
 
-interface CallToActionLinkProps {
+interface ICallToActionLinkProps {
   /**
    * @default "filled"
    */
@@ -13,22 +15,22 @@ interface CallToActionLinkProps {
   color?: ButtonColor;
   disabled?: boolean;
   onClick?: () => void;
-  children: React.ReactNode;
 }
 
 const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
-  const baseButtonClasses = "inline-flex items-center gap-4 p-5 rounded-pill";
+  const baseButtonClasses =
+    "inline-flex items-center gap-4 p-5 rounded-pill text-2";
 
   const baseDotClasses = "w-[14px] h-[14px] border-[5px] rounded-circle";
 
   const buttonVariantStyles = {
     filled: {
-      blue: "bg-[#090E3E] text-white",
-      golden: "bg-[#7E7059] text-white",
+      blue: "bg-blue-8 text-white",
+      golden: "bg-yellow-6 text-white",
     },
     outline: {
-      blue: "bg-white text-[#090E3E] font-semibold border border-[#090E3E]",
-      golden: "bg-white text-[#7E7059] font-semibold border border-[#7E705]",
+      blue: "bg-white text-blue-8 font-semibold border border-blue-8",
+      golden: "bg-white text-yellow-6 font-semibold border border-yellow-6",
     },
   };
 
@@ -38,8 +40,8 @@ const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
       golden: "border-white",
     },
     outline: {
-      blue: "border-[#090E3E]",
-      golden: "border-[#7E705]",
+      blue: "border-blue-8",
+      golden: "border-yellow-6",
     },
   };
 
@@ -52,15 +54,13 @@ const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
   };
 };
 
-const Button = (props: CallToActionLinkProps) => {
-  const {
-    variant = "filled",
-    color = "blue",
-    disabled = false,
-    onClick,
-    children,
-  } = props;
-
+const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
+  variant = "filled",
+  color = "blue",
+  disabled = false,
+  onClick,
+  children,
+}) => {
   const { buttonClasses, dotClasses } = getClassNames(variant, color);
 
   return (
