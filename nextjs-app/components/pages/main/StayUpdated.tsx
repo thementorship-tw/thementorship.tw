@@ -66,9 +66,9 @@ const StayUpdated = () => {
         />
         <div className="w-full px-6 md:px-10">
           <div className="flex flex-wrap gap-4 md:gap-7 justify-start md:justify-center">
-            {socialLinks.map((link, idx) => (
+            {socialLinks.map((link) => (
               <Link
-                key={idx}
+                key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
