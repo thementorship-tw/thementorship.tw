@@ -31,7 +31,7 @@ export default async function RootLayout({
       className={`font-sans ${ebGaramond.variable} bg-white text-black`}
     >
       <body>
-        <section className="min-h-screen pt-24">
+        <section className="min-h-screen pt-[80px] md:pt-[94px]">
           <Header />
           <main className="">{children}</main>
           <Footer />

@@ -15,42 +15,22 @@ import {
 const socialLinks = [
   {
     name: "Medium",
-    icon: (
-      <MediumIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
-        viewBox="0 0 48 49"
-      />
-    ),
+    icon: <MediumIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_MEDIUM_URL,
   },
   {
     name: "Instagram",
-    icon: (
-      <InstagramIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
-        viewBox="0 0 48 49"
-      />
-    ),
+    icon: <InstagramIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_INSTAGRAM_URL,
   },
   {
     name: "linkedin",
-    icon: (
-      <LinkedInIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
-        viewBox="0 0 48 49"
-      />
-    ),
+    icon: <LinkedInIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_LINKEDIN_URL,
   },
   {
     name: "Facebook",
-    icon: (
-      <FacebookIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full md:w-10 md:h-10"
-        viewBox="0 0 48 49"
-      />
-    ),
+    icon: <FacebookIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_FACEBOOK_URL,
   },
 ];
