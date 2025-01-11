@@ -85,7 +85,9 @@ export default function Header() {
                   <li key={title} className="relative group">
                     <Link href={href}>
                       <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
-                        <p className="text-h4-title">{title}</p>
+                        <p className="text-h4-title font-eb-garamond">
+                          {title}
+                        </p>
                         <p className="text-subtitle-md">{subtitle}</p>
                       </div>
 
