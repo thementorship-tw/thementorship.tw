@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import HamburgerButton from "./HamburgerButton";
 
+import Routes from "@/constants/routes";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,
@@ -16,31 +17,31 @@ import { default as CompassIcon } from "@/public/images/compass.svg";
 
 const desktopNavigationMenu = [
   {
-    href: "/",
+    href: Routes.HOME,
     title: "About",
     subtitle: "關於曼陀號",
     subMenu: [
       {
-        href: "/about/philosophy",
+        href: Routes.ABOUT.PHILOSOPHY,
         title: "曼陀號理念",
       },
       {
-        href: "/about/overview",
+        href: Routes.ABOUT.OVERVIEW,
         title: "計劃介紹",
       },
       {
-        href: "/about/team",
+        href: Routes.ABOUT.TEAM,
         title: "團隊介紹",
       },
     ],
   },
   {
-    href: "/program-rules",
+    href: Routes.PROGRAM_RULES,
     title: "Program",
     subtitle: "活動辦法",
   },
   {
-    href: "/faq",
+    href: Routes.FAQ,
     title: "FAQ",
     subtitle: "常見問題",
   },
