@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const WhatWeDo = () => {
   return (
-    <section className="py-[72px] md:py-[120px]">
+    <section className="px-5 md:px-10  py-[72px] md:py-[120px]">
       <div className="mx-auto text-center space-y-11">
         <div className="space-y-8">
           <div className="space-y-3">
