@@ -77,7 +77,7 @@ const StayUpdated = () => {
                 border-yellow-6 flex items-center justify-center"
               >
                 <div className="flex flex-col items-center gap-2 lg:gap-4">
-                  <span className="text-h6 lg:text-h5 text-neutral-10 font-['PingFang_TC']">
+                  <span className="text-h6 lg:text-h5 text-neutral-10">
                     {link.name}
                   </span>
                   <span>{link.icon}</span>

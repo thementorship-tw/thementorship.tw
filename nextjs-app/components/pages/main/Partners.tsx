@@ -60,14 +60,14 @@ const Partners = () => {
           className="mx-auto mb-11"
         />
         <div className="w-full px-5 md:px-10 xl:px-[142px]">
-          <div className="flex flex-wrap gap-4 md:gap-7 justify-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-7">
             {programPartners.map((partner, idx) => (
               <a
                 key={idx}
                 href={partner.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-3 w-[calc(50%-6px)] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+                className="bg-white rounded-3"
               >
                 <Image
                   src={partner.imageSrc}
