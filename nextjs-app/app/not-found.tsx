@@ -11,7 +11,7 @@ export default async function NotFoundPage() {
           height={120}
           className="mb-5"
         />
-        <div className="text-h5 font-['PingFang_TC']">Page Not Found</div>
+        <div className="text-h5 font-semibold text-blue-8">Page Not Found</div>
       </div>
     </div>
   );
