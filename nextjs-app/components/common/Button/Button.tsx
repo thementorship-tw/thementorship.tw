@@ -4,6 +4,8 @@ export type ButtonVariant = "filled" | "outline";
 
 export type ButtonColor = "blue" | "golden";
 
+type ButtonPaddingSize = "default" | "with-icon";
+
 interface ICallToActionLinkProps {
   className?: string;
   /**
@@ -14,17 +16,30 @@ interface ICallToActionLinkProps {
    * @default "blue"
    */
   color?: ButtonColor;
+  /**
+   * @default "default"
+   */
+  paddingSize?: ButtonPaddingSize;
   disabled?: boolean;
   onClick?: () => void;
 }
 
-const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
+const getClassNames = (
+  variant: ButtonVariant,
+  color: ButtonColor,
+  paddingSize: ButtonPaddingSize
+) => {
   const baseButtonClasses =
-    "inline-flex items-center gap-4 p-5 rounded-pill text-2";
+    "inline-flex items-center gap-4 rounded-pill text-2";
 
   const baseDotClasses = "w-[14px] h-[14px] border-[5px] rounded-circle";
 
-  const buttonVariantStyles = {
+  const buttonPaddingSizeClasses: Record<ButtonPaddingSize, string> = {
+    default: "p-5",
+    "with-icon": "py-3 pl-4 pr-5",
+  };
+
+  const buttonVariantClasses = {
     filled: {
       blue: "bg-blue-8 text-white",
       golden: "bg-yellow-6 text-white",
@@ -35,7 +50,7 @@ const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
     },
   };
 
-  const dotVariantStyles = {
+  const dotVariantClasses = {
     filled: {
       blue: "border-white",
       golden: "border-white",
@@ -46,12 +61,13 @@ const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
     },
   };
 
-  const buttonStyles = buttonVariantStyles[variant][color] || "";
-  const dotStyles = dotVariantStyles[variant][color] || "";
+  const buttonClasses = buttonVariantClasses[variant][color] || "";
+  const dotClasses = dotVariantClasses[variant][color] || "";
 
   return {
-    buttonClasses: `${baseButtonClasses} ${buttonStyles}`.trim(),
-    dotClasses: `${baseDotClasses} ${dotStyles}`.trim(),
+    buttonClasses:
+      `${baseButtonClasses} ${buttonPaddingSizeClasses[paddingSize]} ${buttonClasses}`.trim(),
+    dotClasses: `${baseDotClasses} ${dotClasses}`.trim(),
   };
 };
 
@@ -59,11 +75,16 @@ const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
   className = "",
   variant = "filled",
   color = "blue",
+  paddingSize = "default",
   disabled = false,
   onClick,
   children,
 }) => {
-  const { buttonClasses, dotClasses } = getClassNames(variant, color);
+  const { buttonClasses, dotClasses } = getClassNames(
+    variant,
+    color,
+    paddingSize
+  );
 
   return (
     <button

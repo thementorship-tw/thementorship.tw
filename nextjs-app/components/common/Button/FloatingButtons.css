@@ -1,0 +1,31 @@
+.btn-hover-animation-sailor:hover {
+  right: 0;
+
+  button {
+    border: 1px solid #47515f;
+    background-color: #090e3e;
+
+    div {
+      color: white;
+    }
+    span {
+      border: white 5px solid;
+    }
+  }
+}
+
+.btn-hover-animation-navigator:hover {
+  right: 0;
+
+  button {
+    border: 1px solid #47515f;
+    background-color: #7e7059;
+
+    div {
+      color: white;
+    }
+    span {
+      border: white 5px solid;
+    }
+  }
+}
