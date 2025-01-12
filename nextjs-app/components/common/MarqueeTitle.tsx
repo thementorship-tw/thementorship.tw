@@ -11,11 +11,10 @@ interface MarqueeTitleProps {
  * @param text The text to be displayed
  * @returns {number} Number of repetitions
  * - text length >= 20 chars: repeat 4 times
- * - text length >= 10 chars: repeat 8 times
- * - text length < 10 chars:  repeat 15 times
+ * - text length >= 8 chars: repeat 8 times
+ * - text length < 8 chars:  repeat 15 times
  */
 const getRepeatCount = (text: string) => {
-  console.log(text.length);
   if (text.length >= 20) return 4;
   if (text.length >= 8) return 8;
   return 15;
