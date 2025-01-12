@@ -6,17 +6,14 @@ interface MarqueeTitleProps {
   enTitle: string;
 }
 
-const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
-  const repeatedArray: number[] = Array.from(
-    { length: 20 },
-    (_, index) => index
-  );
+const repeatedArray: number[] = Array.from({ length: 8 }, (_, index) => index);
 
+const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
   return (
     <section className="relative overflow-hidden py-[64px] md:py-[112px]">
-      <div className="absolute inset-0 w-full overflow-hidden top-2 md:top-4">
+      <div className="absolute inset-0 w-full overflow-hidden md:top-5">
         <div className="flex">
-          <div className="flex shrink-0 items-center animate-marquee-1">
+          <div className="flex shrink-0 items-center animate-marquee-first-layer">
             {repeatedArray.map((_, index) => (
               <span
                 key={`first-${index.toString()}`}
@@ -26,7 +23,7 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
               </span>
             ))}
           </div>
-          <div className="flex shrink-0 items-center animate-marquee-2 [animation-delay:-40s]">
+          <div className="flex shrink-0 items-center animate-marquee-second-layer [animation-delay:-50s]">
             {repeatedArray.map((_, index) => (
               <span
                 key={`second-${index.toString()}`}
@@ -38,7 +35,6 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
           </div>
         </div>
       </div>
-
       <div className="relative z-10 flex flex-col items-center justify-center text-center">
         <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2 md:mb-3">
           {zhTitle}

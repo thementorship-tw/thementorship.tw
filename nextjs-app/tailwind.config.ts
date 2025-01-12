@@ -51,17 +51,17 @@ export default {
         ...typographyFromToken,
       },
       animation: {
-        "marquee-1": "marquee1 80s linear infinite",
-        "marquee-2": "marquee2 80s linear infinite",
+        "marquee-first-layer": "marquee1 100s linear infinite",
+        "marquee-second-layer": "marquee2 100s linear infinite",
       },
       keyframes: {
         marquee1: {
-          "0%": { transform: "translateX(0%)" },
+          "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
         marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-200%)" },
         },
       },
     },
