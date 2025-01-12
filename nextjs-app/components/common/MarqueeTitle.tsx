@@ -15,8 +15,9 @@ interface MarqueeTitleProps {
  * - text length < 10 chars:  repeat 15 times
  */
 const getRepeatCount = (text: string) => {
+  console.log(text.length);
   if (text.length >= 20) return 4;
-  if (text.length >= 10) return 8;
+  if (text.length >= 8) return 8;
   return 15;
 };
 
