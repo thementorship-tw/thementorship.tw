@@ -51,8 +51,8 @@ export default {
         ...typographyFromToken,
       },
       animation: {
-        "marquee-first-layer": "marquee1 100s linear infinite",
-        "marquee-second-layer": "marquee2 100s linear infinite",
+        "marquee-first-layer": "marquee1 180s linear infinite",
+        "marquee-second-layer": "marquee2 180s linear infinite",
       },
       keyframes: {
         marquee1: {

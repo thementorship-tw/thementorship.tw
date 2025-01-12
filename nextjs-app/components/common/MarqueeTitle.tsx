@@ -6,9 +6,26 @@ interface MarqueeTitleProps {
   enTitle: string;
 }
 
-const repeatedArray: number[] = Array.from({ length: 8 }, (_, index) => index);
+/**
+ * Determines the number of times to repeat the marquee text based on text length
+ * @param text The text to be displayed
+ * @returns {number} Number of repetitions
+ * - text length >= 20 chars: repeat 4 times
+ * - text length >= 10 chars: repeat 8 times
+ * - text length < 10 chars:  repeat 15 times
+ */
+const getRepeatCount = (text: string) => {
+  if (text.length >= 20) return 4;
+  if (text.length >= 10) return 8;
+  return 15;
+};
 
 const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
+  const repeatedArray = Array.from(
+    { length: getRepeatCount(enTitle) },
+    (_, index) => index
+  );
+
   return (
     <section className="relative overflow-hidden py-[64px] md:py-[112px]">
       <div className="absolute inset-0 w-full overflow-hidden md:top-5">
@@ -23,7 +40,7 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
               </span>
             ))}
           </div>
-          <div className="flex shrink-0 items-center animate-marquee-second-layer [animation-delay:-50s]">
+          <div className="flex shrink-0 items-center animate-marquee-second-layer [animation-delay:-90s]">
             {repeatedArray.map((_, index) => (
               <span
                 key={`second-${index.toString()}`}
