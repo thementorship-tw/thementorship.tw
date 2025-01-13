@@ -5,6 +5,7 @@ type ButtonVariant = "filled" | "outline";
 type ButtonColor = "blue" | "golden";
 
 interface ICallToActionLinkProps {
+  className?: string;
   /**
    * @default "filled"
    */
@@ -55,6 +56,7 @@ const getClassNames = (variant: ButtonVariant, color: ButtonColor) => {
 };
 
 const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
+  className = "",
   variant = "filled",
   color = "blue",
   disabled = false,
@@ -64,7 +66,11 @@ const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
   const { buttonClasses, dotClasses } = getClassNames(variant, color);
 
   return (
-    <button className={buttonClasses} disabled={disabled} onClick={onClick}>
+    <button
+      className={`${buttonClasses} ${className}`}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
       <span className={dotClasses}></span>
     </button>

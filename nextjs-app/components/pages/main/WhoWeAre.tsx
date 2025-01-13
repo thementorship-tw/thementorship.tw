@@ -17,6 +17,8 @@ import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
 import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
 
 import SectionTitle from "./SectionTitle";
+import Button from "@/components/common/Button";
+import Link from "next/link";
 
 interface ITeamMember {
   avatar: StaticImageData;
@@ -127,7 +129,6 @@ const WhoWeAre: FC = () => {
           title="籌辦團隊"
           subTitle="Who We Are"
         />
-
         <div className="grid justify-center grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-4">
           {TEAM_MEMBER_DATA.map(
             ({ avatar, team, role, lastName, firstName }) => {
@@ -161,7 +162,7 @@ const WhoWeAre: FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center">
+                  <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center md:gap-2">
                     <p className="text-h4-title font-eb-garamond text-neutral-10">
                       {subTitle}
                     </p>
@@ -174,6 +175,18 @@ const WhoWeAre: FC = () => {
               );
             }
           )}
+        </div>
+
+        <div className="mt-9 flex justify-center">
+          <Link className="grow md:grow-0" href="/about/team">
+            <Button
+              className="w-full justify-center"
+              variant="filled"
+              color="blue"
+            >
+              認識更多籌辦團隊
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
