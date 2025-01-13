@@ -73,7 +73,7 @@ const socialLinks = [
 export default function Header() {
   return (
     <header className="fixed top-0 z-40 w-full bg-white border-b-[1px] border-b-transparent md:border-b-neutral-2">
-      <div className="container mx-auto px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
+      <div className="px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
         <Link href="/">
           <div className="bg-contain bg-no-repeat w-[153px] h-[30px] bg-[url('/images/header-mobile-logo.png')] md:w-[182px] md:h-[40px] md:bg-[url('/images/header-logo.png')]"></div>
         </Link>
