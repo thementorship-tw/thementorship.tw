@@ -50,6 +50,20 @@ export default {
         ...fontSize,
         ...typographyFromToken,
       },
+      animation: {
+        "marquee-first-layer": "marquee1 180s linear infinite",
+        "marquee-second-layer": "marquee2 180s linear infinite",
+      },
+      keyframes: {
+        marquee1: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-200%)" },
+        },
+      },
     },
   },
   future: {
