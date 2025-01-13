@@ -130,7 +130,7 @@ const WhoWeAre: FC = () => {
               const roleText = roleDisplayTextMap[role];
 
               return (
-                <div key={lastName} className="flex flex-col gap-2">
+                <div key={lastName} className="flex flex-col gap-2 md:gap-4">
                   <div className="p-4 border-2 border-yellow-6 rounded-3">
                     <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
                       <Image
