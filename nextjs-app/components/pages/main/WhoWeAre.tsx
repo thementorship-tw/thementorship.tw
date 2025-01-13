@@ -1,10 +1,6 @@
-"use client";
-
 import type { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Team, Role } from "@/types";
-import Viewport from "@/constants/viewport";
-import { useWindowSize } from "@/hooks/useWindowSize";
 import { roleDisplayTextMap } from "@/constants/roleDisplayTextMap";
 
 import AvatarForAlice from "@/public/images/member-avatar/Alice.jpg";
@@ -119,8 +115,6 @@ const teamDisplayTextMap: Record<Team, { name: string; fullName: string }> = {
 };
 
 const WhoWeAre: FC = () => {
-  const { width: windowWidth } = useWindowSize();
-
   return (
     <section className="bg-yellow-1 px-5 py-[72px] md:px-10 md:py-[120px]">
       <div className="mx-auto container">
@@ -135,40 +129,33 @@ const WhoWeAre: FC = () => {
               const teamText = teamDisplayTextMap[team];
               const roleText = roleDisplayTextMap[role];
 
-              const title =
-                !!windowWidth && windowWidth > Viewport.LG
-                  ? `${lastName} ${firstName}`
-                  : lastName;
-
-              const subTitle = (() => {
-                if (!windowWidth) return teamText.fullName;
-
-                if (windowWidth > Viewport.LG) {
-                  return `${teamText.fullName} ${roleText}`;
-                } else {
-                  if (team === Team.LEADERSHIP) {
-                    return teamText.name;
-                  }
-
-                  return `${teamText.name} ${roleText}`;
-                }
-              })();
-
               return (
                 <div key={lastName} className="flex flex-col gap-2">
                   <div className="p-4 border-2 border-yellow-6 rounded-3">
                     <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
-                      <Image src={avatar} alt={title} fill />
+                      <Image
+                        src={avatar}
+                        alt={`${lastName} ${firstName}`}
+                        fill
+                      />
                     </div>
                   </div>
 
                   <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center md:gap-2">
                     <p className="text-h4-title font-eb-garamond text-neutral-10">
-                      {subTitle}
+                      <span className="hidden lg:inline">
+                        {`${teamText.fullName} ${roleText}`}
+                      </span>
+                      <span className="lg:hidden">
+                        {team === Team.LEADERSHIP
+                          ? teamText.name
+                          : `${teamText.name} ${roleText}`}
+                      </span>
                     </p>
 
                     <p className="text-h3-title font-eb-garamond text-neutral-10">
-                      {title}
+                      <span className="hidden lg:inline">{`${lastName} ${firstName}`}</span>
+                      <span className="lg:hidden">{lastName}</span>
                     </p>
                   </div>
                 </div>
