@@ -1,13 +1,89 @@
 "use client";
 
 import type { FC } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Team, Role } from "@/types";
 import Viewport from "@/constants/viewport";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import { roleDisplayTextMap } from "@/constants/roleDisplayTextMap";
 
-import { TEAM_MEMBER_DATA } from "./constant/data";
-import SectionTitle from "../SectionTitle";
+import AvatarForAlice from "@/public/images/member-avatar/Alice.jpg";
+import AvatarForClaire from "@/public/images/member-avatar/Claire.jpg";
+import AvatarForHarper from "@/public/images/member-avatar/Harper.jpg";
+import AvatarForJoann from "@/public/images/member-avatar/Joann.jpg";
+import AvatarForJudy from "@/public/images/member-avatar/Judy.jpg";
+import AvatarForKyle from "@/public/images/member-avatar/Kyle.jpg";
+import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
+import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
+
+import SectionTitle from "./SectionTitle";
+
+interface ITeamMember {
+  avatar: StaticImageData;
+  team: Team;
+  role: Role;
+  lastName: string;
+  firstName: string;
+}
+
+const TEAM_MEMBER_DATA: ITeamMember[] = [
+  {
+    avatar: AvatarForJoann,
+    team: Team.BD,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Joann",
+    firstName: "Chen",
+  },
+  {
+    avatar: AvatarForMila,
+    team: Team.DATA,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Mila",
+    firstName: "Chang",
+  },
+  {
+    avatar: AvatarForJudy,
+    team: Team.ENGINEER,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Judy",
+    firstName: "Tsai",
+  },
+  {
+    avatar: AvatarForKyle,
+    team: Team.ENGINEER,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Kyle",
+    firstName: "Mo",
+  },
+  {
+    avatar: AvatarForAlice,
+    team: Team.MKT,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Alice",
+    firstName: "Chiu",
+  },
+  {
+    avatar: AvatarForClaire,
+    team: Team.PM,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Claire",
+    firstName: "Hsieh",
+  },
+  {
+    avatar: AvatarForPatty,
+    team: Team.UIUX,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Patty",
+    firstName: "Hsu",
+  },
+  {
+    avatar: AvatarForHarper,
+    team: Team.LEADERSHIP,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Harper",
+    firstName: "Liu",
+  },
+];
 
 const teamDisplayTextMap: Record<Team, { name: string; fullName: string }> = {
   [Team.BD]: {
@@ -38,13 +114,6 @@ const teamDisplayTextMap: Record<Team, { name: string; fullName: string }> = {
     name: "UIUX",
     fullName: "User Interface & Experience",
   },
-};
-
-const roleDisplayTextMap: Record<Role, string> = {
-  [Role.CAPTAIN]: "船長",
-  [Role.HARBOUR_PILOT]: "引水人",
-  [Role.NAVIGATOR]: "航海士",
-  [Role.SAILOR]: "水手",
 };
 
 const WhoWeAre: FC = () => {

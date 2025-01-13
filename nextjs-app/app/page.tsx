@@ -3,7 +3,7 @@ import { METADATA } from "@/constants/metadata";
 import StayUpdated from "@/components/pages/main/StayUpdated";
 import Partners from "@/components/pages/main/Partners";
 import WhatWeBring from "@/components/pages/main/WhatWeBring";
-import WhoWeAre from "@/components/pages/main/WhoWeAre/WhoWeAre";
+import WhoWeAre from "@/components/pages/main/WhoWeAre";
 
 export const metadata: Metadata = {
   title: `首頁 - ${METADATA.projectName}`,
