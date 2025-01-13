@@ -21,13 +21,16 @@ export default {
     "./components/**/*.{ts,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-    },
     screens: {
       md: { min: "600px" },
       lg: { min: "840px" },
       xl: { min: "1280px" },
+    },
+    container: {
+      center: true,
+      screens: {
+        xl: "1440px",
+      },
     },
     fontFamily: {
       "eb-garamond": ["var(--font-eb-garamond)"],
