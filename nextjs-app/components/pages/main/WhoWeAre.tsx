@@ -12,9 +12,9 @@ import AvatarForKyle from "@/public/images/member-avatar/Kyle.jpg";
 import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
 import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
 
-import Button from "@/components/common/Button";
 import SectionTitle from "./SectionTitle";
-import type { FC } from "react";
+import Button from "@/components/common/Button/Button";
+import Link from "next/link";
 
 interface ITeamMember {
   avatar: StaticImageData;
