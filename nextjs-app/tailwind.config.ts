@@ -56,6 +56,8 @@ export default {
       animation: {
         "marquee-first-layer": "marquee1 180s linear infinite",
         "marquee-second-layer": "marquee2 180s linear infinite",
+        "marquee-first-layer-reverse": "marquee1-reverse 180s linear infinite",
+        "marquee-second-layer-reverse": "marquee2-reverse 180s linear infinite",
       },
       keyframes: {
         marquee1: {
@@ -65,6 +67,14 @@ export default {
         marquee2: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-200%)" },
+        },
+        "marquee1-reverse": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "marquee2-reverse": {
+          "0%": { transform: "translateX(-200%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },

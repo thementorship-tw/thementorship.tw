@@ -1,25 +1,10 @@
 import { ReviewType } from "@/components/common/ReviewCard";
 
-export const reviewList: ReviewType[] = [
+export const REVIEW_LIST: ReviewType[] = [
   {
-    imageSrc: "",
+    imageSrc: "/images/member-avatar/Patty.jpg",
     name: "Patty",
-    team: "UIUX組",
-    role: "航海士",
-    review: `Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industrys standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.`,
-  },
-  {
-    imageSrc: "",
-    name: "Alice",
-    team: "PM組",
+    team: "User Interface & Experience",
     role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
@@ -32,10 +17,21 @@ export const reviewList: ReviewType[] = [
         of Lorem Ipsum.`,
   },
   {
-    imageSrc: "",
-    name: "Jalex",
-    team: "Engineering組",
-    role: "船長",
+    imageSrc: "/images/member-avatar/Alice.jpg",
+    name: "Alice",
+    team: "Marketing",
+    role: "引水人",
+    review: `Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industrys standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries.`,
+  },
+  {
+    imageSrc: "/images/member-avatar/Claire.jpg",
+    name: "Claire",
+    team: "Product Management",
+    role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -47,40 +43,29 @@ export const reviewList: ReviewType[] = [
         of Lorem Ipsum.`,
   },
   {
-    imageSrc: "",
-    name: "Martin",
-    team: "Engineering組",
-    role: "航海士",
+    imageSrc: "/images/member-avatar/Harper.jpg",
+    name: "Harper",
+    team: "領導力小學堂",
+    role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.`,
   },
   {
-    imageSrc: "",
+    imageSrc: "/images/member-avatar/Kyle.jpg",
     name: "Kyle",
-    team: "Engineering組",
-    role: "水手",
+    team: "Engineering",
+    role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.`,
+        since.`,
   },
   {
-    imageSrc: "",
+    imageSrc: "/images/member-avatar/Judy.jpg",
     name: "Judy",
-    team: "Engineering組",
-    role: "水手",
+    team: "Engineering",
+    role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -92,18 +77,13 @@ export const reviewList: ReviewType[] = [
         of Lorem Ipsum.`,
   },
   {
-    imageSrc: "",
-    name: "Lizzy",
-    team: "Engineering組",
-    role: "水手",
+    imageSrc: "/images/member-avatar/Joann.jpg",
+    name: "Joann Chen",
+    team: "Business Development",
+    role: "引水人",
     review: `Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.`,
+        scrambled it to make a type specimen book.`,
   },
 ];

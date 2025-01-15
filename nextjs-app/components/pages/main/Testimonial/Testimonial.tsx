@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { reviewList } from "./review-list";
 import ReviewCard, { ReviewType } from "@/components/common/ReviewCard";
+import MarqueeContainer from "@/components/common/MarqueeContainer";
+import { REVIEW_LIST } from "@/constants/review-list";
+import { splitArray, expandArray } from "./utils";
 
 const Testimonial = () => {
+  const { firstRow, secondRow } = splitArray(REVIEW_LIST);
+  const repeatedFirstRow = expandArray(firstRow);
+  const repeatedSecondRow = expandArray(secondRow);
   return (
     <section className="py-[72px] md:py-[120px]">
       <div className="mx-auto text-center space-y-11">
@@ -22,10 +27,10 @@ const Testimonial = () => {
           />
         </div>
         <div className="space-y-4 md:space-y-7">
-          <div className="flex gap-4 md:gap-7 overflow-hidden">
-            {reviewList.map((review: ReviewType) => (
+          <MarqueeContainer>
+            {repeatedFirstRow.map((review: ReviewType, index) => (
               <ReviewCard
-                key={`${review.name}-${review.team}${review.role}`}
+                key={`${review.name}-${review.team}${review.role}-${index.toString()}`}
                 imageSrc={review.imageSrc}
                 name={review.name}
                 team={review.team}
@@ -33,11 +38,11 @@ const Testimonial = () => {
                 review={review.review}
               />
             ))}
-          </div>
-          <div className="flex gap-4 md:gap-7 overflow-hidden">
-            {reviewList.map((review: ReviewType) => (
+          </MarqueeContainer>
+          <MarqueeContainer direction="to-right">
+            {repeatedSecondRow.map((review: ReviewType, index) => (
               <ReviewCard
-                key={`${review.name}-${review.team}${review.role}`}
+                key={`${review.name}-${review.team}${review.role}-${index.toString()}}`}
                 imageSrc={review.imageSrc}
                 name={review.name}
                 team={review.team}
@@ -45,7 +50,7 @@ const Testimonial = () => {
                 review={review.review}
               />
             ))}
-          </div>
+          </MarqueeContainer>
         </div>
       </div>
     </section>
