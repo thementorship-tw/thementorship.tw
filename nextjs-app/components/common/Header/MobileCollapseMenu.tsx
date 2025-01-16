@@ -94,7 +94,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
   return createPortal(
     <div
       className={twMerge(
-        show ? "block" : "hidden",
+        show ? "motion-opacity-in-50" : "hidden",
         "fixed z-50 top-0 left-0 right-0 h-screen w-full bg-blue-7"
       )}
     >
