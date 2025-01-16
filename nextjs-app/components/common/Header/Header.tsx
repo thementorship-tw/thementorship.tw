@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import HamburgerButton from "./HamburgerButton";
 
-import Routes from "@/constants/routes";
+import { navigationMenu } from "./constant";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,
@@ -14,38 +14,6 @@ import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
 import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
 import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
 import { default as CompassIcon } from "@/public/images/compass.svg";
-
-const desktopNavigationMenu = [
-  {
-    href: Routes.HOME,
-    title: "About",
-    subtitle: "關於曼陀號",
-    subMenu: [
-      {
-        href: Routes.ABOUT.PHILOSOPHY,
-        title: "曼陀號理念",
-      },
-      {
-        href: Routes.ABOUT.OVERVIEW,
-        title: "計劃介紹",
-      },
-      {
-        href: Routes.ABOUT.TEAM,
-        title: "團隊介紹",
-      },
-    ],
-  },
-  {
-    href: Routes.PROGRAM_RULES,
-    title: "Program",
-    subtitle: "活動辦法",
-  },
-  {
-    href: Routes.FAQ,
-    title: "FAQ",
-    subtitle: "常見問題",
-  },
-];
 
 const socialLinks = [
   {
@@ -81,43 +49,39 @@ export default function Header() {
         <div className="flex">
           <nav className="hidden lg:block mr-8">
             <ul className="flex gap-8">
-              {desktopNavigationMenu.map(
-                ({ title, subtitle, href, subMenu }) => (
-                  <li key={title} className="relative group">
-                    <Link href={href}>
-                      <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
-                        <p className="text-h4-title font-eb-garamond">
-                          {title}
-                        </p>
-                        <p className="text-subtitle-md">{subtitle}</p>
-                      </div>
+              {navigationMenu.map(({ title, subtitle, href, subMenu }) => (
+                <li key={title} className="relative group">
+                  <Link href={href}>
+                    <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
+                      <p className="text-h4-title font-eb-garamond">{title}</p>
+                      <p className="text-subtitle-md">{subtitle}</p>
+                    </div>
 
-                      <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
-                    </Link>
+                    <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
+                  </Link>
 
-                    {subMenu && (
-                      <ul className="absolute left-0 z-10 w-[164px] invisible group-hover:visible group-hover:block">
-                        {subMenu.map(({ title, href }) => (
-                          <li
-                            key={title}
-                            className="border-neutral-2 border-[1px] last:border-b-[1px] border-b-0"
-                          >
-                            <Link href={href}>
-                              <div className="flex justify-between px-7 py-5 bg-white hover:bg-yellow-1">
-                                <p className="text-subtitle-md text-neutral-10">
-                                  {title}
-                                </p>
+                  {subMenu && (
+                    <ul className="absolute left-0 z-10 w-[164px] invisible group-hover:visible group-hover:block">
+                      {subMenu.map(({ title, href }) => (
+                        <li
+                          key={title}
+                          className="border-neutral-2 border-[1px] last:border-b-[1px] border-b-0"
+                        >
+                          <Link href={href}>
+                            <div className="flex justify-between px-7 py-5 bg-white hover:bg-yellow-1">
+                              <p className="text-subtitle-md text-neutral-10">
+                                {title}
+                              </p>
 
-                                <CompassIcon className="w-6 h-6 text-neutral-10" />
-                              </div>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                )
-              )}
+                              <CompassIcon className="w-6 h-6 text-neutral-10" />
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
 
