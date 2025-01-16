@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
+import Benefits from "@/components/pages/program-rules/Benefits";
+import JoinUs from "@/components/pages/program-rules/JoinUs";
 
 export const metadata: Metadata = {
   title: "活動辦法",
@@ -11,6 +13,8 @@ export default async function ProgramRulesPage() {
     <div>
       <Breadcrumb items={["HOME", "活動辦法"]} />
       <MarqueeTitle zhTitle="活動辦法" enTitle="The MentorShip Program" />
+      <Benefits />
+      <JoinUs />
     </div>
   );
 }

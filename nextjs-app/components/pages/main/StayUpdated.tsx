@@ -49,7 +49,7 @@ const socialLinks = [
 
 const StayUpdated = () => {
   return (
-    <section className="pt-[72px] pb-[90px] md:py-[120px]">
+    <section className="container pt-[72px] pb-[90px] md:py-[120px]">
       <div className="mx-auto text-center">
         <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2">
           關注第一手消息
