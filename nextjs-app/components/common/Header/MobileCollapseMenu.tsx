@@ -1,6 +1,7 @@
 "use client";
 
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { default as CloseIcon } from "@/public/images/close-icon.svg";
@@ -72,12 +73,25 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
 }) => {
   const router = useRouter();
 
+  // Prevent scrolling when mobile collapse menu is open
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [show]);
+
   const handleNavigation = (href: string) => {
     router.push(href);
     onClose();
   };
 
-  return (
+  return createPortal(
     <div
       className={twMerge(
         show ? "block" : "hidden",
@@ -136,7 +150,8 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

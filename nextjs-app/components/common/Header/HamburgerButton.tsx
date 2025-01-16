@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+import { useState } from "react";
+import dynamic from "next/dynamic";
 import { default as ListIcon } from "@/public/images/list.svg";
 
-import MobileCollapseMenu from "./MobileCollapseMenu";
+const MobileCollapseMenu = dynamic(() => import("./MobileCollapseMenu"), {
+  ssr: false,
+});
 
 export default function HamburgerButton() {
   const [showMobileCollapseMenu, setShowMobileCollapseMenu] = useState(false);
@@ -17,19 +19,6 @@ export default function HamburgerButton() {
     setShowMobileCollapseMenu(false);
   };
 
-  // Prevent scrolling when mobile collapse menu is open
-  useEffect(() => {
-    if (showMobileCollapseMenu) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, [showMobileCollapseMenu]);
-
   return (
     <>
       <ListIcon
@@ -37,13 +26,10 @@ export default function HamburgerButton() {
         onClick={handleOpenMobileCollapseMenu}
       />
 
-      {createPortal(
-        <MobileCollapseMenu
-          show={showMobileCollapseMenu}
-          onClose={handleCloseMobileCollapseMenu}
-        />,
-        document.body
-      )}
+      <MobileCollapseMenu
+        show={showMobileCollapseMenu}
+        onClose={handleCloseMobileCollapseMenu}
+      />
     </>
   );
 }
