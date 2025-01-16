@@ -1,9 +1,15 @@
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
+import { FC } from "react";
 
-const RegisterSailorButton = () => (
-  <Button variant="outline" color="blue" paddingSize="with-icon">
+const RegisterSailorButton: FC<{ className: string }> = ({ className }) => (
+  <Button
+    variant="outline"
+    color="blue"
+    paddingSize="with-icon"
+    className={className}
+  >
     <Link
       href="/"
       className="w-[172px] flex justify-start items-center space-x-3"

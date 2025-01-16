@@ -1,4 +1,6 @@
+import { cva } from "class-variance-authority";
 import { FC, PropsWithChildren } from "react";
+import { twMerge } from "tailwind-merge";
 
 export type ButtonVariant = "filled" | "outline";
 
@@ -24,52 +26,56 @@ interface ICallToActionLinkProps {
   onClick?: () => void;
 }
 
-const getClassNames = (
-  variant: ButtonVariant,
-  color: ButtonColor,
-  paddingSize: ButtonPaddingSize
-) => {
-  const baseButtonClasses =
-    "inline-flex items-center gap-4 rounded-pill text-2";
-
-  const baseDotClasses = "w-[14px] h-[14px] border-[5px] rounded-circle";
-
-  const buttonPaddingSizeClasses: Record<ButtonPaddingSize, string> = {
-    default: "p-5",
-    "with-icon": "py-3 pl-4 pr-5",
-  };
-
-  const buttonVariantClasses = {
-    filled: {
-      blue: "bg-blue-8 text-white",
-      golden: "bg-yellow-6 text-white",
+const buttonClasses = cva(
+  "inline-flex items-center gap-4 rounded-pill text-2",
+  {
+    variants: {
+      variant: {
+        filled: "text-white",
+        outline: "font-semibold bg-white border",
+      },
+      color: {
+        blue: "",
+        golden: "",
+      },
+      paddingSize: {
+        default: "p-5",
+        "with-icon": "py-3 pl-4 pr-5",
+      },
     },
-    outline: {
-      blue: "bg-white text-blue-8 font-semibold border border-blue-8",
-      golden: "bg-white text-yellow-6 font-semibold border border-yellow-6",
-    },
-  };
+    compoundVariants: [
+      { variant: "filled", color: "blue", class: "bg-blue-8" },
+      { variant: "filled", color: "golden", class: "bg-yellow-6" },
+      {
+        variant: "outline",
+        color: "blue",
+        class: "text-blue-8 border-blue-8",
+      },
+      {
+        variant: "outline",
+        color: "golden",
+        class: "text-yellow-6 border-yellow-6",
+      },
+    ],
+  }
+);
 
-  const dotVariantClasses = {
-    filled: {
-      blue: "border-white",
-      golden: "border-white",
+const dotClasses = cva("size-[14px] border-[5px] rounded-circle", {
+  variants: {
+    variant: {
+      filled: "border-white",
+      outline: "",
     },
-    outline: {
-      blue: "border-blue-8",
-      golden: "border-yellow-6",
+    color: {
+      blue: "",
+      golden: "",
     },
-  };
-
-  const buttonClasses = buttonVariantClasses[variant][color] || "";
-  const dotClasses = dotVariantClasses[variant][color] || "";
-
-  return {
-    buttonClasses:
-      `${baseButtonClasses} ${buttonPaddingSizeClasses[paddingSize]} ${buttonClasses}`.trim(),
-    dotClasses: `${baseDotClasses} ${dotClasses}`.trim(),
-  };
-};
+  },
+  compoundVariants: [
+    { variant: "outline", color: "blue", class: "border-blue-8" },
+    { variant: "outline", color: "golden", class: "border-yellow-6" },
+  ],
+});
 
 const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
   className = "",
@@ -80,20 +86,17 @@ const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
   onClick,
   children,
 }) => {
-  const { buttonClasses, dotClasses } = getClassNames(
-    variant,
-    color,
-    paddingSize
-  );
-
   return (
     <button
-      className={`${buttonClasses} ${className}`}
+      className={twMerge(
+        buttonClasses({ variant, color, paddingSize }),
+        className
+      )}
       disabled={disabled}
       onClick={onClick}
     >
       {children}
-      <span className={dotClasses}></span>
+      <span className={dotClasses({ variant, color })}></span>
     </button>
   );
 };

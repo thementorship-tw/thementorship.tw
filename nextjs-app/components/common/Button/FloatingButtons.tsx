@@ -1,15 +1,35 @@
 import RegisterSailorButton from "./RegisterSailorButton";
 import RegisterNavigatorButton from "./RegisterNavigatorButton";
-import "./FloatingButtons.css";
+import { twMerge } from "tailwind-merge";
 
 const FloatingButtons = () => {
   return (
     <>
-      <div className="btn-hover-animation-sailor fixed bottom-[144px] -right-[160px] transition-all duration-300 inline-flex flex-col space-y-3 z-50">
-        <RegisterSailorButton />
+      <div
+        className={twMerge(
+          "fixed bottom-[144px] -right-[160px] inline-flex flex-col space-y-3 z-50",
+          "hover:right-0 transition-all duration-300"
+        )}
+      >
+        <RegisterSailorButton
+          className={twMerge(
+            "hover:bg-blue-8 hover:border-neutral-8",
+            "[&>*]:hover:text-white [&>span]:hover:border-white"
+          )}
+        />
       </div>
-      <div className="btn-hover-animation-navigator fixed bottom-[72px] -right-[160px] transition-all duration-300 inline-flex flex-col space-y-3 z-50">
-        <RegisterNavigatorButton />
+      <div
+        className={twMerge(
+          "fixed bottom-[72px] -right-[160px] inline-flex flex-col space-y-3 z-50",
+          "hover:right-0 transition-all duration-300"
+        )}
+      >
+        <RegisterNavigatorButton
+          className={twMerge(
+            "hover:bg-yellow-6 hover:border-neutral-8",
+            "[&>*]:hover:text-white [&>span]:hover:border-white"
+          )}
+        />
       </div>
     </>
   );
