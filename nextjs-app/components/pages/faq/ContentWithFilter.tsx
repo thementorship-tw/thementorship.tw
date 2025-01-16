@@ -1,16 +1,22 @@
 "use client";
 
 import TagFilter from "@/components/common/TagFilter/TagFilter";
-import { FILTER_OPTIONS_FOR_FAQ } from "@/constants/filter-options";
+import { FAQ_FILTER_OPTIONS } from "@/constants/filter-options";
+import { useState } from "react";
 
 const ContentWithFilter = () => {
+  const [selectedFilter, setSelectedFilter] = useState("all");
+
   const handleSelect = (selectedOption: string) => {
+    setSelectedFilter(selectedOption);
     console.log("Selected: ", selectedOption);
   };
+
   return (
     <div className="container space-y-10 px-5 md:px-10">
       <TagFilter
-        filterOptions={FILTER_OPTIONS_FOR_FAQ}
+        filterOptions={FAQ_FILTER_OPTIONS}
+        selectedFilter={selectedFilter}
         onSelect={handleSelect}
       />
       <div>{/** Add content here */}</div>

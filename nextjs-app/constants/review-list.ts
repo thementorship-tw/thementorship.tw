@@ -1,6 +1,6 @@
-import { ReviewType } from "@/components/common/ReviewCard";
+import { IReview } from "@/types/review";
 
-export const REVIEW_LIST: ReviewType[] = [
+export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/member-avatar/Patty.jpg",
     name: "Patty",
