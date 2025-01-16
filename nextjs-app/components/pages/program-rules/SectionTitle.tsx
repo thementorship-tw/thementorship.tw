@@ -1,16 +1,64 @@
 import type { FC } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { twMerge } from "tailwind-merge";
 
-interface ISectionTitleProps {
+const sectionTitleVariants = {
+  container: cva("text-center flex flex-col", {
+    variants: {
+      variant: {
+        light: "",
+        dark: "",
+      },
+    },
+    defaultVariants: {
+      variant: "light",
+    },
+  }),
+  serial: cva("text-subtitle-md mb-1", {
+    variants: {
+      variant: {
+        light: "text-yellow-6",
+        dark: "text-white",
+      },
+    },
+  }),
+  title: cva("text-h3 md:text-h2 mb-6", {
+    variants: {
+      variant: {
+        light: "text-blue-8",
+        dark: "text-white",
+      },
+    },
+  }),
+  description: cva("text-body-md whitespace-pre-line", {
+    variants: {
+      variant: {
+        light: "text-neutral-10",
+        dark: "text-white",
+      },
+    },
+  }),
+  note: cva("text-body-sm mt-3 whitespace-pre-line", {
+    variants: {
+      variant: {
+        light: "text-neutral-10",
+        dark: "text-white",
+      },
+    },
+  }),
+};
+
+interface ISectionTitleProps
+  extends VariantProps<typeof sectionTitleVariants.container> {
   className?: string;
   serial: string;
   title: string;
   description?: string;
   note?: string;
-  variant?: "light" | "dark";
 }
 
 const SectionTitle: FC<ISectionTitleProps> = ({
-  className = "",
+  className,
   title,
   serial,
   description,
@@ -18,33 +66,17 @@ const SectionTitle: FC<ISectionTitleProps> = ({
   variant = "light",
 }) => {
   return (
-    <div className={className}>
-      <div className="text-center flex flex-col">
-        <p
-          className={`text-subtitle-md ${variant === "dark" ? "text-white" : "text-yellow-6"} mb-1`}
-        >
-          {serial}
-        </p>
-        <h2
-          className={`text-h3 md:text-h2 ${
-            variant === "dark" ? "text-white" : "text-blue-8"
-          } mb-6`}
-        >
-          {title}
-        </h2>
+    <div className={twMerge(className)}>
+      <div className={sectionTitleVariants.container({ variant })}>
+        <p className={sectionTitleVariants.serial({ variant })}>{serial}</p>
+        <h2 className={sectionTitleVariants.title({ variant })}>{title}</h2>
         {description && (
-          <p
-            className={`text-body-md whitespace-pre-line ${variant === "dark" ? "text-white" : "text-neutral-10"}`}
-          >
+          <p className={sectionTitleVariants.description({ variant })}>
             {description}
           </p>
         )}
         {note && (
-          <p
-            className={`text-body-sm mt-3 whitespace-pre-line ${variant === "dark" ? "text-white" : "text-neutral-10"}`}
-          >
-            {note}
-          </p>
+          <p className={sectionTitleVariants.note({ variant })}>{note}</p>
         )}
       </div>
     </div>
