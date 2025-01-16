@@ -1,8 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 
-type ButtonVariant = "filled" | "outline";
+export type ButtonVariant = "filled" | "outline";
 
-type ButtonColor = "blue" | "golden";
+export type ButtonColor = "blue" | "golden";
 
 interface ICallToActionLinkProps {
   className?: string;
