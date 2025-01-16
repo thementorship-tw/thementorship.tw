@@ -3,6 +3,7 @@ import MarqueeTitle from "@/components/common/MarqueeTitle";
 import Benefits from "@/components/pages/program-rules/Benefits";
 import JoinUs from "@/components/pages/program-rules/JoinUs";
 import GroupsIntro from "@/components/pages/program-rules/GroupsIntro";
+import ProgramFees from "@/components/pages/program-rules/ProgramFees";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default async function ProgramRulesPage() {
       <Benefits />
       <JoinUs />
       <GroupsIntro />
+      <ProgramFees />
     </div>
   );
 }
