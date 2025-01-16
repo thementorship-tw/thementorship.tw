@@ -1,10 +1,10 @@
 import { PropsWithChildren } from "react";
 
-interface IMarqueeContainerProps extends PropsWithChildren {
+interface IMarqueeContainerProps {
   direction?: "to-left" | "to-right";
 }
 
-const MarqueeContainer: React.FC<IMarqueeContainerProps> = ({
+const MarqueeContainer: React.FC<PropsWithChildren<IMarqueeContainerProps>> = ({
   children,
   direction = "to-left",
 }) => {

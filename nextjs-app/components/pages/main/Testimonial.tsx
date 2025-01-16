@@ -2,7 +2,7 @@ import Image from "next/image";
 import ReviewCard, { ReviewType } from "@/components/common/ReviewCard";
 import MarqueeContainer from "@/components/common/MarqueeContainer";
 import { REVIEW_LIST } from "@/constants/review-list";
-import { splitArray, expandArray } from "./utils";
+import { splitArray, expandArray } from "@/utils/marquee";
 
 const Testimonial = () => {
   const { firstRow, secondRow } = splitArray(REVIEW_LIST);

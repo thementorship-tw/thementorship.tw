@@ -2,7 +2,7 @@ export const splitArray = <T>(
   array: T[]
 ): { firstRow: T[]; secondRow: T[] } => {
   const mid = Math.ceil(array.length / 2);
-  const firstRow = array.slice(1, mid);
+  const firstRow = array.slice(0, mid);
   const secondRow = array.slice(mid);
 
   return { firstRow, secondRow };

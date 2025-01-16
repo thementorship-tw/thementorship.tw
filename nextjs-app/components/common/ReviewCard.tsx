@@ -23,7 +23,7 @@ const ReviewCard: FC<ReviewType> = ({ imageSrc, name, team, role, review }) => (
       </div>
       <div className="flex flex-col items-start space-y-1">
         <div className="text-h6 text-neutral-10 gap-x-3">{name}</div>
-        <div className="text-body-md text-neutral-6">{`${team} ${role}`}</div>
+        <div className="text-left text-body-md text-neutral-6">{`${team} ${role}`}</div>
         <div className="flex">
           <ReviewStar />
           <ReviewStar />
