@@ -12,7 +12,7 @@ export const groupsInfo = [
   {
     zhGroupName: "技術開發",
     enGroupName: "Engineering",
-    imageUrl: "/images/group-icon/mkt.png",
+    imageUrl: "/images/group-icon/engineering.png",
   },
   {
     zhGroupName: "行銷",
