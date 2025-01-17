@@ -52,7 +52,7 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-5">
         <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2 md:mb-3">
           {zhTitle}
         </h2>
