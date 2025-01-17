@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
 import Benefits from "@/components/pages/program-rules/Benefits";
 import JoinUs from "@/components/pages/program-rules/JoinUs";
+import GroupsIntro from "@/components/pages/program-rules/GroupsIntro";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default async function ProgramRulesPage() {
       <MarqueeTitle zhTitle="活動辦法" enTitle="The MentorShip Program" />
       <Benefits />
       <JoinUs />
+      <GroupsIntro />
     </div>
   );
 }
