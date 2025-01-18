@@ -1,8 +1,9 @@
 import Image from "next/image";
-import ReviewCard, { ReviewType } from "@/components/common/ReviewCard";
+import ReviewCard from "@/components/common/ReviewCard";
 import MarqueeContainer from "@/components/common/MarqueeContainer";
 import { REVIEW_LIST } from "@/constants/review-list";
 import { splitArray, expandArray } from "@/utils/marquee";
+import { IReview } from "@/types/review";
 
 const Testimonial = () => {
   const { firstRow, secondRow } = splitArray(REVIEW_LIST);
@@ -28,7 +29,7 @@ const Testimonial = () => {
         </div>
         <div className="space-y-4 md:space-y-7">
           <MarqueeContainer>
-            {repeatedFirstRow.map((review: ReviewType, index) => (
+            {repeatedFirstRow.map((review: IReview, index) => (
               <ReviewCard
                 key={`${review.name}-${review.team}${review.role}-${index.toString()}`}
                 imageSrc={review.imageSrc}
@@ -40,7 +41,7 @@ const Testimonial = () => {
             ))}
           </MarqueeContainer>
           <MarqueeContainer direction="to-right">
-            {repeatedSecondRow.map((review: ReviewType, index) => (
+            {repeatedSecondRow.map((review: IReview, index) => (
               <ReviewCard
                 key={`${review.name}-${review.team}${review.role}-${index.toString()}}`}
                 imageSrc={review.imageSrc}
