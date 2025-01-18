@@ -1,7 +1,7 @@
-import Button from "@/components/common/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import Button from "@/components/common/Button";
 
 interface IGoalCardProps {
   imageSrc: string;

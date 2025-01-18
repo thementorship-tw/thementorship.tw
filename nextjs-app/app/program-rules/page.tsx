@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
 import Benefits from "@/components/pages/program-rules/Benefits";
 import JoinUs from "@/components/pages/program-rules/JoinUs";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "活動辦法",

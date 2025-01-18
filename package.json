@@ -41,7 +41,8 @@
     "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "prettier": "3.4.2",
-    "tailwindcss-motion": "^1.0.0"
+    "tailwindcss-motion": "^1.0.0",
+    "eslint-plugin-import": "^2.31.0"
   },
   "husky": {
     "hooks": {
