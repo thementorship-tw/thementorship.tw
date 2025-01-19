@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Routes from "@/constants/routes";
+import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,
@@ -13,38 +13,7 @@ import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
 import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
 import { default as CompassIcon } from "@/public/images/compass.svg";
 import HamburgerButton from "./HamburgerButton";
-
-const desktopNavigationMenu = [
-  {
-    href: Routes.HOME,
-    title: "About",
-    subtitle: "關於曼陀號",
-    subMenu: [
-      {
-        href: Routes.ABOUT.PHILOSOPHY,
-        title: "曼陀號理念",
-      },
-      {
-        href: Routes.ABOUT.OVERVIEW,
-        title: "計劃介紹",
-      },
-      {
-        href: Routes.ABOUT.TEAM,
-        title: "團隊介紹",
-      },
-    ],
-  },
-  {
-    href: Routes.PROGRAM_RULES,
-    title: "Program",
-    subtitle: "活動辦法",
-  },
-  {
-    href: Routes.FAQ,
-    title: "FAQ",
-    subtitle: "常見問題",
-  },
-];
+import type { FC } from "react";
 
 const socialLinks = [
   {
@@ -72,7 +41,7 @@ const socialLinks = [
 export default function Header() {
   return (
     <header className="fixed top-0 z-40 w-full bg-white border-b-[1px] border-b-transparent md:border-b-neutral-2">
-      <div className="container mx-auto px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
+      <div className="px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
         <Link href="/">
           <div className="bg-contain bg-no-repeat w-[153px] h-[30px] bg-[url('/images/header-mobile-logo.png')] md:w-[182px] md:h-[40px] md:bg-[url('/images/header-logo.png')]"></div>
         </Link>
@@ -80,21 +49,31 @@ export default function Header() {
         <div className="flex">
           <nav className="hidden lg:block mr-8">
             <ul className="flex gap-8">
-              {desktopNavigationMenu.map(
-                ({ title, subtitle, href, subMenu }) => (
+              {navigationMenu.map(({ title, subtitle, subMenu, href }) => {
+                const hasSubMenu = !!subMenu && subMenu.length > 0;
+
+                const MenuItem: FC = () => (
+                  <>
+                    <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
+                      <p className="text-h4-title font-eb-garamond">{title}</p>
+                      <p className="text-subtitle-md">{subtitle}</p>
+                    </div>
+
+                    <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
+                  </>
+                );
+
+                return (
                   <li key={title} className="relative group">
-                    <Link href={href}>
-                      <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
-                        <p className="text-h4-title font-eb-garamond">
-                          {title}
-                        </p>
-                        <p className="text-subtitle-md">{subtitle}</p>
-                      </div>
+                    {href ? (
+                      <Link href={href}>
+                        <MenuItem />
+                      </Link>
+                    ) : (
+                      <MenuItem />
+                    )}
 
-                      <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
-                    </Link>
-
-                    {subMenu && (
+                    {hasSubMenu && (
                       <ul className="absolute left-0 z-10 w-[164px] invisible group-hover:visible group-hover:block">
                         {subMenu.map(({ title, href }) => (
                           <li
@@ -115,8 +94,8 @@ export default function Header() {
                       </ul>
                     )}
                   </li>
-                )
-              )}
+                );
+              })}
             </ul>
           </nav>
 
