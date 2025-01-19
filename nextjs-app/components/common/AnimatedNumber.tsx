@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState, FC } from "react";
+import { FC, useEffect, useState, useRef } from "react";
 import { twMerge } from "tailwind-merge";
+import { useInView } from "@/hooks/useInView";
 
 interface AnimatedNumberProps {
   value: number;
@@ -17,8 +18,12 @@ const AnimatedNumber: FC<AnimatedNumberProps> = ({
   className = "",
 }) => {
   const [current, setCurrent] = useState(startValue);
+  const elementRef = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(elementRef);
 
   useEffect(() => {
+    if (!isInView) return;
+
     let startTime: number;
     let animationFrameId: number;
 
@@ -42,9 +47,13 @@ const AnimatedNumber: FC<AnimatedNumberProps> = ({
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [value, startValue, duration]);
+  }, [value, startValue, duration, isInView]);
 
-  return <span className={twMerge(className)}>{current.toLocaleString()}</span>;
+  return (
+    <span ref={elementRef} className={twMerge(className)}>
+      {current.toLocaleString()}
+    </span>
+  );
 };
 
 export default AnimatedNumber;

@@ -62,7 +62,7 @@ const OurImpact: FC = () => {
             unit="天"
             imageSrc="/images/icon-ship.png"
             duration={1200}
-            startValue={0}
+            startValue={900}
           />
           <ImpactCard
             title="報名總人數"
@@ -70,7 +70,7 @@ const OurImpact: FC = () => {
             unit="人"
             imageSrc="/images/icon-writing.png"
             duration={1800}
-            startValue={500}
+            startValue={2000}
           />
           <ImpactCard
             title="活動參與總人次"
