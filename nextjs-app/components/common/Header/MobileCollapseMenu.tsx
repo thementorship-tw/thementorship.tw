@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 import { default as CloseIcon } from "@/public/images/close-icon.svg";
 import Link from "next/link";
 
-import { navigationMenu } from "./constant";
+import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_MEDIUM_URL,
   MENTORSHIP_INSTAGRAM_URL,

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import HamburgerButton from "./HamburgerButton";
 
-import { navigationMenu } from "./constant";
+import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,
