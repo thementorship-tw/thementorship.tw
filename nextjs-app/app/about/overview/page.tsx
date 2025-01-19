@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "計畫介紹",

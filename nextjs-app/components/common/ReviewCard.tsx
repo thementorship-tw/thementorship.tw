@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { default as ReviewStar } from "@/public/images/review-star.svg";
 import { FC } from "react";
 import { IReview } from "@/types/review";
+import { default as ReviewStar } from "@/public/images/review-star.svg";
 
 const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
   <div className="mx-[6px] md:mx-4 p-6 flex flex-col items-start space-y-3 border-2 border-neutral-2 rounded-3">
