@@ -53,7 +53,7 @@ const NavigationMenuItem: FC<{
 }> = ({ title, subtitle, onClick }) => {
   return (
     <div
-      className="px-7 py-5 text-white flex items-center gap-3 border-b-[1px] border-neutral-8"
+      className="cursor-pointer px-7 py-5 text-white flex items-center gap-3 border-b-[1px] border-neutral-8"
       onClick={onClick}
     >
       <p className="text-h4-title font-eb-garamond">{title}</p>
@@ -111,7 +111,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
         </div>
 
         <div className="grow">
-          {navigationMenu.map(({ title, subtitle, href, subMenu }) =>
+          {navigationMenu.map(({ title, subtitle, subMenu, href }) =>
             !!subMenu && subMenu.length > 0 ? (
               <Accordion
                 key={title}
@@ -126,7 +126,9 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
                 title={title}
                 subtitle={subtitle}
                 onClick={() => {
-                  handleNavigation(href);
+                  if (href) {
+                    handleNavigation(href);
+                  }
                 }}
               />
             )

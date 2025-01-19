@@ -1,8 +1,17 @@
 import Routes from "@/constants/routes";
 
-export const navigationMenu = [
+interface IMenuItem {
+  title: string;
+  subtitle: string;
+  href?: string;
+  subMenu?: {
+    title: string;
+    href: string;
+  }[];
+}
+
+export const navigationMenu: IMenuItem[] = [
   {
-    href: Routes.HOME,
     title: "About",
     subtitle: "關於曼陀號",
     subMenu: [
