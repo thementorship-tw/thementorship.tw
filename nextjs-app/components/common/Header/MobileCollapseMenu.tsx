@@ -101,7 +101,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
       <div className="flex flex-col h-full">
         <div className="p-7 flex justify-between">
           <Link href="/">
-            <div className="bg-contain bg-no-repeat w-[140px] h-[30px] bg-[url('/images/header-mobile-logo.png')]" />
+            <div className="bg-contain bg-no-repeat w-[140px] h-[30px] bg-[url('/images/mobile-collapse-menu-logo.png')]" />
           </Link>
 
           <CloseIcon
