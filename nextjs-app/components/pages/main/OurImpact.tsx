@@ -61,7 +61,7 @@ const OurImpact: FC = () => {
             value={997}
             unit="天"
             imageSrc="/images/icon-ship.png"
-            duration={1200}
+            duration={1000}
             startValue={900}
           />
           <ImpactCard
@@ -69,7 +69,7 @@ const OurImpact: FC = () => {
             value={2368}
             unit="人"
             imageSrc="/images/icon-writing.png"
-            duration={1800}
+            duration={1500}
             startValue={2000}
           />
           <ImpactCard
@@ -77,8 +77,8 @@ const OurImpact: FC = () => {
             value={2520}
             unit="人"
             imageSrc="/images/icon-sailor.png"
-            duration={1500}
-            startValue={1000}
+            duration={1200}
+            startValue={1500}
           />
         </div>
       </div>

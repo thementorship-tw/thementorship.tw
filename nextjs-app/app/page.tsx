@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   return (
     <div>
-      <div className="h-[100vh] bg-red-500" />
       <OurImpact />
       <WhatWeDo />
       <WhatWeBring />
