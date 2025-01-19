@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { type FC, useState } from "react";
 import dynamic from "next/dynamic";
 import { default as ListIcon } from "@/public/images/list.svg";
 
@@ -8,7 +8,7 @@ const MobileCollapseMenu = dynamic(() => import("./MobileCollapseMenu"), {
   ssr: false,
 });
 
-export default function HamburgerButton() {
+const HamburgerButton: FC = () => {
   const [showMobileCollapseMenu, setShowMobileCollapseMenu] = useState(false);
 
   const handleOpenMobileCollapseMenu = () => {
@@ -32,4 +32,6 @@ export default function HamburgerButton() {
       />
     </>
   );
-}
+};
+
+export default HamburgerButton;
