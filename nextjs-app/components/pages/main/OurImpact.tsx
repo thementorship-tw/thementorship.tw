@@ -1,7 +1,7 @@
-import type { FC } from "react";
+import Image from "next/image";
 import AnimatedNumber from "@/components/common/AnimatedNumber";
 import SectionTitle from "./SectionTitle";
-import Image from "next/image";
+import type { FC } from "react";
 
 interface IImpactCardProps {
   title: string;
