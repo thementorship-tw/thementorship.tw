@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
-import { FAQ_FILTER_OPTIONS } from "@/constants/filter-options";
+import { FAQ_FILTER_OPTIONS } from "@/constants/faq-page";
 
 const ContentWithFilter = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
