@@ -1,14 +1,15 @@
-import Link from "next/link";
-import Button from "./Button";
-import Image from "next/image";
 import { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
+import Button from "./Button";
 
 const RegisterNavigatorButton: FC<{ className: string }> = ({ className }) => (
   <Button
     variant="outline"
     color="golden"
     paddingSize="with-icon"
-    className={className}
+    className={twMerge(className)}
   >
     <Link
       href="/"
