@@ -1,9 +1,9 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { EB_Garamond } from "next/font/google";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import { METADATA } from "@/constants/metadata";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {

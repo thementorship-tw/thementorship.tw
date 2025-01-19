@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import HamburgerButton from "./HamburgerButton";
-
 import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
@@ -14,6 +12,7 @@ import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
 import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
 import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
 import { default as CompassIcon } from "@/public/images/compass.svg";
+import HamburgerButton from "./HamburgerButton";
 import type { FC } from "react";
 
 const socialLinks = [

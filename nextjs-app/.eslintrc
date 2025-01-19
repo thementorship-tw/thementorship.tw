@@ -8,6 +8,7 @@
     "next/typescript",
     "prettier",
   ],
+  "plugins": ["import"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "projectService": true,
@@ -15,6 +16,28 @@
   "rules": {
     "require-await": "off",
     "@typescript-eslint/require-await": "off",
-    "@typescript-eslint/no-redundant-type-constituents": "off"
+    "@typescript-eslint/no-redundant-type-constituents": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"],
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "distinctGroup": true,
+      }
+    ]
   },
 }

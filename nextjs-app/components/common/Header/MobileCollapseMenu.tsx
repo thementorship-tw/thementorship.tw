@@ -4,8 +4,8 @@ import { useEffect, type FC } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
-import { default as CloseIcon } from "@/public/images/close-icon.svg";
 import Link from "next/link";
+import { default as CloseIcon } from "@/public/images/close-icon.svg";
 
 import { navigationMenu } from "@/constants/header";
 import {

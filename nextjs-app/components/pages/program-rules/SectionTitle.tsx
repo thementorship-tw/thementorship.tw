@@ -1,6 +1,6 @@
-import type { FC } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
+import type { FC } from "react";
 
 const sectionTitleVariants = {
   container: cva("text-center flex flex-col", {
