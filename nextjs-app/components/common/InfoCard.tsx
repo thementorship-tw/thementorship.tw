@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { cva, type VariantProps } from "class-variance-authority";
-import Button, { ButtonVariant, ButtonColor } from "@/components/common/Button";
+import Button, {
+  ButtonVariant,
+  ButtonColor,
+} from "@/components/common/Button/Button";
 
 const infoCardVariants = cva(
   "bg-white rounded-3 relative h-full flex flex-col",
