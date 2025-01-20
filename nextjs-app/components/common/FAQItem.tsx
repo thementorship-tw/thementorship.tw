@@ -20,7 +20,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className={twMerge(isAnswerExpanded && "gap-3", "flex flex-col")}>
       <div className="flex items-end">
         <div className="basis-8 p-2 bg-blue-8 rounded-3">
           <QuestionIcon className="w-7 h-7 text-white" />

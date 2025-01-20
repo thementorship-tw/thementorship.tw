@@ -1,6 +1,9 @@
-import { IFilterOption } from "@/types/filter-option";
+export type FAQType = "registration" | "monthlyMeeting" | "lecture" | "payment";
 
-export const FAQ_FILTER_OPTIONS: IFilterOption[] = [
+export const FAQ_FILTER_OPTIONS: {
+  key: FAQType | "all";
+  name: string;
+}[] = [
   { key: "all", name: "全部" },
   { key: "registration", name: "報名相關" },
   { key: "monthlyMeeting", name: "月會相關" },
@@ -8,7 +11,13 @@ export const FAQ_FILTER_OPTIONS: IFilterOption[] = [
   { key: "payment", name: "付費相關" },
 ];
 
-export const FAQ = {
+export const FAQ: Record<
+  FAQType,
+  {
+    question: string;
+    answer: string;
+  }[]
+> = {
   registration: [
     {
       question: "如果對想申請的組別沒有相關實務經驗，還能申請嗎?",
