@@ -1,6 +1,6 @@
+import { twMerge } from "tailwind-merge";
 import RegisterSailorButton from "./RegisterSailorButton";
 import RegisterNavigatorButton from "./RegisterNavigatorButton";
-import { twMerge } from "tailwind-merge";
 
 const FloatingButtons = () => (
   <>

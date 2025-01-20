@@ -1,3 +1,4 @@
+import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Team, Role } from "@/types";
@@ -12,9 +13,8 @@ import AvatarForKyle from "@/public/images/member-avatar/Kyle.jpg";
 import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
 import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
 
-import SectionTitle from "./SectionTitle";
 import Button from "@/components/common/Button/Button";
-import Link from "next/link";
+import SectionTitle from "./SectionTitle";
 
 interface ITeamMember {
   avatar: StaticImageData;
