@@ -6,7 +6,7 @@ const joinUsData = [
     title: "主動交流",
     description:
       "如果你已經接觸過 UI/UX 或相關課程，未來想往產品設計師、研究員、產品經理等職位發展並加強協作經驗",
-    imageUrl: "/images/icon-exchange.png",
+    imageUrl: "/images/icon-connect.png",
   },
   {
     title: "積極學習",
