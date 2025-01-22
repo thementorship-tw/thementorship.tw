@@ -32,7 +32,11 @@ const SectionTitle: FC<ISectionTitleProps> = ({
       </div>
 
       <Image
-        src="/images/title-symbol-line.png"
+        src={
+          variant === "dark"
+            ? "/images/title-symbol-line-white.png"
+            : "/images/title-symbol-line.png"
+        }
         alt="title-symbol-line"
         width={57}
         height={5}

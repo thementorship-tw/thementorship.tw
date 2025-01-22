@@ -5,6 +5,7 @@ import Partners from "@/components/pages/main/Partners";
 import WhatWeBring from "@/components/pages/main/WhatWeBring";
 import WhoWeAre from "@/components/pages/main/WhoWeAre";
 import Testimonial from "@/components/pages/main/Testimonial";
+import OurImpact from "@/components/pages/main/OurImpact";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   return (
     <div>
-      <div className="h-[100vh] bg-red-500"></div>
+      <OurImpact />
       <WhatWeDo />
       <WhatWeBring />
       <WhoWeAre />
