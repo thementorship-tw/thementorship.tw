@@ -3,7 +3,7 @@
 import { useState } from "react";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import FAQItem from "@/components/common/FAQItem";
-import { FAQ_FILTER_OPTIONS, FAQ, FAQType } from "@/constants/faq-page";
+import { FAQ_FILTER_OPTIONS, FAQ, FAQType } from "@/constants/pages/faq";
 
 type FilterOptionType = FAQType | "all";
 
