@@ -72,10 +72,9 @@ const InfoCard = ({
         <h3 className="text-h5 text-yellow-6 mb-3 whitespace-pre-line">
           {title}
         </h3>
-        <div
-          className="text-body-lg text-neutral-10 flex-1"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+        <p className="text-body-lg text-neutral-10 flex-1 whitespace-pre-line">
+          {description}
+        </p>
         {buttonText &&
           (externalLink ? (
             <Link href={externalLink} target="_blank" className="w-full">
