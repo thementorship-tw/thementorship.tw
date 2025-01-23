@@ -5,27 +5,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import Button, {
   ButtonVariant,
   ButtonColor,
+  ButtonPaddingSize,
 } from "@/components/common/Button/Button";
 
-const infoCardVariants = cva(
-  "bg-white rounded-3 relative h-full flex flex-col",
-  {
-    variants: {
-      background: {
-        white: "bg-white",
-        navy: "bg-blue-1",
-      },
-      border: {
-        none: "border-none",
-        bordered: "border border-solid border-[1px] border-yellow-6",
-      },
+const infoCardVariants = cva("rounded-3 relative h-full flex flex-col", {
+  variants: {
+    background: {
+      white: "bg-white",
+      navy: "bg-blue-1",
     },
-    defaultVariants: {
-      background: "white",
-      border: "none",
+    border: {
+      none: "border-none",
+      bordered: "border border-solid border-[1px] border-yellow-6",
     },
-  }
-);
+  },
+  defaultVariants: {
+    background: "white",
+    border: "none",
+  },
+});
 
 interface IInfoCardProps extends VariantProps<typeof infoCardVariants> {
   title: string;
@@ -35,6 +33,7 @@ interface IInfoCardProps extends VariantProps<typeof infoCardVariants> {
   buttonClassName?: string;
   buttonVariant?: ButtonVariant;
   buttonColor?: ButtonColor;
+  buttonPaddingSize?: ButtonPaddingSize;
   serial?: string;
   externalLink?: string;
 }
@@ -51,6 +50,7 @@ const InfoCard = ({
   buttonClassName,
   buttonVariant = "filled",
   buttonColor = "blue",
+  buttonPaddingSize = "default",
 }: IInfoCardProps) => {
   return (
     <div className={infoCardVariants({ background, border })}>
@@ -72,7 +72,10 @@ const InfoCard = ({
         <h3 className="text-h5 text-yellow-6 mb-3 whitespace-pre-line">
           {title}
         </h3>
-        <p className="text-body-lg text-neutral-10">{description}</p>
+        <div
+          className="text-body-lg text-neutral-10 flex-1"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         {buttonText &&
           (externalLink ? (
             <Link href={externalLink} target="_blank" className="w-full">
@@ -83,6 +86,7 @@ const InfoCard = ({
                 )}
                 variant={buttonVariant}
                 color={buttonColor}
+                paddingSize={buttonPaddingSize}
               >
                 {buttonText}
               </Button>
@@ -95,6 +99,7 @@ const InfoCard = ({
               )}
               variant={buttonVariant}
               color={buttonColor}
+              paddingSize={buttonPaddingSize}
             >
               {buttonText}
             </Button>
