@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
 import WhatWeDoPhilosophy from "@/components/pages/about/philosophy/WhatWeDoPhilosophy";
 import CorePhilosophy from "@/components/pages/about/philosophy/CorePhilosophy";
+import ProgramIntroduction from "@/components/pages/about/philosophy/ProgramIntroduction";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default async function PhilosophyPage() {
       <MarqueeTitle zhTitle="曼陀號理念" enTitle="Philosophy" />
       <WhatWeDoPhilosophy />
       <CorePhilosophy />
+      <ProgramIntroduction />
     </div>
   );
 }
