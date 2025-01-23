@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
+import ProgramIntroduction from "@/components/pages/about/overview/ProgramIntroduction";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export default async function OverviewPage() {
     <div>
       <Breadcrumb items={["HOME", "關於曼陀號", "計畫介紹"]} />
       <MarqueeTitle zhTitle="計畫介紹" enTitle="Overview" />
+      <ProgramIntroduction />
     </div>
   );
 }
