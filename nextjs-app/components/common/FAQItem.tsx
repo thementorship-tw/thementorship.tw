@@ -46,7 +46,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
 
           <p className="grow text-subtitle-lg text-neutral-10">{question}</p>
 
-          <div className="text-neutral-8 w-5 h-5 m-2">
+          <div className="text-neutral-8 w-5 h-5 m-2 shrink-0">
             {isAnswerExpanded ? <MinusIcon /> : <PlusIcon />}
           </div>
         </div>
