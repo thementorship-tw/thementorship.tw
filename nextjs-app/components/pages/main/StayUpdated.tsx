@@ -73,7 +73,7 @@ const StayUpdated = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border h-[108px] lg:h-[212px] w-[calc(50%-6px)] md:w-[calc(33.333%-16px)] lg:w-[212px]
-                rounded-3 hover:bg-yellow-1 transition-all duration-300 
+                rounded-3 hover:bg-yellow-1 transition-[background-color] duration-300 
                 border-yellow-6 flex items-center justify-center"
               >
                 <div className="flex flex-col items-center gap-2 lg:gap-4">
