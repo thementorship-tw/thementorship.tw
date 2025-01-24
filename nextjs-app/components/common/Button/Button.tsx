@@ -6,7 +6,7 @@ export type ButtonVariant = "filled" | "outline";
 
 export type ButtonColor = "blue" | "golden";
 
-type ButtonPaddingSize = "default" | "with-icon";
+export type ButtonPaddingSize = "default" | "with-icon";
 
 interface ICallToActionLinkProps {
   className?: string;
