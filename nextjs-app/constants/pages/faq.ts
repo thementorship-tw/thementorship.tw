@@ -1,5 +1,4 @@
-export type FAQType = "registration" | "monthlyMeeting" | "lecture" | "payment";
-
+import { FAQType } from "@/types/filter-option";
 export const FAQ_FILTER_OPTIONS: {
   key: FAQType | "all";
   name: string;
