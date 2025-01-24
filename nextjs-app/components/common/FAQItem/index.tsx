@@ -6,6 +6,8 @@ import Image from "next/image";
 import { default as QuestionIcon } from "@/public/images/question.svg";
 import { default as PlusIcon } from "@/public/images/plus-icon.svg";
 import { default as MinusIcon } from "@/public/images/minus-icon.svg";
+import { default as ChatStyleLeft } from "./assets/chat-style-left.svg";
+import { default as ChatStyleRight } from "./assets/chat-style-right.svg";
 
 interface IFAQItem {
   question: string;
@@ -30,19 +32,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
           className="grow flex gap-3 items-start cursor-pointer bg-blue-1 rounded-3 rounded-bl-none p-6 relative ml-6 mr-[69px]"
           onClick={handleToggleAnswer}
         >
-          <svg
-            className="absolute bottom-0 left-[-19px] text-blue-1"
-            width="20"
-            height="17"
-            viewBox="0 0 20 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.4783 16.6406V0.640625C14.9075 11.333 10.4342 14.5238 0 16.6406H19.4783Z"
-              fill="currentColor"
-            />
-          </svg>
+          <ChatStyleLeft className="absolute bottom-0 left-[-19px] text-blue-1" />
 
           <p className="grow text-subtitle-lg text-neutral-10">{question}</p>
 
@@ -62,19 +52,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
       >
         <div className="overflow-hidden flex items-end">
           <div className="grow cursor-pointer bg-yellow-1 rounded-3 rounded-br-none p-6 relative mr-6 ml-[73px]">
-            <svg
-              className="absolute bottom-0 right-[-19px] text-yellow-1"
-              width="20"
-              height="17"
-              viewBox="0 0 20 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.52174 16.6406V0.640625C5.09252 11.333 9.56584 14.5238 20 16.6406H0.52174Z"
-                fill="currentColor"
-              />
-            </svg>
+            <ChatStyleRight className="absolute bottom-0 right-[-19px] text-yellow-1" />
 
             <p className="text-body-md text-neutral-10">{answer}</p>
           </div>
