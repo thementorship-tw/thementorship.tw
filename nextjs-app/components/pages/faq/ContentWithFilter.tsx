@@ -10,6 +10,10 @@ type FilterOptionType = FAQType | "all";
 const ContentWithFilter = () => {
   const [selectedFilter, setSelectedFilter] = useState<FilterOptionType>("all");
 
+  const filteredOptions = FAQ_FILTER_OPTIONS.filter(({ key }) =>
+    selectedFilter === "all" ? key !== "all" : key === selectedFilter
+  );
+
   const handleSelect = (selectedOption: FilterOptionType) => {
     setSelectedFilter(selectedOption);
   };
@@ -25,9 +29,7 @@ const ContentWithFilter = () => {
       />
 
       <div className="flex flex-col gap-10">
-        {FAQ_FILTER_OPTIONS.filter(({ key }) =>
-          selectedFilter === "all" ? key !== "all" : key === selectedFilter
-        ).map(({ key, name }) => {
+        {filteredOptions.map(({ key, name }) => {
           const faqList = FAQ[key as FAQType];
 
           return (

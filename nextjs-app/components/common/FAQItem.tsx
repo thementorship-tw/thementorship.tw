@@ -27,10 +27,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
         </div>
 
         <div
-          className={twMerge(
-            "grow flex gap-3 items-start cursor-pointer bg-blue-1 rounded-3 rounded-bl-none p-6",
-            "relative ml-6 mr-[69px]"
-          )}
+          className="grow flex gap-3 items-start cursor-pointer bg-blue-1 rounded-3 rounded-bl-none p-6 relative ml-6 mr-[69px]"
           onClick={handleToggleAnswer}
         >
           <svg
@@ -64,12 +61,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
         )}
       >
         <div className="overflow-hidden flex items-end">
-          <div
-            className={twMerge(
-              "grow cursor-pointer bg-yellow-1 rounded-3 rounded-br-none p-6",
-              "relative mr-6 ml-[73px]"
-            )}
-          >
+          <div className="grow cursor-pointer bg-yellow-1 rounded-3 rounded-br-none p-6 relative mr-6 ml-[73px]">
             <svg
               className="absolute bottom-0 right-[-19px] text-yellow-1"
               width="20"
