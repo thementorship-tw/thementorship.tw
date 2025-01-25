@@ -37,7 +37,7 @@ const recruitmentTargetsData = [
 const RecruitmentTargets = () => {
   return (
     <div className="w-full bg-white">
-      <section className="container px-3 py-[72px] md:px-11 md:py-[120px]">
+      <section className="container px-3 py-[72px] md:px-10 md:py-[120px]">
         <h2 className="text-h2 text-blue-8 text-center flex flex-col">
           曼陀號計畫招募對象
         </h2>
