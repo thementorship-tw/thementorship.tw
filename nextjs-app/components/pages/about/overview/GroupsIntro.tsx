@@ -6,7 +6,7 @@ import Routes from "@/constants/routes";
 const GroupsIntro = () => {
   return (
     <div className="w-full bg-neutral-1">
-      <section className="container px-3 py-[72px] md:px-10 md:py-[120px]">
+      <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <h2 className="text-h2 text-blue-8 text-center flex flex-col">
           組別介紹
         </h2>
