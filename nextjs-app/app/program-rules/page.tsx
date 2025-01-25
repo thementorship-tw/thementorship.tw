@@ -4,6 +4,8 @@ import Benefits from "@/components/pages/program-rules/Benefits";
 import JoinUs from "@/components/pages/program-rules/JoinUs";
 import GroupsIntro from "@/components/pages/program-rules/GroupsIntro";
 import FAQ from "@/components/pages/program-rules/FAQ";
+import Reminders from "@/components/pages/program-rules/Reminders";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +21,7 @@ export default async function ProgramRulesPage() {
       <JoinUs />
       <GroupsIntro />
       <FAQ />
+      <Reminders />
     </div>
   );
 }
