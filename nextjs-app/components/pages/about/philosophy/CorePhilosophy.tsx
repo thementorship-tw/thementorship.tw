@@ -52,14 +52,14 @@ const CorePhilosophy = () => {
           曼陀號理念
         </h3>
 
-        <div className={twMerge(styles.contentRow, "items-center")}>
+        <div className={twMerge(styles.contentRow, "lg:items-start")}>
           <h4 className={styles.rowTitle}>使命</h4>
           <div className={styles.rowContent}>
             <p>建立橋樑，讓不同背景的參加者互為良師益友，激盪職涯無限可能</p>
           </div>
         </div>
 
-        <div className={twMerge(styles.contentRow, "items-center")}>
+        <div className={twMerge(styles.contentRow, "lg:items-start")}>
           <h4 className={styles.rowTitle}>願景</h4>
           <div className={styles.rowContent}>
             <p>讓每位迷惘的職涯旅人都能得到啟發，並建立長期夥伴支持系統</p>
