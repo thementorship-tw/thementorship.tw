@@ -17,7 +17,7 @@ const GoalCard: FC<IGoalCardProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center rounded-3 transition-all duration-300 border border-yellow-6 bg-white z-10">
+    <div className="flex flex-col items-center rounded-3 duration-300 border border-yellow-6 bg-white z-10">
       <div className="h-[30px]">
         <Image
           src={imageSrc}

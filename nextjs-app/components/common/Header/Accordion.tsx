@@ -58,7 +58,7 @@ const Accordion: FC<IAccordionProps> = ({
           isAccordionOpen
             ? "grid-rows-[1fr] opacity-100 mb-2"
             : "grid-rows-[0fr] opacity-0",
-          "grid overflow-hidden transition-all duration-300 ease-in-out"
+          "grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ease-in-out"
         )}
       >
         <div className="overflow-hidden">
