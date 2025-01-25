@@ -25,7 +25,7 @@ export const navigationMenu: IMenuItem[] = [
       },
       {
         href: Routes.ABOUT.TEAM,
-        title: "團隊介紹",
+        title: "執行團隊",
       },
     ],
   },

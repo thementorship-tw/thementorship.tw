@@ -4,14 +4,14 @@ import ContentWithFilter from "@/components/pages/team/ContentWithFilter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "團隊成員",
+  title: "執行團隊",
 };
 
 export default async function TeamPage() {
   return (
     <div>
-      <Breadcrumb items={["HOME", "關於曼陀號", "團隊成員"]} />
-      <MarqueeTitle zhTitle="團隊成員" enTitle="Team" />
+      <Breadcrumb items={["HOME", "關於曼陀號", "執行團隊"]} />
+      <MarqueeTitle zhTitle="執行團隊" enTitle="Team" />
       <ContentWithFilter />
     </div>
   );
