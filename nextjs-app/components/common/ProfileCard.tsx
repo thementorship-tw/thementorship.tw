@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 import { Team } from "@/types";
 import { teamDisplayTextMap } from "@/constants/team-display-text-map";
 import type { FC } from "react";
@@ -11,6 +12,7 @@ interface IProfileCardProps {
   quote: string;
   imageUrl: string;
   hashTags?: string[];
+  hasBorder?: boolean;
 }
 
 const ProfileCard: FC<IProfileCardProps> = ({
@@ -21,12 +23,18 @@ const ProfileCard: FC<IProfileCardProps> = ({
   imageUrl,
   hashTags = [],
   team,
+  hasBorder = false,
 }) => {
   const hasTags = hashTags.length > 0;
   const { zhGroupName, enGroupName } = teamDisplayTextMap[team];
 
   return (
-    <div className="px-5 py-9 rounded-3 bg-blue-1 flex flex-col gap-7 text-center">
+    <div
+      className={twMerge(
+        "px-5 py-9 rounded-3 bg-blue-1 flex flex-col gap-7 text-center",
+        hasBorder && "border-[1px] border-yellow-6"
+      )}
+    >
       <div>
         <p className="text-neutral-10 text-h5">{zhGroupName}</p>
         <p className="text-neutral-10 text-subtitle-lg">{enGroupName}</p>
