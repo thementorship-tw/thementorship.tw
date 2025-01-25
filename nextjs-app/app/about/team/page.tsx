@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
+import ContentWithFilter from "@/components/pages/team/ContentWithFilter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export default async function TeamPage() {
     <div>
       <Breadcrumb items={["HOME", "關於曼陀號", "團隊成員"]} />
       <MarqueeTitle zhTitle="團隊成員" enTitle="Team" />
+      <ContentWithFilter />
     </div>
   );
 }

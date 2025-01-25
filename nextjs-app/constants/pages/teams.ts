@@ -21,14 +21,16 @@ import HarperAvatar from "@/public/images/execution-group/Harper.png";
 import MartinAvatar from "@/public/images/execution-group/Martin.png";
 import LizzyAvatar from "@/public/images/execution-group/Lizzy.png";
 
+import { roleDisplayTextMap } from "../roleDisplayTextMap";
+
 export const EXECUTION_GROUP_FILTER_OPTIONS: {
   key: ExecutionGroupType | "all";
   name: string;
 }[] = [
   { key: "all", name: "全部" },
-  { key: Role.CAPTAIN, name: "船長" },
-  { key: Role.NAVIGATOR, name: "航海士" },
-  { key: Role.ASSISTANT, name: "助理" },
+  { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
+  { key: Role.CAPTAIN, name: roleDisplayTextMap[Role.CAPTAIN] },
+  { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
 ];
 
 interface IProfileInfo {
@@ -141,7 +143,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       ],
     },
   ],
-  [Role.NAVIGATOR]: [
+  [Role.HARBOUR_PILOT]: [
     {
       team: Team.BD,
       name: "陳孟真 Joann Chen",
