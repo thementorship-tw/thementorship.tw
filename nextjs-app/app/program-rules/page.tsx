@@ -3,6 +3,7 @@ import MarqueeTitle from "@/components/common/MarqueeTitle";
 import Benefits from "@/components/pages/program-rules/Benefits";
 import JoinUs from "@/components/pages/program-rules/JoinUs";
 import GroupsIntro from "@/components/pages/program-rules/GroupsIntro";
+import PositiveFeedback from "@/components/pages/program-rules/PositiveFeedback";
 import FAQ from "@/components/pages/program-rules/FAQ";
 import Reminders from "@/components/pages/program-rules/Reminders";
 
@@ -20,6 +21,7 @@ export default async function ProgramRulesPage() {
       <Benefits />
       <JoinUs />
       <GroupsIntro />
+      <PositiveFeedback />
       <FAQ />
       <Reminders />
     </div>
