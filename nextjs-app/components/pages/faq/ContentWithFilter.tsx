@@ -19,7 +19,7 @@ const ContentWithFilter = () => {
   };
 
   return (
-    <div className="container space-y-10 px-5 md:px-10 mb-10">
+    <div className="container space-y-10 px-5 md:px-10 mb-[112px] md:mb-[120px]">
       <TagFilter
         filterOptions={FAQ_FILTER_OPTIONS}
         selectedFilter={selectedFilter}
