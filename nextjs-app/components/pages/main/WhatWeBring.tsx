@@ -65,14 +65,33 @@ const GoalCard: FC<IGoalCardProps> = ({
 
 const WhatWeBring: FC = () => (
   <section className="bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px]">
-    <div className="mx-auto container">
+    <div className="relative mx-auto container">
       <SectionTitle
         className="mb-24"
         title="核心精神"
         subTitle="What We Bring"
         variant="dark"
       />
-      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-[80px] md:gap-7">
+      {/** Rope - md and above */}
+      <div className="hidden md:block md:w-screen lg:w-full -translate-x-10 lg:translate-x-0 translate-y-[130px]">
+        <Image
+          src="/images/rope.png"
+          alt="rope"
+          width={1440}
+          height={(1440 / 4106) * 79}
+        />
+      </div>
+      {/** Rope - sm */}
+      <div className="md:hidden absolute left-1/2 transform -translate-x-1/2 w-[760px] h-[20px] rotate-90 translate-y-[400px]">
+        <Image
+          src="/images/rope.png"
+          alt="rope"
+          fill
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/** Goal Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[80px] md:gap-7">
         {PROGRAM_GOAL_DATA.map((goal) => (
           <GoalCard
             key={goal.title}
@@ -83,9 +102,7 @@ const WhatWeBring: FC = () => (
           />
         ))}
       </div>
-      <div className="border border-white w-full h-full">
-        {/* <Image src="rope.png" alt="rope" fill /> */}
-      </div>
+      {/** Button */}
       <div className="mt-9 flex justify-center">
         <Link className="grow md:grow-0" href="/about/overview">
           <Button
