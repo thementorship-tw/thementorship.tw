@@ -1,5 +1,5 @@
 import { METADATA } from "@/constants/metadata";
-import WhatWeDo from "@/components/pages/main/WhatWeDo";
+import WhatWeDoHomepage from "@/components/pages/main/WhatWeDoHomepage";
 import StayUpdated from "@/components/pages/main/StayUpdated";
 import Partners from "@/components/pages/main/Partners";
 import WhatWeBring from "@/components/pages/main/WhatWeBring";
@@ -16,7 +16,7 @@ export default async function HomePage() {
   return (
     <div>
       <OurImpact />
-      <WhatWeDo />
+      <WhatWeDoHomepage />
       <WhatWeBring />
       <WhoWeAre />
       <Testimonial />
