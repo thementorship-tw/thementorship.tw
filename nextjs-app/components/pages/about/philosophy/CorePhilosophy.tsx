@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-import { twMerge } from "tailwind-merge";
 
 interface ICoreValueCardProps {
   imageSrc: string;
@@ -23,7 +22,7 @@ const CoreValueCard: FC<ICoreValueCardProps> = ({
           alt={title}
           width={80}
           height={80}
-          className="w-[80px] h-[80px] object-cover"
+          className="object-cover"
         />
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-h3 text-yellow-6 mb-1">{title}</h3>
@@ -41,7 +40,7 @@ const styles = {
   contentRow:
     "py-9 text-neutral-10 border-b border-neutral-2 flex flex-col gap-7 lg:flex-row justify-between",
   rowTitle: "lg:w-[200px] xl:w-[330px] text-center lg:text-left text-h4",
-  rowContent: "lg:flex-1 text-center lg:text-left text-h6 lg:text-h5",
+  rowContent: "lg:flex-1 text-center lg:text-left text-h6 lg:text-h4",
 } as const;
 
 const CorePhilosophy = () => {
@@ -52,14 +51,14 @@ const CorePhilosophy = () => {
           曼陀號理念
         </h3>
 
-        <div className={twMerge(styles.contentRow, "lg:items-start")}>
+        <div className={styles.contentRow}>
           <h4 className={styles.rowTitle}>使命</h4>
           <div className={styles.rowContent}>
             <p>建立橋樑，讓不同背景的參加者互為良師益友，激盪職涯無限可能</p>
           </div>
         </div>
 
-        <div className={twMerge(styles.contentRow, "lg:items-start")}>
+        <div className={styles.contentRow}>
           <h4 className={styles.rowTitle}>願景</h4>
           <div className={styles.rowContent}>
             <p>讓每位迷惘的職涯旅人都能得到啟發，並建立長期夥伴支持系統</p>
