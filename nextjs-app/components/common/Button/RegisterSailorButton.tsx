@@ -4,18 +4,32 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import Button from "./Button";
 
-const RegisterSailorButton: FC<{ className: string }> = ({ className }) => (
+interface IRegisterSailorButtonProps {
+  className?: string;
+  disabled?: boolean;
+}
+
+const RegisterSailorButton: FC<IRegisterSailorButtonProps> = ({
+  className,
+  disabled = false,
+}) => (
   <Button
     variant="outline"
     color="blue"
     paddingSize="with-icon"
     className={twMerge(className)}
+    disabled={disabled}
   >
     <Link
       href="/"
       className="w-[172px] flex justify-start items-center space-x-3"
     >
-      <div className="relative size-10 rounded-circle bg-blue-8 overflow-hidden">
+      <div
+        className={twMerge(
+          "relative size-10 rounded-circle overflow-hidden",
+          disabled ? "bg-neutral-5" : "bg-blue-8"
+        )}
+      >
         <Image
           fill
           src="/images/icon-sailor.png"
