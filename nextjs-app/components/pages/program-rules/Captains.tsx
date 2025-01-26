@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
 import ProfileCard from "@/components/common/ProfileCard";
-import { EXECUTION_GROUP } from "@/constants/pages/teams";
+import { EXECUTION_GROUP } from "@/constants/pages/team";
 
 const PROFILE_LIST = EXECUTION_GROUP.Captain;
 
