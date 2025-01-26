@@ -9,7 +9,7 @@ import {
 import { detailCard } from "./detailCardStyles";
 
 const ActiveIcon = () => (
-  <div className="relative size-[48px] shrink-0">
+  <div className="relative size-[48px] shrink-0 motion-translate-y-loop-[4px] motion-duration-2000 motion-ease-in-out">
     <Image
       src="/images/icon-ship.png"
       alt="icon-ship"
@@ -36,6 +36,9 @@ const DetailContent: FC<IDetailContent> = ({ phase, event, isDivider }) => (
     <div className="flex flex-col text-center md:text-left">
       <div className="text-h6">{event.title}</div>
       <div className="text-body-md">{event.description}</div>
+      {event.note && (
+        <div className="text-body-md text-neutral-6">{event.note}</div>
+      )}
     </div>
     {isDivider && <hr className="mt-6 border-neutral-2 lg:hidden" />}
   </div>
@@ -45,7 +48,7 @@ const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
   const renderEvent = () => {
     if (Array.isArray(event)) {
       return (
-        <div className="flex flex-wrap gap-10 justify-center lg:justify-start">
+        <div className="flex flex-wrap gap-5 lg:gap-9 justify-center lg:justify-start">
           {event.map((e, index) => (
             <DetailContent
               key={`${e.title}-${index.toString()}`}
@@ -68,7 +71,7 @@ const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
         <div className="text-body-md">{timeline.description}</div>
       </div>
       <div className={twMerge(detailCard.event({ type, phase }))}>
-        <div className="flex flex-col items-center md:flex-row md:items-start justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {renderEvent()}
           {phase === SchedulePhase.ONGOING && <ActiveIcon />}
         </div>

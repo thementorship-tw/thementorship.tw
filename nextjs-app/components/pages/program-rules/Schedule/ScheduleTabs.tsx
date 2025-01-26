@@ -44,10 +44,16 @@ const ScheduleTabs = () => {
       <div className="mb-10">
         {SCHEDULE_TAB_DATA.find((tab) => tab.key === activeTab)?.content}
       </div>
-      <div className="text-center">
-        <Button variant="filled" color="blue">
-          <Link href="/about/overview">曼陀號計劃詳細介紹</Link>
-        </Button>
+      <div className="mt-9 flex justify-center">
+        <Link className="grow md:grow-0" href="/about/overview">
+          <Button
+            className="w-full justify-center"
+            variant="filled"
+            color="blue"
+          >
+            曼陀號計劃詳細介紹
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
     event: {
       date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
-      tag: "請務必出席",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
@@ -31,13 +30,11 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     event: [
       {
         date: "2025/03/23 (Sun)",
-        tag: "請務必出席",
-        title: "海選名單揭曉",
-        description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
+        title: "面試名單揭曉",
+        description: "屆時將寄信通知第一階段審核結果",
       },
       {
         date: "2025/03/30 (Sun) - 2025/04/06 (Sun)",
-        tag: "請務必出席",
         title: "線上面談",
         description: "進行第二階段面談複審",
       },
@@ -51,7 +48,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       description: "(實體海選)",
     },
     event: {
-      date: "2025/04",
+      date: "2025/04/27v",
       tag: "請務必出席",
       title: "開幕式暨海選日",
       description: "各職能屆時將分組帶開，由各組船長主導進行海選",
@@ -64,14 +61,22 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       title: "5月",
       description: "(公佈錄取名單)",
     },
-    event: {
-      date: "2025/05/11 (Sun)",
-      tag: "請務必出席",
-      title: "第七屆曼陀號領航計劃 航海士 錄取名單揭曉",
-      description:
-        "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
-      note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
-    },
+    event: [
+      {
+        date: "2025/05/03 (Sat)",
+        tag: "請務必出席",
+        title: "第七屆曼陀號領航計劃 航海士錄取名單揭曉",
+        description:
+          "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
+        note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
+      },
+      {
+        date: "2025/05",
+        tag: "日期地點待定",
+        title: "通識主題講座 第一波",
+        description: "錄取者可免費參加，另開放付費參與",
+      },
+    ],
   },
   {
     phase: SchedulePhase.EXPIRED,
