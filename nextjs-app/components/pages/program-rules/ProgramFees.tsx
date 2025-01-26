@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 
-const FEE_DATA: FeeInfo[] = [
+const FEE_DATA = [
   {
     imageSrc: "/images/icon-hat.png",
     title: "海選費用",
@@ -17,15 +18,20 @@ const FEE_DATA: FeeInfo[] = [
   },
 ];
 
-interface FeeInfo {
+interface IFeeInfo {
   imageSrc: string;
   title: string;
   subtitle: string;
   fee: number;
 }
 
-const FeeCard: FC<FeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
-  <div className="lg:max-w-[566px] flex flex-col md:flex-row grow bg-white items-center justify-between rounded-3 py-8 px-7 gap-3 md:gap-7">
+const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
+  <div
+    className={twMerge(
+      "py-8 px-7 bg-white rounded-3",
+      "flex flex-col md:flex-row grow items-center md:items-end justify-between gap-3 md:gap-7"
+    )}
+  >
     <div className="flex flex-col md:flex-row items-center gap-5">
       <Image
         src={imageSrc}
@@ -40,31 +46,32 @@ const FeeCard: FC<FeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
       </div>
     </div>
     <div className="text-h1 text-yellow-6">
-      {`NTD ${fee.toString()}`}
+      {`NTD ${fee.toLocaleString()}`}
       <span className="text-body-lg text-neutral-10">/人</span>
     </div>
   </div>
 );
 
 const ProgramFees = () => (
-  <section className="px-5 py-[72px] md:px-10 md:py-[120px] bg-blue-8">
-    <SectionTitle
-      title="計畫參加費用"
-      description={`「收到海選通知信」始需繳納「海選參加費」
-        「收到錄取通知信」始需繳納「計劃報名費」`}
-      serial="06"
-      variant="dark"
-    />
-    <div className="flex flex-wrap flex-col lg:flex-row justify-center gap-4 md:gap-7 mt-11">
-      {FEE_DATA.map((item) => (
-        <FeeCard
-          key={item.title}
-          imageSrc={item.imageSrc}
-          title={item.title}
-          subtitle={item.subtitle}
-          fee={item.fee}
-        />
-      ))}
+  <section className="bg-blue-8">
+    <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
+      <SectionTitle
+        title="計畫參加費用"
+        description={`「收到海選通知信」始需繳納「海選參加費」\n「收到錄取通知信」始需繳納「計劃報名費」`}
+        serial="06"
+        variant="dark"
+      />
+      <div className="mt-11 grid grid-cols-1 xl:grid-cols-2 justify-center gap-4 md:gap-7">
+        {FEE_DATA.map((item) => (
+          <FeeCard
+            key={item.title}
+            imageSrc={item.imageSrc}
+            title={item.title}
+            subtitle={item.subtitle}
+            fee={item.fee}
+          />
+        ))}
+      </div>
     </div>
   </section>
 );
