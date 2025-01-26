@@ -4,7 +4,7 @@ import { IReview } from "@/types/review";
 import { default as ReviewStar } from "@/public/images/review-star.svg";
 
 const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
-  <div className="mx-[6px] md:mx-4 p-6 flex flex-col items-start space-y-3 border-2 border-neutral-2 rounded-3">
+  <div className="mx-[6px] md:mx-4 p-6 flex flex-col items-start space-y-3 bg-white border-2 border-neutral-2 rounded-3">
     <div className="flex gap-x-4">
       <div className="relative size-[42px] rounded-2 overflow-hidden border-yellow-2">
         <Image
