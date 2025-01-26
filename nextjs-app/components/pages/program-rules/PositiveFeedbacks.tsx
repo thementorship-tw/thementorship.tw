@@ -1,8 +1,5 @@
-import MarqueeContainer from "@/components/common/MarqueeContainer";
-import ReviewCard from "@/components/common/ReviewCard";
+import ParticipantTestimonials from "@/components/common/ParticipantTestimonials";
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
-import { REVIEW_LIST } from "@/constants/review-list";
-import { IReview } from "@/types/review";
 
 const PositiveFeedbacks = () => {
   return (
@@ -16,32 +13,7 @@ const PositiveFeedbacks = () => {
         />
       </div>
 
-      <div className="space-y-4 md:space-y-7">
-        <MarqueeContainer>
-          {REVIEW_LIST.map((review: IReview, index) => (
-            <ReviewCard
-              key={`${review.name}-${review.team}${review.role}-${index.toString()}`}
-              imageSrc={review.imageSrc}
-              name={review.name}
-              team={review.team}
-              role={review.role}
-              review={review.review}
-            />
-          ))}
-        </MarqueeContainer>
-        <MarqueeContainer direction="to-right">
-          {REVIEW_LIST.map((review: IReview, index) => (
-            <ReviewCard
-              key={`${review.name}-${review.team}${review.role}-${index.toString()}}`}
-              imageSrc={review.imageSrc}
-              name={review.name}
-              team={review.team}
-              role={review.role}
-              review={review.review}
-            />
-          ))}
-        </MarqueeContainer>
-      </div>
+      <ParticipantTestimonials />
     </section>
   );
 };
