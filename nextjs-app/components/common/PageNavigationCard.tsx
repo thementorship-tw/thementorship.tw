@@ -35,7 +35,7 @@ const PageNavigationCard: FC<IPageNavigationCardProps> = ({
         height={80}
         className="w-[80px] h-[80px] md:w-[64px] md:h-[64px]"
       />
-      <div className="ml-7 md:ml-5 flex-1 xl:flex xl:justify-between xl:items-center">
+      <div className="ml-7 md:ml-5 flex-1 md:flex md:justify-between md:items-center flex-wrap gap-4">
         <div>
           <h3 className="text-h3-title text-yellow-6 font-eb-garamond">
             {enTitle}
@@ -43,7 +43,7 @@ const PageNavigationCard: FC<IPageNavigationCardProps> = ({
           <p className="text-subtitle-md">{zhTitle}</p>
         </div>
         <Link href={buttonLink}>
-          <Button className="mt-4 xl:mt-0 px-7">{buttonText}</Button>
+          <Button className="mt-4 md:mt-0 px-7">{buttonText}</Button>
         </Link>
       </div>
     </div>

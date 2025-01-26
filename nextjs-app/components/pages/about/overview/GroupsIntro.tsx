@@ -23,7 +23,7 @@ const GroupsIntro = () => {
             imageSrc="/images/icon-lighthouse.png"
             enTitle="Philosophy"
             zhTitle="曼陀號理念"
-            buttonText="了解曼陀號理念"
+            buttonText="more"
             buttonLink={Routes.ABOUT.PHILOSOPHY}
             className="flex-1"
           />
@@ -31,7 +31,7 @@ const GroupsIntro = () => {
             imageSrc="/images/icon-duck.png"
             enTitle="Team"
             zhTitle="執行團隊"
-            buttonText="認識執行團隊"
+            buttonText="more"
             buttonLink={Routes.ABOUT.TEAM}
             className="flex-1"
           />
