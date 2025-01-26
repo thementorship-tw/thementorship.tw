@@ -40,7 +40,7 @@ const GoalCard: FC<IGoalCardProps> = ({
 
 const WhatWeBring = () => {
   return (
-    <section className="py-[72px] md:py-[120px] bg-blue-8">
+    <section className="px-5 py-[72px] md:py-[120px] bg-blue-8">
       <div className="max-w-[343px] md:max-w-[672px] lg:max-w-[1156px] mx-auto text-center">
         <div className="mb-24 space-y-8">
           <div className="space-y-3">
