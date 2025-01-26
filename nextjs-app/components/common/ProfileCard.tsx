@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Team } from "@/types";
-import { teamDisplayTextMap } from "@/constants/teamDisplayTextMap";
+import { teamDisplayTextMap } from "@/constants/team-display-text-map";
 import type { FC } from "react";
 
 interface IProfileCardProps {

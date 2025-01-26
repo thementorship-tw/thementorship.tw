@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Team, Role } from "@/types";
-import { roleDisplayTextMap } from "@/constants/roleDisplayTextMap";
+import { roleDisplayTextMap } from "@/constants/role-display-text-map";
 
 import AvatarForAlice from "@/public/images/member-avatar/Alice.jpg";
 import AvatarForClaire from "@/public/images/member-avatar/Claire.jpg";

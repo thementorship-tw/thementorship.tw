@@ -21,7 +21,7 @@ import HarperAvatar from "@/public/images/execution-group/Harper.png";
 import MartinAvatar from "@/public/images/execution-group/Martin.png";
 import LizzyAvatar from "@/public/images/execution-group/Lizzy.png";
 
-import { roleDisplayTextMap } from "../roleDisplayTextMap";
+import { roleDisplayTextMap } from "../role-display-text-map";
 
 export const EXECUTION_GROUP_FILTER_OPTIONS: {
   key: ExecutionGroupType | "all";
