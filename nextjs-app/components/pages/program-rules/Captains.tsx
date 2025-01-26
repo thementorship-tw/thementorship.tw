@@ -4,7 +4,7 @@ import { EXECUTION_GROUP } from "@/constants/pages/teams";
 
 const PROFILE_LIST = EXECUTION_GROUP.Captain;
 
-const Captain = () => {
+const Captains = () => {
   return (
     <section className="bg-yellow-1 py-[72px] md:py-[120px]">
       <div className="container px-5 md:px-10">
@@ -37,4 +37,4 @@ const Captain = () => {
   );
 };
 
-export default Captain;
+export default Captains;

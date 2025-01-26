@@ -4,7 +4,7 @@ import SectionTitle from "@/components/pages/program-rules/SectionTitle";
 import { REVIEW_LIST } from "@/constants/review-list";
 import { IReview } from "@/types/review";
 
-const PositiveFeedback = () => {
+const PositiveFeedbacks = () => {
   return (
     <section className="bg-neutral-1 py-[72px] md:py-[120px]">
       <div className="container px-5 md:px-10 mb-11">
@@ -46,4 +46,4 @@ const PositiveFeedback = () => {
   );
 };
 
-export default PositiveFeedback;
+export default PositiveFeedbacks;
