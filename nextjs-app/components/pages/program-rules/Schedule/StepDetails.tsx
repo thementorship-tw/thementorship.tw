@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { IScheduleStep } from "@/types/schedule";
-import { splitArray } from "@/utils/marquee";
+import { splitArray } from "@/utils";
 import StepCard from "./StepCard";
 
 interface IStepDetails {

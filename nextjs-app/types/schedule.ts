@@ -1,10 +1,14 @@
-import { ButtonColor, ButtonVariant } from "@/components/common/Button";
+import { ButtonColor, ButtonVariant } from "@/components/common/Button/Button";
 
-export enum IScheduleType {
-  ACTIVE = "active",
-  ONGOING = "ongoing",
-  HIGHLIGHTED = "highlighted",
-  EXPIRED = "expired",
+export enum SchedulePhase {
+  ACTIVE = "ACTIVE",
+  ONGOING = "ONGOING",
+  EXPIRED = "EXPIRED",
+}
+
+export enum ScheduleType {
+  DEFAULT = "DEFAULT",
+  HIGHLIGHT = "HIGHLIGHT",
 }
 
 export interface IScheduleEvent {
@@ -16,7 +20,8 @@ export interface IScheduleEvent {
 }
 
 export interface IScheduleDetail {
-  type: IScheduleType;
+  phase: SchedulePhase;
+  type: ScheduleType;
   timeline: {
     title: string;
     description: string;

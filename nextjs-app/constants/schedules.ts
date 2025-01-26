@@ -1,25 +1,29 @@
+import { ButtonColor } from "@/components/common/Button/Button";
 import {
-  IScheduleRole,
   IScheduleDetail,
-  IScheduleType,
+  SchedulePhase,
   IScheduleStep,
+  ScheduleType,
 } from "@/types/schedule";
 
 export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   {
-    type: IScheduleType.EXPIRED,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
       description: "(書面審核)",
     },
     event: {
       date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
+      tag: "請務必出席",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
   },
   {
-    type: IScheduleType.ONGOING,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "3月",
       description: "(書面審核結果揭曉)",
@@ -27,18 +31,21 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     event: [
       {
         date: "2025/03/23 (Sun)",
+        tag: "請務必出席",
         title: "海選名單揭曉",
         description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
       },
       {
         date: "2025/03/30 (Sun) - 2025/04/06 (Sun)",
+        tag: "請務必出席",
         title: "線上面談",
         description: "進行第二階段面談複審",
       },
     ],
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.ONGOING,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "4月",
       description: "(實體海選)",
@@ -51,13 +58,15 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.ACTIVE,
+    phase: SchedulePhase.ONGOING,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
       description: "(公佈錄取名單)",
     },
     event: {
       date: "2025/05/11 (Sun)",
+      tag: "請務必出席",
       title: "第七屆曼陀號領航計劃 航海士 錄取名單揭曉",
       description:
         "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
@@ -65,7 +74,8 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.EXPIRED,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "6月 - 9月",
       description: "(半年計劃活動)",
@@ -79,7 +89,8 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.EXPIRED,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
       description: "(結業式暨閉幕日)",
@@ -96,31 +107,36 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
 
 export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   {
-    type: IScheduleType.EXPIRED,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
       description: "(書面審核)",
     },
     event: {
       date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
+      tag: "請務必出席",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
   },
   {
-    type: IScheduleType.ONGOING,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "3月",
       description: "(書面審核結果揭曉)",
     },
     event: {
       date: "2025/03/23 (Sun)",
+      tag: "請務必出席",
       title: "海選名單揭曉",
       description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
     },
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.ONGOING,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "4月",
       description: "(實體海選)",
@@ -133,13 +149,15 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.ACTIVE,
+    phase: SchedulePhase.ONGOING,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
       description: "(公佈錄取名單)",
     },
     event: {
       date: "2025/05/11 (Sun)",
+      tag: "請務必出席",
       title: "第七屆曼陀號領航計劃 水手錄取名單揭曉",
       description:
         "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
@@ -147,7 +165,8 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.EXPIRED,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "6月 - 9月",
       description: "(半年計劃活動)",
@@ -161,7 +180,8 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    type: IScheduleType.HIGHLIGHTED,
+    phase: SchedulePhase.EXPIRED,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
       description: "(結業式暨閉幕日)",
@@ -176,38 +196,26 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   },
 ];
 
-export const SCHEDULE_ROLE_DATA: IScheduleRole[] = [
+export const SCHEDULE_ROLE_DATA = [
   {
-    imageSrc: "/images/icon-sailor.png",
-    imageAlt: "icon-sailor",
-    enTitle: "Sailors",
-    zhTitle: "水手 (導生)",
-    descList: [
-      "申請組別領域工作經驗 1-3 年內 (含實習經驗)",
-      "未來有興趣回饋社群",
-    ],
-    button: {
-      variant: "filled",
-      color: "blue",
-      text: "馬上報名水手",
-      href: "/",
-    },
+    title: "Sailor\n水手 (導生)",
+    description:
+      "• 申請組別領域實務經驗 1-3 年內 (含實習經驗)\n• 未來有興趣回饋社群",
+    imageUrl: "/images/icon-sailor.png",
+    buttonText: "馬上報名水手",
+    buttonColor: "blue" as ButtonColor,
+    buttonClassName: "px-7",
+    externalLink: "https://example.com",
   },
   {
-    imageSrc: "/images/icon-navigator.png",
-    imageAlt: "icon-navigator",
-    enTitle: "Navigators",
-    zhTitle: "航海士 (職場前輩)",
-    descList: [
-      "申請組別領域工作經驗 4-6 年以上",
-      "具備提拔後進熱忱，樂意提供實務協助輔導",
-    ],
-    button: {
-      variant: "filled",
-      color: "golden",
-      text: "馬上報名航海士",
-      href: "/",
-    },
+    title: "Navigator\n航海士 (職場前輩)",
+    description:
+      "• 申請組別領域實務經驗 4-6 年以上\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
+    imageUrl: "/images/icon-navigator.png",
+    buttonText: "馬上報名航海士",
+    buttonColor: "golden" as ButtonColor,
+    buttonClassName: "px-7",
+    externalLink: "https://example.com",
   },
 ];
 
