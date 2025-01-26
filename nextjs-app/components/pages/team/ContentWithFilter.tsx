@@ -6,7 +6,7 @@ import ProfileCard from "@/components/common/ProfileCard";
 import {
   EXECUTION_GROUP,
   EXECUTION_GROUP_FILTER_OPTIONS,
-} from "@/constants/pages/teams";
+} from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
 
 type FilterOptionType = ExecutionGroupType | "all";
