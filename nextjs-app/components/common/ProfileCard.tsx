@@ -37,6 +37,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
           <Image
             src={imageUrl}
             alt={name}
+            sizes="330px"
             fill
             className="object-cover object-center"
           />

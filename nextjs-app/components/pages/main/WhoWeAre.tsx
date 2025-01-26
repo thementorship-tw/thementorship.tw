@@ -137,6 +137,7 @@ const WhoWeAre: FC = () => {
                         src={avatar}
                         alt={`${lastName} ${firstName}`}
                         fill
+                        sizes="319px"
                       />
                     </div>
                   </div>
