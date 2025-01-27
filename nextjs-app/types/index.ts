@@ -13,4 +13,5 @@ export enum Role {
   NAVIGATOR = "Navigator",
   SAILOR = "Sailor",
   HARBOUR_PILOT = "HarbourPilot",
+  ASSISTANT = "Assistant",
 }

@@ -18,6 +18,7 @@ const RegisterNavigatorButton: FC<{ className: string }> = ({ className }) => (
       <div className="relative size-10 rounded-circle bg-yellow-6 overflow-hidden">
         <Image
           fill
+          sizes="48px"
           src="/images/icon-navigator.png"
           alt="icon-navigator"
           className="w-full h-full p-3 object-cover"

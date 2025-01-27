@@ -11,6 +11,7 @@ const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
           src={imageSrc}
           alt="profile"
           fill
+          sizes="42px"
           className="w-full h-full object-cover"
         />
       </div>
