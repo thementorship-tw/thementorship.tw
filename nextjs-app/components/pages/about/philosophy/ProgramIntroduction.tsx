@@ -2,7 +2,7 @@ import Image from "next/image";
 import Routes from "@/constants/routes";
 import PageNavigationCard from "@/components/common/PageNavigationCard";
 
-const content: { title: string; description: string }[] = [
+const content = [
   { title: "計劃名稱", description: "曼陀號領航計劃" },
   { title: "創立年度", description: "2018 年" },
   { title: "執行單位", description: "純志工團隊" },
