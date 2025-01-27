@@ -13,6 +13,7 @@ const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
           src="/images/index-banner/time-block.png"
           alt="time-block"
           fill
+          sizes="auto"
           className="absolute w-full h-full object-cover -z-10"
         />
         {time}

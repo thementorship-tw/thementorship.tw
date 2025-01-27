@@ -81,6 +81,7 @@ const Banner = () => (
         src="/images/index-banner/boat.png"
         alt="boat"
         fill
+        sizes="auto"
         className={twMerge(
           "hidden lg:block translate-y-[-50px]",
           "w-full h-full object-contain object-right-bottom",
@@ -93,6 +94,8 @@ const Banner = () => (
       src="/images/index-banner/background-lg.png"
       alt="background-image"
       fill
+      priority
+      sizes="auto"
       className={twMerge(
         "hidden lg:block",
         "absolute w-full h-full object-cover object-left-bottom -z-40"
@@ -102,6 +105,8 @@ const Banner = () => (
       src="/images/index-banner/background-md.png"
       alt="background-image"
       fill
+      priority
+      sizes="auto"
       className={twMerge(
         "hidden md:block lg:hidden",
         "absolute w-full h-full object-cover object-left-bottom -z-40"
@@ -111,6 +116,8 @@ const Banner = () => (
       src="/images/index-banner/background-sm.png"
       alt="background-image"
       fill
+      priority
+      sizes="auto"
       className={twMerge(
         "md:hidden",
         "absolute w-full h-full object-cover object-left-bottom -z-40"
