@@ -22,7 +22,7 @@ const RegisterSailorButton: FC<IRegisterSailorButtonProps> = ({
   >
     <Link
       href="/"
-      className="w-[172px] flex justify-start items-center space-x-3"
+      className="w-[230px] flex justify-start items-center space-x-3"
     >
       <div
         className={twMerge(
@@ -38,7 +38,7 @@ const RegisterSailorButton: FC<IRegisterSailorButtonProps> = ({
           className="w-full h-full p-3 object-cover"
         />
       </div>
-      <div className="text-subtitle-md">馬上報名水手</div>
+      <div className="text-subtitle-md">馬上報名水手(導生)</div>
     </Link>
   </Button>
 );

@@ -33,7 +33,7 @@ const CountdownTimer = () => {
     minutes: "00",
   });
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const startTimer = (): void => {
     intervalRef.current = setInterval(() => {
@@ -45,9 +45,6 @@ const CountdownTimer = () => {
           clearInterval(intervalRef.current);
         }
         setTime({ days: "00", hours: "00", minutes: "00" });
-        setTimeout(() => {
-          alert("報名結束");
-        }, 1000);
         return;
       }
 

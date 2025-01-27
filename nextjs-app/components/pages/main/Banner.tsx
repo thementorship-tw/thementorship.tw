@@ -8,7 +8,7 @@ const Banner = () => (
   <div
     className={twMerge(
       "relative pt-11",
-      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)]"
+      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[768px]"
     )}
   >
     {/** Text Area */}
@@ -22,8 +22,8 @@ const Banner = () => (
           <CountdownTimer />
         </div>
         <div className="w-fit flex flex-col justify-center gap-4 mt-7">
-          <RegisterSailorButton />
-          <RegisterNavigatorButton />
+          <RegisterSailorButton disabled />
+          <RegisterNavigatorButton disabled />
         </div>
       </div>
     </div>
@@ -36,13 +36,13 @@ const Banner = () => (
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover",
+            "w-full h-full object-cover object-top",
             "motion-translate-x-loop-[-20px] motion-duration-1000 motion-ease-in-out"
           )}
         />
       </div>
     </div>
-    <div className="absolute w-full bottom-[5px] overflow-hidden -z-20">
+    <div className="absolute w-full bottom-[10px] overflow-hidden -z-20">
       <div className="relative w-[calc(100vw+60px)] h-[136px]">
         <Image
           src="/images/index-banner/wave-2.png"
@@ -50,7 +50,7 @@ const Banner = () => (
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover",
+            "w-full h-full object-cover object-top",
             "motion-translate-x-loop-[-40px] motion-duration-1500 motion-ease-in-out"
           )}
         />
@@ -64,7 +64,7 @@ const Banner = () => (
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover",
+            "w-full h-full object-cover object-top",
             "motion-translate-x-loop-[-60px] motion-duration-2000 motion-ease-in-out"
           )}
         />
@@ -74,7 +74,7 @@ const Banner = () => (
       className={twMerge(
         "hidden lg:block",
         "absolute bottom-8 right-0 -z-30",
-        "w-[calc(70vh/614*1003)] h-[70vh]"
+        "w-[60vw] h-[calc(60vw/1003*614)]"
       )}
     >
       <Image
@@ -82,7 +82,7 @@ const Banner = () => (
         alt="boat"
         fill
         className={twMerge(
-          "hidden lg:block",
+          "hidden lg:block translate-y-[-50px]",
           "w-full h-full object-contain object-right-bottom",
           "motion-translate-y-loop-[8px] motion-duration-[3000ms] motion-ease-in-out"
         )}
