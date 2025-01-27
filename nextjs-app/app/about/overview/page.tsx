@@ -3,6 +3,7 @@ import MarqueeTitle from "@/components/common/MarqueeTitle";
 import ProgramIntroduction from "@/components/pages/about/overview/ProgramIntroduction";
 import MonthlyMeetingRoles from "@/components/pages/about/overview/MonthlyMeetingRoles";
 import RecruitmentTargets from "@/components/pages/about/overview/RecruitmentTargets";
+import GroupsIntro from "@/components/pages/about/overview/GroupsIntro";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default async function OverviewPage() {
       <ProgramIntroduction />
       <MonthlyMeetingRoles />
       <RecruitmentTargets />
+      <GroupsIntro />
     </div>
   );
 }

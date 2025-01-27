@@ -5,6 +5,7 @@ import JoinUs from "@/components/pages/program-rules/JoinUs";
 import GroupsIntro from "@/components/pages/program-rules/GroupsIntro";
 import Captains from "@/components/pages/program-rules/Captains";
 import PositiveFeedbacks from "@/components/pages/program-rules/PositiveFeedbacks";
+import ProgramFees from "@/components/pages/program-rules/ProgramFees";
 import FAQ from "@/components/pages/program-rules/FAQ";
 import Reminders from "@/components/pages/program-rules/Reminders";
 
@@ -23,6 +24,7 @@ export default async function ProgramRulesPage() {
       <JoinUs />
       <GroupsIntro />
       <Captains />
+      <ProgramFees />
       <PositiveFeedbacks />
       <FAQ />
       <Reminders />
