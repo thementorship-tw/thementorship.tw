@@ -39,8 +39,12 @@ const buttonClasses = cva(
         golden: "",
       },
       paddingSize: {
-        default: "p-5",
+        default: "py-5 px-7",
         "with-icon": "py-3 pl-4 pr-5",
+      },
+      disabled: {
+        true: "",
+        false: "",
       },
     },
     compoundVariants: [
@@ -56,6 +60,10 @@ const buttonClasses = cva(
         color: "golden",
         class: "text-yellow-6 border-yellow-6",
       },
+      {
+        disabled: true,
+        class: "bg-neutral-2 pointer-events-none text-neutral-5 border-none",
+      },
     ],
   }
 );
@@ -70,10 +78,15 @@ const dotClasses = cva("size-[14px] border-[5px] rounded-circle", {
       blue: "",
       golden: "",
     },
+    disabled: {
+      true: "",
+      false: "",
+    },
   },
   compoundVariants: [
     { variant: "outline", color: "blue", class: "border-blue-8" },
     { variant: "outline", color: "golden", class: "border-yellow-6" },
+    { disabled: true, class: "border-neutral-5" },
   ],
 });
 
@@ -89,14 +102,14 @@ const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
   return (
     <button
       className={twMerge(
-        buttonClasses({ variant, color, paddingSize }),
+        buttonClasses({ variant, color, paddingSize, disabled }),
         className
       )}
       disabled={disabled}
       onClick={onClick}
     >
       {children}
-      <span className={dotClasses({ variant, color })}></span>
+      <span className={dotClasses({ variant, color, disabled })}></span>
     </button>
   );
 };
