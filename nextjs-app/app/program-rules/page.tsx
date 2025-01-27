@@ -8,7 +8,7 @@ import PositiveFeedbacks from "@/components/pages/program-rules/PositiveFeedback
 import ProgramFees from "@/components/pages/program-rules/ProgramFees";
 import FAQ from "@/components/pages/program-rules/FAQ";
 import Reminders from "@/components/pages/program-rules/Reminders";
-
+import Schedule from "@/components/pages/program-rules/Schedule";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,12 +22,14 @@ export default async function ProgramRulesPage() {
       <MarqueeTitle zhTitle="活動辦法" enTitle="The MentorShip Program" />
       <Benefits />
       <JoinUs />
+      <Schedule />
       <GroupsIntro />
       <Captains />
       <ProgramFees />
       <PositiveFeedbacks />
       <FAQ />
       <Reminders />
+      <ProgramFees />
     </div>
   );
 }

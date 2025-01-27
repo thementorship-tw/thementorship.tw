@@ -1,7 +1,7 @@
 import { IReview } from "@/types/review";
 import { REVIEW_LIST } from "@/constants/review-list";
-import { expandArray } from "@/utils/marquee";
-import { splitArray } from "@/utils/marquee";
+import { expandArray } from "@/utils";
+import { splitArray } from "@/utils";
 import MarqueeContainer from "./MarqueeContainer";
 import ReviewCard from "./ReviewCard";
 import type { FC } from "react";

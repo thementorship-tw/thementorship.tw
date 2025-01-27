@@ -5,7 +5,7 @@ const WhatWeDoPhilosophy = () => (
   <section className="px-5 md:px-10  py-[72px] md:py-[120px] bg-blue-8">
     <div className="mx-auto text-center space-y-11">
       <div className="flex flex-col items-center space-y-7">
-        <div className="space-y-3 text-h1 text-white">
+        <div className="space-y-3 text-h3 md:text-h1 text-white">
           <div>{WHAT_WE_DO.zhTitle}</div>
           <div>{WHAT_WE_DO.enTitle}</div>
         </div>
