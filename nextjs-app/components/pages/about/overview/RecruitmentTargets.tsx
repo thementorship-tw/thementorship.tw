@@ -1,5 +1,6 @@
 import InfoCard from "@/components/common/InfoCard";
 import { ButtonColor } from "@/components/common/Button/Button";
+import Wave from "@/components/common/Wave";
 
 const recruitmentTargetsData = [
   {
@@ -36,10 +37,11 @@ const recruitmentTargetsData = [
 
 const RecruitmentTargets = () => {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white relative">
+      <Wave color="white" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <h2 className="text-h2 text-blue-8 text-center flex flex-col">
-          曼陀號計畫招募對象
+          計畫招募對象
         </h2>
         <p className="text-body-md text-neutral-10 text-center mt-6">
           依據實務經驗的深度分為三大角色，歡迎有志者報名

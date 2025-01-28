@@ -7,6 +7,7 @@ import {
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
 import BackToTopButton from "@/components/common/BackToTopButton";
+import Wave from "@/components/common/Wave";
 
 export const SOCIAL_MEDIA_LINKS = [
   { url: MENTORSHIP_MEDIUM_URL, icon: "medium" },
@@ -19,6 +20,7 @@ export const SOCIAL_MEDIA_LINKS = [
 export default function Footer() {
   return (
     <footer className="relative w-full">
+      <Wave color="blue8" />
       <div className="absolute right-5 -top-[25px]">
         <BackToTopButton />
       </div>

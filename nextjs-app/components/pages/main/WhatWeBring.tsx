@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import Button from "@/components/common/Button/Button";
+import Wave from "@/components/common/Wave";
 import SectionTitle from "./SectionTitle";
 
 const PROGRAM_GOAL_DATA = [
@@ -64,7 +65,8 @@ const GoalCard: FC<IGoalCardProps> = ({
 };
 
 const WhatWeBring: FC = () => (
-  <section className="bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px]">
+  <section className="bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px] relative">
+    <Wave color="blue8" />
     <div className="relative mx-auto container">
       <SectionTitle
         className="mb-24"

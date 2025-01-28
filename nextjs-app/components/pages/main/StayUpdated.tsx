@@ -12,6 +12,7 @@ import {
   MENTORSHIP_MEDIUM_URL,
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
+import Wave from "@/components/common/Wave";
 
 // Note: to change color of icon, here is the example class name: [&>path]:fill-[#fcba03]
 const socialLinks = [
@@ -49,8 +50,9 @@ const socialLinks = [
 
 const StayUpdated = () => {
   return (
-    <section className="container pt-[72px] pb-[90px] md:py-[120px]">
-      <div className="mx-auto text-center">
+    <section className="relative pt-[72px] pb-[90px] md:py-[120px]">
+      <Wave color="white" />
+      <div className="mx-auto text-center container">
         <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2">
           關注第一手消息
         </h2>

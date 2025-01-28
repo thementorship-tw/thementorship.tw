@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
+import Wave from "@/components/common/Wave/Wave";
 import SectionTitle from "./SectionTitle";
 
 const FEE_DATA = [
@@ -53,7 +54,8 @@ const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
 );
 
 const ProgramFees = () => (
-  <section className="bg-blue-8">
+  <section className="w-full bg-blue-8 relative">
+    <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
         title="計畫參加費用"

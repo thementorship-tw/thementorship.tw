@@ -1,6 +1,9 @@
+import Wave from "@/components/common/Wave";
+
 const ProgramIntroduction = () => {
   return (
-    <section className="px-5 md:px-10 py-[72px] md:py-[120px] bg-blue-1">
+    <section className="px-5 md:px-10 py-[72px] md:py-[120px] bg-blue-1 relative">
+      <Wave color="blue1" />
       <div className="mx-auto text-center flex flex-col items-center space-y-7">
         <div className="text-h2 text-blue-8">曼陀號領航計劃介紹</div>
         <div className="max-w-[684px] text-subtitle-lg text-neutral-10">

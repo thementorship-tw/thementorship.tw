@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
+import Wave from "@/components/common/Wave";
 
 interface ICoreValueCardProps {
   imageSrc: string;
@@ -45,8 +46,9 @@ const styles = {
 
 const CorePhilosophy = () => {
   return (
-    <div className="w-full bg-white">
-      <section className="max-w-[1152px] mx-auto px-5 py-[72px] md:px-10 md:py-[120px] text-center flex flex-col">
+    <div className="w-full bg-white relative">
+      <Wave color="white" />
+      <section className="container px-5 py-[72px] md:px-10 md:py-[120px] text-center flex flex-col">
         <h3 className="text-h3 text-blue-8 border-b border-neutral-2 pb-11">
           曼陀號理念
         </h3>

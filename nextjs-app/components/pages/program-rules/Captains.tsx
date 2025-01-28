@@ -1,13 +1,14 @@
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
 import ProfileCard from "@/components/common/ProfileCard";
 import { EXECUTION_GROUP } from "@/constants/pages/team";
-
+import Wave from "@/components/common/Wave";
 const PROFILE_LIST = EXECUTION_GROUP.Captain;
 
 const Captains = () => {
   return (
-    <section className="bg-yellow-1 py-[72px] md:py-[120px]">
-      <div className="container px-5 md:px-10">
+    <section className="w-full bg-yellow-1 relative">
+      <Wave color="yellow" />
+      <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <SectionTitle
           title="導師齊聚，即將傾囊相授"
           description={`本屆曼陀號領航計劃的各組船長，將在四次月會中不藏私分享\n認同曼陀號使命願景、樂於分享，是他們的共通點`}

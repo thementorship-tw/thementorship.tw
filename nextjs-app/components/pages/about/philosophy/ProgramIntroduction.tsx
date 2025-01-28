@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Routes from "@/constants/routes";
 import PageNavigationCard from "@/components/common/PageNavigationCard";
+import Wave from "@/components/common/Wave";
 
 const content = [
   { title: "計劃名稱", description: "曼陀號領航計劃" },
@@ -17,7 +18,8 @@ const content = [
 ];
 
 const ProgramIntroduction = () => (
-  <div className="w-full bg-yellow-1">
+  <div className="w-full bg-yellow-1 relative">
+    <Wave color="yellow" />
     <section className="container relative px-5 md:px-10 py-[72px] md:py-[120px]">
       <div className="text-center text-h2 text-blue-8 mb-11">
         曼陀號領航計劃簡介
