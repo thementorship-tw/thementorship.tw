@@ -1,10 +1,12 @@
 import { SCHEDULE_ROLE_DATA } from "@/constants/schedules";
 import InfoCard from "@/components/common/InfoCard";
+import Wave from "@/components/common/Wave/Wave";
 import SectionTitle from "../SectionTitle";
 import ScheduleTabs from "./ScheduleTabs";
 
 const Schedule = () => (
-  <section className="bg-blue-8">
+  <section className="bg-blue-8 relative">
+    <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
         title="曼陀號領航計劃重要日程"
