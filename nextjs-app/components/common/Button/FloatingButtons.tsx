@@ -6,7 +6,7 @@ const FloatingButtons = () => (
   <>
     <div
       className={twMerge(
-        "fixed bottom-[144px] -right-[160px] inline-flex flex-col space-y-3 z-50",
+        "fixed bottom-[144px] -right-[215px] inline-flex flex-col space-y-3 z-50",
         "hover:right-0 transition-[right] duration-300"
       )}
     >
@@ -19,7 +19,7 @@ const FloatingButtons = () => (
     </div>
     <div
       className={twMerge(
-        "fixed bottom-[72px] -right-[160px] inline-flex flex-col space-y-3 z-50",
+        "fixed bottom-[72px] -right-[215px] inline-flex flex-col space-y-3 z-50",
         "hover:right-0 transition-[right] duration-300"
       )}
     >

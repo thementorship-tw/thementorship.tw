@@ -109,7 +109,9 @@ const Button: FC<PropsWithChildren<ICallToActionLinkProps>> = ({
       onClick={onClick}
     >
       {children}
-      <span className={dotClasses({ variant, color, disabled })}></span>
+      <span
+        className={twMerge(dotClasses({ variant, color, disabled }))}
+      ></span>
     </button>
   );
 };
