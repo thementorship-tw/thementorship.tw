@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/common/Button/Button";
 import { WHAT_WE_DO } from "@/constants/what-we-do";
+import Wave from "@/components/common/Wave";
 
 const WhatWeDoHomepage = () => (
-  <section className="px-5 md:px-10  py-[72px] md:py-[120px]">
+  <section className="relative px-5 md:px-10  py-[72px] md:py-[120px]">
+    <Wave color="white" />
     <div className="mx-auto text-center space-y-11">
       <div className="space-y-8">
         <div className="space-y-3">

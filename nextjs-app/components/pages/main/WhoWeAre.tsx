@@ -14,6 +14,7 @@ import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
 import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
 
 import Button from "@/components/common/Button/Button";
+import Wave from "@/components/common/Wave";
 import SectionTitle from "./SectionTitle";
 
 interface ITeamMember {
@@ -116,7 +117,8 @@ const teamDisplayTextMap: Record<Team, { name: string; fullName: string }> = {
 
 const WhoWeAre: FC = () => {
   return (
-    <section className="bg-yellow-1 px-5 py-[72px] md:px-10 md:py-[120px]">
+    <section className="relative bg-yellow-1 px-5 py-[72px] md:px-10 md:py-[120px]">
+      <Wave color="yellow" />
       <div className="mx-auto container">
         <SectionTitle
           className="mb-11"

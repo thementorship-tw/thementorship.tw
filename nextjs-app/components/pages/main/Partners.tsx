@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FABLE_PARTNER_URL } from "@/constants/partners";
+import Wave from "@/components/common/Wave";
 
 const programPartners = [
   {
@@ -46,8 +47,9 @@ const programPartners = [
 
 const Partners = () => {
   return (
-    <div className="w-full bg-neutral-1">
-      <section className="container py-[72px] bg-neutral-1 md:py-[120px]">
+    <div className="w-full bg-neutral-1 relative">
+      <Wave color="neutral" />
+      <section className="container py-[72px] md:py-[120px]">
         <div className="mx-auto text-center">
           <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2">合作夥伴</h2>
           <h3 className="text-h3-title md:text-h1-title font-eb-garamond mb-6 md:mb-8 text-blue-8">
