@@ -7,7 +7,7 @@ const waveClasses = cva("absolute inset-0 w-full h-9", {
     color: {
       yellow: "bg-[url(/images/wave/wave-yellow.svg)]",
       blue1: "bg-[url(/images/wave/wave-blue1.svg)]",
-      blue7: "bg-[url(/images/wave/wave-blue7.svg)]",
+      blue8: "bg-[url(/images/wave/wave-blue8.svg)]",
       white: "bg-[url(/images/wave/wave-white.svg)]",
       neutral: "bg-[url(/images/wave/wave-neutral.svg)]",
     },
@@ -15,7 +15,7 @@ const waveClasses = cva("absolute inset-0 w-full h-9", {
 });
 
 const Wave: FC<{
-  color: "yellow" | "blue7" | "blue1" | "white" | "neutral";
+  color: "yellow" | "blue8" | "blue1" | "white" | "neutral";
 }> = ({ color }) => {
   return (
     <div

@@ -66,7 +66,7 @@ const GoalCard: FC<IGoalCardProps> = ({
 
 const WhatWeBring: FC = () => (
   <section className="bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px] relative">
-    <Wave color="blue7" />
+    <Wave color="blue8" />
     <div className="relative mx-auto container">
       <SectionTitle
         className="mb-24"

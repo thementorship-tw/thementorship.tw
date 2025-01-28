@@ -33,7 +33,7 @@ const benefitsData = [
 const Benefits = () => {
   return (
     <div className="w-full bg-blue-8 relative">
-      <Wave color="blue7" />
+      <Wave color="blue8" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <SectionTitle
           title="參加曼陀號，你將會收穫"

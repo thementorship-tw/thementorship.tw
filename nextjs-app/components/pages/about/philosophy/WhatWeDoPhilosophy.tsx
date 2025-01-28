@@ -4,7 +4,7 @@ import Wave from "@/components/common/Wave";
 
 const WhatWeDoPhilosophy = () => (
   <section className="px-5 md:px-10 w-full relative py-[72px] md:py-[120px] bg-blue-8">
-    <Wave color="blue7" />
+    <Wave color="blue8" />
 
     <div className="mx-auto text-center space-y-11">
       <div className="flex flex-col items-center space-y-7">

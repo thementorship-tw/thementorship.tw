@@ -20,7 +20,7 @@ export const SOCIAL_MEDIA_LINKS = [
 export default function Footer() {
   return (
     <footer className="relative w-full">
-      <Wave color="blue7" />
+      <Wave color="blue8" />
       <div className="absolute right-5 -top-[25px]">
         <BackToTopButton />
       </div>
