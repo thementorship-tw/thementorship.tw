@@ -31,8 +31,7 @@ export default async function RootLayout({
       className={`font-sans ${ebGaramond.variable} bg-white text-black`}
     >
       <body>
-        <section className="min-h-screen">
-          <div className="h-[80px] md:h-[88px] lg:h-[94px] z-[-50]" />
+        <section className="min-h-screen pt-[80px] md:pt-[88px] lg:pt-[94px]">
           <Header />
           <main className="">{children}</main>
           <FloatingButtons />
