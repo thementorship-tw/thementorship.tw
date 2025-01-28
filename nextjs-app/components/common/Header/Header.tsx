@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
@@ -60,7 +59,6 @@ export default function Header() {
       }
 
       setIsAtTop(currentScrollY < 50);
-
       setLastScrollY(currentScrollY);
     };
 
