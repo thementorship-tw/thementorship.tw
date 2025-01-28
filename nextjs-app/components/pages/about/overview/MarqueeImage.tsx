@@ -1,6 +1,6 @@
 import Image from "next/image";
 import MarqueeContainer from "@/components/common/MarqueeContainer";
-import { expandArray } from "@/utils/marquee";
+import { expandArray } from "@/utils";
 
 import type { FC } from "react";
 
