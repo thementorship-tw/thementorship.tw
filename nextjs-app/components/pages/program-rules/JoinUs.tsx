@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
 import InfoCard from "@/components/common/InfoCard";
+import Wave from "@/components/common/Wave";
 
 const joinUsData = [
   {
@@ -23,19 +24,23 @@ const joinUsData = [
 
 const JoinUs = () => {
   return (
-    <section className="container bg-white px-5 py-[72px] md:px-10 md:py-[120px]">
-      <SectionTitle
-        title="邀請這樣的你加入"
-        description={
-          "如果你符合以下特質，我們熱切邀請你加入曼陀號，因為你一定會在這裡有所成長！"
-        }
-        serial="02"
-        variant="light"
-      />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-7 mt-11">
-        {joinUsData.map((item) => (
-          <InfoCard key={item.title} {...item} border="bordered" />
-        ))}
+    <section className="w-full bg-white relative">
+      <Wave color="white" />
+      <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
+        <SectionTitle
+          title="邀請這樣的你加入"
+          description={
+            "如果你符合以下特質，我們熱切邀請你加入曼陀號，因為你一定會在這裡有所成長！"
+          }
+          serial="02"
+          variant="light"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-7 mt-11">
+          {joinUsData.map((item) => (
+            <InfoCard key={item.title} {...item} border="bordered" />
+          ))}
+        </div>
       </div>
     </section>
   );
