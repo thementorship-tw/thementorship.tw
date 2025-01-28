@@ -1,4 +1,5 @@
 import InfoCard from "@/components/common/InfoCard";
+import Wave from "@/components/common/Wave";
 
 const monthlyMeetingRolesData = [
   {
@@ -34,7 +35,8 @@ const monthlyMeetingRolesData = [
 
 const MonthlyMeetingRoles = () => {
   return (
-    <div className="w-full bg-yellow-1">
+    <div className="w-full bg-yellow-1 relative">
+      <Wave color="yellow" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <h2 className="text-h2 text-blue-8 text-center flex flex-col">
           月會運作方式
