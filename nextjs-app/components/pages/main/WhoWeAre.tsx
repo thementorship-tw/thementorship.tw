@@ -149,10 +149,11 @@ const WhoWeAre: FC = () => {
                       <div className="p-4 border-2 border-yellow-6 rounded-3">
                         <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
                           <Image
+                            className="object-cover"
                             src={avatar}
                             alt={`${lastName} ${firstName}`}
                             fill
-                            sizes="319px"
+                            sizes="100vw"
                           />
                         </div>
                       </div>
