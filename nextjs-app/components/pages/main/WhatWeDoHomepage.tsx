@@ -3,28 +3,18 @@ import Link from "next/link";
 import Button from "@/components/common/Button/Button";
 import { WHAT_WE_DO } from "@/constants/what-we-do";
 import Wave from "@/components/common/Wave";
+import Routes from "@/constants/routes";
+import SectionTitle from "./SectionTitle";
 
 const WhatWeDoHomepage = () => (
   <section className="relative px-5 md:px-10  py-[72px] md:py-[120px]">
     <Wave color="white" />
     <div className="mx-auto text-center space-y-11">
-      <div className="space-y-8">
-        <div className="space-y-3">
-          <h2 className="text-h4 font-semibold text-yellow-6">
-            {WHAT_WE_DO.zhTitle}
-          </h2>
-          <h3 className="text-h1-title font-eb-garamond text-blue-8">
-            {WHAT_WE_DO.enTitle}
-          </h3>
-        </div>
-        <Image
-          src="/images/title-symbol-line.png"
-          alt="title-symbol-line"
-          width={57}
-          height={5}
-          className="mx-auto mb-9"
-        />
-      </div>
+      <SectionTitle
+        className="mb-11"
+        title={WHAT_WE_DO.zhTitle}
+        subTitle={WHAT_WE_DO.enTitle}
+      />
       <div className="flex flex-col items-center space-y-7">
         <Image
           src={WHAT_WE_DO.logo.src}
@@ -36,7 +26,7 @@ const WhatWeDoHomepage = () => (
           {WHAT_WE_DO.description}
         </div>
         <Button variant="filled" color="blue">
-          <Link href="/about/philosophy">{WHAT_WE_DO.buttonText}</Link>
+          <Link href={Routes.ABOUT.PHILOSOPHY}>{WHAT_WE_DO.buttonText}</Link>
         </Button>
       </div>
     </div>

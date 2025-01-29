@@ -7,14 +7,14 @@ import SectionTitle from "./SectionTitle";
 const FEE_DATA = [
   {
     imageSrc: "/images/icon-hat.png",
-    title: "海選費用",
-    subtitle: "海選場地費用",
+    title: "海選參加費",
+    subtitle: "含海選當日場地與器材費用",
     fee: 350,
   },
   {
     imageSrc: "/images/icon-ship.png",
-    title: "報名費用",
-    subtitle: "4次月會、５場講座費用",
+    title: "計畫報名費",
+    subtitle: "含職能月會、通識講座費用",
     fee: 3500,
   },
 ];

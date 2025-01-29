@@ -11,7 +11,6 @@ const Testimonial = () => {
         title="參加者心得"
         subTitle="Testimonial"
       />
-
       <ParticipantTestimonials />
     </section>
   );

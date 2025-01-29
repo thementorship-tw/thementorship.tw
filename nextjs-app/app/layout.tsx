@@ -1,6 +1,6 @@
 import "./globals.css";
 import { EB_Garamond } from "next/font/google";
-import FloatingButtons from "@/components/common/Button/FloatingButtons";
+// import FloatingButtons from "@/components/common/Button/FloatingButtons";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import { METADATA } from "@/constants/metadata";
@@ -34,7 +34,8 @@ export default async function RootLayout({
         <section className="min-h-screen pt-[80px] md:pt-[88px] lg:pt-[94px]">
           <Header />
           <main className="">{children}</main>
-          <FloatingButtons />
+          {/* TODO: enable floating buttons when the registration is open */}
+          {/* <FloatingButtons /> */}
           <Footer />
         </section>
       </body>
