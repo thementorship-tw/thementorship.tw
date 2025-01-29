@@ -22,10 +22,10 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   },
   {
     phase: SchedulePhase.ACTIVE,
-    type: ScheduleType.HIGHLIGHT,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "3月",
-      description: "(書面審核結果揭曉)",
+      description: "(面談複審)",
     },
     event: [
       {
@@ -41,21 +41,21 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.ONGOING,
-    type: ScheduleType.DEFAULT,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
       description: "(實體海選)",
     },
     event: {
-      date: "2025/04/27v",
+      date: "2025/04/27 (Sun)",
       tag: "請務必出席",
       title: "開幕式暨海選日",
       description: "各職能屆時將分組帶開，由各組船長主導進行海選",
     },
   },
   {
-    phase: SchedulePhase.ONGOING,
+    phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -79,22 +79,22 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
-    type: ScheduleType.DEFAULT,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
-      description: "(半年計劃活動)",
+      description: "(計劃主要活動)",
     },
     event: {
       date: "2025/06 - 2025/09",
       tag: "日期地點待定",
-      title: "第七屆曼陀號領航計劃 活動期間",
+      title: "第七屆曼陀號領航計劃 主要活動期間",
       description:
-        "包含 (各組月會 + 通識主題講座 + 不定期跨職能與跨屆交流) x 無限可能！",
+        "包含 (各組月會四場 + 通識主題講座八場 + 不定期跨職能與跨屆交流) x 無限可能！",
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
@@ -120,28 +120,28 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
     event: {
       date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
-      tag: "請務必出席",
+      tag: "",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
   },
   {
     phase: SchedulePhase.ACTIVE,
-    type: ScheduleType.HIGHLIGHT,
+    type: ScheduleType.DEFAULT,
     timeline: {
       title: "3月",
       description: "(書面審核結果揭曉)",
     },
     event: {
       date: "2025/03/23 (Sun)",
-      tag: "請務必出席",
+      tag: "",
       title: "海選名單揭曉",
       description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
     },
   },
   {
-    phase: SchedulePhase.ONGOING,
-    type: ScheduleType.DEFAULT,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
       description: "(實體海選)",
@@ -154,38 +154,46 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ONGOING,
+    phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
       description: "(公佈錄取名單)",
     },
-    event: {
-      date: "2025/05/11 (Sun)",
-      tag: "請務必出席",
-      title: "第七屆曼陀號領航計劃 水手錄取名單揭曉",
-      description:
-        "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
-      note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
-    },
+    event: [
+      {
+        date: "2025/05/03 (Sat)",
+        tag: "",
+        title: "第七屆曼陀號領航計劃 水手錄取名單揭曉",
+        description:
+          "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
+        note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
+      },
+      {
+        date: "2025/05",
+        tag: "日期地點待定",
+        title: "通識主題講座 第一波",
+        description: "錄取者可免費參加，另開放付費參與",
+      },
+    ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
-    type: ScheduleType.DEFAULT,
+    phase: SchedulePhase.ACTIVE,
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
-      description: "(半年計劃活動)",
+      description: "(計劃主要活動)",
     },
     event: {
       date: "2025/06 - 2025/09",
       tag: "日期地點待定",
-      title: "第七屆曼陀號領航計劃 活動期間",
+      title: "第七屆曼陀號領航計劃 主要活動期間",
       description:
-        "包含 (各組月會 + 通識主題講座 + 不定期跨職能與跨屆交流) x 無限可能！",
+        "包含 (各組月會四場 + 通識主題講座八場 + 不定期跨職能與跨屆交流) x 無限可能！",
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
@@ -205,22 +213,22 @@ export const SCHEDULE_ROLE_DATA = [
   {
     title: "Sailor\n水手 (導生)",
     description:
-      "• 申請組別領域實務經驗 1-3 年內 (含實習經驗)\n• 未來有興趣回饋社群",
+      "• 申請組別領域實務經驗 3 年 (含) 以下 (含實習經驗)\n• 未來有興趣回饋社群",
     imageUrl: "/images/icon-sailor.png",
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://example.com",
+    externalLink: "",
   },
   {
     title: "Navigator\n航海士 (職場前輩)",
     description:
-      "• 申請組別領域實務經驗 4-6 年以上\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
+      "• 申請組別領域實務經驗 3 年 (含) 以上\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
     imageUrl: "/images/icon-navigator.png",
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://example.com",
+    externalLink: "",
   },
 ];
 

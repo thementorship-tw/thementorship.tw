@@ -75,19 +75,19 @@ const CorePhilosophy = () => {
                 imageSrc="/images/icon-map.png"
                 title="人脈連結"
                 subtitle="交織彼此的航線"
-                description="三人行必有我師，這裡臥虎藏龍，只要願意積極參與，就能結識良師益友，串起人脈網絡"
+                description="三人行必有我師，在曼陀號到處充滿樂於分享的各路好手，只要願意積極參與，就能在結識能長期陪伴的良師益友，串起緊密的海上人際網絡"
               />
               <CoreValueCard
                 imageSrc="/images/icon-lighthouse.png"
                 title="職涯探索"
                 subtitle="互為迷航的燈塔"
-                description="迷惘乃人之常情，但眼前的迷霧也許能折射出別人的光。我們在交流中點亮職涯新的可能性"
+                description="迷惘乃人之常情，但也許你眼前的迷霧，能折射出別人的光。透過夥伴間的激盪交流，我們互為彼此的燈塔，點燃迷航的微光，幫助認識自己在地圖上的座標，看見未曾想過的可能性"
               />
               <CoreValueCard
                 imageSrc="/images/icon-rudder.png"
                 title="經驗傳承"
                 subtitle="共享掌舵的智慧"
-                description="經驗是最好老師，曼陀號有資深前輩不藏私分享經驗，讓我們少走冤枉路，發揮正向影響力"
+                description="經驗是最好老師，在曼陀號有資歷豐富的前輩不藏私分享心路歷程，交換乘風破浪的獨門心法，讓我們可以少走冤枉路，也能夠將所學回饋社會，發揮正向影響力"
               />
             </div>
           </div>

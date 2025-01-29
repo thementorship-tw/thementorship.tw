@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { default as MediumIcon } from "@/public/images/medium-logo.svg";
 import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
 import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
@@ -13,8 +12,8 @@ import {
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
 import Wave from "@/components/common/Wave";
+import SectionTitle from "./SectionTitle";
 
-// Note: to change color of icon, here is the example class name: [&>path]:fill-[#fcba03]
 const socialLinks = [
   {
     name: "Medium",
@@ -52,19 +51,11 @@ const StayUpdated = () => {
   return (
     <section className="relative pt-[72px] pb-[90px] md:py-[120px]">
       <Wave color="white" />
-      <div className="mx-auto text-center container">
-        <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2">
-          關注第一手消息
-        </h2>
-        <h3 className="text-h3-title md:text-h1-title font-eb-garamond mb-6 text-blue-8">
-          Stay Updated
-        </h3>
-        <Image
-          src="/images/title-symbol-line.png"
-          alt="title-symbol-line"
-          width={57}
-          height={5}
-          className="mx-auto mb-11"
+      <div className="mx-auto text-center">
+        <SectionTitle
+          className="mb-11"
+          title="關注第一手消息"
+          subTitle="Stay Updated"
         />
         <div className="w-full px-6 md:px-10">
           <div className="flex flex-wrap gap-4 md:gap-7 justify-start md:justify-center">

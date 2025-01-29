@@ -1,6 +1,7 @@
 import InfoCard from "@/components/common/InfoCard";
 import { ButtonColor } from "@/components/common/Button/Button";
 import Wave from "@/components/common/Wave";
+import { MENTORSHIP_EMAIL_ADDRESS_MAILTO } from "@/constants/contact-info";
 
 const recruitmentTargetsData = [
   {
@@ -11,7 +12,7 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://example.com",
+    externalLink: "",
   },
   {
     title: "Navigator\n航海士 (職場前輩)",
@@ -21,7 +22,7 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://example.com",
+    externalLink: "",
   },
   {
     title: "Captain\n船長 (導師)",
@@ -31,7 +32,7 @@ const recruitmentTargetsData = [
     buttonText: "馬上聯絡我們",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://example.com",
+    externalLink: MENTORSHIP_EMAIL_ADDRESS_MAILTO,
   },
 ];
 

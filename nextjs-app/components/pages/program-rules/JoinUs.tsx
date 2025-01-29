@@ -6,18 +6,18 @@ const joinUsData = [
   {
     title: "主動交流",
     description:
-      "如果你已經接觸過 UI/UX 或相關課程，未來想往產品設計師、研究員、產品經理等職位發展並加強協作經驗",
+      "人格測驗無法限制你想認識他人的熱忱，在群體中願意主動與人建立關係",
     imageUrl: "/images/icon-connect.png",
   },
   {
     title: "積極學習",
-    description:
-      "如果你想要訓練扎實產品設計流程 (從研究、探索、設計、測試等)，並將成果以完整的產品設計作品呈現",
+    description: "好奇心沒有極限，懷著成長心態，如同海綿一般渴望吸收新知",
     imageUrl: "/images/icon-sailor.png",
   },
   {
     title: "樂於分享",
-    description: "未來有興趣回饋ＯＯＯＯ",
+    description:
+      "對於自己已有的知識、經驗、資源不藏私，樂意分享給身邊可能需要的人",
     imageUrl: "/images/icon-duck.png",
   },
 ];

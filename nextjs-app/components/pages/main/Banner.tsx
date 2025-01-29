@@ -8,7 +8,7 @@ const Banner = () => (
   <div
     className={twMerge(
       "relative pt-11",
-      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[768px]"
+      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]"
     )}
   >
     {/** Text Area */}
@@ -28,7 +28,7 @@ const Banner = () => (
       </div>
     </div>
     {/** Animation elements for desktop */}
-    <div className="absolute w-full bottom-0 overflow-hidden -z-10">
+    <div className="absolute w-full bottom-[-15px] overflow-hidden -z-10">
       <div className="relative w-[calc(100vw+40px)] h-[136px]">
         <Image
           src="/images/index-banner/wave-1.png"
@@ -42,7 +42,7 @@ const Banner = () => (
         />
       </div>
     </div>
-    <div className="absolute w-full bottom-[10px] overflow-hidden -z-20">
+    <div className="absolute w-full bottom-[-5px] overflow-hidden -z-20">
       <div className="relative w-[calc(100vw+60px)] h-[136px]">
         <Image
           src="/images/index-banner/wave-2.png"
@@ -56,7 +56,7 @@ const Banner = () => (
         />
       </div>
     </div>
-    <div className="absolute w-full bottom-[20px] overflow-hidden -z-30">
+    <div className="absolute w-full bottom-[5px] overflow-hidden -z-30">
       <div className="relative w-[calc(100vw+60px)] h-[136px]">
         <Image
           src="/images/index-banner/wave-3.png"
@@ -98,7 +98,7 @@ const Banner = () => (
       sizes="auto"
       className={twMerge(
         "hidden lg:block",
-        "absolute w-full h-full object-cover object-left-bottom -z-40"
+        "absolute w-full h-full object-cover object-[left_90%] -z-40"
       )}
     />
     <Image
