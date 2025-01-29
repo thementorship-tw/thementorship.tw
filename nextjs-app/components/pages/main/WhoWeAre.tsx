@@ -129,7 +129,7 @@ const WhoWeAre: FC = () => {
   return (
     <section className="relative bg-yellow-1 px-5 py-[72px] md:px-10 md:py-[120px]">
       <Wave color="yellow" />
-      <div className="mx-auto container">
+      <div className="max-w-[1344px] mx-auto">
         <SectionTitle
           className="mb-11"
           title="籌辦團隊"
@@ -172,7 +172,7 @@ const WhoWeAre: FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center md:gap-2">
+                    <div className="flex justify-between items-baseline px-4 pb-4 md:px-0 md:flex-col md:items-center md:gap-2">
                       <p className="text-h4-title font-eb-garamond text-neutral-10">
                         <span className="hidden lg:inline">
                           {`${teamText.fullName} ${roleText}`}
