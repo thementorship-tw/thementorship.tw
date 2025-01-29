@@ -144,50 +144,51 @@ const WhoWeAre: FC = () => {
                 const roleText = roleDisplayTextMap[role];
 
                 return (
-                  <div key={`${lastName} ${firstName}`} className="relative">
-                    <div className="flex flex-col gap-2 md:gap-4">
-                      <div className="p-4 border-2 border-yellow-6 rounded-3">
-                        <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
-                          <Image
-                            className="object-cover"
-                            src={avatar}
-                            alt={`${lastName} ${firstName}`}
-                            fill
-                            sizes="100vw"
-                          />
-                        </div>
-                      </div>
+                  <div
+                    className="flex flex-col gap-2 md:gap-4"
+                    key={`${lastName} ${firstName}`}
+                  >
+                    <div className="p-4 border-2 border-yellow-6 rounded-3">
+                      <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
+                        <Image
+                          className="object-cover"
+                          src={avatar}
+                          alt={`${lastName} ${firstName}`}
+                          fill
+                          sizes="100vw"
+                        />
 
-                      <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center md:gap-2">
-                        <p className="text-h4-title font-eb-garamond text-neutral-10">
-                          <span className="hidden lg:inline">
-                            {`${teamText.fullName} ${roleText}`}
-                          </span>
-                          <span className="lg:hidden">
-                            {team === Team.LEADERSHIP
-                              ? teamText.name
-                              : `${teamText.name} ${roleText}`}
-                          </span>
-                        </p>
+                        <SloganPopup
+                          slogan={slogan}
+                          position="left"
+                          className="md:hidden max-h-[272px] -top-6 -left-3 tracking-[4px]"
+                        />
 
-                        <p className="text-h3-title font-eb-garamond text-neutral-10">
-                          <span className="hidden lg:inline">{`${lastName} ${firstName}`}</span>
-                          <span className="lg:hidden">{lastName}</span>
-                        </p>
+                        <SloganPopup
+                          slogan={slogan}
+                          position="right"
+                          className=" hidden md:block h-auto max-h-[272px] -top-9 -right-10 lg:-top-[88px] xl:-top-9 xl:-right-8 tracking-[4px]"
+                        />
                       </div>
                     </div>
 
-                    <SloganPopup
-                      slogan={slogan}
-                      position="left"
-                      className="md:hidden max-h-[272px] -top-[20px] -left-[8px] tracking-[4px]"
-                    />
+                    <div className="flex justify-between items-baseline px-4 pb-4 md:flex-col md:items-center md:gap-2">
+                      <p className="text-h4-title font-eb-garamond text-neutral-10">
+                        <span className="hidden lg:inline">
+                          {`${teamText.fullName} ${roleText}`}
+                        </span>
+                        <span className="lg:hidden">
+                          {team === Team.LEADERSHIP
+                            ? teamText.name
+                            : `${teamText.name} ${roleText}`}
+                        </span>
+                      </p>
 
-                    <SloganPopup
-                      slogan={slogan}
-                      position="right"
-                      className=" hidden md:block max-h-[272px] -top-[30px] -right-[16px] tracking-[4px]"
-                    />
+                      <p className="text-h3-title font-eb-garamond text-neutral-10">
+                        <span className="hidden lg:inline">{`${lastName} ${firstName}`}</span>
+                        <span className="lg:hidden">{lastName}</span>
+                      </p>
+                    </div>
                   </div>
                 );
               }
