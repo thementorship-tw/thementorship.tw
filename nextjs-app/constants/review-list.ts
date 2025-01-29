@@ -4,7 +4,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/wendy.png",
     name: "Wendy",
-    team: "UIUX",
+    team: "UIUX組",
     role: "水手",
     review:
       "在這近半年的過程中，從對自己職涯充滿迷茫、不知道自己該怎麼前進的狀態下，因為參與了曼陀號而對未來逐漸的清晰起來，除了更了解自己的現況外，更知道自己未來想成為什麼模樣，目標也在跟著船長與航海士以及水手們的交流下越來越明確，同時也認識很多職場上厲害的前輩跟夥伴，建立了珍貴的業界人脈。",
@@ -12,7 +12,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/denny.png",
     name: "Denny",
-    team: "Data",
+    team: "Data組",
     role: "助教",
     review:
       "今年在 Data 組，我首次從學員轉變為助教，參與月會籌備、執行與會後交流，讓我深感收穫滿滿。在這段過程中，與團隊合作更加緊密，提升溝通與協作能力。同時，透過與不同背景的學員互動，我學會換位思考，強化同理心與問題解決能力。此外，從學員、夥伴及導師的回饋中獲得許多啟發，不僅結識了優秀的朋友，也在職涯發展上獲得寶貴建議與支持。能成為助教並成為這個團隊的一份子感到非常驕傲！",
@@ -20,7 +20,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/tia.png",
     name: "Tia",
-    team: "UIUX",
+    team: "UIUX組",
     role: "航海士",
     review:
       "參與曼陀號，像是歷經一趟充滿挑戰與成長的旅程，由於有不同產業的成員陪伴，這趟旅程有趣且不孤單。 從中最大的收穫是探索到自我的職涯定位與目標，每次月會的主題，讓我逐步爬梳過去到現在的職涯發展，並且透過與成員間的互動與分享，整合出屬於自己的定位。",
@@ -28,7 +28,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/ethan.png",
     name: "政廷 Ethan",
-    team: "MKT",
+    team: "MKT組",
     role: "水手",
     review:
       "透過曼陀號的組內月會、跨組聯合月會及各式講座安排，不僅能近距離向經驗豐富的船長和講師們學習，深入汲取經驗與產業知識，以提升自身的軟硬實力外，更會與身邊來自不同領域、具備多元職能的水手 / 航海士緊密交流，這樣的互動機會能激盪出多元的想法與觀點，並進一步拓展我們的視野，累積寶貴的成長經驗！",
@@ -36,7 +36,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/jade.png",
     name: "Jade",
-    team: "UIUX",
+    team: "UIUX組",
     role: "助教",
     review:
       "我們助教可以跟著引水人和船長一起把月會內容玩出各式各樣的花樣，在月會中我們會用I like, I wish, I wonder方法進行快速回饋收集，讓每次月會一個比一個好玩，本次的內容著重在對設計師的角色定位、職涯發展、職場問題解決方法和面試技巧進行各種探索，特別的是，雖不是學員，但透過密切的月會前課程會議，我對各個月會的教學目的有很深入的理解，了解這些知識都是對一名設計師來說特別核心且重要的，在編課過程中也能理解船長對於課程內容的想法，算是另外的寶貴收穫呢！",
@@ -44,7 +44,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/pearl.png",
     name: "Pearl",
-    team: "UIUX",
+    team: "UIUX組",
     role: "水手",
     review:
       "從很多不同職級優秀的人身上，學到可以立刻應用在職場的軟實力。因為之前在公司常忙到沒空觀察，同事也都是各自對接業務，時間久了增長幅度有限。像是有次曼陀號跨組工作坊，直接見識資深ux設計師幫團隊掌控時程進度的魄力，也有效的確認設計方向符合團隊期待，瞬間感覺到自己能夠進步的空間還有好多。除了這個，還有很多的交流都更加激勵我的職涯選擇！",
@@ -52,7 +52,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/juno.png",
     name: "Juno",
-    team: "MKT",
+    team: "MKT組",
     role: "助教",
     review:
       "我覺得在曼陀號最大的收穫是結識原本工作圈不會認識到的人脈。尤其工作之後，大部分的人只會接觸到同公司、同產業的人，少有與他人交流、切磋學習的機會，而在曼陀號打破了這樣的壁壘，突破同溫層打開更寬廣的視野",
@@ -60,7 +60,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/joanna.png",
     name: "Joanna",
-    team: "UIUX",
+    team: "UIUX組",
     role: "水手",
     review:
       "參加曼陀號的過程，我結識了一群志同道合的朋友，也認識了閱歷豐富的導師們。他們在我面臨職涯疑惑時，提供了多方面的建議與解答，幫助我釐清方向。這些寶貴的人際連結與智慧分享，是我在曼陀號最大的收穫，也是最難得的經驗。",
@@ -68,7 +68,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/rong.png",
     name: "Rong",
-    team: "Data",
+    team: "Data組",
     role: "助教",
     review:
       "參加曼陀號計畫最大的收穫是認識了一群非常優秀且樂於分享交流的夥伴。對我來說，無論人生走到哪個階段，難免都會遇到迷惘的時刻，而比起直接得到解答，我更喜歡藉由與他人的交流，看見不同的觀點，在過程中一邊梳理自己的矛盾與盲點，一邊摸索出前進的方向。",
@@ -76,7 +76,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/tom-liu.png",
     name: "湯六",
-    team: "UIUX",
+    team: "UIUX組",
     role: "航海士",
     review:
       "因為我是航海士，在引導青年設計師的過程，也幫助自己重新整理了「角色建立、設計影響力、職涯規劃地圖」等...相關題目，讓我更加理解青年設計師的需求。也幫助自己補強了對於領導 UED 團隊的規劃，算是一舉兩得 (燦笑)",
@@ -84,7 +84,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/amber.png",
     name: "Amber",
-    team: "Engineering",
+    team: "Engineering組",
     role: "水手",
     review:
       "船長 Jalex 總是不私藏的分享他個人的想法、原則和思考方式，每次月會都會有觀念打通和拓展眼界的感覺！參加曼陀號也能夠認識許多正向積極的夥伴，大家互相鼓勵、一起向前，就是成長最快速度方式！",
@@ -92,7 +92,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/zonnie.png",
     name: "Zonnie",
-    team: "UIUX",
+    team: "UIUX組",
     role: "水手",
     review:
       "跟著船長與引水人設計的漸進式月會內容，從向內的盤點自己現況，到向外開始與身邊夥伴交流自己在工作的工作經歷，並互相解惑、取暖，最後再設立未來的目標與規劃。在整個過程中，不僅更了解自我，更重要的是認識了一群有共同目標的夥伴能夠持續交流！",
@@ -100,7 +100,7 @@ export const REVIEW_LIST: IReview[] = [
   {
     imageSrc: "/images/review-list/dd.png",
     name: "DD",
-    team: "PM",
+    team: "PM組",
     role: "水手",
     review:
       "1. 除了本職外, 接觸了職涯探索、談判、投資, 還有數場跟工程師、設計師的工作坊 2. 跟夥伴讀了不少產品管理、商業模式的書 3. 了解到工作價值與成長階梯 4. 在自己迷惘時可以跟夥伴船長討論",
