@@ -47,7 +47,7 @@ const SloganPopup: FC<SloganItemProps> = ({ slogan, className }) => {
         className
       )}
     >
-      <p className="text-white vertical-rl bg-blue-8 p-5 rounded-5 relative motion-translate-y-loop-[5%]">
+      <p className="text-white text-body-md vertical-rl whitespace-pre-line bg-blue-8 p-5 rounded-5 relative motion-translate-y-loop-[5px]">
         {slogan}
         <PopupPointerImg className="absolute -bottom-[15px] left-1/2 -translate-x-1/2" />
       </p>
