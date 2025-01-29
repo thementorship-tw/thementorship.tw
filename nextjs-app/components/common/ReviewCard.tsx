@@ -16,8 +16,10 @@ const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
         />
       </div>
       <div className="flex flex-col items-start space-y-1">
-        <div className="text-h6 text-neutral-10 gap-x-3">{name}</div>
-        <div className="text-left text-body-md text-neutral-6">{`${team} ${role}`}</div>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-3">
+          <div className="text-h6 text-neutral-10">{name}</div>
+          <div className="text-left text-body-md text-neutral-6">{`${team} ${role}`}</div>
+        </div>
         <div className="flex">
           <ReviewStar />
           <ReviewStar />

@@ -46,9 +46,10 @@ const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
         <div className="text-body-md text-neutral-10">{subtitle}</div>
       </div>
     </div>
-    <div className="text-h1 text-yellow-6">
-      {`NTD ${fee.toLocaleString()}`}
-      <span className="text-body-lg text-neutral-10">/人</span>
+    <div className="flex items-baseline">
+      <h4 className="text-h4 text-yellow-6">$ </h4>
+      <h1 className="text-h1 text-yellow-6 ml-1">{fee.toLocaleString()}</h1>
+      <p className="text-body-lg text-neutral-10 ml-1">/人</p>
     </div>
   </div>
 );
