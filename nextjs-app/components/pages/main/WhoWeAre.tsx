@@ -178,7 +178,14 @@ const WhoWeAre: FC = () => {
 
                     <SloganPopup
                       slogan={slogan}
-                      className="max-h-[272px] -top-[40px] -right-[16px] tracking-[4px]"
+                      position="left"
+                      className="md:hidden max-h-[272px] -top-[20px] -left-[8px] tracking-[4px]"
+                    />
+
+                    <SloganPopup
+                      slogan={slogan}
+                      position="right"
+                      className=" hidden md:block max-h-[272px] -top-[30px] -right-[16px] tracking-[4px]"
                     />
                   </div>
                 );

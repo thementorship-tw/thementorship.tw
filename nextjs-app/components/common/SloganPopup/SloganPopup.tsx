@@ -18,10 +18,15 @@ const SloganContainer: FC<SloganProps> = ({ children, slogans }) => {
 // Slogan.Item 元件
 interface SloganItemProps {
   slogan: string;
+  position?: "left" | "right";
   className?: string;
 }
 
-const SloganPopup: FC<SloganItemProps> = ({ slogan, className }) => {
+const SloganPopup: FC<SloganItemProps> = ({
+  slogan,
+  position = "right",
+  className,
+}) => {
   const [isActive, setIsActive] = useState(false);
   const { randomSlogans } = useSlogan();
 
@@ -42,14 +47,20 @@ const SloganPopup: FC<SloganItemProps> = ({ slogan, className }) => {
   return (
     <div
       className={twMerge(
-        "absolute top-0 right-0 opacity-0",
+        "absolute top-0 opacity-0",
+        position === "left" ? "left-0" : "right-0",
         isActive && "animate-fade-in-out",
         className
       )}
     >
       <p className="text-white text-body-md vertical-rl whitespace-pre-line bg-blue-8 p-5 rounded-5 relative motion-translate-y-loop-[5px]">
         {slogan}
-        <PopupPointerImg className="absolute -bottom-[15px] left-1/2 -translate-x-1/2" />
+        <PopupPointerImg
+          className={twMerge(
+            "absolute -bottom-[15px] left-1/2 -translate-x-1/2",
+            position === "left" && "scale-x-[-1]"
+          )}
+        />
       </p>
     </div>
   );
