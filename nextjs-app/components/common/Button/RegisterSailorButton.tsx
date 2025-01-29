@@ -38,7 +38,7 @@ const RegisterSailorButton: FC<IRegisterSailorButtonProps> = ({
           className="w-full h-full p-3 object-cover"
         />
       </div>
-      <div className="text-subtitle-md">馬上報名水手(導生)</div>
+      <div className="text-subtitle-md">馬上報名水手 (導生)</div>
     </Link>
   </Button>
 );

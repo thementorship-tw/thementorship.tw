@@ -5,27 +5,30 @@ import Wave from "@/components/common/Wave";
 const benefitsData = [
   {
     serial: "01",
-    title: "主題月會",
-    description: "和不同職能的產品設計夥伴共創，在有限時間內得到共識並產出成果",
+    title: "職能月會",
+    description:
+      "由各職能組別船長分享工作經驗，幫助學員培養軟實力、突破職涯瓶頸",
     imageUrl: "/images/icon-hat.png",
   },
   {
     serial: "02",
-    title: "主題講座",
+    title: "通識講座",
     description:
-      "邀請到深耕產品設計業界的多年的講師們來分享主題工作坊、主題講座、主題對談等來幫助參賽者獲得更多靈",
+      "邀請各領域業界講師針對現今趨勢、學員敲碗主題分享帶得走的知識技能",
     imageUrl: "/images/icon-license.png",
   },
   {
     serial: "03",
-    title: "跨職能＆跨界交流",
-    description: "從研究一路到測試、最終提案，並結合企業主題解決真實性問題",
+    title: "跨職能 & 跨屆交流",
+    description:
+      "卸下工作包袱，與不同職能、年資的夥伴交流工作與生活，激盪不同的火花",
     imageUrl: "/images/icon-sailor-hat.png",
   },
   {
     serial: "04",
-    title: "曼陀號社群互動",
-    description: "從研究一路到測試、最終提案，並結合企業主題解決真實性問題",
+    title: "社群連結",
+    description:
+      "透過 LinkedIn、Facebook 社團、LINE 群組等媒介維繫長期穩定的人脈資產",
     imageUrl: "/images/icon-lighthouse.png",
   },
 ];

@@ -29,7 +29,6 @@ export default async function ProgramRulesPage() {
       <PositiveFeedbacks />
       <FAQ />
       <Reminders />
-      <ProgramFees />
     </div>
   );
 }

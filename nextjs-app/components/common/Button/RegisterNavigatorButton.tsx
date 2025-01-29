@@ -38,7 +38,7 @@ const RegisterNavigatorButton: FC<IRegisterNavigatorButtonProps> = ({
           className="w-full h-full p-3 object-cover"
         />
       </div>
-      <div className="text-subtitle-md">馬上報名航海士(職場前輩)</div>
+      <div className="text-subtitle-md">馬上報名航海士 (職場前輩)</div>
     </Link>
   </Button>
 );

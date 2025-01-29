@@ -3,29 +3,30 @@ import Link from "next/link";
 import { FC } from "react";
 import Button from "@/components/common/Button/Button";
 import Wave from "@/components/common/Wave";
+import Routes from "@/constants/routes";
 import SectionTitle from "./SectionTitle";
 
 const PROGRAM_GOAL_DATA = [
   {
     imageSrc: "/images/icon-map.png",
-    title: "人脈連結",
+    title: "人脈鏈結",
     subTitle: "交織彼此的航線",
     description:
-      "三人行必有我師，曼陀號裡臥虎藏龍，只要願意積極參與，就能結識長期良師益友，串起緊密人脈網絡",
+      "三人行必有我師，這裡臥虎藏龍，只要願意積極參與，就能結識良師益友，串起人脈網絡",
   },
   {
     imageSrc: "/images/icon-lighthouse.png",
     title: "職涯探索",
     subTitle: "互為迷航的燈塔",
     description:
-      "迷惘乃人之常情，但眼前的迷霧也許能折射出別人的光。在夥伴交流中，我們幫助彼此點亮新的可能性",
+      "迷惘乃人之常情，但眼前的迷霧也許能折射出別人的光。我們在交流中點亮職涯新的可能性",
   },
   {
     imageSrc: "/images/icon-rudder.png",
     title: "經驗傳承",
     subTitle: "共享掌舵的智慧",
     description:
-      "經驗是最好老師，曼陀號有資歷豐富前輩不藏私分享心路歷程，讓我們能少走冤枉路，發揮正向影響力",
+      "經驗是最好老師，曼陀號有資深前輩不藏私分享經驗，讓我們少走冤枉路，發揮正向影響力",
   },
 ];
 
@@ -106,7 +107,7 @@ const WhatWeBring: FC = () => (
       </div>
       {/** Button */}
       <div className="mt-9 flex justify-center">
-        <Link className="grow md:grow-0" href="/about/overview">
+        <Link className="grow md:grow-0" href={Routes.ABOUT.OVERVIEW}>
           <Button
             className="w-full justify-center"
             variant="filled"

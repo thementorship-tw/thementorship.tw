@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "@/components/common/Button/Button";
+import Routes from "@/constants/routes";
 import TabToggle from "./TabToggle";
 import TabContentSailor from "./TabContentSailor";
 import TabContentNavigator from "./TabContentNavigator";
@@ -45,13 +46,13 @@ const ScheduleTabs = () => {
         {SCHEDULE_TAB_DATA.find((tab) => tab.key === activeTab)?.content}
       </div>
       <div className="mt-9 flex justify-center">
-        <Link className="grow md:grow-0" href="/about/overview">
+        <Link className="grow md:grow-0" href={Routes.ABOUT.OVERVIEW}>
           <Button
             className="w-full justify-center"
             variant="filled"
             color="blue"
           >
-            曼陀號計劃詳細介紹
+            更多曼陀號計畫介紹
           </Button>
         </Link>
       </div>

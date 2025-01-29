@@ -15,6 +15,7 @@ import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
 
 import Button from "@/components/common/Button/Button";
 import Wave from "@/components/common/Wave";
+import Routes from "@/constants/routes";
 import SectionTitle from "./SectionTitle";
 
 interface ITeamMember {
@@ -122,7 +123,7 @@ const WhoWeAre: FC = () => {
       <div className="mx-auto container">
         <SectionTitle
           className="mb-11"
-          title="籌辦團隊"
+          title="執行團隊"
           subTitle="Who We Are"
         />
         <div className="grid justify-center grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-4">
@@ -168,13 +169,13 @@ const WhoWeAre: FC = () => {
         </div>
 
         <div className="mt-9 flex justify-center">
-          <Link className="grow md:grow-0" href="/about/team">
+          <Link className="grow md:grow-0" href={Routes.ABOUT.TEAM}>
             <Button
               className="w-full justify-center"
               variant="filled"
               color="blue"
             >
-              認識更多籌辦團隊
+              認識執行團隊
             </Button>
           </Link>
         </div>
