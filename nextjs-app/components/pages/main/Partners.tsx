@@ -37,12 +37,13 @@ const Partners = () => {
                   rel="noopener noreferrer"
                   className="bg-white rounded-3 flex items-center justify-center h-[108px] lg:h-[98px] lg:max-w-[270px]"
                 >
-                  <div className="relative w-[70%] h-[70%]">
+                  <div className="relative w-auto h-auto px-7">
                     <Image
                       src={partner.imageSrc}
                       alt={`${partner.name} logo`}
-                      fill
-                      className="object-contain"
+                      width={158}
+                      height={30}
+                      className="object-contain w-auto h-auto"
                     />
                   </div>
                 </a>
