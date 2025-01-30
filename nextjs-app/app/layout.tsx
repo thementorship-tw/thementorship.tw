@@ -3,6 +3,7 @@ import { EB_Garamond } from "next/font/google";
 // import FloatingButtons from "@/components/common/Button/FloatingButtons";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
+import { MENTORSHIP_WEBSITE_URL } from "@/constants/contact-info";
 import { METADATA } from "@/constants/metadata";
 import type { Metadata } from "next";
 
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
     template: `%s - ${METADATA.projectName}`,
   },
   description: METADATA.projectDescription,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL ?? MENTORSHIP_WEBSITE_URL
+  ),
 };
 
 const ebGaramond = EB_Garamond({
