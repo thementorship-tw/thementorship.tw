@@ -2,24 +2,25 @@ import { Role, Team } from "@/types";
 import { ExecutionGroupType } from "@/types/filter-option";
 
 // Captain
-import SteveAvatar from "@/public/images/execution-group/Steve.png";
-import BrownAvatar from "@/public/images/execution-group/Brown.png";
-import BryanAvatar from "@/public/images/execution-group/Bryan.png";
-import SidneyAvatar from "@/public/images/execution-group/Sidney.png";
-import GordonAvatar from "@/public/images/execution-group/Gordon.png";
-import DukiAvatar from "@/public/images/execution-group/Duki.png";
+import SteveAvatar from "@/public/images/execution-group/Steve.jpg";
+import BrownAvatar from "@/public/images/execution-group/Brown.jpg";
+import BryanAvatar from "@/public/images/execution-group/Bryan.jpg";
+import SidneyAvatar from "@/public/images/execution-group/Sidney.jpg";
+import GordonAvatar from "@/public/images/execution-group/Gordon.jpg";
+import DukiAvatar from "@/public/images/execution-group/Duki.jpg";
 // Navigator
-import JoannAvatar from "@/public/images/execution-group/Joann.png";
-import MilaAvatar from "@/public/images/execution-group/Mila.png";
-import JudyAvatar from "@/public/images/execution-group/Judy.png";
-import KyleAvatar from "@/public/images/execution-group/Kyle.png";
-import AliceAvatar from "@/public/images/execution-group/Alice.png";
-import ClaireAvatar from "@/public/images/execution-group/Claire.png";
-import PattyAvatar from "@/public/images/execution-group/Patty.png";
-import HarperAvatar from "@/public/images/execution-group/Harper.png";
+import JoannAvatar from "@/public/images/execution-group/Joann.jpg";
+import MilaAvatar from "@/public/images/execution-group/Mila.jpg";
+import JudyAvatar from "@/public/images/execution-group/Judy.jpg";
+import KyleAvatar from "@/public/images/execution-group/Kyle.jpg";
+import AliceAvatar from "@/public/images/execution-group/Alice.jpg";
+import ClaireAvatar from "@/public/images/execution-group/Claire.jpg";
+import PattyAvatar from "@/public/images/execution-group/Patty.jpg";
+import HarperAvatar from "@/public/images/execution-group/Harper.jpg";
 // Assistant
-import MartinAvatar from "@/public/images/execution-group/Martin.png";
-import LizzyAvatar from "@/public/images/execution-group/Lizzy.png";
+import MartinAvatar from "@/public/images/execution-group/Martin.jpg";
+import LizzyAvatar from "@/public/images/execution-group/Lizzy.jpg";
+import KevinAvatar from "@/public/images/execution-group/Kevin.jpg";
 
 import { roleDisplayTextMap } from "../role-display-text-map";
 
@@ -233,6 +234,14 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Engineer 水手"],
       quote: "現在放棄的話，比賽就結束了。",
       imageUrl: LizzyAvatar.src,
+    },
+    {
+      team: Team.DATA,
+      name: "李岳洲 Kevin Lee",
+      title: "第七屆 活動組 助理",
+      subTitle: ["第五屆 Data 水手"],
+      quote: "曼陀號將會帶給各位意想不到的航程",
+      imageUrl: KevinAvatar.src,
     },
   ],
 };
