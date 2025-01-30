@@ -5,22 +5,22 @@ import { twMerge } from "tailwind-merge";
 import { SloganProvider, useSlogan } from "./slogan-context";
 import { default as PopupPointerImg } from "./assets/popup-pointer.svg";
 
-interface SloganProps {
+interface ISloganContainerProps {
   children: ReactNode;
   slogans: string[];
 }
 
-const SloganContainer: FC<SloganProps> = ({ children, slogans }) => {
+const SloganContainer: FC<ISloganContainerProps> = ({ children, slogans }) => {
   return <SloganProvider slogans={slogans}>{children}</SloganProvider>;
 };
 
-interface SloganItemProps {
+interface ISloganItemProps {
   slogan: string;
   position?: "left" | "right";
   className?: string;
 }
 
-const SloganPopup: FC<SloganItemProps> = ({
+const SloganPopup: FC<ISloganItemProps> = ({
   slogan,
   position = "right",
   className,
