@@ -52,10 +52,12 @@ export default function Header() {
     const controlHeader = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < lastScrollY) {
+      if (currentScrollY < 50) {
         setIsVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
+      } else {
+        if (Math.abs(currentScrollY - lastScrollY) > 5) {
+          setIsVisible(currentScrollY < lastScrollY);
+        }
       }
 
       setIsAtTop(currentScrollY < 50);
