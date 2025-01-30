@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
+import { MENTORSHIP_WEBSITE_URL } from "@/constants/contact-info";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ?? "https://thementorship.tw";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? MENTORSHIP_WEBSITE_URL;
 
   return [
     {

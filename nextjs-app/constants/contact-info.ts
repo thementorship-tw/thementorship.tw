@@ -1,3 +1,4 @@
+export const MENTORSHIP_WEBSITE_URL = "https://thementorship.tw";
 export const MENTORSHIP_MEDIUM_URL = "https://thementorshiptaiwan.medium.com/";
 export const MENTORSHIP_INSTAGRAM_URL =
   "https://www.instagram.com/thementorshiptaiwan/";
