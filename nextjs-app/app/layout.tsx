@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import { MENTORSHIP_WEBSITE_URL } from "@/constants/contact-info";
 import { METADATA } from "@/constants/metadata";
+import { CSPostHogProvider } from "@/providers/CSPostHogProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,13 +36,15 @@ export default async function RootLayout({
       className={`font-sans ${ebGaramond.variable} bg-white text-black`}
     >
       <body>
-        <section className="min-h-screen pt-[80px] md:pt-[88px] lg:pt-[94px]">
-          <Header />
-          <main className="">{children}</main>
-          {/* TODO: enable floating buttons when the registration is open */}
-          {/* <FloatingButtons /> */}
-          <Footer />
-        </section>
+        <CSPostHogProvider>
+          <section className="min-h-screen pt-[80px] md:pt-[88px] lg:pt-[94px]">
+            <Header />
+            <main className="">{children}</main>
+            {/* TODO: enable floating buttons when the registration is open */}
+            {/* <FloatingButtons /> */}
+            <Footer />
+          </section>
+        </CSPostHogProvider>
       </body>
     </html>
   );
