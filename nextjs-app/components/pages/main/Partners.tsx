@@ -18,7 +18,7 @@ const programPartners = [
 
 const Partners = () => {
   return (
-    <div className="w-full bg-neutral-1 relative">
+    <div className="relative w-full bg-neutral-1">
       <Wave color="neutral" />
       <section className="container py-[72px] md:py-[120px]">
         <div className="mx-auto text-center">
@@ -28,22 +28,22 @@ const Partners = () => {
             subTitle="Our Partners"
           />
           <div className="w-full px-5 md:px-10">
-            <div className="grid grid-cols-2 gap-4 md:gap-7 justify-center max-w-[588px] mx-auto">
+            <div className="mx-auto grid max-w-[588px] grid-cols-2 justify-center gap-4 md:gap-7">
               {programPartners.map((partner, idx) => (
                 <a
                   key={idx}
                   href={partner.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-3 flex items-center justify-center h-[108px] lg:h-[98px] lg:max-w-[270px]"
+                  className="flex h-[108px] items-center justify-center rounded-3 bg-white lg:h-[98px] lg:max-w-[270px]"
                 >
-                  <div className="relative w-auto h-auto px-7">
+                  <div className="relative h-auto w-auto px-7">
                     <Image
                       src={partner.imageSrc}
                       alt={`${partner.name} logo`}
                       width={158}
                       height={30}
-                      className="object-contain w-auto h-auto"
+                      className="h-auto w-auto object-contain"
                     />
                   </div>
                 </a>

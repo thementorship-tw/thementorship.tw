@@ -6,31 +6,31 @@ const FloatingButtons = () => (
   <>
     <div
       className={twMerge(
-        "fixed bottom-[144px] -right-[215px] inline-flex flex-col space-y-3 z-50",
-        "hover:right-0 active:right-0 transition-[right] duration-300"
+        "fixed -right-[215px] bottom-[144px] z-50 inline-flex flex-col space-y-3",
+        "transition-[right] duration-300 hover:right-0 active:right-0"
       )}
     >
       <RegisterSailorButton
         className={twMerge(
-          "hover:bg-blue-8 active:bg-blue-8 hover:border-neutral-8 active:border-neutral-8",
+          "hover:border-neutral-8 hover:bg-blue-8 active:border-neutral-8 active:bg-blue-8",
           "[&>*]:hover:text-white [&>*]:active:text-white",
           "[&>span]:hover:border-white [&>span]:active:border-white",
-          "hover:transition active:transition duration-300"
+          "duration-300 hover:transition active:transition"
         )}
       />
     </div>
     <div
       className={twMerge(
-        "fixed bottom-[72px] -right-[215px] inline-flex flex-col space-y-3 z-50",
-        "hover:right-0 active:right-0 transition-[right] duration-300"
+        "fixed -right-[215px] bottom-[72px] z-50 inline-flex flex-col space-y-3",
+        "transition-[right] duration-300 hover:right-0 active:right-0"
       )}
     >
       <RegisterNavigatorButton
         className={twMerge(
-          "hover:bg-yellow-6 active:bg-yellow-6 hover:border-neutral-8 active:border-neutral-8",
+          "hover:border-neutral-8 hover:bg-yellow-6 active:border-neutral-8 active:bg-yellow-6",
           "[&>*]:hover:text-white [&>*]:active:text-white",
           "[&>span]:hover:border-white [&>span]:active:border-white",
-          "hover:transition active:transition duration-300"
+          "duration-300 hover:transition active:transition"
         )}
       />
     </div>

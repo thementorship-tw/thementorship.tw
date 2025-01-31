@@ -4,7 +4,7 @@ import Wave from "@/components/common/Wave";
 
 const PositiveFeedbacks = () => {
   return (
-    <section className="w-full bg-neutral-1 relative py-[72px] md:py-[120px]">
+    <section className="relative w-full bg-neutral-1 py-[72px] md:py-[120px]">
       <Wave color="neutral" />
 
       <SectionTitle

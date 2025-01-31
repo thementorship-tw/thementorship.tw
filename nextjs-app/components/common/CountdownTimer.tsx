@@ -8,17 +8,17 @@ const DEADLINE = new Date("Feb 10, 2025 00:00:00").getTime();
 const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
   return (
     <>
-      <div className="relative p-3 size-[72px] text-h1 text-white">
+      <div className="relative size-[72px] p-3 text-h1 text-white">
         <Image
           src="/images/index-banner/time-block.png"
           alt="time-block"
           fill
           sizes="auto"
-          className="absolute w-full h-full object-cover -z-10"
+          className="absolute -z-10 h-full w-full object-cover"
         />
         {time}
       </div>
-      <div className="text-blue-8 text-subtitle-md">{unit}</div>
+      <div className="text-subtitle-md text-blue-8">{unit}</div>
     </>
   );
 };
@@ -76,17 +76,17 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="w-fit flex flex-col items-center lg:items-start gap-y-2">
+    <div className="flex w-fit flex-col items-center gap-y-2 lg:items-start">
       <div className="text-subtitle-md text-neutral-10">第七屆開放報名倒數</div>
       <ul className="flex items-center gap-x-2 text-center">
         <li>
           <TimeBlock time={time.days} unit="Days" />
         </li>
-        <li className="text-blue-8 text-h4-title">:</li>
+        <li className="text-h4-title text-blue-8">:</li>
         <li>
           <TimeBlock time={time.hours} unit="Hours" />
         </li>
-        <li className="text-blue-8 text-h4-title">:</li>
+        <li className="text-h4-title text-blue-8">:</li>
         <li>
           <TimeBlock time={time.minutes} unit="Minutes" />
         </li>

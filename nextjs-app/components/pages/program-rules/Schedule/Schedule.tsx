@@ -5,7 +5,7 @@ import SectionTitle from "../SectionTitle";
 import ScheduleTabs from "./ScheduleTabs";
 
 const Schedule = () => (
-  <section className="bg-blue-8 relative">
+  <section className="relative bg-blue-8">
     <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
@@ -17,7 +17,7 @@ const Schedule = () => (
         serial="03"
         variant="dark"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7 mt-11">
+      <div className="mt-11 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-7">
         {SCHEDULE_ROLE_DATA.map((role) => (
           <InfoCard key={role.title} {...role} />
         ))}

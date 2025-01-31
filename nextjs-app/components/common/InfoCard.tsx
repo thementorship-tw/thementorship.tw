@@ -55,24 +55,24 @@ const InfoCard = ({
   return (
     <div className={infoCardVariants({ background, border })}>
       {serial && (
-        <div className="absolute text-h5 -top-5 -left-[13px] bg-yellow-6 text-white w-[52px] h-[52px] flex items-center justify-center rounded-2">
+        <div className="absolute -left-[13px] -top-5 flex h-[52px] w-[52px] items-center justify-center rounded-2 bg-yellow-6 text-h5 text-white">
           {serial}
         </div>
       )}
-      <div className="flex flex-col items-center h-full text-center py-8 px-7">
+      <div className="flex h-full flex-col items-center px-7 py-8 text-center">
         {imageUrl && (
           <Image
             src={imageUrl}
             alt={title}
             width={80}
             height={80}
-            className="w-[80px] h-[80px] object-cover mb-6"
+            className="mb-6 h-[80px] w-[80px] object-cover"
           />
         )}
-        <h3 className="text-h5 text-yellow-6 mb-3 whitespace-pre-line">
+        <h3 className="mb-3 whitespace-pre-line text-h5 text-yellow-6">
           {title}
         </h3>
-        <p className="text-body-lg text-neutral-10 flex-1 whitespace-pre-line">
+        <p className="flex-1 whitespace-pre-line text-body-lg text-neutral-10">
           {description}
         </p>
         {buttonText &&
@@ -80,7 +80,7 @@ const InfoCard = ({
             <Link href={externalLink} target="_blank" className="w-full">
               <Button
                 className={twMerge(
-                  "mt-6 w-full md:w-auto justify-center",
+                  "mt-6 w-full justify-center md:w-auto",
                   buttonClassName
                 )}
                 variant={buttonVariant}
@@ -95,7 +95,7 @@ const InfoCard = ({
           ) : (
             <Button
               className={twMerge(
-                "mt-6 w-full md:w-auto justify-center",
+                "mt-6 w-full justify-center md:w-auto",
                 buttonClassName
               )}
               variant={buttonVariant}

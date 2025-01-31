@@ -29,11 +29,11 @@ interface IFeeInfo {
 const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
   <div
     className={twMerge(
-      "py-8 px-7 bg-white rounded-3",
-      "flex flex-col md:flex-row grow items-center md:items-end justify-between gap-3 md:gap-7"
+      "rounded-3 bg-white px-7 py-8",
+      "flex grow flex-col items-center justify-between gap-3 md:flex-row md:items-end md:gap-7"
     )}
   >
-    <div className="flex flex-col md:flex-row items-center gap-5">
+    <div className="flex flex-col items-center gap-5 md:flex-row">
       <Image
         src={imageSrc}
         alt="program-fee-icon"
@@ -48,14 +48,14 @@ const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
     </div>
     <div className="flex items-baseline">
       <h4 className="text-h4 text-yellow-6">$ </h4>
-      <h1 className="text-h1 text-yellow-6 ml-1">{fee.toLocaleString()}</h1>
-      <p className="text-body-lg text-neutral-10 ml-1">/人</p>
+      <h1 className="ml-1 text-h1 text-yellow-6">{fee.toLocaleString()}</h1>
+      <p className="ml-1 text-body-lg text-neutral-10">/人</p>
     </div>
   </div>
 );
 
 const ProgramFees = () => (
-  <section className="w-full bg-blue-8 relative">
+  <section className="relative w-full bg-blue-8">
     <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
@@ -64,7 +64,7 @@ const ProgramFees = () => (
         serial="06"
         variant="dark"
       />
-      <div className="mt-11 grid grid-cols-1 xl:grid-cols-2 justify-center gap-4 md:gap-7">
+      <div className="mt-11 grid grid-cols-1 justify-center gap-4 md:gap-7 xl:grid-cols-2">
         {FEE_DATA.map((item) => (
           <FeeCard
             key={item.title}

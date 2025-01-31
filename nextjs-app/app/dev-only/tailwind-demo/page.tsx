@@ -14,7 +14,7 @@ export default async function TailwindDemo() {
           <span className="text-blue-5">Try to change the screen size.</span>
         </p>
 
-        <div className="w-[100px] h-[100px] bg-blue-5 md:bg-neutral-6 lg:bg-yellow-5 xl:bg-yellow-2"></div>
+        <div className="h-[100px] w-[100px] bg-blue-5 md:bg-neutral-6 lg:bg-yellow-5 xl:bg-yellow-2"></div>
       </section>
 
       <section className="mb-10">
@@ -86,47 +86,47 @@ export default async function TailwindDemo() {
           <ul>
             <li>
               <p>space-1</p>
-              <div className="h-5 pl-1 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-1"></div>
             </li>
             <li>
               <p>space-2</p>
-              <div className="h-5 pl-2 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-2"></div>
             </li>
             <li>
               <p>space-3</p>
-              <div className="h-5 pl-3 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-3"></div>
             </li>
             <li>
               <p>space-4</p>
-              <div className="h-5 pl-4 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-4"></div>
             </li>
             <li>
               <p>space-5</p>
-              <div className="h-5 pl-5 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-5"></div>
             </li>
             <li>
               <p>space-6</p>
-              <div className="h-5 pl-6 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-6"></div>
             </li>
             <li>
               <p>space-7</p>
-              <div className="h-5 pl-7 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-7"></div>
             </li>
             <li>
               <p>space-8</p>
-              <div className="h-5 pl-8 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-8"></div>
             </li>
             <li>
               <p>space-9</p>
-              <div className="h-5 pl-9 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-9"></div>
             </li>
             <li>
               <p>space-10</p>
-              <div className="h-5 pl-10 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-10"></div>
             </li>
             <li>
               <p>space-11</p>
-              <div className="h-5 pl-11 bg-blue-4 inline-block"></div>
+              <div className="inline-block h-5 bg-blue-4 pl-11"></div>
             </li>
           </ul>
         </ol>
@@ -139,27 +139,27 @@ export default async function TailwindDemo() {
           <ul>
             <li className="mb-6">
               <p>rounded-1</p>
-              <div className="rounded-1 bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-1 bg-yellow-3 p-11"></div>
             </li>
             <li className="mb-6">
               <p>rounded-2</p>
-              <div className="rounded-2 bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-2 bg-yellow-3 p-11"></div>
             </li>
             <li className="mb-6">
               <p>rounded-3</p>
-              <div className="rounded-3 bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-3 bg-yellow-3 p-11"></div>
             </li>
             <li className="mb-6">
               <p>rounded-4</p>
-              <div className="rounded-4 bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-4 bg-yellow-3 p-11"></div>
             </li>
             <li className="mb-6">
               <p>rounded-circle</p>
-              <div className="rounded-circle bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-circle bg-yellow-3 p-11"></div>
             </li>
             <li className="mb-6">
               <p>rounded-pill</p>
-              <div className="rounded-pill bg-yellow-3 p-11 inline-block"></div>
+              <div className="inline-block rounded-pill bg-yellow-3 p-11"></div>
             </li>
           </ul>
         </ol>
@@ -171,19 +171,19 @@ export default async function TailwindDemo() {
         <ol>
           <li className="mb-6">
             <p>shadow-action</p>
-            <div className="shadow-action h-8 w-[200px] border-pink-100 border-4 "></div>
+            <div className="border-pink-100 h-8 w-[200px] border-4 shadow-action"></div>
           </li>
           <li className="mb-6">
             <p>shadow-fixed</p>
-            <div className="shadow-fixed h-8 w-[200px] border-pink-100 border-4"></div>
+            <div className="border-pink-100 h-8 w-[200px] border-4 shadow-fixed"></div>
           </li>
           <li className="mb-6">
             <p>shadow-raise</p>
-            <div className="shadow-raise h-8 w-[200px] border-pink-100 border-4"></div>
+            <div className="border-pink-100 h-8 w-[200px] border-4 shadow-raise"></div>
           </li>
           <li className="mb-6">
             <p>shadow-overlay</p>
-            <div className="shadow-overlay h-8 w-[200px] border-pink-100 border-4"></div>
+            <div className="border-pink-100 h-8 w-[200px] border-4 shadow-overlay"></div>
           </li>
         </ol>
       </section>

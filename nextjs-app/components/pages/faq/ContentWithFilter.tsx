@@ -19,7 +19,7 @@ const ContentWithFilter = () => {
   };
 
   return (
-    <div className="container space-y-10 px-5 md:px-10 xl:px-0 mb-[112px] md:mb-[120px]">
+    <div className="container mb-[112px] space-y-10 px-5 md:mb-[120px] md:px-10 xl:px-0">
       <TagFilter
         filterOptions={FAQ_FILTER_OPTIONS}
         selectedFilter={selectedFilter}
@@ -34,8 +34,8 @@ const ContentWithFilter = () => {
 
           return (
             <div key={key}>
-              <div className="mb-9 relative after:content-[''] after:absolute after:bottom-0 after:rounded-2 after:block after:w-[260px] after:h-[3px] after:bg-yellow-6">
-                <p className="py-4 text-h3 text-blue-8 border-b-[1px] border-neutral-2">
+              <div className="relative mb-9 after:absolute after:bottom-0 after:block after:h-[3px] after:w-[260px] after:rounded-2 after:bg-yellow-6 after:content-['']">
+                <p className="border-b-[1px] border-neutral-2 py-4 text-h3 text-blue-8">
                   {name}
                 </p>
               </div>

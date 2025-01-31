@@ -6,7 +6,7 @@ interface IBreadcrumbProps {
 
 const Breadcrumb: FC<IBreadcrumbProps> = ({ items }) => {
   return (
-    <nav className="p-5 md:px-7 max-h-10">
+    <nav className="max-h-10 p-5 md:px-7">
       <ol className="flex items-center">
         {items.map((item, idx) => (
           <li key={item} className="flex items-center">
@@ -16,7 +16,7 @@ const Breadcrumb: FC<IBreadcrumbProps> = ({ items }) => {
               {item}
             </span>
             {idx < items.length - 1 && (
-              <div className="mx-3 w-3 h-[1px] bg-yellow-6" />
+              <div className="mx-3 h-[1px] w-3 bg-yellow-6" />
             )}
           </li>
         ))}

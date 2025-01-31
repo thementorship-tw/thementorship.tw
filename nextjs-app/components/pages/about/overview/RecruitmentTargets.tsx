@@ -38,16 +38,16 @@ const recruitmentTargetsData = [
 
 const RecruitmentTargets = () => {
   return (
-    <div className="w-full bg-white relative">
+    <div className="relative w-full bg-white">
       <Wave color="white" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
-        <h2 className="text-h2 text-blue-8 text-center flex flex-col">
+        <h2 className="flex flex-col text-center text-h2 text-blue-8">
           計畫招募對象
         </h2>
-        <p className="text-body-md text-neutral-10 text-center mt-6">
+        <p className="mt-6 text-center text-body-md text-neutral-10">
           依據實務經驗的深度分為三大角色，歡迎有志者報名
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-11 md:[&>*:last-child]:translate-x-[50%] lg:[&>*:last-child]:translate-x-0">
+        <div className="mt-11 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 md:[&>*:last-child]:translate-x-[50%] lg:[&>*:last-child]:translate-x-0">
           {recruitmentTargetsData.map((item) => (
             <InfoCard key={item.title} {...item} background="navy" />
           ))}

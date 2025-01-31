@@ -10,21 +10,21 @@ interface INavItemProps {
 const NavItem = ({ href, enTitle, zhTitle }: INavItemProps) => {
   const content = (
     <>
-      <h4 className="text-h4 font-eb-garamond font-normal">{enTitle}</h4>
+      <h4 className="font-eb-garamond text-h4 font-normal">{enTitle}</h4>
       <p className="text-body-md">{zhTitle}</p>
     </>
   );
 
   if (href) {
     return (
-      <Link href={href} className="flex flex-col justify-center items-center">
+      <Link href={href} className="flex flex-col items-center justify-center">
         {content}
       </Link>
     );
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">{content}</div>
+    <div className="flex flex-col items-center justify-center">{content}</div>
   );
 };
 

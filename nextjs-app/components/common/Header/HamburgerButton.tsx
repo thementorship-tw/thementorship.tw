@@ -22,7 +22,7 @@ const HamburgerButton: FC = () => {
   return (
     <>
       <ListIcon
-        className="w-8 h-8 cursor-pointer text-neutral-10 hover:text-yellow-6"
+        className="h-8 w-8 cursor-pointer text-neutral-10 hover:text-yellow-6"
         onClick={handleOpenMobileCollapseMenu}
       />
 

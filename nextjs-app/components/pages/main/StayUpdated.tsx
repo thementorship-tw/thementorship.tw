@@ -17,29 +17,29 @@ import SectionTitle from "./SectionTitle";
 const socialLinks = [
   {
     name: "Medium",
-    icon: <MediumIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
+    icon: <MediumIcon className="h-8 w-8 text-yellow-6 md:h-10 md:w-10" />,
     href: MENTORSHIP_MEDIUM_URL,
   },
   {
     name: "Instagram",
-    icon: <InstagramIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
+    icon: <InstagramIcon className="h-8 w-8 text-yellow-6 md:h-10 md:w-10" />,
     href: MENTORSHIP_INSTAGRAM_URL,
   },
   {
     name: "linkedin",
-    icon: <LinkedInIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
+    icon: <LinkedInIcon className="h-8 w-8 text-yellow-6 md:h-10 md:w-10" />,
     href: MENTORSHIP_LINKEDIN_URL,
   },
   {
     name: "Facebook",
-    icon: <FacebookIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
+    icon: <FacebookIcon className="h-8 w-8 text-yellow-6 md:h-10 md:w-10" />,
     href: MENTORSHIP_FACEBOOK_URL,
   },
   {
     name: "Email",
     icon: (
       <EmailIcon
-        className="w-8 h-8 [&>svg]:w-full [&>svg]:h-full lg:w-10 lg:h-10"
+        className="h-8 w-8 lg:h-10 lg:w-10 [&>svg]:h-full [&>svg]:w-full"
         viewBox="0 0 48 49"
       />
     ),
@@ -49,7 +49,7 @@ const socialLinks = [
 
 const StayUpdated = () => {
   return (
-    <section className="relative pt-[72px] pb-[90px] md:py-[120px]">
+    <section className="relative pb-[90px] pt-[72px] md:py-[120px]">
       <Wave color="white" />
       <div className="mx-auto text-center">
         <SectionTitle
@@ -58,19 +58,17 @@ const StayUpdated = () => {
           subTitle="Stay Updated"
         />
         <div className="w-full px-6 md:px-10">
-          <div className="flex flex-wrap gap-4 md:gap-7 justify-start md:justify-center">
+          <div className="flex flex-wrap justify-start gap-4 md:justify-center md:gap-7">
             {socialLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border h-[108px] lg:h-[212px] w-[calc(50%-6px)] md:w-[calc(33.333%-16px)] lg:w-[212px]
-                rounded-3 hover:bg-yellow-1 transition-[background-color] duration-300 
-                border-yellow-6 flex items-center justify-center"
+                className="flex h-[108px] w-[calc(50%-6px)] items-center justify-center rounded-3 border border-yellow-6 transition-[background-color] duration-300 hover:bg-yellow-1 md:w-[calc(33.333%-16px)] lg:h-[212px] lg:w-[212px]"
               >
                 <div className="flex flex-col items-center gap-2 lg:gap-4">
-                  <span className="text-h6 lg:text-h5 text-neutral-10">
+                  <span className="text-h6 text-neutral-10 lg:text-h5">
                     {link.name}
                   </span>
                   <span>{link.icon}</span>

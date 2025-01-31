@@ -8,63 +8,63 @@ const Banner = () => (
   <div
     className={twMerge(
       "relative pt-11",
-      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]"
+      "h-[calc(100vh-80px)] w-full md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]"
     )}
   >
     {/** Text Area */}
     <div className="flex justify-center lg:justify-start">
-      <div className="lg:ml-[144px] flex flex-col items-center lg:items-start">
-        <div className="text-center lg:text-start text-h1 text-neutral-10 mb-4">
+      <div className="flex flex-col items-center lg:ml-[144px] lg:items-start">
+        <div className="mb-4 text-center text-h1 text-neutral-10 lg:text-start">
           <div>在職涯地圖上</div>
           <div>點亮自己的航線</div>
         </div>
         <div>
           <CountdownTimer />
         </div>
-        <div className="w-fit flex flex-col justify-center gap-4 mt-7">
+        <div className="mt-7 flex w-fit flex-col justify-center gap-4">
           <RegisterSailorButton disabled />
           <RegisterNavigatorButton disabled />
         </div>
       </div>
     </div>
     {/** Animation elements for desktop */}
-    <div className="absolute w-full bottom-[-15px] overflow-hidden -z-10">
-      <div className="relative w-[calc(100vw+40px)] h-[136px]">
+    <div className="absolute bottom-[-15px] -z-10 w-full overflow-hidden">
+      <div className="relative h-[136px] w-[calc(100vw+40px)]">
         <Image
           src="/images/index-banner/wave-1.png"
           alt="wave"
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover object-top",
+            "h-full w-full object-cover object-top",
             "motion-translate-x-loop-[-20px] motion-duration-1000 motion-ease-in-out"
           )}
         />
       </div>
     </div>
-    <div className="absolute w-full bottom-[-5px] overflow-hidden -z-20">
-      <div className="relative w-[calc(100vw+60px)] h-[136px]">
+    <div className="absolute bottom-[-5px] -z-20 w-full overflow-hidden">
+      <div className="relative h-[136px] w-[calc(100vw+60px)]">
         <Image
           src="/images/index-banner/wave-2.png"
           alt="wave"
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover object-top",
+            "h-full w-full object-cover object-top",
             "motion-translate-x-loop-[-40px] motion-duration-1500 motion-ease-in-out"
           )}
         />
       </div>
     </div>
-    <div className="absolute w-full bottom-[5px] overflow-hidden -z-30">
-      <div className="relative w-[calc(100vw+60px)] h-[136px]">
+    <div className="absolute bottom-[5px] -z-30 w-full overflow-hidden">
+      <div className="relative h-[136px] w-[calc(100vw+60px)]">
         <Image
           src="/images/index-banner/wave-3.png"
           alt="wave"
           fill
           className={twMerge(
             "hidden lg:block",
-            "w-full h-full object-cover object-top",
+            "h-full w-full object-cover object-top",
             "motion-translate-x-loop-[-60px] motion-duration-2000 motion-ease-in-out"
           )}
         />
@@ -74,7 +74,7 @@ const Banner = () => (
       className={twMerge(
         "hidden lg:block",
         "absolute bottom-8 right-0 -z-30",
-        "w-[60vw] h-[calc(60vw/1003*614)]"
+        "h-[calc(60vw/1003*614)] w-[60vw]"
       )}
     >
       <Image
@@ -83,8 +83,8 @@ const Banner = () => (
         fill
         sizes="auto"
         className={twMerge(
-          "hidden lg:block translate-y-[-50px]",
-          "w-full h-full object-contain object-right-bottom",
+          "hidden translate-y-[-50px] lg:block",
+          "h-full w-full object-contain object-right-bottom",
           "motion-translate-y-loop-[8px] motion-duration-[3000ms] motion-ease-in-out"
         )}
       />
@@ -98,7 +98,7 @@ const Banner = () => (
       sizes="auto"
       className={twMerge(
         "hidden lg:block",
-        "absolute w-full h-full object-cover object-[left_90%] -z-40"
+        "absolute -z-40 h-full w-full object-cover object-[left_90%]"
       )}
     />
     <Image
@@ -109,7 +109,7 @@ const Banner = () => (
       sizes="auto"
       className={twMerge(
         "hidden md:block lg:hidden",
-        "absolute w-full h-full object-cover object-left-bottom -z-40"
+        "absolute -z-40 h-full w-full object-cover object-left-bottom"
       )}
     />
     <Image
@@ -120,7 +120,7 @@ const Banner = () => (
       sizes="auto"
       className={twMerge(
         "md:hidden",
-        "absolute w-full h-full object-cover object-left-bottom -z-40"
+        "absolute -z-40 h-full w-full object-cover object-left-bottom"
       )}
     />
   </div>

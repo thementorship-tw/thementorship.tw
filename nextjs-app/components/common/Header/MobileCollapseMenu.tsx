@@ -53,10 +53,10 @@ const NavigationMenuItem: FC<{
 }> = ({ title, subtitle, onClick }) => {
   return (
     <div
-      className="cursor-pointer px-7 py-5 text-white flex items-center gap-3 border-b-[1px] border-neutral-8"
+      className="flex cursor-pointer items-center gap-3 border-b-[1px] border-neutral-8 px-7 py-5 text-white"
       onClick={onClick}
     >
-      <p className="text-h4-title font-eb-garamond">{title}</p>
+      <p className="font-eb-garamond text-h4-title">{title}</p>
       <p className="text-body-md">{subtitle}</p>
     </div>
   );
@@ -95,17 +95,17 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
     <div
       className={twMerge(
         show ? "motion-opacity-in-50" : "hidden",
-        "fixed z-50 top-0 left-0 right-0 h-screen w-full bg-blue-7"
+        "fixed left-0 right-0 top-0 z-50 h-screen w-full bg-blue-7"
       )}
     >
-      <div className="flex flex-col h-full">
-        <div className="p-7 flex justify-between">
+      <div className="flex h-full flex-col">
+        <div className="flex justify-between p-7">
           <Link href="/">
-            <div className="bg-contain bg-no-repeat w-[140px] h-[30px] bg-[url('/images/mobile-collapse-menu-logo.png')]" />
+            <div className="h-[30px] w-[140px] bg-[url('/images/mobile-collapse-menu-logo.png')] bg-contain bg-no-repeat" />
           </Link>
 
           <CloseIcon
-            className="w-8 h-8 cursor-pointer text-white"
+            className="h-8 w-8 cursor-pointer text-white"
             onClick={onClose}
           />
         </div>
@@ -134,14 +134,14 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
             )
           )}
 
-          <div className="px-7 py-8 flex flex-col gap-4">
-            <p className="text-neutral-2 text-body-sm">FOLLOW US</p>
+          <div className="flex flex-col gap-4 px-7 py-8">
+            <p className="text-body-sm text-neutral-2">FOLLOW US</p>
 
             <div className="flex gap-4">
               {socialLinks.map((link) => (
                 <Link
                   target="_blank"
-                  className="w-7 h-7 text-white"
+                  className="h-7 w-7 text-white"
                   href={link.href}
                   key={link.href}
                 >

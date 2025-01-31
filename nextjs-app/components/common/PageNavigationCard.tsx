@@ -24,7 +24,7 @@ const PageNavigationCard: FC<IPageNavigationCardProps> = ({
   return (
     <div
       className={twMerge(
-        "px-7 py-8 md:py-[44px] bg-white rounded-3 flex items-center",
+        "flex items-center rounded-3 bg-white px-7 py-8 md:py-[44px]",
         className
       )}
     >
@@ -33,17 +33,17 @@ const PageNavigationCard: FC<IPageNavigationCardProps> = ({
         alt={enTitle}
         width={80}
         height={80}
-        className="w-[80px] h-[80px] md:w-[64px] md:h-[64px]"
+        className="h-[80px] w-[80px] md:h-[64px] md:w-[64px]"
       />
-      <div className="ml-7 md:ml-5 flex-1 md:flex md:justify-between md:items-center flex-wrap gap-4">
+      <div className="ml-7 flex-1 flex-wrap gap-4 md:ml-5 md:flex md:items-center md:justify-between">
         <div>
-          <h3 className="text-h3-title text-yellow-6 font-eb-garamond">
+          <h3 className="font-eb-garamond text-h3-title text-yellow-6">
             {enTitle}
           </h3>
           <p className="text-subtitle-md">{zhTitle}</p>
         </div>
         <Link href={buttonLink}>
-          <Button className="mt-4 md:mt-0 px-7">{buttonText}</Button>
+          <Button className="mt-4 px-7 md:mt-0">{buttonText}</Button>
         </Link>
       </div>
     </div>

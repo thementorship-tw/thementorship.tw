@@ -7,18 +7,18 @@ const GroupsIntro = () => {
   return (
     <div className="w-full bg-neutral-1">
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
-        <h2 className="text-h2 text-blue-8 text-center flex flex-col">
+        <h2 className="flex flex-col text-center text-h2 text-blue-8">
           組別介紹
         </h2>
-        <p className="text-body-md text-neutral-10 text-center mt-6">
+        <p className="mt-6 text-center text-body-md text-neutral-10">
           依照學員職能領域共分為六大組別，月會也將依此分組進行
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-7 mt-11 mb-4 md:mb-7">
+        <div className="mb-4 mt-11 grid grid-cols-1 gap-4 md:mb-7 md:grid-cols-2 md:gap-7 xl:grid-cols-3">
           {groupsInfo.map((group) => (
             <GroupLabel key={group.enGroupName} {...group} />
           ))}
         </div>
-        <div className="pt-[60px] lg:pt-[120px] flex flex-col lg:flex-row gap-7">
+        <div className="flex flex-col gap-7 pt-[60px] lg:flex-row lg:pt-[120px]">
           <PageNavigationCard
             imageSrc="/images/icon-lighthouse.png"
             enTitle="Philosophy"

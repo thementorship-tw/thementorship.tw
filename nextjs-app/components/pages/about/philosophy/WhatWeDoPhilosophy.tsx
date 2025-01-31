@@ -3,12 +3,12 @@ import { WHAT_WE_DO } from "@/constants/what-we-do";
 import Wave from "@/components/common/Wave";
 
 const WhatWeDoPhilosophy = () => (
-  <section className="px-5 md:px-10 w-full relative py-[72px] md:py-[120px] bg-blue-8">
+  <section className="relative w-full bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px]">
     <Wave color="blue8" />
 
-    <div className="mx-auto text-center space-y-11">
+    <div className="mx-auto space-y-11 text-center">
       <div className="flex flex-col items-center space-y-7">
-        <div className="space-y-3 text-h3 md:text-h1 text-white">
+        <div className="space-y-3 text-h3 text-white md:text-h1">
           <div>{WHAT_WE_DO.zhTitle}</div>
           <div>{WHAT_WE_DO.enTitle}</div>
         </div>
@@ -18,7 +18,7 @@ const WhatWeDoPhilosophy = () => (
           width={120}
           height={120}
         />
-        <div className="max-w-[684px] text-subtitle-lg text-white whitespace-break-spaces">
+        <div className="max-w-[684px] whitespace-break-spaces text-subtitle-lg text-white">
           {WHAT_WE_DO.description}
         </div>
       </div>

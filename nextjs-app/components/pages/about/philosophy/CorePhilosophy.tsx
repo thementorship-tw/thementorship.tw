@@ -16,8 +16,8 @@ const CoreValueCard: FC<ICoreValueCardProps> = ({
   description,
 }) => {
   return (
-    <div className="rounded-3 relative h-full flex flex-col items-center text-center px-7 py-8 bg-blue-1 md:flex-row md:justify-between md:items-center">
-      <div className="flex flex-col items-center md:flex-row gap-6 md:gap-8 md:flex-shrink-0">
+    <div className="relative flex h-full flex-col items-center rounded-3 bg-blue-1 px-7 py-8 text-center md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col items-center gap-6 md:flex-shrink-0 md:flex-row md:gap-8">
         <Image
           src={imageSrc}
           alt={title}
@@ -26,8 +26,8 @@ const CoreValueCard: FC<ICoreValueCardProps> = ({
           className="object-cover"
         />
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-h3 text-yellow-6 mb-1">{title}</h3>
-          <h6 className="text-h6 text-neutral-10 mb-4 md:mb-0">{subtitle}</h6>
+          <h3 className="mb-1 text-h3 text-yellow-6">{title}</h3>
+          <h6 className="mb-4 text-h6 text-neutral-10 md:mb-0">{subtitle}</h6>
         </div>
       </div>
       <p className="text-body-md text-neutral-10 md:ml-8 md:flex-1 md:text-left">
@@ -46,10 +46,10 @@ const styles = {
 
 const CorePhilosophy = () => {
   return (
-    <div className="w-full bg-white relative">
+    <div className="relative w-full bg-white">
       <Wave color="white" />
-      <section className="container px-5 py-[72px] md:px-10 md:py-[120px] text-center flex flex-col">
-        <h3 className="text-h3 text-blue-8 border-b border-neutral-2 pb-11">
+      <section className="container flex flex-col px-5 py-[72px] text-center md:px-10 md:py-[120px]">
+        <h3 className="border-b border-neutral-2 pb-11 text-h3 text-blue-8">
           曼陀號理念
         </h3>
 
@@ -69,7 +69,7 @@ const CorePhilosophy = () => {
 
         <div className={styles.contentRow}>
           <h4 className={styles.rowTitle}>核心價值</h4>
-          <div className="lg:flex-1 text-center lg:text-left">
+          <div className="text-center lg:flex-1 lg:text-left">
             <div className="flex flex-col gap-5">
               <CoreValueCard
                 imageSrc="/images/icon-map.png"

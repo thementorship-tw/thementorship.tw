@@ -16,7 +16,7 @@ const SectionTitle: FC<ISectionTitleProps> = ({
 }) => {
   return (
     <div className={`flex flex-col gap-6 md:gap-8 ${className}`}>
-      <div className="text-center flex flex-col gap-2 md:gap-3">
+      <div className="flex flex-col gap-2 text-center md:gap-3">
         <h2
           className={`text-h5 md:text-h4 ${
             variant === "dark" ? "text-white" : "text-yellow-6"
@@ -25,7 +25,7 @@ const SectionTitle: FC<ISectionTitleProps> = ({
           {title}
         </h2>
         <h3
-          className={`text-h3-title font-eb-garamond md:text-h1-title ${variant === "dark" ? "text-white" : "text-blue-8"}`}
+          className={`font-eb-garamond text-h3-title md:text-h1-title ${variant === "dark" ? "text-white" : "text-blue-8"}`}
         >
           {subTitle}
         </h3>

@@ -7,9 +7,9 @@ import Routes from "@/constants/routes";
 import SectionTitle from "./SectionTitle";
 
 const WhatWeDoHomepage = () => (
-  <section className="relative px-5 md:px-10  py-[72px] md:py-[120px]">
+  <section className="relative px-5 py-[72px] md:px-10 md:py-[120px]">
     <Wave color="white" />
-    <div className="mx-auto text-center space-y-11">
+    <div className="mx-auto space-y-11 text-center">
       <SectionTitle
         className="mb-11"
         title={WHAT_WE_DO.zhTitle}
@@ -22,7 +22,7 @@ const WhatWeDoHomepage = () => (
           width={120}
           height={120}
         />
-        <div className="max-w-[684px] text-subtitle-lg text-neutral-10 whitespace-break-spaces">
+        <div className="max-w-[684px] whitespace-break-spaces text-subtitle-lg text-neutral-10">
           {WHAT_WE_DO.description}
         </div>
         <Button variant="filled" color="blue">

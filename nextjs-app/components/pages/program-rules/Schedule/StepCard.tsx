@@ -11,7 +11,7 @@ const StepCard: FC<IStepCard> = ({ imageSrc, desc, hasArrow = true }) => {
     <div className="flex gap-5">
       <div className="w-[64px]">
         <Image src={imageSrc} alt={desc} width={56} height={56} />
-        <div className="text-subtitle-lg whitespace-pre-line">{desc}</div>
+        <div className="whitespace-pre-line text-subtitle-lg">{desc}</div>
       </div>
       {hasArrow && (
         <div className="my-auto">

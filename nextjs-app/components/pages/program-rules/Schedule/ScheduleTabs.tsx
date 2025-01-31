@@ -29,8 +29,8 @@ const ScheduleTabs = () => {
   };
 
   return (
-    <div className="bg-white rounded-3 mt-7 px-5 md:px-10 py-11">
-      <ol className="mx-auto flex max-w-[448px] p-2 bg-neutral-2 rounded-2 mb-10 items-center">
+    <div className="mt-7 rounded-3 bg-white px-5 py-11 md:px-10">
+      <ol className="mx-auto mb-10 flex max-w-[448px] items-center rounded-2 bg-neutral-2 p-2">
         {SCHEDULE_TAB_DATA.map(({ key, label }) => (
           <TabToggle
             key={key}

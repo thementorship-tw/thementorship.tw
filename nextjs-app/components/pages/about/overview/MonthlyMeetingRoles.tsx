@@ -35,19 +35,19 @@ const monthlyMeetingRolesData = [
 
 const MonthlyMeetingRoles = () => {
   return (
-    <div className="w-full bg-yellow-1 relative">
+    <div className="relative w-full bg-yellow-1">
       <Wave color="yellow" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
-        <h2 className="text-h2 text-blue-8 text-center flex flex-col">
+        <h2 className="flex flex-col text-center text-h2 text-blue-8">
           月會運作方式
         </h2>
-        <p className="text-body-md text-neutral-10 text-center mt-6">
+        <p className="mt-6 text-center text-body-md text-neutral-10">
           月會是曼陀號領航計劃的主要課程，將於 6 - 9 月每月安排一次 3
           小時實體月會
           <br />
           由以下五種角色促成月會的運作
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-11 md:[&>*:last-child]:translate-x-[50%] lg:[&>*:last-child]:translate-x-0">
+        <div className="mt-11 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 md:[&>*:last-child]:translate-x-[50%] lg:[&>*:last-child]:translate-x-0">
           {monthlyMeetingRolesData.map((item) => (
             <InfoCard key={item.title} {...item} border="bordered" />
           ))}

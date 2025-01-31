@@ -21,18 +21,18 @@ export default function Footer() {
   return (
     <footer className="relative w-full">
       <Wave color="blue8" />
-      <div className="absolute right-5 -top-[25px]">
+      <div className="absolute -top-[25px] right-5">
         <BackToTopButton />
       </div>
-      <div className="bg-blue-8 w-full p-7 pt-11">
-        <div className="flex flex-col items-center border-b border-neutral-8 mb-4">
+      <div className="w-full bg-blue-8 p-7 pt-11">
+        <div className="mb-4 flex flex-col items-center border-b border-neutral-8">
           <div className="hidden md:block">
             <Image
               src="/images/program-logo-with-white-text-big.png"
               alt="program-logo"
               width={264}
               height={50}
-              className="w-[264px] h-[50px]"
+              className="h-[50px] w-[264px]"
             />
           </div>
           <div className="block md:hidden">
@@ -41,10 +41,10 @@ export default function Footer() {
               alt="program-logo"
               width={187}
               height={40}
-              className="w-[187px] h-[40px]"
+              className="h-[40px] w-[187px]"
             />
           </div>
-          <div className="flex gap-5 mt-5 pb-8">
+          <div className="mt-5 flex gap-5 pb-8">
             {SOCIAL_MEDIA_LINKS.map(({ url, icon }) => (
               <a
                 key={icon}
@@ -63,14 +63,14 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center min-h-11">
+        <div className="flex min-h-11 flex-col items-center lg:flex-row">
           <div className="hidden lg:block lg:flex-1" />
-          <div className="lg:flex-1 flex justify-center">
-            <p className="text-white text-center text-body-md mb-4 lg:mb-0">
+          <div className="flex justify-center lg:flex-1">
+            <p className="mb-4 text-center text-body-md text-white lg:mb-0">
               © MentorShip All Rights Reserved
             </p>
           </div>
-          <div className="md:flex-1 md:flex md:justify-end md:items-end flex justify-center">
+          <div className="flex justify-center md:flex md:flex-1 md:items-end md:justify-end">
             <Image
               src="/images/deployed-on-zeabur.png"
               alt="footer-logo"

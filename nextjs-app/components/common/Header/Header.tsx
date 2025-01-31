@@ -72,42 +72,36 @@ export default function Header() {
 
   return (
     <header
-      className={`
-        fixed top-0 z-40 w-full 
-        transition-all duration-300
-        border-b-[1px]
-        ${isVisible ? "translate-y-0" : "-translate-y-full"}
-        ${
-          isHomePage && isAtTop
-            ? "bg-transparent border-b-transparent"
-            : "bg-white border-b-transparent md:border-b-neutral-2"
-        }
-      `}
+      className={`fixed top-0 z-40 w-full border-b-[1px] transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"} ${
+        isHomePage && isAtTop
+          ? "border-b-transparent bg-transparent"
+          : "border-b-transparent bg-white md:border-b-neutral-2"
+      } `}
     >
-      <div className="px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
+      <div className="flex items-center justify-between px-5 py-7 md:px-7 lg:py-0">
         <Link href="/">
-          <div className="bg-contain bg-no-repeat w-[153px] h-[30px] bg-[url('/images/header-mobile-logo.png')] md:w-[182px] md:h-[40px] md:bg-[url('/images/header-logo.png')]"></div>
+          <div className="h-[30px] w-[153px] bg-[url('/images/header-mobile-logo.png')] bg-contain bg-no-repeat md:h-[40px] md:w-[182px] md:bg-[url('/images/header-logo.png')]"></div>
         </Link>
 
         <div className="flex">
-          <nav className="hidden lg:block mr-8">
+          <nav className="mr-8 hidden lg:block">
             <ul className="flex gap-8">
               {navigationMenu.map(({ title, subtitle, subMenu, href }) => {
                 const hasSubMenu = !!subMenu && subMenu.length > 0;
 
                 const MenuItem: FC = () => (
                   <>
-                    <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
-                      <p className="text-h4-title font-eb-garamond">{title}</p>
+                    <div className="flex flex-col items-center justify-center gap-1 py-7 text-blue-8">
+                      <p className="font-eb-garamond text-h4-title">{title}</p>
                       <p className="text-subtitle-md">{subtitle}</p>
                     </div>
 
-                    <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
+                    <span className="absolute bottom-0 left-0 right-0 hidden h-1 bg-yellow-2 group-hover:block" />
                   </>
                 );
 
                 return (
-                  <li key={title} className="relative group">
+                  <li key={title} className="group relative">
                     {href ? (
                       <Link href={href}>
                         <MenuItem />
@@ -117,19 +111,19 @@ export default function Header() {
                     )}
 
                     {hasSubMenu && (
-                      <ul className="absolute left-0 z-10 w-[164px] invisible group-hover:visible group-hover:block">
+                      <ul className="invisible absolute left-0 z-10 w-[164px] group-hover:visible group-hover:block">
                         {subMenu.map(({ title, href }) => (
                           <li
                             key={title}
-                            className="border-neutral-2 border-[1px] last:border-b-[1px] border-b-0"
+                            className="border-[1px] border-b-0 border-neutral-2 last:border-b-[1px]"
                           >
                             <Link href={href}>
-                              <div className="flex justify-between px-7 py-5 bg-white hover:bg-yellow-1">
+                              <div className="flex justify-between bg-white px-7 py-5 hover:bg-yellow-1">
                                 <p className="text-subtitle-md text-neutral-10">
                                   {title}
                                 </p>
 
-                                <CompassIcon className="w-6 h-6 text-neutral-10" />
+                                <CompassIcon className="h-6 w-6 text-neutral-10" />
                               </div>
                             </Link>
                           </li>
@@ -146,7 +140,7 @@ export default function Header() {
             {socialLinks.map(({ icon, href, shouldHideInMobile }) => (
               <li
                 key={href}
-                className={`w-8 h-8 text-neutral-10 hover:text-yellow-6 ${shouldHideInMobile ? "hidden md:block" : "block"}`}
+                className={`h-8 w-8 text-neutral-10 hover:text-yellow-6 ${shouldHideInMobile ? "hidden md:block" : "block"}`}
               >
                 <Link href={href} target="_blank" rel="noopener noreferrer">
                   {icon}

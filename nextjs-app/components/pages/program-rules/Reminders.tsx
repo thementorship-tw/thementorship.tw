@@ -6,7 +6,7 @@ const Reminders = () => {
       <div className="container px-5 md:px-10">
         <SectionTitle title="注意事項" serial="09" variant="light" />
 
-        <ol className="text-body-lg text-neutral-10 list-disc pl-7 pt-[36px]">
+        <ol className="list-disc pl-7 pt-[36px] text-body-lg text-neutral-10">
           <li>
             報名計劃則視為同意主辦單位使用參加者本次活動照片與資料，作為主辦單位活動文宣推廣，活動紀錄，以及行銷文宣使用。
           </li>

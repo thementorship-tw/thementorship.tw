@@ -130,7 +130,7 @@ const WhoWeAre: FC = () => {
   return (
     <section className="relative bg-yellow-1 px-5 py-[72px] md:px-10 md:py-[120px]">
       <Wave color="yellow" />
-      <div className="max-w-[1344px] mx-auto">
+      <div className="mx-auto max-w-[1344px]">
         <SectionTitle
           className="mb-11"
           title="執行團隊"
@@ -138,7 +138,7 @@ const WhoWeAre: FC = () => {
         />
 
         <SloganContainer slogans={TEAM_MEMBER_DATA.map(({ slogan }) => slogan)}>
-          <div className="grid justify-center grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-4">
+          <div className="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-4">
             {TEAM_MEMBER_DATA.map(
               ({ avatar, team, role, lastName, firstName, slogan }) => {
                 const teamText = teamDisplayTextMap[team];
@@ -149,8 +149,8 @@ const WhoWeAre: FC = () => {
                     className="flex flex-col gap-2 md:gap-4"
                     key={`${lastName} ${firstName}`}
                   >
-                    <div className="p-4 border-2 border-yellow-6 rounded-3">
-                      <div className="w-full aspect-[319/294] mx-auto relative md:aspect-square">
+                    <div className="rounded-3 border-2 border-yellow-6 p-4">
+                      <div className="relative mx-auto aspect-[319/294] w-full md:aspect-square">
                         <Image
                           className="object-cover"
                           src={avatar}
@@ -162,19 +162,19 @@ const WhoWeAre: FC = () => {
                         <SloganPopup
                           slogan={slogan}
                           position="left"
-                          className="md:hidden max-h-[272px] -top-6 -left-3 tracking-[4px]"
+                          className="-left-3 -top-6 max-h-[272px] tracking-[4px] md:hidden"
                         />
 
                         <SloganPopup
                           slogan={slogan}
                           position="right"
-                          className=" hidden md:block h-auto max-h-[272px] -top-9 -right-10 lg:-top-[88px] xl:-top-9 xl:-right-8 tracking-[4px]"
+                          className="-right-10 -top-9 hidden h-auto max-h-[272px] tracking-[4px] md:block lg:-top-[88px] xl:-right-8 xl:-top-9"
                         />
                       </div>
                     </div>
 
-                    <div className="flex justify-between items-baseline px-4 pb-4 md:px-0 md:flex-col md:items-center md:gap-2">
-                      <p className="text-h4-title font-eb-garamond text-neutral-10">
+                    <div className="flex items-baseline justify-between px-4 pb-4 md:flex-col md:items-center md:gap-2 md:px-0">
+                      <p className="font-eb-garamond text-h4-title text-neutral-10">
                         <span className="hidden lg:inline">
                           {`${teamText.fullName} ${roleText}`}
                         </span>
@@ -185,7 +185,7 @@ const WhoWeAre: FC = () => {
                         </span>
                       </p>
 
-                      <p className="text-h3-title font-eb-garamond text-neutral-10">
+                      <p className="font-eb-garamond text-h3-title text-neutral-10">
                         <span className="hidden lg:inline">{`${lastName} ${firstName}`}</span>
                         <span className="lg:hidden">{lastName}</span>
                       </p>

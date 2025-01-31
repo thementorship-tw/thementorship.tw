@@ -22,11 +22,11 @@ const RegisterNavigatorButton: FC<IRegisterNavigatorButtonProps> = ({
   >
     <Link
       href="/"
-      className="w-[230px] flex justify-start items-center space-x-3"
+      className="flex w-[230px] items-center justify-start space-x-3"
     >
       <div
         className={twMerge(
-          "relative size-10 rounded-circle overflow-hidden",
+          "relative size-10 overflow-hidden rounded-circle",
           disabled ? "bg-neutral-5" : "bg-yellow-6"
         )}
       >
@@ -35,7 +35,7 @@ const RegisterNavigatorButton: FC<IRegisterNavigatorButtonProps> = ({
           sizes="48px"
           src="/images/icon-navigator.png"
           alt="icon-navigator"
-          className="w-full h-full p-3 object-cover"
+          className="h-full w-full object-cover p-3"
         />
       </div>
       <div className="text-subtitle-md">馬上報名航海士 (職場前輩)</div>

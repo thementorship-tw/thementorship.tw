@@ -24,7 +24,7 @@ const joinUsData = [
 
 const JoinUs = () => {
   return (
-    <section className="w-full bg-white relative">
+    <section className="relative w-full bg-white">
       <Wave color="white" />
       <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <SectionTitle
@@ -36,7 +36,7 @@ const JoinUs = () => {
           variant="light"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-7 mt-11">
+        <div className="mt-11 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-7">
           {joinUsData.map((item) => (
             <InfoCard key={item.title} {...item} border="bordered" />
           ))}

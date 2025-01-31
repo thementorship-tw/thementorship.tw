@@ -20,7 +20,7 @@ const PROFILE_LIST = EXECUTION_GROUP.Captain.map((captainInfo, index) => ({
 
 const Captains = () => {
   return (
-    <section className="w-full bg-yellow-1 relative">
+    <section className="relative w-full bg-yellow-1">
       <Wave color="yellow" />
       <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <SectionTitle
@@ -30,7 +30,7 @@ const Captains = () => {
           variant="light"
         />
         <SloganContainer slogans={PROFILE_LIST.map(({ slogan }) => slogan)}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mt-11">
+          <div className="mt-11 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
             {PROFILE_LIST.map(
               ({
                 team,
@@ -54,7 +54,7 @@ const Captains = () => {
                     hashTags={hashTags}
                   />
                   <SloganPopup
-                    className="top-[116px] right-[10px]"
+                    className="right-[10px] top-[116px]"
                     slogan={slogan}
                   />
                 </div>

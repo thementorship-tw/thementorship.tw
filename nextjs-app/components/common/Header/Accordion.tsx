@@ -30,8 +30,8 @@ const Accordion: FC<IAccordionProps> = ({
   };
 
   return (
-    <div className="px-7 border-b-[1px] border-neutral-8">
-      <div onClick={handleToggleAccordion} className="flex gap-3 w-full py-5">
+    <div className="border-b-[1px] border-neutral-8 px-7">
+      <div onClick={handleToggleAccordion} className="flex w-full gap-3 py-5">
         <div className="flex-1">
           <div
             className={twMerge(
@@ -39,16 +39,16 @@ const Accordion: FC<IAccordionProps> = ({
               "flex items-center gap-3"
             )}
           >
-            <p className="text-h4-title font-eb-garamond">{title}</p>
+            <p className="font-eb-garamond text-h4-title">{title}</p>
             <p className="text-body-md">{subtitle}</p>
           </div>
         </div>
 
         <div>
           {isAccordionOpen ? (
-            <MinusIcon className="w-6 h-6 cursor-pointer text-white" />
+            <MinusIcon className="h-6 w-6 cursor-pointer text-white" />
           ) : (
-            <PlusIcon className="w-6 h-6 cursor-pointer text-white" />
+            <PlusIcon className="h-6 w-6 cursor-pointer text-white" />
           )}
         </div>
       </div>
@@ -56,7 +56,7 @@ const Accordion: FC<IAccordionProps> = ({
       <div
         className={twMerge(
           isAccordionOpen
-            ? "grid-rows-[1fr] opacity-100 mb-2"
+            ? "mb-2 grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0",
           "grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ease-in-out"
         )}
@@ -64,13 +64,13 @@ const Accordion: FC<IAccordionProps> = ({
         <div className="overflow-hidden">
           {subMenu.map(({ href, title }) => (
             <div
-              className="flex gap-3 text-white py-4 cursor-pointer"
+              className="flex cursor-pointer gap-3 py-4 text-white"
               onClick={() => {
                 onMenuItemClick(href);
               }}
               key={title}
             >
-              <CompassIcon className="w-6 h-6 " />
+              <CompassIcon className="h-6 w-6" />
               <div className="text-body-md">{title}</div>
             </div>
           ))}

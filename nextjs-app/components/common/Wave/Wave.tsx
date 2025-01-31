@@ -21,7 +21,7 @@ const Wave: FC<{
     <div
       className={twMerge(
         waveClasses({ color }),
-        "absolute left-0 h-[9px] w-full top-0 translate-y-[-9px]"
+        "absolute left-0 top-0 h-[9px] w-full translate-y-[-9px]"
       )}
     ></div>
   );

@@ -10,7 +10,7 @@ interface IStepDetails {
 const StepDetails: FC<IStepDetails> = ({ steps }) => {
   const { firstRow, secondRow } = splitArray(steps);
   return (
-    <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 mb-7 text-center">
+    <div className="mb-7 flex flex-col flex-wrap items-center justify-center gap-5 text-center md:flex-row">
       <div className="flex gap-5">
         {firstRow.map((step, index) => (
           <StepCard

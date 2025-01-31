@@ -30,21 +30,21 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
     <section className="relative overflow-hidden py-[64px] md:py-[112px]">
       <div className="absolute inset-0 w-full overflow-hidden md:top-5">
         <div className="flex">
-          <div className="flex shrink-0 items-center animate-marquee-first-layer">
+          <div className="flex shrink-0 animate-marquee-first-layer items-center">
             {repeatedArray.map((_, index) => (
               <span
                 key={`first-${index.toString()}`}
-                className="inline-block mx-4 text-[64px] md:text-[96px] font-eb-garamond text-yellow-1"
+                className="mx-4 inline-block font-eb-garamond text-[64px] text-yellow-1 md:text-[96px]"
               >
                 {enTitle}
               </span>
             ))}
           </div>
-          <div className="flex shrink-0 items-center animate-marquee-second-layer [animation-delay:-90s]">
+          <div className="flex shrink-0 animate-marquee-second-layer items-center [animation-delay:-90s]">
             {repeatedArray.map((_, index) => (
               <span
                 key={`second-${index.toString()}`}
-                className="inline-block mx-4 text-[64px] md:text-[96px] font-eb-garamond text-yellow-1"
+                className="mx-4 inline-block font-eb-garamond text-[64px] text-yellow-1 md:text-[96px]"
               >
                 {enTitle}
               </span>
@@ -52,11 +52,11 @@ const MarqueeTitle: FC<MarqueeTitleProps> = ({ zhTitle, enTitle }) => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-5">
-        <h2 className="text-h5 md:text-h4 text-yellow-6 mb-2 md:mb-3">
+      <div className="relative z-10 flex flex-col items-center justify-center px-5 text-center">
+        <h2 className="mb-2 text-h5 text-yellow-6 md:mb-3 md:text-h4">
           {zhTitle}
         </h2>
-        <h3 className="text-h1-title font-eb-garamond mb-8 text-blue-8">
+        <h3 className="mb-8 font-eb-garamond text-h1-title text-blue-8">
           {enTitle}
         </h3>
         <Image

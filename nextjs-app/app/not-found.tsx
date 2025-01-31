@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default async function NotFoundPage() {
   return (
-    <div className="flex items-center justify-center min-h-[80vh] bg-white">
+    <div className="flex min-h-[80vh] items-center justify-center bg-white">
       <div className="flex flex-col items-center">
         <Image
           src="/images/not-found.png"

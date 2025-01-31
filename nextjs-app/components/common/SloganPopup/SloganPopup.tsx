@@ -51,7 +51,7 @@ const SloganPopup: FC<ISloganItemProps> = ({
         className
       )}
     >
-      <p className="text-white text-body-md vertical-rl whitespace-pre-line bg-blue-8 p-5 rounded-5 relative motion-translate-y-loop-[5px]">
+      <p className="vertical-rl relative whitespace-pre-line rounded-5 bg-blue-8 p-5 text-body-md text-white motion-translate-y-loop-[5px]">
         {slogan}
         <PopupPointerImg
           className={twMerge(

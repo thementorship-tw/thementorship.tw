@@ -44,7 +44,7 @@ const GoalCard: FC<IGoalCardProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center rounded-3 duration-300 border border-yellow-6 bg-white z-10">
+    <div className="z-10 flex flex-col items-center rounded-3 border border-yellow-6 bg-white duration-300">
       <div className="h-[30px]">
         <Image
           src={imageSrc}
@@ -54,7 +54,7 @@ const GoalCard: FC<IGoalCardProps> = ({
           className="-translate-y-1/2"
         />
       </div>
-      <div className="px-7 pt-11 pb-8 space-y-4 text-center">
+      <div className="space-y-4 px-7 pb-8 pt-11 text-center">
         <div className="space-y-2 text-yellow-6">
           <h3 className="text-h4">{title}</h3>
           <h6 className="text-h6">{subTitle}</h6>
@@ -66,9 +66,9 @@ const GoalCard: FC<IGoalCardProps> = ({
 };
 
 const WhatWeBring: FC = () => (
-  <section className="bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px] relative">
+  <section className="relative bg-blue-8 px-5 py-[72px] md:px-10 md:py-[120px]">
     <Wave color="blue8" />
-    <div className="relative mx-auto container">
+    <div className="container relative mx-auto">
       <SectionTitle
         className="mb-24"
         title="核心精神"
@@ -76,7 +76,7 @@ const WhatWeBring: FC = () => (
         variant="dark"
       />
       {/** Rope - md and above */}
-      <div className="hidden md:block md:w-screen lg:w-full -translate-x-10 lg:translate-x-0 translate-y-[130px]">
+      <div className="hidden -translate-x-10 translate-y-[130px] md:block md:w-screen lg:w-full lg:translate-x-0">
         <Image
           src="/images/rope.png"
           alt="rope"
@@ -85,16 +85,16 @@ const WhatWeBring: FC = () => (
         />
       </div>
       {/** Rope - sm */}
-      <div className="md:hidden absolute left-1/2 transform -translate-x-1/2 w-[760px] h-[20px] rotate-90 translate-y-[400px]">
+      <div className="absolute left-1/2 h-[20px] w-[760px] -translate-x-1/2 translate-y-[400px] rotate-90 transform md:hidden">
         <Image
           src="/images/rope.png"
           alt="rope"
           fill
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
       {/** Goal Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-[80px] md:gap-7">
+      <div className="grid grid-cols-1 gap-[80px] md:grid-cols-3 md:gap-7">
         {PROGRAM_GOAL_DATA.map((goal) => (
           <GoalCard
             key={goal.title}

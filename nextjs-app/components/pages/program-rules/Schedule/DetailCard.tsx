@@ -14,7 +14,7 @@ const ActiveIcon = () => (
       src="/images/icon-ship.png"
       alt="icon-ship"
       fill
-      className="w-full h-full object-cover"
+      className="h-full w-full object-cover"
     />
   </div>
 );
@@ -26,8 +26,8 @@ interface IDetailContent {
 }
 
 const DetailContent: FC<IDetailContent> = ({ phase, event, isDivider }) => (
-  <div className="w-full lg:w-fit flex flex-col">
-    <div className="flex flex-wrap justify-center md:justify-start items-center text-subtitle-md text-neutral-10 text-center md:text-left mb-2">
+  <div className="flex w-full flex-col lg:w-fit">
+    <div className="mb-2 flex flex-wrap items-center justify-center text-center text-subtitle-md text-neutral-10 md:justify-start md:text-left">
       <div className="mr-3">{event.date}</div>
       {event.tag && (
         <div className={twMerge(detailCard.tag({ phase }))}>{event.tag}</div>
@@ -48,7 +48,7 @@ const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
   const renderEvent = () => {
     if (Array.isArray(event)) {
       return (
-        <div className="flex flex-wrap gap-5 lg:gap-9 justify-center lg:justify-start">
+        <div className="flex flex-wrap justify-center gap-5 lg:justify-start lg:gap-9">
           {event.map((e, index) => (
             <DetailContent
               key={`${e.title}-${index.toString()}`}
@@ -65,13 +65,13 @@ const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-stretch rounded-3">
+    <div className="flex flex-col items-stretch rounded-3 md:flex-row">
       <div className={twMerge(detailCard.title({ type, phase }))}>
         <div className="text-h5">{timeline.title}</div>
         <div className="text-body-md">{timeline.description}</div>
       </div>
       <div className={twMerge(detailCard.event({ type, phase }))}>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           {renderEvent()}
           {phase === SchedulePhase.ONGOING && <ActiveIcon />}
         </div>

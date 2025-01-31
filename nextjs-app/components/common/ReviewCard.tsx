@@ -4,15 +4,15 @@ import { IReview } from "@/types/review";
 import { default as ReviewStar } from "@/public/images/review-star.svg";
 
 const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
-  <div className="mx-[6px] md:mx-4 p-6 flex flex-col items-start space-y-3 bg-white border-2 border-neutral-2 rounded-3">
+  <div className="mx-[6px] flex flex-col items-start space-y-3 rounded-3 border-2 border-neutral-2 bg-white p-6 md:mx-4">
     <div className="flex gap-x-4">
-      <div className="relative size-[42px] rounded-2 overflow-hidden border-yellow-2">
+      <div className="relative size-[42px] overflow-hidden rounded-2 border-yellow-2">
         <Image
           src={imageSrc}
           alt="profile"
           fill
           sizes="42px"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="flex flex-col items-start space-y-1">
@@ -29,7 +29,7 @@ const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
         </div>
       </div>
     </div>
-    <div className="w-[225px] md:w-[216px] lg:w-[400px] text-left text-body-md text-neutral-10">
+    <div className="w-[225px] text-left text-body-md text-neutral-10 md:w-[216px] lg:w-[400px]">
       {review}
     </div>
   </div>
