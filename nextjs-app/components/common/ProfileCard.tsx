@@ -31,7 +31,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
   return (
     <div
       className={twMerge(
-        "flex flex-col gap-7 rounded-3 bg-blue-1 px-5 py-9 text-center",
+        "flex h-full flex-col gap-7 rounded-3 bg-blue-1 px-5 py-9 text-center",
         hasBorder && "border-[1px] border-yellow-6"
       )}
     >
