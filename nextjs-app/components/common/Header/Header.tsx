@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
@@ -72,11 +73,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full border-b-[1px] transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"} ${
+      className={twMerge(
+        "fixed top-0 z-40 w-full border-b-[1px] transition-all duration-300",
+        isVisible ? "translate-y-0" : "-translate-y-full",
         isHomePage && isAtTop
           ? "border-b-transparent bg-transparent"
           : "border-b-transparent bg-white md:border-b-neutral-2"
-      } `}
+      )}
     >
       <div className="flex items-center justify-between px-5 py-7 md:px-7 lg:py-0">
         <Link href="/">
