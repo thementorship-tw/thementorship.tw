@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import throttle from "lodash/throttle";
 import { navigationMenu } from "@/constants/header";
 import {
   MENTORSHIP_FACEBOOK_URL,
@@ -64,9 +65,12 @@ export default function Header() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", controlHeader);
+    const throttledControlHeader = throttle(controlHeader, 200);
+
+    window.addEventListener("scroll", throttledControlHeader);
     return () => {
-      window.removeEventListener("scroll", controlHeader);
+      window.removeEventListener("scroll", throttledControlHeader);
+      throttledControlHeader.cancel();
     };
   }, [lastScrollY]);
 
