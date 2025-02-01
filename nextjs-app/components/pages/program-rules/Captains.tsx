@@ -42,7 +42,7 @@ const Captains = () => {
                 hashTags,
                 slogan,
               }) => (
-                <div key={name} className="relative">
+                <div key={name} className="relative flex">
                   <ProfileCard
                     hasBorder
                     team={team}

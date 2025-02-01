@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "date-fns": "^3.6.0",
+    "lodash": "^4.17.21",
     "next": "^15.0.3",
     "next-sanity": "^9.8.11",
     "postcss": "^8.4.49",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@types/lodash": "^4.17.15",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.3",
     "eslint-config-prettier": "9.1.0",

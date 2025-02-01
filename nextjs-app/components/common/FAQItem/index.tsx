@@ -15,7 +15,7 @@ interface IFAQItem {
 }
 
 const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
-  const [isAnswerExpanded, setIsAnswerExpanded] = useState(true);
+  const [isAnswerExpanded, setIsAnswerExpanded] = useState(false);
 
   const handleToggleAnswer = () => {
     setIsAnswerExpanded((prev) => !prev);
