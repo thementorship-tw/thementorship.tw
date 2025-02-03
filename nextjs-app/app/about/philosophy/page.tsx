@@ -4,7 +4,6 @@ import WhatWeDoPhilosophy from "@/components/pages/about/philosophy/WhatWeDoPhil
 import CorePhilosophy from "@/components/pages/about/philosophy/CorePhilosophy";
 import ProgramIntroduction from "@/components/pages/about/philosophy/ProgramIntroduction";
 import Routes from "@/constants/routes";
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
