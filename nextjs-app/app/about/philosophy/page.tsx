@@ -3,10 +3,15 @@ import MarqueeTitle from "@/components/common/MarqueeTitle";
 import WhatWeDoPhilosophy from "@/components/pages/about/philosophy/WhatWeDoPhilosophy";
 import CorePhilosophy from "@/components/pages/about/philosophy/CorePhilosophy";
 import ProgramIntroduction from "@/components/pages/about/philosophy/ProgramIntroduction";
+import Routes from "@/constants/routes";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "曼陀號理念",
+  title: "曼陀號理念｜關於曼陀號",
+  alternates: {
+    canonical: Routes.ABOUT.PHILOSOPHY,
+  },
 };
 
 export default async function PhilosophyPage() {

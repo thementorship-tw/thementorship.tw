@@ -7,10 +7,14 @@ import WhoWeAre from "@/components/pages/main/WhoWeAre";
 import Testimonial from "@/components/pages/main/Testimonial";
 import OurImpact from "@/components/pages/main/OurImpact";
 import Banner from "@/components/pages/main/Banner";
+import Routes from "@/constants/routes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `首頁 - ${METADATA.projectName}`,
+  title: METADATA.projectName,
+  alternates: {
+    canonical: Routes.HOME,
+  },
 };
 
 export default async function HomePage() {

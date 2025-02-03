@@ -26,7 +26,7 @@ const monthlyMeetingRolesData = [
     imageUrl: "/images/icon-navigator.png",
   },
   {
-    title: "Sailor\n水手 (導生)",
+    title: "Sailor\n水手 (職場新人)",
     description:
       "對自身發展有理想、希望能吸取前輩經驗，往目標更加努力；或對職涯發展略有迷惘，帶著切身問題和其他水手、前輩們交流",
     imageUrl: "/images/icon-sailor.png",
