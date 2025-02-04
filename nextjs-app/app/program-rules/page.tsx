@@ -9,10 +9,14 @@ import ProgramFees from "@/components/pages/program-rules/ProgramFees";
 import FAQ from "@/components/pages/program-rules/FAQ";
 import Reminders from "@/components/pages/program-rules/Reminders";
 import Schedule from "@/components/pages/program-rules/Schedule";
+import Routes from "@/constants/routes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "活動辦法",
+  alternates: {
+    canonical: Routes.PROGRAM_RULES,
+  },
 };
 
 export default async function ProgramRulesPage() {

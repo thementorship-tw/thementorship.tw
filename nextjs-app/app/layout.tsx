@@ -11,12 +11,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     default: METADATA.projectName,
-    template: `%s - ${METADATA.projectName}`,
+    template: `%s｜${METADATA.projectName}`,
   },
   description: METADATA.projectDescription,
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL ?? MENTORSHIP_WEBSITE_URL
   ),
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+  },
 };
 
 const ebGaramond = EB_Garamond({

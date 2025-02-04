@@ -211,7 +211,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
 
 export const SCHEDULE_ROLE_DATA = [
   {
-    title: "Sailor\n水手 (導生)",
+    title: "Sailor\n水手 (職場新人)",
     description:
       "• 申請組別領域實務經驗 3 年 (含) 以下 (含實習經驗)\n• 未來有興趣回饋社群",
     imageUrl: "/images/icon-sailor.png",

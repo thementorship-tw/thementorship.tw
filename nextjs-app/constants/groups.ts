@@ -1,7 +1,7 @@
 export const groupsInfo = [
   {
     zhGroupName: "商業開發",
-    enGroupName: "Business (BD)",
+    enGroupName: "Business Development (BD)",
     imageUrl: "/images/group-icon/bd.png",
   },
   {

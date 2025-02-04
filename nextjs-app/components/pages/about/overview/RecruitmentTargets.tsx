@@ -5,7 +5,7 @@ import { MENTORSHIP_EMAIL_ADDRESS_MAILTO } from "@/constants/contact-info";
 
 const recruitmentTargetsData = [
   {
-    title: "Sailor\n水手 (導生)",
+    title: "Sailor\n水手 (職場新人)",
     description:
       "• 申請組別領域實務經驗 1-3 年內 (含實習經驗)\n• 未來有興趣回饋社群",
     imageUrl: "/images/icon-sailor.png",
