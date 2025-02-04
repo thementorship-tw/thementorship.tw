@@ -52,7 +52,7 @@ const buttonClasses = cva(
         variant: "filled",
         color: "blue",
         class:
-          "bg-blue-8 hover:bg-blue-9 transition-[background-color] duration-300",
+          "bg-blue-7 hover:bg-blue-9 transition-[background-color] duration-300",
       },
       {
         variant: "filled",
@@ -64,7 +64,7 @@ const buttonClasses = cva(
         variant: "outline",
         color: "blue",
         class:
-          "text-blue-8 border-blue-8 hover:text-blue-9 hover:border-blue-9 transition duration-300",
+          "text-blue-7 border-blue-7 hover:text-blue-9 hover:border-blue-9 transition duration-300",
       },
       {
         variant: "outline",
@@ -100,7 +100,7 @@ const dotClasses = cva("size-[14px] border-[5px] rounded-circle", {
       variant: "outline",
       color: "blue",
       class:
-        "border-blue-8 group-hover:border-blue-9 transition-[border] duration-300",
+        "border-blue-7 group-hover:border-blue-9 transition-[border] duration-300",
     },
     {
       variant: "outline",

@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="hidden lg:block lg:flex-1" />
           <div className="lg:flex-1 flex justify-center">
             <p className="text-white text-center text-body-md mb-4 lg:mb-0">
-              © MentorShip All Rights Reserved
+              © The MentorShip Program All Rights Reserved
             </p>
           </div>
           <div className="md:flex-1 md:flex md:justify-end md:items-end flex justify-center">
