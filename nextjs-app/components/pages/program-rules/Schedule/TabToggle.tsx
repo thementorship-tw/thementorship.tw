@@ -7,7 +7,7 @@ const toggle = cva(
   {
     variants: {
       isActive: {
-        true: "text-white bg-blue-8",
+        true: "text-white bg-blue-8 motion-preset-confetti",
         false: "text-neutral-10",
       },
     },
