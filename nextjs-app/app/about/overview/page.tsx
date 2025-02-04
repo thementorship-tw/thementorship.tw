@@ -9,7 +9,7 @@ import Routes from "@/constants/routes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "計畫介紹｜關於曼陀號",
+  title: "計劃介紹｜關於曼陀號",
   alternates: {
     canonical: Routes.ABOUT.OVERVIEW,
   },
