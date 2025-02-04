@@ -13,7 +13,7 @@ const FEE_DATA = [
   },
   {
     imageSrc: "/images/icon-ship.png",
-    title: "計畫報名費",
+    title: "計劃報名費",
     subtitle: "含職能月會、通識講座費用",
     fee: 3500,
   },
@@ -59,7 +59,7 @@ const ProgramFees = () => (
     <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
-        title="計畫參加費用"
+        title="計劃參加費用"
         description={`「收到海選通知信」始需繳納「海選參加費」\n「收到錄取通知信」始需繳納「計劃報名費」`}
         serial="06"
         variant="dark"

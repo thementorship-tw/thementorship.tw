@@ -54,7 +54,7 @@ const Captains = () => {
                     hashTags={hashTags}
                   />
                   <SloganPopup
-                    className="top-[116px] right-[10px]"
+                    className="top-[116px] right-[10px] tracking-[4px]"
                     slogan={slogan}
                   />
                 </div>

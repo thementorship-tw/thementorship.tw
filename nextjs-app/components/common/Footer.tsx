@@ -28,20 +28,20 @@ export default function Footer() {
         <div className="flex flex-col items-center border-b border-neutral-8 mb-4">
           <div className="hidden md:block">
             <Image
-              src="/images/program-logo-with-white-text-big.png"
+              src="/images/program-logo-with-white-text.png"
               alt="program-logo"
-              width={264}
+              width={238}
               height={50}
-              className="w-[264px] h-[50px]"
+              className="w-[238px] h-[50px]"
             />
           </div>
           <div className="block md:hidden">
             <Image
               src="/images/program-logo-with-white-text.png"
               alt="program-logo"
-              width={187}
+              width={181}
               height={40}
-              className="w-[187px] h-[40px]"
+              className="w-[181px] h-[40px]"
             />
           </div>
           <div className="flex gap-5 mt-5 pb-8">

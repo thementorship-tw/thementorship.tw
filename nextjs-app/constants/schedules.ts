@@ -64,7 +64,6 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     event: [
       {
         date: "2025/05/03 (Sat)",
-        tag: "請務必出席",
         title: "第七屆曼陀號領航計劃 航海士錄取名單揭曉",
         description:
           "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
@@ -147,7 +146,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
       description: "(實體海選)",
     },
     event: {
-      date: "2025/04",
+      date: "2025/04/27 (Sun)",
       tag: "請務必出席",
       title: "開幕式暨海選日",
       description: "各職能屆時將分組帶開，由各組船長主導進行海選",
