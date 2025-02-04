@@ -27,7 +27,7 @@ interface ICallToActionLinkProps {
 }
 
 const buttonClasses = cva(
-  "inline-flex items-center gap-4 rounded-pill text-2",
+  "group inline-flex items-center gap-4 rounded-pill text-2",
   {
     variants: {
       variant: {
@@ -48,17 +48,29 @@ const buttonClasses = cva(
       },
     },
     compoundVariants: [
-      { variant: "filled", color: "blue", class: "bg-blue-8" },
-      { variant: "filled", color: "golden", class: "bg-yellow-6" },
+      {
+        variant: "filled",
+        color: "blue",
+        class:
+          "bg-blue-8 hover:bg-blue-9 transition-[background-color] duration-300",
+      },
+      {
+        variant: "filled",
+        color: "golden",
+        class:
+          "bg-yellow-6 hover:bg-yellow-8 transition-[background-color] duration-300",
+      },
       {
         variant: "outline",
         color: "blue",
-        class: "text-blue-8 border-blue-8",
+        class:
+          "text-blue-8 border-blue-8 hover:text-blue-9 hover:border-blue-9 transition duration-300",
       },
       {
         variant: "outline",
         color: "golden",
-        class: "text-yellow-6 border-yellow-6",
+        class:
+          "text-yellow-6 border-yellow-6 hover:text-yellow-8 hover:border-yellow-8 transition duration-300",
       },
       {
         disabled: true,
@@ -84,8 +96,18 @@ const dotClasses = cva("size-[14px] border-[5px] rounded-circle", {
     },
   },
   compoundVariants: [
-    { variant: "outline", color: "blue", class: "border-blue-8" },
-    { variant: "outline", color: "golden", class: "border-yellow-6" },
+    {
+      variant: "outline",
+      color: "blue",
+      class:
+        "border-blue-8 group-hover:border-blue-9 transition-[border] duration-300",
+    },
+    {
+      variant: "outline",
+      color: "golden",
+      class:
+        "border-yellow-6 group-hover:border-yellow-8 transition-[border] duration-300",
+    },
     { disabled: true, class: "border-neutral-5" },
   ],
 });
