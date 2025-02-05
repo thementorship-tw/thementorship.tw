@@ -162,19 +162,19 @@ const WhoWeAre: FC = () => {
                         <SloganPopup
                           slogan={slogan}
                           position="left"
-                          className="md:hidden max-h-[272px] -top-6 -left-3 tracking-[4px]"
+                          className="lg:hidden max-h-[272px] -top-6 -left-3 tracking-[4px]"
                         />
 
                         <SloganPopup
                           slogan={slogan}
                           position="right"
-                          className=" hidden md:block h-auto max-h-[272px] -top-9 -right-10 lg:-top-[88px] xl:-top-9 xl:-right-8 tracking-[4px]"
+                          className=" hidden lg:block h-auto max-h-[272px] -top-9 -right-10 lg:max-h-[200px] xl:max-h-[272px] xl:-right-8 tracking-[4px]"
                         />
                       </div>
                     </div>
 
                     <div className="flex justify-between items-baseline px-4 pb-4 md:px-0 md:flex-col md:items-center md:gap-2">
-                      <p className="text-h4-title font-eb-garamond text-neutral-10">
+                      <p className="text-h4-title font-eb-garamond text-neutral-10 text-center">
                         <span className="hidden lg:inline">
                           {`${teamText.fullName} ${roleText}`}
                         </span>

@@ -58,7 +58,7 @@ export default {
         "marquee-second-layer": "marquee2 180s linear infinite",
         "marquee-first-layer-reverse": "marquee1-reverse 180s linear infinite",
         "marquee-second-layer-reverse": "marquee2-reverse 180s linear infinite",
-        "fade-in-out": "fade-in-out 3000ms linear 1",
+        "fade-in-out": "fade-in-out 6000ms linear 1",
       },
       keyframes: {
         marquee1: {
@@ -79,8 +79,8 @@ export default {
         },
         "fade-in-out": {
           "0%": { opacity: "0" },
-          "30%": { opacity: "1" },
-          "70%": { opacity: "1" },
+          "15%": { opacity: "1" },
+          "85%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
       },

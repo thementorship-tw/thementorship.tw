@@ -4,6 +4,7 @@ import { FC, useEffect, useState, type ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import { SloganProvider, useSlogan } from "./slogan-context";
 import { default as PopupPointerImg } from "./assets/popup-pointer.svg";
+import { ANIMATION_DURATION } from "./slogan-context";
 
 interface ISloganContainerProps {
   children: ReactNode;
@@ -34,7 +35,7 @@ const SloganPopup: FC<ISloganItemProps> = ({
 
       const timeoutId = setTimeout(() => {
         setIsActive(false);
-      }, 3000);
+      }, ANIMATION_DURATION);
 
       return () => {
         clearTimeout(timeoutId);
