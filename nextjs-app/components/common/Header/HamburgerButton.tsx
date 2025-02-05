@@ -9,14 +9,14 @@ const MobileCollapseMenu = dynamic(() => import("./MobileCollapseMenu"), {
 });
 
 const HamburgerButton: FC = () => {
-  const [showMobileCollapseMenu, setShowMobileCollapseMenu] = useState(false);
+  const [shouldShowMobileMenu, setShouldShowMobileMenu] = useState(false);
 
   const handleOpenMobileCollapseMenu = () => {
-    setShowMobileCollapseMenu(true);
+    setShouldShowMobileMenu(true);
   };
 
   const handleCloseMobileCollapseMenu = () => {
-    setShowMobileCollapseMenu(false);
+    setShouldShowMobileMenu(false);
   };
 
   return (
@@ -27,7 +27,7 @@ const HamburgerButton: FC = () => {
       />
 
       <MobileCollapseMenu
-        show={showMobileCollapseMenu}
+        shouldShowMobileMenu={shouldShowMobileMenu}
         onClose={handleCloseMobileCollapseMenu}
       />
     </>
