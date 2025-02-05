@@ -18,7 +18,10 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_BASE_URL ?? MENTORSHIP_WEBSITE_URL
   ),
   icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/images/favicon.png", type: "image/png", sizes: "48x48" },
+    ],
   },
 };
 
