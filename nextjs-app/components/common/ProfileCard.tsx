@@ -26,7 +26,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
   hasBorder = false,
 }) => {
   const hasTags = hashTags.length > 0;
-  const { zhGroupName, enGroupName } = teamDisplayTextMap[team];
+  const { zhGroupName, enGroupName, shortName } = teamDisplayTextMap[team];
 
   return (
     <div
@@ -36,8 +36,13 @@ const ProfileCard: FC<IProfileCardProps> = ({
       )}
     >
       <div>
-        <p className="text-neutral-10 text-h5">{zhGroupName}</p>
-        <p className="text-neutral-10 text-subtitle-lg">{enGroupName}</p>
+        <p className="text-neutral-10 text-h5">
+          <span>{zhGroupName}</span>
+        </p>
+        <p className="text-neutral-10 text-subtitle-lg">
+          <span>{enGroupName}</span>
+          {shortName && <span> ({shortName})</span>}
+        </p>
       </div>
 
       <div className="px-2">
