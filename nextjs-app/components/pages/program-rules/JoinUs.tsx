@@ -7,7 +7,7 @@ const joinUsData = [
     title: "主動交流",
     description:
       "人格測驗無法限制你想認識他人的熱忱，在群體中願意主動與人建立關係",
-    imageUrl: "/images/icon-connect.png",
+    imageUrl: "/images/icon-assist.png",
   },
   {
     title: "積極學習",

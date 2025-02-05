@@ -68,7 +68,7 @@ const OurImpact: FC = () => {
             title="報名總人數"
             value={2368}
             unit="人"
-            imageSrc="/images/icon-writing.png"
+            imageSrc="/images/icon-letter.png"
             duration={1500}
             startValue={2000}
           />
