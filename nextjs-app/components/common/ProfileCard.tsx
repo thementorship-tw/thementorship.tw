@@ -46,7 +46,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
       </div>
 
       <div className="px-2">
-        <div className="w-full h-[330px] rounded-circle relative overflow-hidden">
+        <div className="w-full aspect-square rounded-circle relative overflow-hidden">
           <Image
             src={imageUrl}
             alt={name}
