@@ -174,7 +174,7 @@ const WhoWeAre: FC = () => {
                     </div>
 
                     <div className="flex justify-between items-baseline px-4 pb-4 md:px-0 md:flex-col md:items-center md:gap-2">
-                      <p className="text-h4-title font-eb-garamond text-neutral-10">
+                      <p className="text-h4-title font-eb-garamond text-neutral-10 text-center">
                         <span className="hidden lg:inline">
                           {`${teamText.fullName} ${roleText}`}
                         </span>
