@@ -1,6 +1,6 @@
 "use client";
 
-import { type FC, useState } from "react";
+import { type FC, useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 import { default as PlusIcon } from "@/public/images/plus-icon.svg";
@@ -9,6 +9,7 @@ import { default as CompassIcon } from "@/public/images/compass.svg";
 
 interface IAccordionProps {
   title: string;
+  shouldShowMobileMenu: boolean;
   subtitle: string;
   subMenu: {
     href: string;
@@ -19,6 +20,7 @@ interface IAccordionProps {
 
 const Accordion: FC<IAccordionProps> = ({
   title,
+  shouldShowMobileMenu,
   subtitle,
   subMenu,
   onMenuItemClick,
@@ -28,6 +30,12 @@ const Accordion: FC<IAccordionProps> = ({
   const handleToggleAccordion = () => {
     setIsAccordionOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (!shouldShowMobileMenu) {
+      setIsAccordionOpen(false);
+    }
+  }, [shouldShowMobileMenu]);
 
   return (
     <div className="px-7 border-b-[1px] border-neutral-8">

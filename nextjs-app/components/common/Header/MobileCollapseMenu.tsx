@@ -63,19 +63,19 @@ const NavigationMenuItem: FC<{
 };
 
 interface IMobileCollapseMenuProps {
-  show: boolean;
+  shouldShowMobileMenu: boolean;
   onClose: () => void;
 }
 
 const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
-  show,
+  shouldShowMobileMenu,
   onClose,
 }) => {
   const router = useRouter();
 
   // Prevent scrolling when mobile collapse menu is open
   useEffect(() => {
-    if (show) {
+    if (shouldShowMobileMenu) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
@@ -84,7 +84,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
-  }, [show]);
+  }, [shouldShowMobileMenu]);
 
   const handleNavigation = (href: string) => {
     router.push(href);
@@ -94,7 +94,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
   return createPortal(
     <div
       className={twMerge(
-        show ? "motion-opacity-in-50" : "hidden",
+        shouldShowMobileMenu ? "motion-opacity-in-50" : "hidden",
         "fixed z-50 top-0 left-0 right-0 h-screen w-full bg-blue-7"
       )}
     >
@@ -116,6 +116,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
               <Accordion
                 key={title}
                 title={title}
+                shouldShowMobileMenu={shouldShowMobileMenu}
                 subtitle={subtitle}
                 subMenu={subMenu}
                 onMenuItemClick={handleNavigation}
