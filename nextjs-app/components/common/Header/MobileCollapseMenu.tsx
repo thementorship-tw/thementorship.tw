@@ -116,6 +116,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
               <Accordion
                 key={title}
                 title={title}
+                shouldShowMobileMenu={shouldShowMobileMenu}
                 subtitle={subtitle}
                 subMenu={subMenu}
                 onMenuItemClick={handleNavigation}
