@@ -15,7 +15,7 @@ export const teamDisplayTextMap: Record<
   },
   [Team.DATA]: {
     zhGroupName: "資料應用",
-    enGroupName: "Data Application (Data)",
+    enGroupName: "Data Application",
     shortName: "DATA",
   },
   [Team.ENGINEER]: {
