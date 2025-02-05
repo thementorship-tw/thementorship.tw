@@ -66,7 +66,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     {
       team: Team.DATA,
       name: "賴柏龍 Brown Lai",
-      title: "韓商電商平台",
+      title: "電商平台",
       subTitle: ["Principal Business Analyst"],
       quote:
         "You can’t connect the dots looking forward; you can only connect them looking backwards.",
