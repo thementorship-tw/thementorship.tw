@@ -9,6 +9,8 @@ import {
 } from "react";
 import { shuffleArray } from "@/utils";
 
+export const ANIMATION_DURATION = 6000;
+
 interface ISloganContext {
   randomSlogans: string[];
 }
@@ -34,7 +36,10 @@ const SloganProvider = ({
       };
 
       updateRandomSlogans();
-      const interval = setInterval(updateRandomSlogans, 5000);
+      const interval = setInterval(
+        updateRandomSlogans,
+        ANIMATION_DURATION + 1000
+      );
 
       return () => {
         clearInterval(interval);
