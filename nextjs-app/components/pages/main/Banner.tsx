@@ -81,7 +81,6 @@ const Banner = () => (
         src="/images/index-banner/boat.png"
         alt="boat"
         fill
-        priority
         sizes="auto"
         className={twMerge(
           "hidden lg:block translate-y-[-50px]",

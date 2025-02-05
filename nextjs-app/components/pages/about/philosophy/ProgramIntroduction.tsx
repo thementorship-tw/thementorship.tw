@@ -29,7 +29,7 @@ const ProgramIntroduction = () => (
         alt="icon-ship"
         width={48}
         height={48}
-        className="hidden lg:block absolute right-[96px] -translate-y-1/2"
+        className="absolute right-11 -translate-y-2/3 md:right-[96px] md:-translate-y-1/2 motion-translate-y-loop-[4px] motion-duration-2000 motion-ease-in-out"
       />
       <div className="w-full flex flex-col justify-center mb-11 p-7 md:p-11 bg-white rounded-3">
         <div className="w-full mx-auto">
