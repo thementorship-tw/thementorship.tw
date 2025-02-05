@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { ZEABUR_PARTNER_URL, SANGUINE_PARTNER_URL } from "@/constants/partners";
+import {
+  ZEABUR_PARTNER_URL,
+  SANGUINE_PARTNER_URL,
+  POPOP_TAIPEI_PARTNER_URL,
+  GIS_GROUP_PARTNER_URL,
+} from "@/constants/partners";
 import Wave from "@/components/common/Wave";
 import SectionTitle from "./SectionTitle";
 
@@ -13,6 +18,16 @@ const programPartners = [
     name: "Sanguine",
     imageSrc: "/images/partners/sanguine.png",
     href: SANGUINE_PARTNER_URL,
+  },
+  {
+    name: "Popop Taipei",
+    imageSrc: "/images/partners/popop-taipei.png",
+    href: POPOP_TAIPEI_PARTNER_URL,
+  },
+  {
+    name: "GIS Group",
+    imageSrc: "/images/partners/gis-group.png",
+    href: GIS_GROUP_PARTNER_URL,
   },
 ];
 
@@ -28,7 +43,7 @@ const Partners = () => {
             subTitle="Our Partners"
           />
           <div className="w-full px-5 md:px-10">
-            <div className="grid grid-cols-2 gap-4 md:gap-7 justify-center max-w-[588px] mx-auto">
+            <div className="container grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-7 justify-center">
               {programPartners.map((partner, idx) => (
                 <a
                   key={idx}
