@@ -15,34 +15,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: Routes.HOME,
   },
-  icons: {
-    other: [
-      {
-        rel: "preload",
-        url: "/images/index-banner/background-lg.png",
-        fetchPriority: "high",
-        media: "(min-width: 840px)",
-      },
-      {
-        rel: "preload",
-        url: "/images/index-banner/background-md.png",
-        fetchPriority: "high",
-        media: "(min-width: 600px) and (max-width: 839px)",
-      },
-      {
-        rel: "preload",
-        url: "/images/index-banner/background-sm.png",
-        fetchPriority: "high",
-        media: "(max-width: 599px)",
-      },
-      {
-        rel: "preload",
-        url: "/images/index-banner/boat.png",
-        fetchPriority: "high",
-        media: "(min-width: 840px)",
-      },
-    ],
-  },
 };
 
 export default async function HomePage() {
