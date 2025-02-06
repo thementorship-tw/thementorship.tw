@@ -188,8 +188,8 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     {
       team: Team.PM,
       name: "謝慧霖 Claire Hsieh",
-      title: "第七屆 Marketing 引水人",
-      subTitle: ["第六屆 PM 航海士 "],
+      title: "第七屆 PM 引水人",
+      subTitle: ["第六屆 PM 航海士"],
       quote: "把每次挑戰都變成學習與成長的機會。",
       imageUrl: ClaireAvatar.src,
     },
