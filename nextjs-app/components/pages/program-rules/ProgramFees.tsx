@@ -14,7 +14,7 @@ const FEE_DATA = [
   {
     imageSrc: "/images/icon-ship.png",
     title: "計劃報名費",
-    subtitle: "含職能月會、通識講座費用",
+    subtitle: "含職能月會、通識講座、閉幕式暨結業日等活動經費",
     fee: 3500,
   },
 ];
@@ -46,7 +46,7 @@ const FeeCard: FC<IFeeInfo> = ({ imageSrc, title, subtitle, fee }) => (
         <div className="text-body-md text-neutral-10">{subtitle}</div>
       </div>
     </div>
-    <div className="flex items-baseline">
+    <div className="flex items-baseline shrink-0">
       <h4 className="text-h4 text-yellow-6">$ </h4>
       <h1 className="text-h1 text-yellow-6 ml-1">{fee.toLocaleString()}</h1>
       <p className="text-body-lg text-neutral-10 ml-1">/人</p>
