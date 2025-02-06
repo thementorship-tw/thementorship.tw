@@ -41,6 +41,14 @@ export default async function RootLayout({
       lang="en"
       className={`font-sans ${ebGaramond.variable} bg-white text-black`}
     >
+      <head>
+        <link rel="preconnect" href="https://posthog.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://us-assets.i.posthog.com"
+          crossOrigin=""
+        />
+      </head>
       <body>
         <CSPostHogProvider>
           <section className="min-h-screen pt-[80px] md:pt-[88px] lg:pt-[94px]">
