@@ -15,7 +15,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
+      date: "2025/02/10 (Mon) - 2025/03/02 (Sun)",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
@@ -25,7 +25,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "3月",
-      description: "(面談複審)",
+      description: "(面試複審)",
     },
     event: [
       {
@@ -35,8 +35,8 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       },
       {
         date: "2025/03/30 (Sun) - 2025/04/06 (Sun)",
-        title: "線上面談",
-        description: "進行第二階段面談複審",
+        title: "線上面試",
+        description: "進行第二階段面試複審",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
-      description: "(實體海選)",
+      description: "(開幕式海選)",
     },
     event: {
       date: "2025/04/27 (Sun)",
@@ -97,7 +97,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
-      description: "(結業式暨閉幕日)",
+      description: "(閉幕式暨結業日)",
     },
     event: {
       date: "2025/10",
@@ -118,7 +118,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: "2025/02/10 (Mon) - 2025/03/03 (Mon)",
+      date: "2025/02/10 (Mon) - 2025/03/02 (Sun)",
       tag: "",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
@@ -143,7 +143,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
-      description: "(實體海選)",
+      description: "(開幕式海選)",
     },
     event: {
       date: "2025/04/27 (Sun)",
@@ -196,7 +196,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "10月",
-      description: "(結業式暨閉幕日)",
+      description: "(閉幕式暨結業日)",
     },
     event: {
       date: "2025/10",
@@ -212,7 +212,7 @@ export const SCHEDULE_ROLE_DATA = [
   {
     title: "Sailor\n水手 (職場新人)",
     description:
-      "• 申請組別領域實務經驗 3 年 (含) 以下 (含實習經驗)\n• 未來有興趣回饋社群",
+      "• 申請組別領域實務經驗 1 - 3 年的新鮮人（包含實習經驗）\n• 未來有興趣回饋社群",
     imageUrl: "/images/icon-sailor.png",
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
@@ -234,49 +234,49 @@ export const SCHEDULE_ROLE_DATA = [
 export const SCHEDULE_STEPS_DATA_NAVIGATOR: IScheduleStep[] = [
   {
     imageSrc: "/images/icon-letter.png",
-    desc: "第一階段書面報名",
+    desc: "第一階段\n書面報名",
   },
   {
     imageSrc: "/images/icon-assist.png",
-    desc: "第二階段面談複審",
+    desc: "第二階段\n面試複審",
   },
   {
     imageSrc: "/images/icon-spyglass.png",
-    desc: "第三階段實體海選",
+    desc: "第三階段\n開幕式海選",
   },
   {
     imageSrc: "/images/icon-navigator.png",
-    desc: "錄取成為航海士",
+    desc: "錄取\n成為航海士",
   },
   {
     imageSrc: "/images/icon-captain.png",
-    desc: "參加半年計劃活動",
+    desc: "參加半年\n計劃活動",
   },
   {
     imageSrc: "/images/icon-scroll.png",
-    desc: "閉幕式暨結業日",
+    desc: "閉幕式暨\n結業日",
   },
 ];
 
 export const SCHEDULE_STEPS_DATA_SAILOR: IScheduleStep[] = [
   {
     imageSrc: "/images/icon-letter.png",
-    desc: "第一階段書面審核",
+    desc: "第一階段\n書面審核",
   },
   {
     imageSrc: "/images/icon-spyglass.png",
-    desc: "第二階段實體海選",
+    desc: "第二階段\n開幕式海選",
   },
   {
     imageSrc: "/images/icon-sailor.png",
-    desc: "錄取成為水手",
+    desc: "錄取\n成為水手",
   },
   {
     imageSrc: "/images/icon-captain.png",
-    desc: "參加半年計劃活動",
+    desc: "參加半年\n計劃活動",
   },
   {
     imageSrc: "/images/icon-scroll.png",
-    desc: "閉幕式暨結業日",
+    desc: "閉幕式暨\n結業日",
   },
 ];

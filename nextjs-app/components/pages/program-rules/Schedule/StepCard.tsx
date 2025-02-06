@@ -9,7 +9,7 @@ interface IStepCard extends IScheduleStep {
 const StepCard: FC<IStepCard> = ({ imageSrc, desc, hasArrow = true }) => {
   return (
     <div className="flex gap-5">
-      <div className="w-[64px]">
+      <div className="flex flex-col items-center gap-3">
         <Image src={imageSrc} alt={desc} width={56} height={56} />
         <div className="text-subtitle-lg whitespace-pre-line">{desc}</div>
       </div>
