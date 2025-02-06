@@ -8,7 +8,8 @@ const Banner = () => (
   <div
     className={twMerge(
       "relative pt-11",
-      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]"
+      "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]",
+      "lg:bg-[#e6f4ff] lg:-z-50"
     )}
   >
     {/** Text Area */}
@@ -92,7 +93,7 @@ const Banner = () => (
     </div>
     {/** Background Image */}
     <Image
-      src="/images/index-banner/background-lg.png"
+      src="/images/index-banner/background-lg.jpg"
       alt="background-image"
       fill
       priority
