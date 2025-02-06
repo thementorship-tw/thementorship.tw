@@ -85,7 +85,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       team: Team.ENGINEER,
       name: "楊立偉 Bryan Yang",
       title: "顧職",
-      subTitle: ["外商技術主管 & 顧職創辦人"],
+      subTitle: ["外商資深軟體工程師 & 顧職創辦人"],
       quote: "Be kind",
       imageUrl: BryanAvatar.src,
       hashTags: [
