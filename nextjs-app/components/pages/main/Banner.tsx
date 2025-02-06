@@ -33,13 +33,7 @@ const Banner = () => {
     src: "/images/index-banner/boat.png",
     alt: "boat",
     fill: true,
-    loading: "eager",
     sizes: "auto",
-    className: twMerge(
-      "translate-y-[-50px]",
-      "w-full h-full object-contain object-right-bottom",
-      "motion-translate-y-loop-[8px] motion-duration-[3000ms] motion-ease-in-out"
-    ),
   });
 
   return (
@@ -115,19 +109,15 @@ const Banner = () => {
           "w-[60vw] h-[calc(60vw/1003*614)]"
         )}
       >
-        <picture className="absolute inset-0">
-          <source
-            media="(min-width: 840px)"
-            srcSet={boatProps.props.srcSet}
-            sizes={boatProps.props.sizes}
-          />
-          <img
-            {...boatProps.props}
-            src={undefined}
-            srcSet={undefined}
-            alt={boatProps.props.alt}
-          />
-        </picture>
+        <img
+          {...boatProps.props}
+          alt={boatProps.props.alt}
+          className={twMerge(
+            "translate-y-[-50px]",
+            "w-full h-full object-contain object-right-bottom",
+            "motion-translate-y-loop-[8px] motion-duration-[3000ms] motion-ease-in-out"
+          )}
+        />
       </div>
       {/** Background Image */}
       <picture className="absolute inset-0">
