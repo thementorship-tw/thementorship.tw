@@ -12,19 +12,28 @@
       "login": "kylemocode",
       "name": "Kyle Mo",
       "avatar_url": "https://avatars.githubusercontent.com/u/35811214?v=4",
-      "profile": "https://medium.com/@oldmo860617",
+      "profile": "https://github.com/kylemocode",
       "contributions": [
         "code"
       ]
     },
     {
-        "login": "gongtzuuuu",
-        "name": "Tzu-Yun Liang",
-        "avatar_url": "https://avatars.githubusercontent.com/u/104567770?v=4",
-        "profile": "https://tzu-yun.dev/",
-        "contributions": [
-          "code"
-        ]
-      }
+      "login": "gongtzuuuu",
+      "name": "Tzu-Yun Liang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/104567770?v=4",
+      "profile": "https://github.com/gongtzuuuu",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ChengYiLin",
+      "name": "Martin Lin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34314614?v=4",
+      "profile": "https://github.com/ChengYiLin",
+      "contributions": [
+        "code"
+      ]
+    }
   ]
 }
