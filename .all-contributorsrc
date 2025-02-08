@@ -1,4 +1,21 @@
 {
   "projectName": "thementorship.tw",
-  "projectOwner": "thementorship-tw"
+  "projectOwner": "thementorship-tw",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "kylemocode",
+      "name": "Kyle Mo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35811214?v=4",
+      "profile": "https://medium.com/@oldmo860617",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
 }
