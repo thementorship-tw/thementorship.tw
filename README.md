@@ -1,6 +1,12 @@
 # The Mentorship Program Taiwan Official Website ⛴️
 
-[![status: active](https://opensource.twitter.dev/status/active.svg)](https://opensource.twitter.dev/status/#active)
+<p>
+  <a href="https://opensource.twitter.dev/status/#active"><img src="https://opensource.twitter.dev/status/active.svg" alt="status: active" /></a>
+  <a href="https://github.com/thementorship-tw/thementorship.tw/blob/main/LICENSE" target="blank"><img src="https://img.shields.io/github/license/thementorship-tw/thementorship.tw?style=flat-square" alt="thementorship.tw license" /></a>
+  <a href="https://github.com/thementorship-tw/thementorship.tw/stargazers" target="blank"><img src="https://img.shields.io/github/stars/thementorship-tw/thementorship.tw?style=flat-square" alt="thementorship.tw stars"/></a>
+  <a href="https://thementorship.tw" target="blank"><img src="https://img.shields.io/website?url=https%3A%2F%2Fthementorship.tw&logo=github&style=flat-square" /></a>
+</p>
+
 
 <img src="nextjs-app/public/images/header-logo.png" alt="thementorship-logo" width="182" height="40" />
 
@@ -65,6 +71,17 @@ We are proudly deployed on [Zeabur](https://zeabur.com), a modern cloud platform
 <a href="https://zeabur.com" target="_blank">
   <img src="nextjs-app/public/images/deployed-on-zeabur.png" alt="Deployed on Zeabur" width="194" height="37"/>
 </a>
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
