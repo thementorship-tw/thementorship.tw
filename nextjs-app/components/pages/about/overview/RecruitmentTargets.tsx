@@ -18,7 +18,7 @@ const recruitmentTargetsData = [
   {
     title: "Navigator\n航海士 (職場前輩)",
     description:
-      "• 申請組別領域實務經驗 3 年（含）以上\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
+      "• 申請組別領域實務經驗超過 3 年\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
     imageUrl: "/images/icon-navigator.png",
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
@@ -43,7 +43,7 @@ const RecruitmentTargets = () => {
       <Wave color="white" />
       <section className="container px-5 py-[72px] md:px-10 md:py-[120px]">
         <h2 className="text-h2 text-blue-8 text-center flex flex-col">
-          計畫招募對象
+          計劃招募對象
         </h2>
         <p className="text-body-md text-neutral-10 text-center mt-6">
           依據實務經驗的深度分為三大角色，歡迎有志者報名

@@ -223,7 +223,7 @@ export const SCHEDULE_ROLE_DATA = [
   {
     title: "Navigator\n航海士 (職場前輩)",
     description:
-      "• 申請組別領域實務經驗 3 年 (含) 以上\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
+      "• 申請組別領域實務經驗超過 3 年\n• 具備提拔後進熱忱，樂意提供實務協助輔導",
     imageUrl: "/images/icon-navigator.png",
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,

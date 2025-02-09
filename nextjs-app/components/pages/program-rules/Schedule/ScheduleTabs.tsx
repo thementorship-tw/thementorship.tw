@@ -52,7 +52,7 @@ const ScheduleTabs = () => {
             variant="filled"
             color="blue"
           >
-            更多曼陀號計畫介紹
+            更多曼陀號計劃介紹
           </Button>
         </Link>
       </div>
