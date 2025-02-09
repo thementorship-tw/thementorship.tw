@@ -26,7 +26,7 @@ const socialLinks = [
     href: MENTORSHIP_INSTAGRAM_URL,
   },
   {
-    name: "linkedin",
+    name: "LinkedIn",
     icon: <LinkedInIcon className="text-yellow-6 w-8 h-8 md:w-10 md:h-10" />,
     href: MENTORSHIP_LINKEDIN_URL,
   },

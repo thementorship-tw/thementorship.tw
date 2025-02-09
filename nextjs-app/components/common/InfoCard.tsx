@@ -86,8 +86,6 @@ const InfoCard = ({
                 variant={buttonVariant}
                 color={buttonColor}
                 paddingSize={buttonPaddingSize}
-                // TODO: enable when registration is open
-                disabled
               >
                 {buttonText}
               </Button>
@@ -101,8 +99,6 @@ const InfoCard = ({
               variant={buttonVariant}
               color={buttonColor}
               paddingSize={buttonPaddingSize}
-              // TODO: enable when registration is open
-              disabled
             >
               {buttonText}
             </Button>

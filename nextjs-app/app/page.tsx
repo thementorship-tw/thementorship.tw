@@ -4,7 +4,7 @@ import StayUpdated from "@/components/pages/main/StayUpdated";
 import Partners from "@/components/pages/main/Partners";
 import WhatWeBring from "@/components/pages/main/WhatWeBring";
 import WhoWeAre from "@/components/pages/main/WhoWeAre";
-import Testimonial from "@/components/pages/main/Testimonial";
+import Testimonials from "@/components/pages/main/Testimonials";
 import OurImpact from "@/components/pages/main/OurImpact";
 import Banner from "@/components/pages/main/Banner";
 import Routes from "@/constants/routes";
@@ -27,7 +27,7 @@ export default async function HomePage() {
         <WhatWeDoHomepage />
         <WhatWeBring />
         <WhoWeAre />
-        <Testimonial />
+        <Testimonials />
         <Partners />
         <StayUpdated />
       </div>
