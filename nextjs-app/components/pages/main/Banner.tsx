@@ -106,7 +106,7 @@ const Banner = () => (
     </div>
 
     {/* Content container */}
-    <div className={twMerge("relative pt-11")}>
+    <div className="pt-11">
       <div className="flex justify-center lg:justify-start">
         <div className="lg:ml-[144px] flex flex-col items-center lg:items-start">
           <div className="text-center lg:text-start text-h1 text-neutral-10 mb-4">
