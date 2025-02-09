@@ -5,15 +5,9 @@ import RegisterSailorButton from "@/components/common/Button/RegisterSailorButto
 import CountdownTimer from "@/components/common/CountdownTimer";
 
 const Banner = () => (
-  <div className="relative">
+  <div className="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]">
     {/* Background and wave container */}
-    <div
-      className={twMerge(
-        "absolute inset-0",
-        "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]",
-        "bg-[#e6f4ff] -z-50"
-      )}
-    >
+    <div className={twMerge("absolute inset-0", "bg-[#e6f4ff] -z-50")}>
       {/** Animation elements for desktop */}
       <div className="absolute w-full bottom-[-15px] overflow-hidden -z-10">
         <div className="relative w-[calc(100vw+40px)] h-[136px]">
@@ -112,12 +106,7 @@ const Banner = () => (
     </div>
 
     {/* Content container */}
-    <div
-      className={twMerge(
-        "relative pt-11",
-        "w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]"
-      )}
-    >
+    <div className={twMerge("relative pt-11")}>
       <div className="flex justify-center lg:justify-start">
         <div className="lg:ml-[144px] flex flex-col items-center lg:items-start">
           <div className="text-center lg:text-start text-h1 text-neutral-10 mb-4">
