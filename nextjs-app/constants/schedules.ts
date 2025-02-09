@@ -5,10 +5,11 @@ import {
   IScheduleStep,
   ScheduleType,
 } from "@/types/schedule";
+import { REGISTRATION_FORM_URL } from "@/constants/registration";
 
 export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: SchedulePhase.ONGOING,
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
@@ -111,7 +112,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
 
 export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: SchedulePhase.ONGOING,
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
@@ -217,7 +218,7 @@ export const SCHEDULE_ROLE_DATA = [
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
+    externalLink: REGISTRATION_FORM_URL,
   },
   {
     title: "Navigator\n航海士 (職場前輩)",
@@ -227,7 +228,7 @@ export const SCHEDULE_ROLE_DATA = [
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
+    externalLink: REGISTRATION_FORM_URL,
   },
 ];
 

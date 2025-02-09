@@ -3,7 +3,7 @@
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const DEADLINE = new Date("Feb 10, 2025 00:00:00").getTime();
+const DEADLINE = new Date("Mar 02, 2025 23:59:59").getTime();
 
 const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
   return (
@@ -77,7 +77,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="w-fit flex flex-col items-center lg:items-start gap-y-2">
-      <div className="text-subtitle-md text-neutral-10">第七屆開放報名倒數</div>
+      <div className="text-subtitle-md text-neutral-10">第七屆報名截止倒數</div>
       <ul className="flex items-center gap-x-2 text-center">
         <li>
           <TimeBlock time={time.days} unit="Days" />

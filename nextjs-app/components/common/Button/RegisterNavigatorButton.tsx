@@ -2,6 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import { REGISTRATION_FORM_URL } from "@/constants/registration";
 import Button from "./Button";
 
 interface IRegisterNavigatorButtonProps {
@@ -21,7 +22,8 @@ const RegisterNavigatorButton: FC<IRegisterNavigatorButtonProps> = ({
     disabled={disabled}
   >
     <Link
-      href="/"
+      href={REGISTRATION_FORM_URL}
+      target="_blank"
       className="w-[230px] flex justify-start items-center space-x-3"
     >
       <div
