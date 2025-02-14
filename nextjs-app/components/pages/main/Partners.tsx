@@ -4,7 +4,6 @@ import {
   SANGUINE_PARTNER_URL,
   POPOP_TAIPEI_PARTNER_URL,
   GIS_GROUP_PARTNER_URL,
-  JUNYI_PARTNER_URL,
   FABLE_PARTNER_URL,
 } from "@/constants/partners";
 import Wave from "@/components/common/Wave";
@@ -25,11 +24,6 @@ const programPartners = [
     name: "GIS Group",
     imageSrc: "/images/partners/gis-group.png",
     href: GIS_GROUP_PARTNER_URL,
-  },
-  {
-    name: "Junyi Academy",
-    imageSrc: "/images/partners/junyi.png",
-    href: JUNYI_PARTNER_URL,
   },
   {
     name: "Zeabur",
