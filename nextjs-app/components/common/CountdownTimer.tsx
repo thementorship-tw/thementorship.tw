@@ -3,14 +3,14 @@
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const DEADLINE = new Date("Mar 02, 2025 23:59:59").getTime();
+const DEADLINE = new Date("Mar 17, 2025 23:59:59").getTime();
 
 const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
   return (
     <>
       <div className="relative p-3 size-[72px] text-h1 text-white">
         <Image
-          src="/images/index-banner/time-block.png"
+          src="/images/index-banner/time-block-yellow.png"
           alt="time-block"
           fill
           sizes="auto"
@@ -18,7 +18,7 @@ const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
         />
         {time}
       </div>
-      <div className="text-blue-8 text-subtitle-md">{unit}</div>
+      <div className="text-yellow-6 text-subtitle-md">{unit}</div>
     </>
   );
 };
@@ -77,7 +77,9 @@ const CountdownTimer = () => {
 
   return (
     <div className="w-fit flex flex-col items-center lg:items-start gap-y-2">
-      <div className="text-subtitle-md text-neutral-10">第七屆報名截止倒數</div>
+      <div className="text-subtitle-md text-neutral-10">
+        好評延長！第七屆報名最後倒數
+      </div>
       <ul className="flex items-center gap-x-2 text-center">
         <li>
           <TimeBlock time={time.days} unit="Days" />
