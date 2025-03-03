@@ -3,7 +3,7 @@
 import { FC, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const DEADLINE = new Date("Mar 17, 2025 23:59:59").getTime();
+const DEADLINE = new Date("Mar 16, 2025 23:59:59").getTime();
 
 const TimeBlock: FC<{ time: string; unit: string }> = ({ time, unit }) => {
   return (
