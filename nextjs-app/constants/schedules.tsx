@@ -16,7 +16,12 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: "2025/02/10 (Mon) - 2025/03/02 (Sun)",
+      date: (
+        <span>
+          2025/02/10 (Mon) - <del>2025/03/02 (Sun)</del> 2025/03/16 (Sun)
+        </span>
+      ),
+      tag: "好評延長 ❤️",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
@@ -30,12 +35,12 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
     event: [
       {
-        date: "2025/03/23 (Sun)",
+        date: "2025/03/19 (Wed)",
         title: "面試名單揭曉",
         description: "屆時將寄信通知第一階段審核結果",
       },
       {
-        date: "2025/03/30 (Sun) - 2025/04/06 (Sun)",
+        date: "2025/03/24 (Mon) - 2025/03/30 (Sun)",
         title: "線上面試",
         description: "進行第二階段面試複審",
       },
@@ -46,14 +51,21 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
-      description: "(開幕式海選)",
+      description: "(面試複審結果揭曉\n開幕式海選)",
     },
-    event: {
-      date: "2025/04/27 (Sun)",
-      tag: "請務必出席",
-      title: "開幕式暨海選日",
-      description: "各職能屆時將分組帶開，由各組船長主導進行海選",
-    },
+    event: [
+      {
+        date: "2025/04/04 (Fri)",
+        title: "面試結果揭曉",
+        description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
+      },
+      {
+        date: "2025/04/27 (Sun)",
+        tag: "請務必出席",
+        title: "開幕式暨海選日",
+        description: "各職能屆時將分組帶開，由各組船長主導進行海選",
+      },
+    ],
   },
   {
     phase: SchedulePhase.ACTIVE,
@@ -119,24 +131,14 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: "2025/02/10 (Mon) - 2025/03/02 (Sun)",
-      tag: "",
+      date: (
+        <span>
+          2025/02/10 (Mon) - <del>2025/03/02 (Sun)</del> 2025/03/16 (Sun)
+        </span>
+      ),
+      tag: "好評延長 ❤️",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
-    },
-  },
-  {
-    phase: SchedulePhase.ACTIVE,
-    type: ScheduleType.DEFAULT,
-    timeline: {
-      title: "3月",
-      description: "(書面審核結果揭曉)",
-    },
-    event: {
-      date: "2025/03/23 (Sun)",
-      tag: "",
-      title: "海選名單揭曉",
-      description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
     },
   },
   {
@@ -144,14 +146,25 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
-      description: "(開幕式海選)",
+      description: "(書面審核結果揭曉\n開幕式海選)",
     },
-    event: {
-      date: "2025/04/27 (Sun)",
-      tag: "請務必出席",
-      title: "開幕式暨海選日",
-      description: "各職能屆時將分組帶開，由各組船長主導進行海選",
-    },
+    event: [
+      {
+        date: (
+          <span>
+            <del>2025/03/23 (Sun)</del> 2025/04/04 (Fri)
+          </span>
+        ),
+        title: "海選名單揭曉",
+        description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
+      },
+      {
+        date: "2025/04/27 (Sun)",
+        tag: "請務必出席",
+        title: "開幕式暨海選日",
+        description: "各職能屆時將分組帶開，由各組船長主導進行海選",
+      },
+    ],
   },
   {
     phase: SchedulePhase.ACTIVE,
@@ -163,7 +176,6 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     event: [
       {
         date: "2025/05/03 (Sat)",
-        tag: "",
         title: "第七屆曼陀號領航計劃 水手錄取名單揭曉",
         description:
           "屆時將寄信通知海選結果，最終錄取者可參與第七屆曼陀號領航計劃",
