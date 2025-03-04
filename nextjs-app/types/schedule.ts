@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ButtonColor, ButtonVariant } from "@/components/common/Button/Button";
 
 export enum SchedulePhase {
@@ -12,7 +13,7 @@ export enum ScheduleType {
 }
 
 export interface IScheduleEvent {
-  date: string;
+  date: string | ReactNode;
   tag?: string;
   title: string;
   description: string;

@@ -68,7 +68,9 @@ const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
     <div className="flex flex-col md:flex-row items-stretch rounded-3">
       <div className={twMerge(detailCard.title({ type, phase }))}>
         <div className="text-h5">{timeline.title}</div>
-        <div className="text-body-md">{timeline.description}</div>
+        <div className="text-body-md whitespace-break-spaces text-center">
+          {timeline.description}
+        </div>
       </div>
       <div className={twMerge(detailCard.event({ type, phase }))}>
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
