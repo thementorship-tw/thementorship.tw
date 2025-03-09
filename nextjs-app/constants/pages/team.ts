@@ -52,7 +52,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       title: "先行智庫",
       subTitle: ["董事長暨執行長"],
       quote:
-        "現在你是誰並不重要，重要的是未來你想成為誰。 讓我們一起成為更好的自己",
+        "現在你是誰並不重要，重要的是未來你想成為誰。 讓我們一起成為更好的自己。",
       imageUrl: SteveAvatar.src,
       hashTags: [
         "商業開發",
@@ -86,7 +86,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       name: "布萊恩 Bryan Yang",
       title: "顧職",
       subTitle: ["外商資深軟體工程師 & 顧職創辦人"],
-      quote: "Be kind",
+      quote: "Be kind.",
       imageUrl: BryanAvatar.src,
       hashTags: [
         "軟體架構與開發",
@@ -100,7 +100,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       name: "黃馨儀 Sidney Huang",
       title: "TutorABC",
       subTitle: ["Marketing VP"],
-      quote: "每天都比昨天進步一點點",
+      quote: "每天都比昨天進步一點點。",
       imageUrl: SidneyAvatar.src,
       hashTags: [
         "資源整合",
