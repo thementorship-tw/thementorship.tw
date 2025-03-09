@@ -11,12 +11,12 @@ const MarqueeContainer: React.FC<PropsWithChildren<IMarqueeContainerProps>> = ({
   const isToLeft = direction === "to-left";
 
   const firstLayerClasses = isToLeft
-    ? "flex items-start animate-marquee-container-first-layer motion-safe:group-hover:[animation-play-state:paused]"
-    : "flex items-start animate-marquee-container-first-layer-reverse motion-safe:group-hover:[animation-play-state:paused]";
+    ? "flex items-start animate-marquee-container-first-layer group-hover:motion-paused"
+    : "flex items-start animate-marquee-container-first-layer-reverse group-hover:motion-paused";
 
   const secondLayerClasses = isToLeft
-    ? "flex items-start animate-marquee-container-second-layer [animation-delay:-120s] motion-safe:group-hover:[animation-play-state:paused]"
-    : "flex items-start animate-marquee-container-second-layer-reverse [animation-delay:-120s] motion-safe:group-hover:[animation-play-state:paused]";
+    ? "flex items-start animate-marquee-container-second-layer [animation-delay:-120s] group-hover:motion-paused"
+    : "flex items-start animate-marquee-container-second-layer-reverse [animation-delay:-120s] group-hover:motion-paused";
 
   return (
     <div className="w-full overflow-hidden group">
