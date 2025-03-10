@@ -58,6 +58,14 @@ export default {
         "marquee-second-layer": "marquee2 180s linear infinite",
         "marquee-first-layer-reverse": "marquee1-reverse 180s linear infinite",
         "marquee-second-layer-reverse": "marquee2-reverse 180s linear infinite",
+        //
+        "marquee-container-first-layer": "marquee1 240s linear infinite",
+        "marquee-container-second-layer": "marquee2 240s linear infinite",
+        "marquee-container-first-layer-reverse":
+          "marquee1-reverse 240s linear infinite",
+        "marquee-container-second-layer-reverse":
+          "marquee2-reverse 240s linear infinite",
+        //
         "fade-in-out": "fade-in-out 6000ms linear 1",
       },
       keyframes: {
