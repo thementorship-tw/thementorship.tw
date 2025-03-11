@@ -61,8 +61,8 @@ const OurImpact: FC = () => {
             value={997}
             unit="天"
             imageSrc="/images/icon-ship.png"
-            duration={1000}
-            startValue={900}
+            duration={1300}
+            startValue={100}
           />
           <ImpactCard
             title="報名總人數"
