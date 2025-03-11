@@ -10,6 +10,7 @@ interface IImpactCardProps {
   imageSrc: string;
   duration?: number;
   startValue?: number;
+  className?: string;
 }
 
 const ImpactCard: FC<IImpactCardProps> = ({
@@ -19,9 +20,12 @@ const ImpactCard: FC<IImpactCardProps> = ({
   imageSrc,
   duration,
   startValue,
+  className,
 }) => {
   return (
-    <div className="rounded-3 border-[1px] border-yellow-6 bg-white p-7">
+    <div
+      className={`rounded-3 border-[1px] border-yellow-6 bg-white p-7 ${className ?? ""}`}
+    >
       <h3 className="text-h6 text-blue-8 mb-2">{title}</h3>
       <div className="flex justify-between items-end">
         <div className="text-yellow-6">
@@ -55,7 +59,7 @@ const OurImpact: FC = () => {
           subTitle="Your Journey, Our Impact"
           variant="dark"
         />
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-7 md:[&>*:last-child]:translate-x-[50%] lg:[&>*:last-child]:translate-x-0 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-flow-row md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:grid-flow-row-dense">
           <ImpactCard
             title="計劃總時長"
             value={997}
@@ -63,6 +67,7 @@ const OurImpact: FC = () => {
             imageSrc="/images/icon-ship.png"
             duration={1300}
             startValue={100}
+            className="md:col-span-2 lg:col-span-1"
           />
           <ImpactCard
             title="報名總人數"
