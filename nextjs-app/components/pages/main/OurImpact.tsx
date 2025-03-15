@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 import AnimatedNumber from "@/components/common/AnimatedNumber";
 import SectionTitle from "./SectionTitle";
 import type { FC } from "react";
@@ -24,7 +25,10 @@ const ImpactCard: FC<IImpactCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-3 border-[1px] border-yellow-6 bg-white p-7 ${className ?? ""}`}
+      className={twMerge(
+        "rounded-3 border-[1px] border-yellow-6 bg-white p-7",
+        className
+      )}
     >
       <h3 className="text-h6 text-blue-8 mb-2">{title}</h3>
       <div className="flex justify-between items-end">
