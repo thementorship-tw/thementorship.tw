@@ -34,6 +34,7 @@ interface IInfoCardProps extends VariantProps<typeof infoCardVariants> {
   buttonVariant?: ButtonVariant;
   buttonColor?: ButtonColor;
   buttonPaddingSize?: ButtonPaddingSize;
+  buttonDisabled?: boolean;
   serial?: string;
   externalLink?: string;
 }
@@ -51,6 +52,7 @@ const InfoCard = ({
   buttonVariant = "filled",
   buttonColor = "blue",
   buttonPaddingSize = "default",
+  buttonDisabled = false,
 }: IInfoCardProps) => {
   return (
     <div className={infoCardVariants({ background, border })}>
@@ -86,6 +88,7 @@ const InfoCard = ({
                 variant={buttonVariant}
                 color={buttonColor}
                 paddingSize={buttonPaddingSize}
+                disabled={buttonDisabled}
               >
                 {buttonText}
               </Button>
@@ -99,6 +102,7 @@ const InfoCard = ({
               variant={buttonVariant}
               color={buttonColor}
               paddingSize={buttonPaddingSize}
+              disabled={buttonDisabled}
             >
               {buttonText}
             </Button>

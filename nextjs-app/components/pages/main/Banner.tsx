@@ -117,8 +117,8 @@ const Banner = () => (
             <CountdownTimer />
           </div>
           <div className="w-fit flex flex-col justify-center gap-4 mt-7">
-            <RegisterSailorButton />
-            <RegisterNavigatorButton />
+            <RegisterSailorButton disabled />
+            <RegisterNavigatorButton disabled />
           </div>
         </div>
       </div>

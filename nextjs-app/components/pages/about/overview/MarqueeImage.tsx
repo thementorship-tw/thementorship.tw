@@ -32,7 +32,7 @@ const MarqueeImage: FC = () => {
       </div>
 
       <div className="mt-11">
-        <MarqueeContainer>
+        <MarqueeContainer pauseOnHover={false}>
           {imageList.map((image, index) => (
             <div
               key={`${image}-${index.toString()}`}
