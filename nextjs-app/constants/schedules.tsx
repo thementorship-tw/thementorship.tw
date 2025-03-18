@@ -8,7 +8,7 @@ import {
 
 export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.ONGOING,
+    phase: SchedulePhase.EXPIRED,
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
@@ -26,7 +26,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: SchedulePhase.ONGOING,
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "3月",
@@ -123,7 +123,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
 
 export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.ONGOING,
+    phase: SchedulePhase.EXPIRED,
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月",
@@ -141,7 +141,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: SchedulePhase.ONGOING,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",

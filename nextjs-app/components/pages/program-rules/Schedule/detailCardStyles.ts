@@ -105,6 +105,14 @@ export const detailCard = {
       ],
     }
   ),
+  contentContainer: cva(["flex flex-col"], {
+    variants: {
+      isSingleMessage: {
+        true: "lg:w-fit",
+        false: "lg:w-full",
+      },
+    },
+  }),
   tag: cva(["px-3 py-1 rounded-2"], {
     variants: {
       phase: {
