@@ -52,24 +52,23 @@ const DetailContent: FC<IDetailContent> = ({
 
 const DetailCard: FC<IScheduleDetail> = ({ phase, type, timeline, event }) => {
   const renderEvent = () => {
-    if (Array.isArray(event)) {
-      return (
-        <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-9 justify-center md:justify-start">
-          {event.map((e, index) => (
-            <DetailContent
-              key={`${e.title}-${index.toString()}`}
-              event={e}
-              phase={phase}
-              isDivider={index + 1 !== event.length}
-            />
-          ))}
-        </div>
-      );
-    } else {
+    if (!Array.isArray(event))
       return (
         <DetailContent phase={phase} event={event} isSingleMessage={true} />
       );
-    }
+
+    return (
+      <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-9 justify-center md:justify-start">
+        {event.map((e, index) => (
+          <DetailContent
+            key={`${e.title}-${index.toString()}`}
+            event={e}
+            phase={phase}
+            isDivider={index + 1 !== event.length}
+          />
+        ))}
+      </div>
+    );
   };
 
   return (
