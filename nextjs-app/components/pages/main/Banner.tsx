@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import RegisterNavigatorButton from "@/components/common/Button/RegisterNavigatorButton";
-import RegisterSailorButton from "@/components/common/Button/RegisterSailorButton";
-import CountdownTimer from "@/components/common/CountdownTimer";
+// import RegisterNavigatorButton from "@/components/common/Button/RegisterNavigatorButton";
+// import RegisterSailorButton from "@/components/common/Button/RegisterSailorButton";
+// import CountdownTimer from "@/components/common/CountdownTimer";
 
 const Banner = () => (
   <div className="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-88px)] lg:h-[calc(100vh-94px)] lg:min-h-[780px]">
@@ -113,13 +113,13 @@ const Banner = () => (
             <div>在職涯地圖上</div>
             <div>點亮自己的航線</div>
           </div>
-          <div>
+          {/* <div>
             <CountdownTimer />
           </div>
           <div className="w-fit flex flex-col justify-center gap-4 mt-7">
             <RegisterSailorButton disabled />
             <RegisterNavigatorButton disabled />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
