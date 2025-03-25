@@ -7,11 +7,11 @@ import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
-import { default as MediumIcon } from "@/public/images/footer/medium-logo-outline.svg";
-import { default as FacebookIcon } from "@/public/images/footer/facebook-logo-outline.svg";
-import { default as LinkedInIcon } from "@/public/images/footer/linkedin-logo-outline.svg";
-import { default as InstagramIcon } from "@/public/images/footer/instagram-logo-outline.svg";
-import { default as EmailIcon } from "@/public/images/footer/email-logo-outline.svg";
+import { default as MediumIcon } from "@/public/images/social-media/medium-outline.svg";
+import { default as FacebookIcon } from "@/public/images/social-media/facebook-outline.svg";
+import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-outline.svg";
+import { default as InstagramIcon } from "@/public/images/social-media/instagram-outline.svg";
+import { default as EmailIcon } from "@/public/images/social-media/email-outline.svg";
 import BackToTopButton from "@/components/common/BackToTopButton";
 import Wave from "@/components/common/Wave";
 
