@@ -58,7 +58,8 @@ export const FAQ: Record<
   payment: [
     {
       question: "報名繳費可以使用哪些支付方式?",
-      answer: "我們目前接受「線上刷卡」、「LINE Pay」、「街口支付」三種方式。",
+      answer:
+        "我們目前接受「線上刷卡」、「LINE Pay」、「街口支付」、「國泰世華 ATM」、「全家超商繳費」五種方式。",
     },
     {
       question: "是否可以申請開立發票？",
