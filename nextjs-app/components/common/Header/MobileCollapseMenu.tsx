@@ -15,11 +15,11 @@ import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
-import { default as MediumIcon } from "@/public/images/medium-outline.svg";
-import { default as FacebookIcon } from "@/public/images/facebook-outline.svg";
-import { default as LinkedInIcon } from "@/public/images/linkedin-outline.svg";
-import { default as InstagramIcon } from "@/public/images/instagram-outline.svg";
-import { default as EnvelopeIcon } from "@/public/images/envelope-outline.svg";
+import { default as MediumIcon } from "@/public/images/social-media/medium-outline.svg";
+import { default as FacebookIcon } from "@/public/images/social-media/facebook-outline.svg";
+import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-outline.svg";
+import { default as InstagramIcon } from "@/public/images/social-media/instagram-outline.svg";
+import { default as EnvelopeIcon } from "@/public/images/social-media/email-outline.svg";
 
 import Accordion from "./Accordion";
 

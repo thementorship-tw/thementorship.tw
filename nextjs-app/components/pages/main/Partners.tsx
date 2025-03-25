@@ -56,7 +56,7 @@ const Partners = () => {
                   href={partner.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-3 flex items-center justify-center h-[108px] lg:h-[98px] lg:max-w-[270px]"
+                  className="bg-white rounded-3 flex items-center justify-center h-[108px] lg:h-[98px] lg:max-w-[270px] border border-neutral-2 hover:border-yellow-6"
                 >
                   <div className="relative w-auto h-auto px-7">
                     <Image

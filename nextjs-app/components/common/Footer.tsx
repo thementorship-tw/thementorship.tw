@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   MENTORSHIP_MEDIUM_URL,
   MENTORSHIP_INSTAGRAM_URL,
@@ -6,15 +7,20 @@ import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_EMAIL_ADDRESS_MAILTO,
 } from "@/constants/contact-info";
+import { default as MediumIcon } from "@/public/images/social-media/medium-outline.svg";
+import { default as FacebookIcon } from "@/public/images/social-media/facebook-outline.svg";
+import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-outline.svg";
+import { default as InstagramIcon } from "@/public/images/social-media/instagram-outline.svg";
+import { default as EmailIcon } from "@/public/images/social-media/email-outline.svg";
 import BackToTopButton from "@/components/common/BackToTopButton";
 import Wave from "@/components/common/Wave";
 
 export const SOCIAL_MEDIA_LINKS = [
-  { url: MENTORSHIP_MEDIUM_URL, icon: "medium" },
-  { url: MENTORSHIP_INSTAGRAM_URL, icon: "instagram" },
-  { url: MENTORSHIP_LINKEDIN_URL, icon: "linkedin" },
-  { url: MENTORSHIP_FACEBOOK_URL, icon: "facebook" },
-  { url: MENTORSHIP_EMAIL_ADDRESS_MAILTO, icon: "email" },
+  { url: MENTORSHIP_MEDIUM_URL, icon: <MediumIcon /> },
+  { url: MENTORSHIP_INSTAGRAM_URL, icon: <InstagramIcon /> },
+  { url: MENTORSHIP_LINKEDIN_URL, icon: <LinkedInIcon /> },
+  { url: MENTORSHIP_FACEBOOK_URL, icon: <FacebookIcon /> },
+  { url: MENTORSHIP_EMAIL_ADDRESS_MAILTO, icon: <EmailIcon /> },
 ] as const;
 
 export default function Footer() {
@@ -46,20 +52,15 @@ export default function Footer() {
           </div>
           <div className="flex gap-5 mt-5 pb-8">
             {SOCIAL_MEDIA_LINKS.map(({ url, icon }) => (
-              <a
-                key={icon}
+              <Link
+                key={url}
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="size-8 text-white hover:text-yellow-6"
               >
-                <Image
-                  src={`/images/${icon}-logo.png`}
-                  alt={`${icon}-logo`}
-                  width={32}
-                  height={32}
-                  className="cursor-pointer transition-transform duration-300 hover:scale-[1.2]"
-                />
-              </a>
+                {icon}
+              </Link>
             ))}
           </div>
         </div>
