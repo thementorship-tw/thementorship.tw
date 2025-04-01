@@ -7,7 +7,7 @@
   <a href="https://thementorship.tw" target="blank"><img src="https://img.shields.io/website?url=https%3A%2F%2Fthementorship.tw&logo=github&style=flat-square" /></a>
 </p>
 
-<img src="nextjs-app/public/images/header-logo.png" alt="thementorship-logo" width="182" height="40" />
+<img src="nextjs-app/public/images/program-logo/logo-header.png" alt="thementorship-logo" width="182" height="40" />
 
 ## About The Mentorship Program
 

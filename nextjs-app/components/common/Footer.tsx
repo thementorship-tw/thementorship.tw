@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="flex flex-col items-center border-b border-neutral-8 mb-4">
           <div className="hidden md:block">
             <Image
-              src="/images/program-logo-with-white-text.png"
+              src="/images/program-logo/logo-white-text.png"
               alt="program-logo"
               width={238}
               height={50}
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
           <div className="block md:hidden">
             <Image
-              src="/images/program-logo-with-white-text.png"
+              src="/images/program-logo/logo-white-text.png"
               alt="program-logo"
               width={181}
               height={40}

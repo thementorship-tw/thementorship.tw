@@ -90,7 +90,7 @@ export default function Header() {
     >
       <div className="px-5 py-7 flex justify-between items-center md:px-7 lg:py-0">
         <Link href="/">
-          <div className="bg-contain bg-no-repeat w-[153px] h-[30px] bg-[url('/images/header-mobile-logo.png')] md:w-[182px] md:h-[40px] md:bg-[url('/images/header-logo.png')]"></div>
+          <div className="bg-contain bg-no-repeat w-[153px] h-[30px] bg-[url('/images/program-logo/logo-header-mobile.png')] md:w-[182px] md:h-[40px] md:bg-[url('/images/program-logo/logo-header.png')]"></div>
         </Link>
 
         <div className="flex">
