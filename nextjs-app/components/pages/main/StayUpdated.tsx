@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { default as MediumIcon } from "@/public/images/medium-logo.svg";
-import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
-import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
-import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
-import { default as EmailIcon } from "@/public/images/email-logo.svg";
+import { default as MediumIcon } from "@/public/images/social-media/medium-filled.svg";
+import { default as FacebookIcon } from "@/public/images/social-media/facebook-filled.svg";
+import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-filled.svg";
+import { default as InstagramIcon } from "@/public/images/social-media/instagram-filled.svg";
+import { default as EmailIcon } from "@/public/images/social-media/email-filled.svg";
 import {
   MENTORSHIP_FACEBOOK_URL,
   MENTORSHIP_INSTAGRAM_URL,

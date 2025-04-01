@@ -11,10 +11,10 @@ import {
   MENTORSHIP_LINKEDIN_URL,
   MENTORSHIP_MEDIUM_URL,
 } from "@/constants/contact-info";
-import { default as MediumIcon } from "@/public/images/medium-logo.svg";
-import { default as FacebookIcon } from "@/public/images/facebook-logo.svg";
-import { default as LinkedInIcon } from "@/public/images/linkedin-logo.svg";
-import { default as InstagramIcon } from "@/public/images/instagram-logo.svg";
+import { default as MediumIcon } from "@/public/images/social-media/medium-filled.svg";
+import { default as FacebookIcon } from "@/public/images/social-media/facebook-filled.svg";
+import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-filled.svg";
+import { default as InstagramIcon } from "@/public/images/social-media/instagram-filled.svg";
 import { default as CompassIcon } from "@/public/images/compass.svg";
 import HamburgerButton from "./HamburgerButton";
 import type { FC } from "react";
