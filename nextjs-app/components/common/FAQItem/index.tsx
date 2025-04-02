@@ -59,7 +59,7 @@ const FAQItem: FC<IFAQItem> = ({ question, answer }) => {
 
           <div className="basis-8 shrink-0 p-2 bg-yellow-6 rounded-3 mb-2">
             <Image
-              src="/images/faq-program-logo.png"
+              src="/images/program-logo/logo-faq.png"
               className="w-7 h-7 object-contain"
               width={24}
               height={24}
