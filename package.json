@@ -3,6 +3,7 @@
   "packageManager": "pnpm@8.15.4",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "dev": "pnpm run -r dev",
     "build": "cd nextjs-app && pnpm run build",
     "start": "cd nextjs-app && pnpm run start",
     "prepare": "husky install",
