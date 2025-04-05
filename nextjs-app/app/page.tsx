@@ -1,4 +1,3 @@
-import { METADATA } from "@/constants/metadata";
 import WhatWeDoHomepage from "@/components/pages/main/WhatWeDoHomepage";
 import StayUpdated from "@/components/pages/main/StayUpdated";
 import Partners from "@/components/pages/main/Partners";
@@ -11,7 +10,6 @@ import Routes from "@/constants/routes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: METADATA.projectName,
   alternates: {
     canonical: Routes.HOME,
   },
