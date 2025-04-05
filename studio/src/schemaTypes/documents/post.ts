@@ -1,4 +1,4 @@
-import {DocumentTextIcon} from '@sanity/icons'
+import {WarningOutlineIcon} from '@sanity/icons'
 import {format, parseISO} from 'date-fns'
 import {defineField, defineType} from 'sanity'
 
@@ -9,8 +9,8 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'post',
-  title: 'Posts',
-  icon: DocumentTextIcon,
+  title: 'Posts (To be Deleted)',
+  icon: WarningOutlineIcon,
   type: 'document',
   fields: [
     defineField({
