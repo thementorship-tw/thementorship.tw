@@ -28,7 +28,7 @@
     "posthog-js": "^1.215.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sanity": "^3.74.0",
+    "sanity": "^3.82.0",
     "sonner": "^1.7.0",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.6.0",

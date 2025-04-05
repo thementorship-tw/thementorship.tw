@@ -2,8 +2,6 @@
   "root": true,
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/strict-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
     "next/core-web-vitals",
     "next/typescript",
     "prettier",
@@ -15,8 +13,6 @@
   },
   "rules": {
     "require-await": "off",
-    "@typescript-eslint/require-await": "off",
-    "@typescript-eslint/no-redundant-type-constituents": "off",
     "import/order": [
       "error",
       {
