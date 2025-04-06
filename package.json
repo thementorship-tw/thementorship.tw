@@ -4,8 +4,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "pnpm run -r dev",
-    "build": "cd nextjs-app && pnpm run build",
-    "start": "cd nextjs-app && pnpm run start",
+    "build": "pnpm --filter nextjs-app build",
+    "start": "pnpm --filter nextjs-app start",
     "prepare": "husky install",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS"
   },
