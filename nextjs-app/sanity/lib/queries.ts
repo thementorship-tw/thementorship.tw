@@ -74,3 +74,21 @@ export const pagesSlugs = defineQuery(`
   *[_type == "page" && defined(slug.current)]
   {"slug": slug.current}
 `);
+
+export const allFAQCategoriesQuery = defineQuery(`
+  *[_type == "faqCategory"] | order(name asc)
+  {
+    "key": value,
+    "value": label
+  }
+`);
+
+export const allFAQItemsQuery = defineQuery(`
+  *[_type == "faq"] | order(name asc)
+  {
+    question,
+    answer,
+    "type": type->value,
+    order,
+  }
+`);

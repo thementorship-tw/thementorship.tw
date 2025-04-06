@@ -1,6 +1,8 @@
 import person from './documents/person'
 import page from './documents/page'
 import post from './documents/post'
+import faq from './documents/faq'
+import faqCategory from './documents/faqCategory'
 import callToAction from './objects/callToAction'
 import infoSection from './objects/infoSection'
 import settings from './singletons/settings'
@@ -16,6 +18,8 @@ export const schemaTypes = [
   page,
   post,
   person,
+  faq,
+  faqCategory,
   // Objects
   blockContent,
   infoSection,

@@ -1,16 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FC } from "react";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import FAQItem from "@/components/common/FAQItem";
-import { FAQ_FILTER_OPTIONS, FAQ } from "@/constants/pages/faq";
-import { FAQType } from "@/types/filter-option";
+import { FAQType, IFilterOption } from "@/types/filter-option";
+import type { AllFAQItemsQueryResult } from "@/sanity.types";
+
 type FilterOptionType = FAQType | "all";
 
-const ContentWithFilter = () => {
+interface IProps {
+  filterOptions: IFilterOption[];
+  faqItemTypeMap: Record<FAQType, AllFAQItemsQueryResult>;
+}
+
+const ContentWithFilter: FC<IProps> = ({ filterOptions, faqItemTypeMap }) => {
   const [selectedFilter, setSelectedFilter] = useState<FilterOptionType>("all");
 
-  const filteredOptions = FAQ_FILTER_OPTIONS.filter(({ key }) =>
+  const filteredOptions = filterOptions.filter(({ key }) =>
     selectedFilter === "all" ? key !== "all" : key === selectedFilter
   );
 
@@ -21,7 +27,7 @@ const ContentWithFilter = () => {
   return (
     <div className="container space-y-10 px-5 md:px-10 xl:px-0 mb-[112px] md:mb-[120px]">
       <TagFilter
-        filterOptions={FAQ_FILTER_OPTIONS}
+        filterOptions={filterOptions}
         selectedFilter={selectedFilter}
         onSelect={(selectedFilter) => {
           handleSelect(selectedFilter as FilterOptionType);
@@ -30,7 +36,7 @@ const ContentWithFilter = () => {
 
       <div className="flex flex-col gap-10">
         {filteredOptions.map(({ key, name }) => {
-          const faqList = FAQ[key as FAQType];
+          const faqList = faqItemTypeMap[key as FAQType];
 
           return (
             <div key={key}>
@@ -41,7 +47,7 @@ const ContentWithFilter = () => {
               </div>
 
               <div className="flex flex-col gap-5">
-                {faqList.map(({ question, answer }) => (
+                {faqList?.map(({ question, answer }) => (
                   <FAQItem key={question} question={question} answer={answer} />
                 ))}
               </div>
