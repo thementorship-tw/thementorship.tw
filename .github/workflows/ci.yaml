@@ -1,6 +1,12 @@
 name: CI workflow
 
-concurrency: 
+env:
+  NEXT_PUBLIC_SANITY_API_VERSION: ${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }}
+  NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+  NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+  SANITY_API_READ_TOKEN: ${{ secrets.SANITY_API_READ_TOKEN }}
+
+concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}
   cancel-in-progress: true
 
@@ -28,7 +34,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
@@ -53,7 +59,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
@@ -81,7 +87,7 @@ jobs:
         with:
           path: |
             ./nextjs-app/node_modules
-          key: deps-node-modules-${{ hashFiles('./nextjs-app/pnpm-lock.yaml') }}
+          key: deps-node-modules-${{ hashFiles('./pnpm-lock.yaml') }}
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
