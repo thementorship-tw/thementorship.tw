@@ -5,6 +5,8 @@ import {
   POPOP_TAIPEI_PARTNER_URL,
   GIS_GROUP_PARTNER_URL,
   FABLE_PARTNER_URL,
+  MORE_THAN_PRINT_PARTNER_URL,
+  TEMPO_HOUSE_PARTNER_URL,
 } from "@/constants/partners";
 import Wave from "@/components/common/Wave";
 import SectionTitle from "./SectionTitle";
@@ -16,6 +18,21 @@ const programPartners = [
     href: FABLE_PARTNER_URL,
   },
   {
+    name: "Zeabur",
+    imageSrc: "/images/partners/zeabur.png",
+    href: ZEABUR_PARTNER_URL,
+  },
+  {
+    name: "More Than Print",
+    imageSrc: "/images/partners/more-than-print.png",
+    href: MORE_THAN_PRINT_PARTNER_URL,
+  },
+  {
+    name: "Tempo House",
+    imageSrc: "/images/partners/tempo-house.png",
+    href: TEMPO_HOUSE_PARTNER_URL,
+  },
+  {
     name: "Popop Taipei",
     imageSrc: "/images/partners/popop-taipei.png",
     href: POPOP_TAIPEI_PARTNER_URL,
@@ -24,11 +41,6 @@ const programPartners = [
     name: "GIS Group",
     imageSrc: "/images/partners/gis-group.png",
     href: GIS_GROUP_PARTNER_URL,
-  },
-  {
-    name: "Zeabur",
-    imageSrc: "/images/partners/zeabur.png",
-    href: ZEABUR_PARTNER_URL,
   },
   {
     name: "Sanguine",
