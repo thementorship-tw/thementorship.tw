@@ -42,7 +42,6 @@ const programPartners = [
     imageSrc: "/images/partners/gis-group.png",
     href: GIS_GROUP_PARTNER_URL,
   },
-
   {
     name: "Sanguine",
     imageSrc: "/images/partners/sanguine.png",
