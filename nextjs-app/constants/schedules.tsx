@@ -82,8 +82,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
         note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
       },
       {
-        date: "2025/05",
-        tag: "日期地點待定",
+        date: "2025/05/20 (Tue)",
         title: "通識主題講座 第一波",
         description: "錄取者可免費參加，另開放付費參與",
       },
@@ -181,8 +180,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
         note: "(註：篩選條件為各組船長經過多方因素考量而定，與報名者能力優劣無直接關聯)",
       },
       {
-        date: "2025/05",
-        tag: "日期地點待定",
+        date: "2025/05/20 (Tue)",
         title: "通識主題講座 第一波",
         description: "錄取者可免費參加，另開放付費參與",
       },
