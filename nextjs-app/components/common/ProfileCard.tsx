@@ -2,6 +2,7 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { Team } from "@/types";
 import { teamDisplayTextMap } from "@/constants/team-display-text-map";
+import HashTag from "./HashTag";
 import type { FC } from "react";
 
 interface IProfileCardProps {
@@ -81,12 +82,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
         {hasTags && (
           <div className="pt-3 flex flex-wrap justify-center items-center gap-3">
             {hashTags.map((tag) => (
-              <p
-                key={`${name}-${tag}`}
-                className="px-4 py-2 rounded-pill bg-blue-2 text-body-sm"
-              >
-                {"#" + tag}
-              </p>
+              <HashTag key={`${name}-${tag}`}>{tag}</HashTag>
             ))}
           </div>
         )}
