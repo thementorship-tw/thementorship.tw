@@ -7,4 +7,5 @@ export default {
   },
   PROGRAM_RULES: "/program-rules",
   FAQ: "/faq",
+  ACTIVITY: "/activity",
 } as const;
