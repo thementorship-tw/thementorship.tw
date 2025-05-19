@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import {DocumentIcon} from '@sanity/icons'
+import {WarningOutlineIcon} from '@sanity/icons'
 
 /**
  * Page schema.  Define and edit the fields for the 'page' content type.
@@ -8,9 +8,9 @@ import {DocumentIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'page',
-  title: 'Pages',
+  title: 'Pages (To be Deleted)',
   type: 'document',
-  icon: DocumentIcon,
+  icon: WarningOutlineIcon,
   fields: [
     defineField({
       name: 'name',
