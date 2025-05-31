@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 0;
+
 export default async function FAQPage() {
   const faqCategories = await client.fetch<AllFAQCategoriesQueryResult>(
     allFAQCategoriesQuery
