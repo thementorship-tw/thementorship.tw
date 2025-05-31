@@ -5,8 +5,12 @@ import MarqueeTitle from "@/components/common/MarqueeTitle";
 import ContentWithFilter from "@/components/pages/faq/ContentWithFilter";
 import Routes from "@/constants/routes";
 import { allFAQCategoriesQuery, allFAQItemsQuery } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/sanity/lib/live";
+import { client } from "@/sanity/lib/client";
 import { IFilterOption } from "@/types/filter-option";
+import {
+  AllFAQCategoriesQueryResult,
+  AllFAQItemsQueryResult,
+} from "@/sanity.types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,14 +20,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function FAQPage() {
-  const { data: faqCategories } = await sanityFetch({
-    query: allFAQCategoriesQuery,
-  });
+export const revalidate = 0;
 
-  const { data: faqItems } = await sanityFetch({
-    query: allFAQItemsQuery,
-  });
+export default async function FAQPage() {
+  const faqCategories = await client.fetch<AllFAQCategoriesQueryResult>(
+    allFAQCategoriesQuery
+  );
+
+  const faqItems = await client.fetch<AllFAQItemsQueryResult>(allFAQItemsQuery);
 
   const filterOptions: IFilterOption[] = [{ key: "all", name: "全部" }].concat(
     faqCategories.map(({ key, value }) => ({
