@@ -35,6 +35,11 @@ export const navigationMenu: IMenuItem[] = [
     subtitle: "活動辦法",
   },
   {
+    href: Routes.ACTIVITY,
+    title: "Activity",
+    subtitle: "活動內容",
+  },
+  {
     href: Routes.FAQ,
     title: "FAQ",
     subtitle: "常見問題",

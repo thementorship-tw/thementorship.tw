@@ -19,10 +19,10 @@ export interface ActivityInfo {
   lecturer: string;
   location: string;
   hashTags: string[];
-  imageSrc?: string;
+  imageSrc: string | null;
   register: {
     start: string;
     end: string;
-    href?: string;
+    href: string | null;
   };
 }
