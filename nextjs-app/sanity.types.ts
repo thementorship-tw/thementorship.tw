@@ -166,6 +166,58 @@ export type BlockContent = Array<{
   _key: string;
 }>;
 
+export type Activity = {
+  _id: string;
+  _type: "activity";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  type: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "activityCategory";
+  };
+  time?: TimeRange;
+  title: string;
+  lecturer: string;
+  location: string;
+  hashTags: Array<string>;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  register?: {
+    registerTime?: TimeRange;
+    href?: string;
+  };
+};
+
+export type TimeRange = {
+  _type: "timeRange";
+  start: string;
+  end: string;
+};
+
+export type ActivityCategory = {
+  _id: string;
+  _type: "activityCategory";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  label: string;
+  value: string;
+  order?: number;
+};
+
 export type Faq = {
   _id: string;
   _type: "faq";
@@ -504,6 +556,9 @@ export type AllSanitySchemaTypes =
   | Link
   | InfoSection
   | BlockContent
+  | Activity
+  | TimeRange
+  | ActivityCategory
   | Faq
   | FaqCategory
   | Page
@@ -807,6 +862,34 @@ export type AllFAQItemsQueryResult = Array<{
   type: string;
   order: number | null;
 }>;
+// Variable: allActivityCategoriesQuery
+// Query: *[_type == "activityCategory"] | order(name asc)   {    "key": value,    "value": label  }
+export type AllActivityCategoriesQueryResult = Array<{
+  key: string;
+  value: string;
+}>;
+// Variable: allActivitiesQuery
+// Query: *[_type == "activity"]{  _id,  title,  "type": type->value,  time {    start,    end  },  "imageUrl": image.asset->url,  lecturer,  location,  hashTags,  register {    registerTime {      start,      end    },    href  }}
+export type AllActivitiesQueryResult = Array<{
+  _id: string;
+  title: string;
+  type: string;
+  time: {
+    start: string;
+    end: string;
+  } | null;
+  imageUrl: string | null;
+  lecturer: string;
+  location: string;
+  hashTags: Array<string>;
+  register: {
+    registerTime: {
+      start: string;
+      end: string;
+    } | null;
+    href: string | null;
+  } | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -821,5 +904,7 @@ declare module "@sanity/client" {
     '\n  *[_type == "page" && defined(slug.current)]\n  {"slug": slug.current}\n': PagesSlugsResult;
     '\n  *[_type == "faqCategory"] | order(name asc)\n  {\n    "key": value,\n    "value": label\n  }\n': AllFAQCategoriesQueryResult;
     '\n  *[_type == "faq"] | order(name asc)\n  {\n    question,\n    answer,\n    "type": type->value,\n    order,\n  }\n': AllFAQItemsQueryResult;
+    '\n  *[_type == "activityCategory"] | order(name asc)\n   {\n    "key": value,\n    "value": label\n  }\n  ': AllActivityCategoriesQueryResult;
+    '*[_type == "activity"]{\n  _id,\n  title,\n  "type": type->value,\n  time {\n    start,\n    end\n  },\n  "imageUrl": image.asset->url,\n  lecturer,\n  location,\n  hashTags,\n  register {\n    registerTime {\n      start,\n      end\n    },\n    href\n  }\n}': AllActivitiesQueryResult;
   }
 }

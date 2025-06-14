@@ -92,3 +92,32 @@ export const allFAQItemsQuery = defineQuery(`
     order,
   }
 `);
+
+export const allActivityCategoriesQuery = defineQuery(`
+  *[_type == "activityCategory"] | order(name asc)
+   {
+    "key": value,
+    "value": label
+  }
+  `);
+
+export const allActivitiesQuery = defineQuery(`*[_type == "activity"]{
+  _id,
+  title,
+  "type": type->value,
+  time {
+    start,
+    end
+  },
+  "imageUrl": image.asset->url,
+  lecturer,
+  location,
+  hashTags,
+  register {
+    registerTime {
+      start,
+      end
+    },
+    href
+  }
+}`);

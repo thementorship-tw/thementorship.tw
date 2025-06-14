@@ -1,29 +1,30 @@
 "use client";
-import { useState } from "react";
-import { ACTIVITY_FILTER_OPTIONS } from "@/constants/pages/activity";
-import { ActivityFilterOptionType } from "@/types/activity";
+import { FC, useState } from "react";
+import { IFilterOption } from "@/types/filter-option";
+import { ActivityFilterOptionType, ActivityInfo } from "@/types/activity";
 import { filterActivityByType } from "@/utils/activity";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import ActivityCard from "@/components/pages/activity/ActivityCard";
-import { mockActivities } from "./mockData";
 
-const ContentWithFilter = () => {
+interface IProps {
+  filterOptions: IFilterOption[];
+  activities: ActivityInfo[];
+}
+
+const ContentWithFilter: FC<IProps> = ({ filterOptions, activities }) => {
   const [selectedFilter, setSelectedFilter] =
     useState<ActivityFilterOptionType>("all");
+
+  const filteredActivities = filterActivityByType(selectedFilter, activities);
 
   const handleSelect = (selectedOption: ActivityFilterOptionType) => {
     setSelectedFilter(selectedOption);
   };
 
-  const filteredActivities = filterActivityByType(
-    selectedFilter,
-    mockActivities
-  );
-
   return (
     <div className="container space-y-10 px-5 md:px-10 xl:px-0 mb-[112px] md:mb-[120px]">
       <TagFilter
-        filterOptions={ACTIVITY_FILTER_OPTIONS}
+        filterOptions={filterOptions}
         selectedFilter={selectedFilter}
         onSelect={(selectedFilter) => {
           handleSelect(selectedFilter as ActivityFilterOptionType);
