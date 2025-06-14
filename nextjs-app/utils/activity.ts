@@ -31,6 +31,7 @@ const formatDate = (date: Date) =>
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
+    timeZone: "Asia/Taipei",
   });
 
 const formatTime = (date: Date) =>
@@ -38,6 +39,7 @@ const formatTime = (date: Date) =>
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
+    timeZone: "Asia/Taipei",
   });
 
 const lectureTimeToString = (
