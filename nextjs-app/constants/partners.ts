@@ -6,3 +6,5 @@ export const JUNYI_PARTNER_URL = "https://www.junyiacademy.org/";
 export const FABLE_PARTNER_URL = "https://www.fable.com.tw/";
 export const TEMPO_HOUSE_PARTNER_URL = "https://portaly.cc/tempohouse";
 export const MORE_THAN_PRINT_PARTNER_URL = "https://mtprint.com.tw";
+export const JINGXINLU_PARTNER_URL = "https://jingxinlu.com/";
+export const VOICE_TUBE_PARTNER_URL = "https://tw.voicetube.com/";

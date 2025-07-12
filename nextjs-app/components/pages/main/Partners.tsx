@@ -7,6 +7,8 @@ import {
   FABLE_PARTNER_URL,
   MORE_THAN_PRINT_PARTNER_URL,
   TEMPO_HOUSE_PARTNER_URL,
+  JINGXINLU_PARTNER_URL,
+  VOICE_TUBE_PARTNER_URL,
 } from "@/constants/partners";
 import Wave from "@/components/common/Wave";
 import SectionTitle from "./SectionTitle";
@@ -46,6 +48,16 @@ const programPartners = [
     name: "Sanguine",
     imageSrc: "/images/partners/sanguine.png",
     href: SANGUINE_PARTNER_URL,
+  },
+  {
+    name: "Jingxinlu",
+    imageSrc: "/images/partners/jingxinlu.png",
+    href: JINGXINLU_PARTNER_URL,
+  },
+  {
+    name: "VoiceTube",
+    imageSrc: "/images/partners/voice-tube.png",
+    href: VOICE_TUBE_PARTNER_URL,
   },
 ];
 
