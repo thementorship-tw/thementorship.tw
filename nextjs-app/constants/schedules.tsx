@@ -97,22 +97,21 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
     event: {
       date: "2025/06 - 2025/09",
-      tag: "日期地點待定",
+      tag: "日期地點依各組公布為主",
       title: "第七屆曼陀號領航計劃 主要活動期間",
       description:
-        "包含 (各組月會四場 + 通識主題講座八場 + 不定期跨職能與跨屆交流) x 無限可能！",
+        "包含 (各組月會四場 + 通識主題講座七場 + 不定期跨職能與跨屆交流) x 無限可能！",
     },
   },
   {
     phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
-      title: "10月",
+      title: "11月",
       description: "(閉幕式暨結業日)",
     },
     event: {
-      date: "2025/10",
-      tag: "日期地點待定",
+      date: "2025/11/1 (Sat)",
       title: "閉幕式暨結業日",
       description:
         "將會頒發結業證書、紀念品，並預計安排船長分享、學員交流等精彩環節，劃下美好航程的句號，精彩生涯的逗號",
@@ -195,22 +194,21 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
     event: {
       date: "2025/06 - 2025/09",
-      tag: "日期地點待定",
+      tag: "日期地點依各組公布為主",
       title: "第七屆曼陀號領航計劃 主要活動期間",
       description:
-        "包含 (各組月會四場 + 通識主題講座八場 + 不定期跨職能與跨屆交流) x 無限可能！",
+        "包含 (各組月會四場 + 通識主題講座七場 + 不定期跨職能與跨屆交流) x 無限可能！",
     },
   },
   {
     phase: SchedulePhase.ACTIVE,
     type: ScheduleType.HIGHLIGHT,
     timeline: {
-      title: "10月",
+      title: "11月",
       description: "(閉幕式暨結業日)",
     },
     event: {
-      date: "2025/10",
-      tag: "日期地點待定",
+      date: "2025/11/1 (Sat)",
       title: "閉幕式暨結業日",
       description:
         "將會頒發結業證書、紀念品，並預計安排船長分享、學員交流等精彩環節，劃下美好航程的句號，精彩生涯的逗號",
