@@ -69,26 +69,6 @@ We are proudly deployed on [Zeabur](https://zeabur.com), a modern cloud platform
   <img src="nextjs-app/public/images/deployed-on-zeabur.png" alt="Deployed on Zeabur" width="194" height="37"/>
 </a>
 
-## Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kylemocode"><img src="https://avatars.githubusercontent.com/u/35811214?v=4?s=100" width="100px;" alt="Kyle Mo"/><br /><sub><b>Kyle Mo</b></sub></a><br /><a href="#code-kylemocode" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gongtzuuuu"><img src="https://avatars.githubusercontent.com/u/104567770?v=4?s=100" width="100px;" alt="Tzu-Yun Liang"/><br /><sub><b>Tzu-Yun Liang</b></sub></a><br /><a href="#code-gongtzuuuu" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ChengYiLin"><img src="https://avatars.githubusercontent.com/u/34314614?v=4?s=100" width="100px;" alt="Martin Lin"/><br /><sub><b>Martin Lin</b></sub></a><br /><a href="#code-ChengYiLin" title="Code">💻</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
