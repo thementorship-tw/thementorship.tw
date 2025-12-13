@@ -4,14 +4,14 @@ import Link from "next/link";
 import { Team, Role } from "@/types";
 import { roleDisplayTextMap } from "@/constants/role-display-text-map";
 
-import AvatarForAlice from "@/public/images/member-avatar/Alice.jpg";
-import AvatarForClaire from "@/public/images/member-avatar/Claire.jpg";
-import AvatarForHarper from "@/public/images/member-avatar/Harper.jpg";
-import AvatarForJoann from "@/public/images/member-avatar/Joann.jpg";
-import AvatarForJudy from "@/public/images/member-avatar/Judy.jpg";
-import AvatarForKyle from "@/public/images/member-avatar/Kyle.jpg";
-import AvatarForMila from "@/public/images/member-avatar/Mila.jpg";
-import AvatarForPatty from "@/public/images/member-avatar/Patty.jpg";
+import AvatarForAndrea from "@/public/images/member-avatar/eighth/Andrea.jpg";
+import AvatarForBenson from "@/public/images/member-avatar/eighth/Benson.jpg";
+import AvatarForBill from "@/public/images/member-avatar/eighth/Bill.jpg";
+import AvatarForEmily from "@/public/images/member-avatar/eighth/Emily.jpg";
+import AvatarForJill from "@/public/images/member-avatar/eighth/Jill.jpg";
+import AvatarForLukas from "@/public/images/member-avatar/eighth/Lukas.jpg";
+import AvatarForLena from "@/public/images/member-avatar/eighth/Lena.jpg";
+import AvatarForPeterLi from "@/public/images/member-avatar/eighth/PeterLi.jpg";
 
 import Button from "@/components/common/Button/Button";
 import Wave from "@/components/common/Wave";
@@ -30,68 +30,68 @@ interface ITeamMember {
 
 const TEAM_MEMBER_DATA: ITeamMember[] = [
   {
-    avatar: AvatarForJoann,
+    avatar: AvatarForBenson,
     team: Team.BD,
     role: Role.HARBOUR_PILOT,
-    lastName: "Joann",
-    firstName: "Chen",
-    slogan: `世界上最大的悲哀，\n不是我不行，\n而是我本可以。`,
+    lastName: "Benson",
+    firstName: "Cheng",
+    slogan: `為社會進步添上一塊磚。`,
   },
   {
-    avatar: AvatarForMila,
+    avatar: AvatarForBill,
     team: Team.DATA,
     role: Role.HARBOUR_PILOT,
-    lastName: "Mila",
+    lastName: "Bill",
+    firstName: "Syu",
+    slogan: `保有彈性，\n擁抱失敗，\n享受成果。`,
+  },
+  {
+    avatar: AvatarForPeterLi,
+    team: Team.DATA,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Peter",
+    firstName: "Li",
+    slogan: `面對錯誤，\n並以謙遜的態度向他人求助。`,
+  },
+  {
+    avatar: AvatarForJill,
+    team: Team.ENGINEER,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Jill",
+    firstName: "Lee",
+    slogan: `沒有白走的路，\n每一步都算數！`,
+  },
+  {
+    avatar: AvatarForLukas,
+    team: Team.ENGINEER,
+    role: Role.HARBOUR_PILOT,
+    lastName: "Lukas",
     firstName: "Chang",
-    slogan: `學會站在別人的角度，\n才能成就更好的自己。`,
+    slogan: `保有對立場與選擇偏頗的權利，\n持客觀以維持對萬物的吸引力。`,
   },
   {
-    avatar: AvatarForJudy,
-    team: Team.ENGINEER,
-    role: Role.HARBOUR_PILOT,
-    lastName: "Judy",
-    firstName: "Tsai",
-    slogan: `天賦決定下限，\n好奇心決定上限。`,
-  },
-  {
-    avatar: AvatarForKyle,
-    team: Team.ENGINEER,
-    role: Role.HARBOUR_PILOT,
-    lastName: "Kyle",
-    firstName: "Mo",
-    slogan: "如果你希望周遭環境改變，\n答案或許是從\n「改變自己」開始。",
-  },
-  {
-    avatar: AvatarForAlice,
+    avatar: AvatarForLena,
     team: Team.MKT,
     role: Role.HARBOUR_PILOT,
-    lastName: "Alice",
-    firstName: "Chiu",
-    slogan: "不怕失去才是擁有的開始。",
+    lastName: "Lena",
+    firstName: "Zhong",
+    slogan: `人生最好的狀態，\n是從未放棄成長。`,
   },
   {
-    avatar: AvatarForClaire,
+    avatar: AvatarForAndrea,
     team: Team.PM,
     role: Role.HARBOUR_PILOT,
-    lastName: "Claire",
-    firstName: "Hsieh",
-    slogan: "把每次挑戰都變成\n學習與成長的機會。",
+    lastName: "Andrea",
+    firstName: "Shieh",
+    slogan: `不斷的觀察，\n不斷的學習，\n不斷的進步。`,
   },
   {
-    avatar: AvatarForPatty,
+    avatar: AvatarForEmily,
     team: Team.UIUX,
     role: Role.HARBOUR_PILOT,
-    lastName: "Patty",
-    firstName: "Hsu",
-    slogan: "用設計改變世界，\n用體驗溫暖人心。",
-  },
-  {
-    avatar: AvatarForHarper,
-    team: Team.LEADERSHIP,
-    role: Role.HARBOUR_PILOT,
-    lastName: "Harper",
-    firstName: "Liu",
-    slogan: "你打算怎麼渡過這\n瘋狂又珍貴的人生？",
+    lastName: "Emily",
+    firstName: "Chao",
+    slogan: `願能以誠待人、眼底有光。`,
   },
 ];
 
@@ -161,7 +161,7 @@ const WhoWeAre: FC = () => {
 
                         <SloganPopup
                           slogan={slogan}
-                          className="h-auto max-h-[272px] -top-6 -right-3 lg:-top-9 lg:-right-10 lg:max-h-[200px] xl:max-h-[272px] xl:-right-8 tracking-[4px]"
+                          className="h-auto max-h-[300px] -top-6 -right-3 lg:-top-9 lg:-right-10 lg:max-h-[220px] xl:max-h-[300px] xl:-right-8 tracking-[4px]"
                         />
                       </div>
                     </div>
