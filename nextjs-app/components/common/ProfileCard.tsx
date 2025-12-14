@@ -77,7 +77,9 @@ const ProfileCard: FC<IProfileCardProps> = ({
           {name}
         </p>
 
-        <p className="px-5 py-2 text-subtitle-lg text-yellow-6">{quote}</p>
+        <p className="px-5 py-2 text-subtitle-lg text-yellow-6 whitespace-pre-line">
+          {quote}
+        </p>
 
         {hasTags && (
           <div className="pt-3 flex flex-wrap justify-center items-center gap-3">

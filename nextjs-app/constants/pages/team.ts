@@ -8,15 +8,15 @@ import BryanAvatar from "@/public/images/execution-group/Bryan.jpg";
 import SidneyAvatar from "@/public/images/execution-group/Sidney.jpg";
 import GordonAvatar from "@/public/images/execution-group/Gordon.jpg";
 import DukiAvatar from "@/public/images/execution-group/Duki.jpg";
-// Navigator
-import JoannAvatar from "@/public/images/execution-group/Joann.jpg";
-import MilaAvatar from "@/public/images/execution-group/Mila.jpg";
-import JudyAvatar from "@/public/images/execution-group/Judy.jpg";
-import KyleAvatar from "@/public/images/execution-group/Kyle.jpg";
-import AliceAvatar from "@/public/images/execution-group/Alice.jpg";
-import ClaireAvatar from "@/public/images/execution-group/Claire.jpg";
-import PattyAvatar from "@/public/images/execution-group/Patty.jpg";
-import HarperAvatar from "@/public/images/execution-group/Harper.jpg";
+// Harbour Pilot - 8th Cohort
+import BensonAvatar from "@/public/images/execution-group/eighth/Benson.jpg";
+import BillAvatar from "@/public/images/execution-group/eighth/Bill.jpg";
+import PeterLiAvatar from "@/public/images/execution-group/eighth/PeterLi.jpg";
+import JillAvatar from "@/public/images/execution-group/eighth/Jill.jpg";
+import LukasAvatar from "@/public/images/execution-group/eighth/Lukas.jpg";
+import LenaAvatar from "@/public/images/execution-group/eighth/Lena.jpg";
+import AndreaAvatar from "@/public/images/execution-group/eighth/Andrea.jpg";
+import EmilyNewAvatar from "@/public/images/execution-group/eighth/Emily.jpg";
 // Assistant
 import MartinAvatar from "@/public/images/execution-group/Martin.jpg";
 import LizzyAvatar from "@/public/images/execution-group/Lizzy.jpg";
@@ -44,6 +44,11 @@ export const EXECUTION_GROUP_FILTER_OPTIONS: {
   { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
   { key: Role.CAPTAIN, name: roleDisplayTextMap[Role.CAPTAIN] },
   { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
+];
+
+export const COMING_SOON_ROLES: ExecutionGroupType[] = [
+  Role.CAPTAIN,
+  Role.ASSISTANT,
 ];
 
 interface IProfileInfo {
@@ -159,67 +164,67 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
   [Role.HARBOUR_PILOT]: [
     {
       team: Team.BD,
-      name: "陳孟真 Joann Chen",
-      title: "第七屆 BD 引水人",
-      subTitle: ["第六屆 BD 水手"],
-      quote: "世界上最大的悲哀，不是我不行，而是我本可以。",
-      imageUrl: JoannAvatar.src,
+      name: "鄭本源 Benson Cheng",
+      title: "第八屆 BD 引水人",
+      subTitle: ["第七屆 BD 航海士"],
+      quote: "為社會進步添上一塊磚。",
+      imageUrl: BensonAvatar.src,
     },
     {
       team: Team.DATA,
-      name: "張若兪 Mila Chang  ",
-      title: "第七屆 Data 引水人",
-      subTitle: ["第六屆 Data 航海士"],
-      quote: "學會站在別人的角度，才能成就更好的自己。",
-      imageUrl: MilaAvatar.src,
+      name: "許勝嵐 Bill Hsu",
+      title: "第八屆 Data 引水人",
+      subTitle: ["第五屆 Data 水手"],
+      quote: "保有彈性，擁抱失敗，享受成果。",
+      imageUrl: BillAvatar.src,
+    },
+    {
+      team: Team.DATA,
+      name: "李賜明 Peter Li",
+      title: "第八屆 Data 引水人",
+      subTitle: ["第七屆 Data 水手"],
+      quote: "面對錯誤，並以謙遜的態度向他人求助。",
+      imageUrl: PeterLiAvatar.src,
     },
     {
       team: Team.ENGINEER,
-      name: "蔡珮歆 Judy Tsai",
-      title: "第七屆 Engineering 引水人",
-      subTitle: ["第六屆 Engineering 水手"],
-      quote: "天賦決定下限，好奇心決定上限。",
-      imageUrl: JudyAvatar.src,
+      name: "李季陵 Jill Lee",
+      title: "第八屆 Engineering 引水人",
+      subTitle: ["第七屆 Engineering 水手"],
+      quote: "沒有白走的路，每一步都算數！",
+      imageUrl: JillAvatar.src,
     },
     {
       team: Team.ENGINEER,
-      name: "莫力全 Kyle Mo",
-      title: "第七屆 Engineering 引水人",
-      subTitle: ["第六屆 Engineering 水手"],
-      quote: "如果你希望周遭環境改變，答案或許是從「改變自己」開始。",
-      imageUrl: KyleAvatar.src,
+      name: "張家維 Lukas Chang",
+      title: "第八屆 Engineering 引水人",
+      subTitle: ["第七屆 Engineering 水手"],
+      quote: "保有對立場與選擇偏頗的權利，\n持客觀以維持對萬物的吸引力。",
+      imageUrl: LukasAvatar.src,
     },
     {
       team: Team.MKT,
-      name: "邱姵璇 Alice Chiu",
-      title: "第七屆 Marketing 引水人",
-      subTitle: ["第六屆 PM 助教"],
-      quote: "不怕失去才是擁有的開始。",
-      imageUrl: AliceAvatar.src,
+      name: "鍾佩真 Lena Zhong",
+      title: "第八屆 Marketing 引水人",
+      subTitle: ["第七屆 Marketing 航海士"],
+      quote: "人生最好的狀態，是從未放棄成長。",
+      imageUrl: LenaAvatar.src,
     },
     {
       team: Team.PM,
-      name: "謝慧霖 Claire Hsieh",
-      title: "第七屆 PM 引水人",
-      subTitle: ["第六屆 PM 航海士"],
-      quote: "把每次挑戰都變成學習與成長的機會。",
-      imageUrl: ClaireAvatar.src,
+      name: "謝采穎 Andrea Hsieh",
+      title: "第八屆 PM 引水人",
+      subTitle: ["第七屆 PM 航海士"],
+      quote: "不斷的觀察，不斷的學習，不斷的進步。",
+      imageUrl: AndreaAvatar.src,
     },
     {
       team: Team.UIUX,
-      name: "許珮甄 Patty Hsu",
-      title: "第七屆 UIUX 引水人",
-      subTitle: ["第六屆 UIUX 航海士"],
-      quote: "用設計改變世界，用體驗溫暖人心。",
-      imageUrl: PattyAvatar.src,
-    },
-    {
-      team: Team.LEADERSHIP,
-      name: "劉芷吟 Harper Liu",
-      title: "第七屆 領導力小學堂 引水人",
-      subTitle: ["第六屆 BD 助教"],
-      quote: "你打算怎麼渡過這瘋狂又珍貴的人生？",
-      imageUrl: HarperAvatar.src,
+      name: "趙庭暄 Emily Chao",
+      title: "第八屆 UIUX 引水人",
+      subTitle: ["第七屆 Data 水手"],
+      quote: "願能以誠待人、眼底有光。",
+      imageUrl: EmilyNewAvatar.src,
     },
   ],
   [Role.ASSISTANT]: [

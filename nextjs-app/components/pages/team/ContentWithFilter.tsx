@@ -3,9 +3,11 @@
 import { useState } from "react";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import ProfileCard from "@/components/common/ProfileCard";
+import ComingSoonCard from "@/components/common/ComingSoonCard";
 import {
   EXECUTION_GROUP,
   EXECUTION_GROUP_FILTER_OPTIONS,
+  COMING_SOON_ROLES,
 } from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
 
@@ -34,6 +36,9 @@ const ContentWithFilter = () => {
 
       {filteredOptions.map(({ key, name: groupName }) => {
         const profileList = EXECUTION_GROUP[key as ExecutionGroupType];
+        const isComingSoon = COMING_SOON_ROLES.includes(
+          key as ExecutionGroupType
+        );
 
         return (
           <div key={key}>
@@ -44,26 +49,30 @@ const ContentWithFilter = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-              {profileList.map(
-                ({
-                  team,
-                  name,
-                  title,
-                  subTitle,
-                  quote,
-                  imageUrl,
-                  hashTags,
-                }) => (
-                  <ProfileCard
-                    key={name}
-                    team={team}
-                    name={name}
-                    title={title}
-                    subTitle={subTitle}
-                    quote={quote}
-                    imageUrl={imageUrl}
-                    hashTags={hashTags}
-                  />
+              {isComingSoon ? (
+                <ComingSoonCard title={groupName} />
+              ) : (
+                profileList.map(
+                  ({
+                    team,
+                    name,
+                    title,
+                    subTitle,
+                    quote,
+                    imageUrl,
+                    hashTags,
+                  }) => (
+                    <ProfileCard
+                      key={name}
+                      team={team}
+                      name={name}
+                      title={title}
+                      subTitle={subTitle}
+                      quote={quote}
+                      imageUrl={imageUrl}
+                      hashTags={hashTags}
+                    />
+                  )
                 )
               )}
             </div>
