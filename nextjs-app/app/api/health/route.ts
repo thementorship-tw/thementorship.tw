@@ -1,5 +1,14 @@
 import { NextResponse } from "next/server";
 
+const SERVICE_ID = "thementorship-tw-nextjs";
+
+const COMMON_HEADERS = {
+  "Content-Type": "application/health+json",
+  "Cache-Control": "no-cache, no-store, must-revalidate",
+  Pragma: "no-cache",
+  Expires: "0",
+};
+
 interface HealthCheck {
   name: string;
   status: "pass" | "fail" | "warn";
@@ -28,7 +37,8 @@ async function performHealthChecks(): Promise<HealthCheck[]> {
       Math.round((memoryUsage.heapUsed / 1024 / 1024) * 100) / 100;
     const memoryTotalMB =
       Math.round((memoryUsage.heapTotal / 1024 / 1024) * 100) / 100;
-    const memoryUsagePercent = (memoryUsedMB / memoryTotalMB) * 100;
+    const memoryUsagePercent =
+      memoryTotalMB > 0 ? (memoryUsedMB / memoryTotalMB) * 100 : 0;
 
     checks.push({
       name: "system:memory",
@@ -53,24 +63,14 @@ async function performHealthChecks(): Promise<HealthCheck[]> {
   }
 
   // Uptime check
-  try {
-    const uptimeSeconds = process.uptime();
-    checks.push({
-      name: "system:uptime",
-      status: "pass",
-      componentType: "system",
-      time: new Date().toISOString(),
-      output: `Uptime: ${Math.round(uptimeSeconds)}s`,
-    });
-  } catch (error) {
-    checks.push({
-      name: "system:uptime",
-      status: "fail",
-      componentType: "system",
-      time: new Date().toISOString(),
-      output: `Uptime check failed: ${error instanceof Error ? error.message : "Unknown error"}`,
-    });
-  }
+  const uptimeSeconds = process.uptime();
+  checks.push({
+    name: "system:uptime",
+    status: "pass",
+    componentType: "system",
+    time: new Date().toISOString(),
+    output: `Uptime: ${Math.round(uptimeSeconds)}s`,
+  });
 
   return checks;
 }
@@ -96,11 +96,12 @@ export async function GET() {
         ? "warn"
         : "pass";
 
+    const releaseId =
+      process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.ZEABUR_GIT_COMMIT_SHA;
     const healthResponse: HealthResponse = {
       status: overallStatus,
-      releaseId:
-        process.env.VERCEL_GIT_COMMIT_SHA || process.env.ZEABUR_GIT_COMMIT_SHA,
-      serviceId: "thementorship-tw-nextjs",
+      ...(releaseId && { releaseId }),
+      serviceId: SERVICE_ID,
       description: "The Mentorship Taiwan Next.js Application",
       details,
     };
@@ -111,17 +112,14 @@ export async function GET() {
     return NextResponse.json(healthResponse, {
       status: statusCode,
       headers: {
-        "Content-Type": "application/health+json",
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
+        ...COMMON_HEADERS,
         "X-Response-Time": `${responseTime}ms`,
       },
     });
   } catch (error) {
     const errorResponse: HealthResponse = {
       status: "fail",
-      serviceId: "thementorship-tw-nextjs",
+      serviceId: SERVICE_ID,
       description: "The Mentorship Taiwan Next.js Application",
       output: `Health check failed: ${error instanceof Error ? error.message : "Unknown error"}`,
       details: {
@@ -137,12 +135,7 @@ export async function GET() {
 
     return NextResponse.json(errorResponse, {
       status: 503,
-      headers: {
-        "Content-Type": "application/health+json",
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
-      },
+      headers: COMMON_HEADERS,
     });
   }
 }
