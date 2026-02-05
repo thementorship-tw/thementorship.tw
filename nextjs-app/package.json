@@ -23,7 +23,7 @@
     "class-variance-authority": "^0.7.1",
     "date-fns": "^3.6.0",
     "lodash": "^4.17.21",
-    "next": "15.3.8",
+    "next": "15.3.9",
     "next-sanity": "9.12.0",
     "postcss": "^8.4.49",
     "posthog-js": "^1.215.0",

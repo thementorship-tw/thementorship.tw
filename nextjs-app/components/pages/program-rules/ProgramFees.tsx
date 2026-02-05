@@ -19,6 +19,9 @@ const FEE_DATA = [
   },
 ];
 
+const FEE_NOTICE =
+  "費用每年依活動規模、場地與課程設計進行動態調整，請以當屆公告為準。";
+
 interface IFeeInfo {
   imageSrc: string;
   title: string;
@@ -59,7 +62,7 @@ const ProgramFees = () => (
     <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
-        title="計劃參加費用"
+        title="2025 第 7 屆計劃參加費用"
         description={`「收到海選通知信」始需繳納「海選參加費」\n「收到錄取通知信」始需繳納「計劃報名費」`}
         serial="06"
         variant="dark"
@@ -74,6 +77,12 @@ const ProgramFees = () => (
             fee={item.fee}
           />
         ))}
+      </div>
+      <div className="mt-6 md:mt-8 rounded-2 border border-blue-3/50 bg-blue-7/70 px-4 py-3 md:px-6 md:py-4">
+        <p className="text-body-sm md:text-body-md text-white/90 leading-relaxed">
+          <span className="font-semibold text-yellow-3">註：</span>
+          {FEE_NOTICE}
+        </p>
       </div>
     </div>
   </section>
