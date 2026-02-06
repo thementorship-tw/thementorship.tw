@@ -2,12 +2,12 @@ import { Role, Team } from "@/types";
 import { ExecutionGroupType } from "@/types/filter-option";
 
 // Captain
-import SteveAvatar from "@/public/images/execution-group/Steve.jpg";
-import BrownAvatar from "@/public/images/execution-group/Brown.jpg";
-import BryanAvatar from "@/public/images/execution-group/Bryan.jpg";
-import SidneyAvatar from "@/public/images/execution-group/Sidney.jpg";
-import GordonAvatar from "@/public/images/execution-group/Gordon.jpg";
-import DukiAvatar from "@/public/images/execution-group/Duki.jpg";
+import NathanAvatar from "@/public/images/execution-group/eighth/Nathan.jpg";
+import NaiwenAvatar from "@/public/images/execution-group/eighth/Naiwen.jpg";
+import JohnAvatar from "@/public/images/execution-group/eighth/John.jpg";
+import AndyAvatar from "@/public/images/execution-group/eighth/Andy.jpg";
+import JackAvatar from "@/public/images/execution-group/eighth/Jack.jpg";
+import CarolynAvatar from "@/public/images/execution-group/eighth/Carolyn.jpg";
 // Harbour Pilot - 8th Cohort
 import BensonAvatar from "@/public/images/execution-group/eighth/Benson.jpg";
 import BillAvatar from "@/public/images/execution-group/eighth/Bill.jpg";
@@ -65,12 +65,11 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
   [Role.CAPTAIN]: [
     {
       team: Team.BD,
-      name: "蘇書平 Steve Sue",
-      title: "先行智庫",
-      subTitle: ["董事長暨執行長"],
-      quote:
-        "現在你是誰並不重要，重要的是未來你想成為誰。 讓我們一起成為更好的自己。",
-      imageUrl: SteveAvatar.src,
+      name: "范永銀 Nathan Fan",
+      title: "COMMEET",
+      subTitle: ["首席增長官 CGO"],
+      quote: "Don't prove yourself, Improve yourself.",
+      imageUrl: NathanAvatar.src,
       hashTags: [
         "商業開發",
         "新商機挖掘",
@@ -82,12 +81,11 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     },
     {
       team: Team.DATA,
-      name: "賴柏龍 Brown Lai",
-      title: "電商平台",
-      subTitle: ["首席商業分析師"],
-      quote:
-        "You can’t connect the dots looking forward; you can only connect them looking backwards.",
-      imageUrl: BrownAvatar.src,
+      name: "姜乃文 Naiwen Chiang",
+      title: "媒體集團",
+      subTitle: ["主任分析師"],
+      quote: "Life’s best insights only appear after enough iterations.",
+      imageUrl: NaiwenAvatar.src,
       hashTags: [
         "產品分析",
         "用戶行為分析",
@@ -100,11 +98,11 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     },
     {
       team: Team.ENGINEER,
-      name: "布萊恩 Bryan Yang",
-      title: "顧職",
-      subTitle: ["外商資深軟體工程師 & 顧職創辦人"],
-      quote: "Be kind.",
-      imageUrl: BryanAvatar.src,
+      name: "劉奕為 John Liu",
+      title: "Netskope",
+      subTitle: ["工程經理"],
+      quote: "精益求精，孜孜不倦，大家互相學習，一起成長!",
+      imageUrl: JohnAvatar.src,
       hashTags: [
         "軟體架構與開發",
         "後端與資料系統設計",
@@ -114,11 +112,12 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     },
     {
       team: Team.MKT,
-      name: "黃馨儀 Sidney Huang",
-      title: "TutorABC",
-      subTitle: ["Marketing VP"],
-      quote: "每天都比昨天進步一點點。",
-      imageUrl: SidneyAvatar.src,
+      name: "陳嘉孟  Andy Chen",
+      title: "OWNDAYS Taiwan",
+      subTitle: ["總經理"],
+      quote:
+        "Your time is limited, so don't waste it living someone else's life. And most importantly, have the courage to follow your heart and intuition. \n — Steve Jobs",
+      imageUrl: AndyAvatar.src,
       hashTags: [
         "資源整合",
         "跨部門及產業協作",
@@ -130,11 +129,11 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     },
     {
       team: Team.PM,
-      name: "張智翔 Gordon Chang",
-      title: "漸強實驗室",
-      subTitle: ["產品長"],
-      quote: "Change is inevitable. Growth is optional.",
-      imageUrl: GordonAvatar.src,
+      name: "張錦炘 Jack Chang",
+      title: "Kleis Commerce",
+      subTitle: ["CEO"],
+      quote: "If You're Not Growing You're Dying.",
+      imageUrl: JackAvatar.src,
       hashTags: [
         "產品策略規劃",
         "產品開發流程",
@@ -146,12 +145,12 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
     },
     {
       team: Team.UIUX,
-      name: "姜虹伊 Duki Chiang",
-      title: "Gamania",
-      subTitle: ["Product Design Lead"],
+      name: "鍾念庭 Carolyn Chung",
+      title: "Trend Micro",
+      subTitle: ["資深 UX 主管"],
       quote:
-        "以假設驗證的思維，從未知中找尋解決問題的秩序，並讓有序的事物變得有趣好玩！",
-      imageUrl: DukiAvatar.src,
+        "UX 是高強度的同理心輸出，但不該是單向的消耗。最棒的設計狀態，是當你解決了使用者的痛點，那份價值也回流滋養了你的熱情。",
+      imageUrl: CarolynAvatar.src,
       hashTags: [
         "產品體驗設計策略",
         "創意工作坊規劃",
