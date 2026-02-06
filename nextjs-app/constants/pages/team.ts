@@ -46,10 +46,7 @@ export const EXECUTION_GROUP_FILTER_OPTIONS: {
   { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
 ];
 
-export const COMING_SOON_ROLES: ExecutionGroupType[] = [
-  Role.CAPTAIN,
-  Role.ASSISTANT,
-];
+export const COMING_SOON_ROLES: ExecutionGroupType[] = [Role.ASSISTANT];
 
 interface IProfileInfo {
   team: Team;
