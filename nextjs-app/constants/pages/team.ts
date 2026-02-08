@@ -67,31 +67,14 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["首席增長官 CGO"],
       quote: "Don't prove yourself, Improve yourself.",
       imageUrl: NathanAvatar.src,
-      hashTags: [
-        "商業開發",
-        "新商機挖掘",
-        "渠道銷售",
-        "直接銷售",
-        "客戶關係管理",
-        "售前技術支持",
-      ],
     },
     {
       team: Team.DATA,
       name: "姜乃文 Naiwen Chiang",
       title: "媒體集團",
       subTitle: ["主任分析師"],
-      quote: "Life’s best insights only appear after enough iterations.",
+      quote: "Life's best insights only appear after enough iterations.",
       imageUrl: NaiwenAvatar.src,
-      hashTags: [
-        "產品分析",
-        "用戶行為分析",
-        "資料視覺化",
-        "Storytelling",
-        "跨團隊溝通",
-        "建立數據指標體系",
-        "跨產業經驗 (金融、社群、電商)",
-      ],
     },
     {
       team: Team.ENGINEER,
@@ -100,12 +83,6 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["工程經理"],
       quote: "精益求精，孜孜不倦，大家互相學習，一起成長!",
       imageUrl: JohnAvatar.src,
-      hashTags: [
-        "軟體架構與開發",
-        "後端與資料系統設計",
-        "DevOps",
-        "軟體專案管理",
-      ],
     },
     {
       team: Team.MKT,
@@ -115,14 +92,6 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       quote:
         "Your time is limited, so don't waste it living someone else's life. And most importantly, have the courage to follow your heart and intuition. \n — Steve Jobs",
       imageUrl: AndyAvatar.src,
-      hashTags: [
-        "資源整合",
-        "跨部門及產業協作",
-        "溝通協調",
-        "行銷公關",
-        "媒體訊息策略",
-        "品牌定位",
-      ],
     },
     {
       team: Team.PM,
@@ -131,14 +100,6 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["CEO"],
       quote: "If You're Not Growing You're Dying.",
       imageUrl: JackAvatar.src,
-      hashTags: [
-        "產品策略規劃",
-        "產品開發流程",
-        "用戶需求挖掘",
-        "產品規格撰寫",
-        "OKR 制定落實",
-        "領導力與團隊文化",
-      ],
     },
     {
       team: Team.UIUX,
@@ -148,13 +109,6 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       quote:
         "UX 是高強度的同理心輸出，但不該是單向的消耗。最棒的設計狀態，是當你解決了使用者的痛點，那份價值也回流滋養了你的熱情。",
       imageUrl: CarolynAvatar.src,
-      hashTags: [
-        "產品體驗設計策略",
-        "創意工作坊規劃",
-        "原型概念設計",
-        "介面設計與設計系統",
-        "跨職能設計溝通",
-      ],
     },
   ],
   [Role.HARBOUR_PILOT]: [
