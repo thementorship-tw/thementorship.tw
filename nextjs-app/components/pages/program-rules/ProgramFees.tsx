@@ -9,13 +9,13 @@ const FEE_DATA = [
     imageSrc: "/images/icon-hat.png",
     title: "海選參加費",
     subtitle: "含海選當日場地與器材費用",
-    fee: 350,
+    fee: 450,
   },
   {
     imageSrc: "/images/icon-ship.png",
     title: "計劃報名費",
     subtitle: "含職能月會、通識講座、閉幕式暨結業日等活動經費",
-    fee: 3500,
+    fee: 4200,
   },
 ];
 
@@ -62,7 +62,7 @@ const ProgramFees = () => (
     <Wave color="blue8" />
     <div className="container px-5 py-[72px] md:px-10 md:py-[120px]">
       <SectionTitle
-        title="2025 第 7 屆計劃參加費用"
+        title="2026 第 8 屆計劃參加費用"
         description={`「收到海選通知信」始需繳納「海選參加費」\n「收到錄取通知信」始需繳納「計劃報名費」`}
         serial="06"
         variant="dark"

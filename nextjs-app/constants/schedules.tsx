@@ -199,8 +199,8 @@ export const SCHEDULE_ROLE_DATA = [
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
-    buttonDisabled: true,
+    externalLink: "https://forms.gle/upPsjEssy4nAJTAW8",
+    buttonDisabled: false,
   },
   {
     title: "Navigator\n航海士 (職場前輩)",
@@ -210,8 +210,8 @@ export const SCHEDULE_ROLE_DATA = [
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
-    buttonDisabled: true,
+    externalLink: "https://forms.gle/upPsjEssy4nAJTAW8",
+    buttonDisabled: false,
   },
 ];
 
