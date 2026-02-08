@@ -20,7 +20,7 @@ const MarqueeImage: FC = () => {
     <div className="bg-white py-[120px] relative">
       <Wave color="white" />
       <div className="container text-center">
-        <h2 className="text-h2 text-blue-8">第七屆引水人們想傳達的話</h2>
+        <h2 className="text-h2 text-blue-8">引水人們想傳達的話</h2>
 
         <p className="text-subtitle-lg text-neutral-8 mt-7">
           我們求新求變，不斷打磨
