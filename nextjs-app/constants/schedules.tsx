@@ -171,7 +171,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
       tag: "日期地點依各組公布為主",
       title: "第八屆曼陀號領航計劃 主要活動期間",
       description:
-        "包含 (各組月會四場 + 通識主題講座七場 + 不定期跨職能與跨屆交流) x 無限可能！",
+        "包含 (各組月會四場 + 通識主題講座四場 + 不定期跨職能與跨屆交流) x 無限可能！",
     },
   },
   {

@@ -10,7 +10,7 @@ const GroupsIntro = () => {
         <SectionTitle
           title="旅程上，將有這群人相伴"
           description={
-            "第七屆計劃包含以下六個職能月會組別\n每組皆由約 4 位航海士與 16-20 位水手組成"
+            "第八屆計劃包含以下六個職能月會組別\n每組皆由約 4 位航海士與 16-20 位水手組成"
           }
           serial="04"
           variant="light"
