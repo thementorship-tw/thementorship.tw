@@ -29,7 +29,7 @@ const ReviewCard: FC<IReview> = ({ imageSrc, name, team, role, review }) => (
         </div>
       </div>
     </div>
-    <div className="w-[225px] md:w-[216px] lg:w-[400px] text-left text-body-md text-neutral-10">
+    <div className="w-[225px] md:w-[216px] lg:w-[400px] max-h-[220px] md:max-h-[260px] lg:max-h-[160px] pr-2 overflow-y-auto whitespace-pre-line text-left text-body-md text-neutral-10">
       {review}
     </div>
   </div>
