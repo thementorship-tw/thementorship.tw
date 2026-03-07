@@ -15,7 +15,12 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: <span>2026/02/09(Mon) - 2026/03/08 (Sun)</span>,
+      date: (
+        <span>
+          2026/02/09 (Mon) - <del>2026/03/08 (Sun)</del> 2026/03/22 (Sun)
+        </span>
+      ),
+      tag: "好評延長 ❤️",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
@@ -29,12 +34,12 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
     event: [
       {
-        date: "2026/03/18 (Wed)",
+        date: "2026/03/30 (Mon)",
         title: "面試名單揭曉",
         description: "屆時將寄信通知第一階段審核結果",
       },
       {
-        date: "2026/03/23 (Mon) - 2026/03/27 (Fri)",
+        date: "2026/04/13 (Mon) - 2026/04/17 (Fri)",
         title: "線上面試",
         description: "進行第二階段面試複審",
       },
@@ -48,7 +53,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
       description: "(面試複審)",
     },
     event: {
-      date: "2026/04/06 (Mon)",
+      date: "2026/04/19 (Sun)",
       title: "面試結果揭曉",
       description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
     },
@@ -116,7 +121,12 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
       description: "(書面審核)",
     },
     event: {
-      date: <span>2026/02/09 (Mon) - 2026/03/08 (Sun)</span>,
+      date: (
+        <span>
+          2026/02/09 (Mon) - <del>2026/03/08 (Sun)</del> 2026/03/22 (Sun)
+        </span>
+      ),
+      tag: "好評延長 ❤️",
       title: "計劃開放報名",
       description: "於招募期間，選定參加之組別，填寫並繳報名文件",
     },
@@ -130,7 +140,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
     event: [
       {
-        date: <span>2026/04/06 (Mon)</span>,
+        date: <span>2026/04/12 (Sun)</span>,
         title: "海選名單揭曉",
         description: "屆時將寄信通知第一階段審核結果，通過者得以進入海選",
       },
