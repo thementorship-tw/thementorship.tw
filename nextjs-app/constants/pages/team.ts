@@ -41,12 +41,19 @@ export const EXECUTION_GROUP_FILTER_OPTIONS: {
   name: string;
 }[] = [
   { key: "all", name: "全部" },
-  { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
   { key: Role.CAPTAIN, name: roleDisplayTextMap[Role.CAPTAIN] },
-  { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
+  { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
+  { key: Role.TEACH_ASSISTANT, name: roleDisplayTextMap[Role.TEACH_ASSISTANT] },
+  {
+    key: Role.ASSISTANT_VOLUNTEER,
+    name: roleDisplayTextMap[Role.ASSISTANT_VOLUNTEER],
+  },
 ];
 
-export const COMING_SOON_ROLES: ExecutionGroupType[] = [Role.ASSISTANT];
+export const COMING_SOON_ROLES: ExecutionGroupType[] = [
+  Role.TEACH_ASSISTANT,
+  Role.ASSISTANT_VOLUNTEER,
+];
 
 interface IProfileInfo {
   team: Team;
@@ -177,7 +184,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       imageUrl: EmilyNewAvatar.src,
     },
   ],
-  [Role.ASSISTANT]: [
+  [Role.ASSISTANT_VOLUNTEER]: [
     {
       team: Team.ENGINEER,
       name: "林政儀 Martin Lin",

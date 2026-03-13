@@ -10,4 +10,5 @@ export type FAQType = "registration" | "monthlyMeeting" | "lecture" | "payment";
 export type ExecutionGroupType =
   | Role.CAPTAIN
   | Role.HARBOUR_PILOT
-  | Role.ASSISTANT;
+  | Role.TEACH_ASSISTANT
+  | Role.ASSISTANT_VOLUNTEER;
