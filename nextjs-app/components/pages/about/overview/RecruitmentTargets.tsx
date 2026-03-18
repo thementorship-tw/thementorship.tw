@@ -12,7 +12,6 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
     buttonDisabled: true,
   },
   {
@@ -23,7 +22,6 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "",
     buttonDisabled: true,
   },
   {
