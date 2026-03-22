@@ -12,8 +12,7 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名水手",
     buttonColor: "blue" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://forms.gle/upPsjEssy4nAJTAW8",
-    buttonDisabled: false,
+    buttonDisabled: true,
   },
   {
     title: "Navigator\n航海士 (職場前輩)",
@@ -23,8 +22,7 @@ const recruitmentTargetsData = [
     buttonText: "馬上報名航海士",
     buttonColor: "golden" as ButtonColor,
     buttonClassName: "px-7",
-    externalLink: "https://forms.gle/upPsjEssy4nAJTAW8",
-    buttonDisabled: false,
+    buttonDisabled: true,
   },
   {
     title: "Captain\n船長 (導師)",
