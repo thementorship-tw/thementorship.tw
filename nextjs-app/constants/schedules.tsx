@@ -1,14 +1,18 @@
 import { ButtonColor } from "@/components/common/Button/Button";
 import {
   IScheduleDetail,
-  SchedulePhase,
   IScheduleStep,
   ScheduleType,
 } from "@/types/schedule";
+import { getSchedulePhaseByDateTimeIndex } from "@/utils/schedule";
 
-export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
+type IScheduleDetailWithoutPhase = Omit<IScheduleDetail, "phase"> & {
+  dateTimeIndex: number[];
+};
+
+const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [2, 3],
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -26,7 +30,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [3],
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "3 月",
@@ -38,28 +42,30 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
         title: "面試名單揭曉",
         description: "屆時將寄信通知第一階段審核結果",
       },
-      {
-        date: "2026/04/13 (Mon) - 2026/04/17 (Fri)",
-        title: "線上面試",
-        description: "進行第二階段面試複審",
-      },
     ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [4],
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "4 月",
       description: "(面試複審)",
     },
-    event: {
-      date: "2026/04/19 (Sun)",
-      title: "面試結果揭曉",
-      description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
-    },
+    event: [
+      {
+        date: "2026/04/13 (Mon) - 2026/04/17 (Fri)",
+        title: "線上面試",
+        description: "進行第二階段面試複審",
+      },
+      {
+        date: "2026/04/19 (Sun)",
+        title: "面試結果揭曉",
+        description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
+      },
+    ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [5],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -82,7 +88,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.ONGOING,
+    dateTimeIndex: [6, 9],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -97,7 +103,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    dateTimeIndex: [11],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
@@ -112,9 +118,19 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   },
 ];
 
-export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
+export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] =
+  SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW.map((detail) => {
+    const { dateTimeIndex, ...scheduleDetail } = detail;
+
+    return {
+      ...scheduleDetail,
+      phase: getSchedulePhaseByDateTimeIndex(dateTimeIndex),
+    };
+  });
+
+const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [2, 3],
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -132,7 +148,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [4],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
@@ -147,7 +163,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    dateTimeIndex: [5],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -170,7 +186,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.ONGOING,
+    dateTimeIndex: [6, 9],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -185,7 +201,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    dateTimeIndex: [11],
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
@@ -199,6 +215,16 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
 ];
+
+export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] =
+  SCHEDULE_DETAIL_DATA_SAILOR_RAW.map((detail) => {
+    const { dateTimeIndex, ...scheduleDetail } = detail;
+
+    return {
+      ...scheduleDetail,
+      phase: getSchedulePhaseByDateTimeIndex(dateTimeIndex),
+    };
+  });
 
 export const SCHEDULE_ROLE_DATA = [
   {
