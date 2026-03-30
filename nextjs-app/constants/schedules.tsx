@@ -4,15 +4,11 @@ import {
   IScheduleStep,
   ScheduleType,
 } from "@/types/schedule";
-import { getSchedulePhaseByDateTimeIndex } from "@/utils/schedule";
+import { getSchedulePhaseByMonth } from "@/utils/schedule";
 
-type IScheduleDetailWithoutPhase = Omit<IScheduleDetail, "phase"> & {
-  dateTimeIndex: number[];
-};
-
-const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
+export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   {
-    dateTimeIndex: [2, 3],
+    phase: getSchedulePhaseByMonth({ startMonth: 2, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -30,10 +26,10 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
     },
   },
   {
-    dateTimeIndex: [3],
+    phase: getSchedulePhaseByMonth({ startMonth: 3, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
-      title: "3 月",
+      title: "3月",
       description: "(面試複審)",
     },
     event: [
@@ -45,10 +41,10 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
     ],
   },
   {
-    dateTimeIndex: [4],
-    type: ScheduleType.DEFAULT,
+    phase: getSchedulePhaseByMonth({ startMonth: 4, endMonth: 4 }),
+    type: ScheduleType.HIGHLIGHT,
     timeline: {
-      title: "4 月",
+      title: "4月",
       description: "(面試複審)",
     },
     event: [
@@ -65,7 +61,7 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
     ],
   },
   {
-    dateTimeIndex: [5],
+    phase: getSchedulePhaseByMonth({ startMonth: 5, endMonth: 5 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -88,7 +84,7 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
     ],
   },
   {
-    dateTimeIndex: [6, 9],
+    phase: getSchedulePhaseByMonth({ startMonth: 6, endMonth: 9 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -103,7 +99,7 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
     },
   },
   {
-    dateTimeIndex: [11],
+    phase: getSchedulePhaseByMonth({ startMonth: 11, endMonth: 11 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
@@ -118,19 +114,9 @@ const SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW: IScheduleDetailWithoutPhase[] = [
   },
 ];
 
-export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] =
-  SCHEDULE_DETAIL_DATA_NAVIGATOR_RAW.map((detail) => {
-    const { dateTimeIndex, ...scheduleDetail } = detail;
-
-    return {
-      ...scheduleDetail,
-      phase: getSchedulePhaseByDateTimeIndex(dateTimeIndex),
-    };
-  });
-
-const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
+export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   {
-    dateTimeIndex: [2, 3],
+    phase: getSchedulePhaseByMonth({ startMonth: 2, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -148,7 +134,7 @@ const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
     },
   },
   {
-    dateTimeIndex: [4],
+    phase: getSchedulePhaseByMonth({ startMonth: 4, endMonth: 4 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
@@ -163,7 +149,7 @@ const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
     ],
   },
   {
-    dateTimeIndex: [5],
+    phase: getSchedulePhaseByMonth({ startMonth: 5, endMonth: 5 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -186,7 +172,7 @@ const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
     ],
   },
   {
-    dateTimeIndex: [6, 9],
+    phase: getSchedulePhaseByMonth({ startMonth: 6, endMonth: 9 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -201,7 +187,7 @@ const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
     },
   },
   {
-    dateTimeIndex: [11],
+    phase: getSchedulePhaseByMonth({ startMonth: 11, endMonth: 11 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
@@ -215,16 +201,6 @@ const SCHEDULE_DETAIL_DATA_SAILOR_RAW: IScheduleDetailWithoutPhase[] = [
     },
   },
 ];
-
-export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] =
-  SCHEDULE_DETAIL_DATA_SAILOR_RAW.map((detail) => {
-    const { dateTimeIndex, ...scheduleDetail } = detail;
-
-    return {
-      ...scheduleDetail,
-      phase: getSchedulePhaseByDateTimeIndex(dateTimeIndex),
-    };
-  });
 
 export const SCHEDULE_ROLE_DATA = [
   {
