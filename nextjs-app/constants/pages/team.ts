@@ -46,6 +46,19 @@ export const EXECUTION_GROUP_FILTER_OPTIONS: {
   { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
 ];
 
+export type SessionFilterOptionType = "all" | "7" | "8";
+
+export const CURRENT_SESSION: Exclude<SessionFilterOptionType, "all"> = "8";
+
+export const SESSION_FILTER_OPTIONS: {
+  name: string;
+  value: SessionFilterOptionType;
+}[] = [
+  { name: "全部", value: "all" },
+  { name: "第七屆", value: "7" },
+  { name: "第八屆", value: "8" },
+];
+
 export const COMING_SOON_ROLES: ExecutionGroupType[] = [Role.ASSISTANT];
 
 interface IProfileInfo {
@@ -55,6 +68,7 @@ interface IProfileInfo {
   subTitle: string[];
   quote: string;
   imageUrl: string;
+  session: Exclude<SessionFilterOptionType, "all">;
   hashTags?: string[];
 }
 
@@ -67,6 +81,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["首席增長官 CGO"],
       quote: "Don't prove yourself, Improve yourself.",
       imageUrl: NathanAvatar.src,
+      session: "8",
     },
     {
       team: Team.DATA,
@@ -75,6 +90,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["主任分析師"],
       quote: "Life's best insights only appear after enough iterations.",
       imageUrl: NaiwenAvatar.src,
+      session: "8",
     },
     {
       team: Team.ENGINEER,
@@ -83,6 +99,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["工程經理"],
       quote: "精益求精，孜孜不倦，大家互相學習，一起成長!",
       imageUrl: JohnAvatar.src,
+      session: "8",
     },
     {
       team: Team.MKT,
@@ -92,6 +109,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       quote:
         "Your time is limited, so don't waste it living someone else's life. And most importantly, have the courage to follow your heart and intuition. \n — Steve Jobs",
       imageUrl: AndyAvatar.src,
+      session: "8",
     },
     {
       team: Team.PM,
@@ -100,6 +118,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["CEO"],
       quote: "If You're Not Growing You're Dying.",
       imageUrl: JackAvatar.src,
+      session: "8",
     },
     {
       team: Team.UIUX,
@@ -109,6 +128,25 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       quote:
         "UX 是高強度的同理心輸出，但不該是單向的消耗。最棒的設計狀態，是當你解決了使用者的痛點，那份價值也回流滋養了你的熱情。",
       imageUrl: CarolynAvatar.src,
+      session: "8",
+    },
+    {
+      team: Team.BD,
+      name: "測試船長 Avery Lin",
+      title: "第七屆 BD 船長（測試資料）",
+      subTitle: ["測試用假資料", "前商務開發負責人"],
+      quote: "這筆資料是用來驗證第七屆篩選邏輯。",
+      imageUrl: MartinAvatar.src,
+      session: "7",
+    },
+    {
+      team: Team.PM,
+      name: "測試船長 Nora Wu",
+      title: "第七屆 PM 船長（測試資料）",
+      subTitle: ["測試用假資料", "產品策略顧問"],
+      quote: "確認不同職能在第七屆下也能正常顯示。",
+      imageUrl: EmilyAvatar.src,
+      session: "7",
     },
   ],
   [Role.HARBOUR_PILOT]: [
@@ -119,6 +157,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 BD 航海士"],
       quote: "為社會進步添上一塊磚。",
       imageUrl: BensonAvatar.src,
+      session: "8",
     },
     {
       team: Team.DATA,
@@ -127,6 +166,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第五屆 Data 水手"],
       quote: "保有彈性，擁抱失敗，享受成果。",
       imageUrl: BillAvatar.src,
+      session: "8",
     },
     {
       team: Team.DATA,
@@ -135,6 +175,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 Data 水手"],
       quote: "面對錯誤，並以謙遜的態度向他人求助。",
       imageUrl: PeterLiAvatar.src,
+      session: "8",
     },
     {
       team: Team.ENGINEER,
@@ -143,6 +184,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 Engineering 水手"],
       quote: "沒有白走的路，每一步都算數！",
       imageUrl: JillAvatar.src,
+      session: "8",
     },
     {
       team: Team.ENGINEER,
@@ -151,6 +193,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 Engineering 水手"],
       quote: "保有對立場與選擇偏頗的權利，\n持客觀以維持對萬物的吸引力。",
       imageUrl: LukasAvatar.src,
+      session: "8",
     },
     {
       team: Team.MKT,
@@ -159,6 +202,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 Marketing 航海士"],
       quote: "人生最好的狀態，是從未放棄成長。",
       imageUrl: LenaAvatar.src,
+      session: "8",
     },
     {
       team: Team.PM,
@@ -167,6 +211,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 PM 航海士"],
       quote: "不斷的觀察，不斷的學習，不斷的進步。",
       imageUrl: AndreaAvatar.src,
+      session: "8",
     },
     {
       team: Team.UIUX,
@@ -175,6 +220,25 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第七屆 Data 水手"],
       quote: "願能以誠待人、眼底有光。",
       imageUrl: EmilyNewAvatar.src,
+      session: "8",
+    },
+    {
+      team: Team.DATA,
+      name: "測試引水人 Oscar Chen",
+      title: "第七屆 Data 引水人（測試資料）",
+      subTitle: ["測試用假資料", "前資料分析導師"],
+      quote: "讓第七屆篩選可以驗證引水人區塊。",
+      imageUrl: KevinAvatar.src,
+      session: "7",
+    },
+    {
+      team: Team.UIUX,
+      name: "測試引水人 Iris Kuo",
+      title: "第七屆 UIUX 引水人（測試資料）",
+      subTitle: ["測試用假資料", "設計研究顧問"],
+      quote: "驗證第七屆與職能篩選的交集是否正確。",
+      imageUrl: ZonnieAvatar.src,
+      session: "7",
     },
   ],
   [Role.ASSISTANT]: [
@@ -185,6 +249,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Engineer 航海士"],
       quote: "開拓視野，看見世界，貼近彼此，感受生活，這就是生活的目的。",
       imageUrl: MartinAvatar.src,
+      session: "7",
     },
     {
       team: Team.ENGINEER,
@@ -193,6 +258,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Engineer 水手"],
       quote: "現在放棄的話，比賽就結束了。",
       imageUrl: LizzyAvatar.src,
+      session: "7",
     },
     {
       team: Team.DATA,
@@ -201,6 +267,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第五屆 Data 水手"],
       quote: "曼陀號將會帶給各位意想不到的航程",
       imageUrl: KevinAvatar.src,
+      session: "7",
     },
     {
       team: Team.BD,
@@ -210,6 +277,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       quote:
         "沒有做不到，只有想不到。人生要有登上諾曼第的野心；也要有挺過滑鐵盧的勇氣。",
       imageUrl: ChristineAvatar.src,
+      session: "7",
     },
     {
       team: Team.BD,
@@ -218,6 +286,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 BD 水手"],
       quote: "能否骰到六，繫於機緣及命運；如何擊中球，全憑膽識與耕耘。",
       imageUrl: LucasAvatar.src,
+      session: "7",
     },
     {
       team: Team.DATA,
@@ -226,6 +295,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Data 航海士"],
       quote: "認真且快樂過好每一天，珍惜每一次的相遇。",
       imageUrl: GallonAvatar.src,
+      session: "7",
     },
     {
       team: Team.DATA,
@@ -234,6 +304,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Data 水手"],
       quote: "一起徜徉於數據之海嗎？",
       imageUrl: SandraAvatar.src,
+      session: "7",
     },
     {
       team: Team.ENGINEER,
@@ -242,6 +313,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Engineer 水手"],
       quote: "思路決定出路，格局決定結局。",
       imageUrl: ChiChiAvatar.src,
+      session: "7",
     },
     {
       team: Team.ENGINEER,
@@ -250,6 +322,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 Engineer 水手"],
       quote: "在自己的時區中，一切準時。",
       imageUrl: CherylAvatar.src,
+      session: "7",
     },
     {
       team: Team.MKT,
@@ -258,6 +331,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 MKT 水手"],
       quote: "在人生的米字路口，學會當隻靈活的八爪章魚！",
       imageUrl: GloriaAvatar.src,
+      session: "7",
     },
     {
       team: Team.MKT,
@@ -266,6 +340,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第五屆 MKT 水手"],
       quote: "享受當下，追求結果。",
       imageUrl: NiuAvatar.src,
+      session: "7",
     },
     {
       team: Team.PM,
@@ -274,6 +349,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第五屆 PM 水手"],
       quote: "成長的秘訣就是多快速嘗試、快速失敗。",
       imageUrl: EmilyAvatar.src,
+      session: "7",
     },
     {
       team: Team.PM,
@@ -282,6 +358,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 PM 航海士"],
       quote: "I came, I saw, I contributed.",
       imageUrl: JulianAvatar.src,
+      session: "7",
     },
     {
       team: Team.UIUX,
@@ -290,6 +367,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第三屆 UX 航海士"],
       quote: "開始跑，離終點就不遠了。",
       imageUrl: LukeAvatar.src,
+      session: "7",
     },
     {
       team: Team.UIUX,
@@ -298,6 +376,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       subTitle: ["第六屆 UX 水手"],
       quote: "沒有人可以代替你經歷自己的人生，你的人生體驗由你來設計。",
       imageUrl: ZonnieAvatar.src,
+      session: "7",
     },
   ],
 };

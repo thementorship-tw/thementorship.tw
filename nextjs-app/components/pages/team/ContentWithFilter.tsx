@@ -1,27 +1,114 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import Select from "@/components/common/Select";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import ProfileCard from "@/components/common/ProfileCard";
 import ComingSoonCard from "@/components/common/ComingSoonCard";
 import {
   EXECUTION_GROUP,
   EXECUTION_GROUP_FILTER_OPTIONS,
+  CURRENT_SESSION,
   COMING_SOON_ROLES,
+  SESSION_FILTER_OPTIONS,
 } from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
 
 type FilterOptionType = ExecutionGroupType | "all";
 
 const ContentWithFilter = () => {
-  const [selectedFilter, setSelectedFilter] = useState<FilterOptionType>("all");
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const filteredOptions = EXECUTION_GROUP_FILTER_OPTIONS.filter(({ key }) =>
-    selectedFilter === "all" ? key !== "all" : key === selectedFilter
+  const roleFromSearchParams = searchParams.get("role");
+  const hasValidRole = EXECUTION_GROUP_FILTER_OPTIONS.some(
+    ({ key }) => key === roleFromSearchParams
+  );
+  const selectedFilter = hasValidRole
+    ? (roleFromSearchParams as FilterOptionType)
+    : "all";
+
+  const sessionOptions = [...SESSION_FILTER_OPTIONS];
+  const sessionFromSearchParams = searchParams.get("session");
+  const hasValidSession = sessionOptions.some(
+    ({ value }) => value === sessionFromSearchParams
+  );
+  const selectedSession = hasValidSession
+    ? sessionFromSearchParams
+    : CURRENT_SESSION;
+
+  const updateUrlWithSearchParams = useCallback(
+    (searchParams: URLSearchParams) => {
+      const updatedUrl = searchParams
+        ? `${pathname}?${searchParams}`
+        : pathname;
+
+      router.replace(updatedUrl);
+    },
+    [pathname, router]
   );
 
-  const handleSelect = (selectedOption: FilterOptionType) => {
-    setSelectedFilter(selectedOption);
+  const updateSearchParam = useCallback(
+    (key: "role" | "session", value: string) => {
+      const newSearchParams = new URLSearchParams(searchParams);
+      newSearchParams.set(key, value);
+      updateUrlWithSearchParams(newSearchParams);
+    },
+    [searchParams, updateUrlWithSearchParams]
+  );
+
+  useEffect(() => {
+    if (hasValidRole && hasValidSession) return;
+
+    const nextSearchParams = new URLSearchParams(searchParams);
+    if (!hasValidRole) nextSearchParams.set("role", "all");
+    if (!hasValidSession) nextSearchParams.set("session", CURRENT_SESSION);
+
+    updateUrlWithSearchParams(nextSearchParams);
+  }, [hasValidRole, hasValidSession, updateUrlWithSearchParams, searchParams]);
+
+  const displayedGroups = EXECUTION_GROUP_FILTER_OPTIONS.reduce<
+    {
+      key: ExecutionGroupType;
+      groupName: string;
+      isComingSoon: boolean;
+      profileList: (typeof EXECUTION_GROUP)[ExecutionGroupType];
+    }[]
+  >((acc, { key, name: groupName }) => {
+    if (key === "all") return acc;
+
+    const groupKey = key as ExecutionGroupType;
+    const matchesRole = selectedFilter === "all" || groupKey === selectedFilter;
+
+    if (!matchesRole) return acc;
+
+    const isComingSoon = COMING_SOON_ROLES.includes(groupKey);
+    const profileList = EXECUTION_GROUP[groupKey].filter(
+      (profile) =>
+        selectedSession === "all" || profile.session === selectedSession
+    );
+
+    const hasNoProfile = profileList.length === 0;
+    const showComingSoon =
+      isComingSoon && selectedSession === CURRENT_SESSION && hasNoProfile;
+    if (hasNoProfile && !showComingSoon) return acc;
+
+    return acc.concat({
+      key: groupKey,
+      groupName,
+      isComingSoon: showComingSoon,
+      profileList,
+    });
+  }, []);
+
+  const handleRoleSelect = (selectedOption: FilterOptionType) => {
+    updateSearchParam("role", selectedOption);
+  };
+
+  const handleSessionSelect = (selectedOption: string) => {
+    updateSearchParam("session", selectedOption);
   };
 
   return (
@@ -30,16 +117,26 @@ const ContentWithFilter = () => {
         filterOptions={EXECUTION_GROUP_FILTER_OPTIONS}
         selectedFilter={selectedFilter}
         onSelect={(selectedFilter) => {
-          handleSelect(selectedFilter as FilterOptionType);
+          handleRoleSelect(selectedFilter as FilterOptionType);
         }}
       />
 
-      {filteredOptions.map(({ key, name: groupName }) => {
-        const profileList = EXECUTION_GROUP[key as ExecutionGroupType];
-        const isComingSoon = COMING_SOON_ROLES.includes(
-          key as ExecutionGroupType
-        );
+      <div className="flex flex-col lg:flex-row lg:col-span-1 flex-wrap items-stretch">
+        <div className="flex items-center justify-center py-4 px-6 bg-neutral-1 text-subtitle-md rounded-t-3 lg:rounded-none lg:rounded-l-3">
+          按屆次搜索
+        </div>
+        <div className="flex flex-wrap grow gap-3 py-4 px-6 bg-white border border-neutral-1 rounded-b-3 lg:rounded-none lg:rounded-r-3">
+          <Select
+            label=""
+            options={sessionOptions}
+            selectedValue={selectedSession}
+            onChange={handleSessionSelect}
+            name="session-select"
+          />
+        </div>
+      </div>
 
+      {displayedGroups.map(({ key, groupName, isComingSoon, profileList }) => {
         return (
           <div key={key}>
             <div className="mb-9 relative after:content-[''] after:absolute after:bottom-0 after:rounded-2 after:block after:w-[260px] after:h-[3px] after:bg-yellow-6">
