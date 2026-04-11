@@ -41,9 +41,8 @@ const ContentWithFilter = () => {
 
   const updateUrlWithSearchParams = useCallback(
     (searchParams: URLSearchParams) => {
-      const updatedUrl = searchParams
-        ? `${pathname}?${searchParams}`
-        : pathname;
+      const qs = searchParams.toString();
+      const updatedUrl = qs ? `${pathname}?${qs}` : pathname;
 
       router.replace(updatedUrl);
     },

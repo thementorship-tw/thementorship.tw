@@ -8,7 +8,7 @@ interface ISelectOption {
 }
 
 interface ISelectProps {
-  label: string;
+  label?: string;
   options: ISelectOption[];
   selectedValue: string;
   onChange: (selectedValue: string) => void;
@@ -31,12 +31,14 @@ export default function Select({
 
   return (
     <div className={className}>
-      <label
-        htmlFor={selectId}
-        className="mb-2 block text-body-md text-neutral-10"
-      >
-        {label}
-      </label>
+      {label ? (
+        <label
+          htmlFor={selectId}
+          className="mb-2 block text-body-md text-neutral-10"
+        >
+          {label}
+        </label>
+      ) : null}
       <select
         className="w-full rounded-2 border border-neutral-3 bg-white px-4 py-3 text-body-md text-neutral-10 focus:border-blue-1 focus:outline-none"
         id={selectId}
