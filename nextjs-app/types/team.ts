@@ -8,6 +8,7 @@ export interface IProfileInfo {
   quote: string;
   imageUrl: string;
   hashTags?: string[];
+  session: string;
 }
 
 export type AssistantCohort = "seventh" | "eighth";
