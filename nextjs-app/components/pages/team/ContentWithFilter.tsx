@@ -12,6 +12,7 @@ import {
   CURRENT_SESSION,
   COMING_SOON_ROLES,
   SESSION_FILTER_OPTIONS,
+  SessionFilterOptionType,
 } from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
 
@@ -35,8 +36,8 @@ const ContentWithFilter = () => {
   const hasValidSession = sessionOptions.some(
     ({ value }) => value === sessionFromSearchParams
   );
-  const selectedSession = hasValidSession
-    ? sessionFromSearchParams
+  const selectedSession: SessionFilterOptionType = hasValidSession
+    ? (sessionFromSearchParams as SessionFilterOptionType)
     : CURRENT_SESSION;
 
   const updateUrlWithSearchParams = useCallback(
@@ -126,7 +127,6 @@ const ContentWithFilter = () => {
         </div>
         <div className="flex flex-wrap grow gap-3 py-4 px-6 bg-white border border-neutral-1 rounded-b-3 lg:rounded-none lg:rounded-r-3">
           <Select
-            label=""
             options={sessionOptions}
             selectedValue={selectedSession}
             onChange={handleSessionSelect}
