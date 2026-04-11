@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import MarqueeTitle from "@/components/common/MarqueeTitle";
 import ContentWithFilter from "@/components/pages/team/ContentWithFilter";
@@ -16,7 +17,9 @@ export default async function TeamPage() {
     <div>
       <Breadcrumb items={["HOME", "關於曼陀號", "執行團隊"]} />
       <MarqueeTitle zhTitle="執行團隊" enTitle="Team" />
-      <ContentWithFilter />
+      <Suspense>
+        <ContentWithFilter />
+      </Suspense>
     </div>
   );
 }
