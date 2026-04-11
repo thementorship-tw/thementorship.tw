@@ -11,6 +11,7 @@ import TA_EthanChen from "@/public/images/execution-group/eighth/TA_EthanChen.jp
 import TA_TimTsai from "@/public/images/execution-group/eighth/TA_TimTsai.jpg";
 import TA_WillyChiu from "@/public/images/execution-group/eighth/TA_WillyChiu.jpg";
 import TA_ZoeSu from "@/public/images/execution-group/eighth/TA_ZoeSu.jpg";
+import TA_IrisWei from "@/public/images/execution-group/eighth/TA_IrisWei.jpg";
 import TA_KatyLiu from "@/public/images/execution-group/eighth/TA_KatyLiu.jpg";
 import TA_LenaLiang from "@/public/images/execution-group/eighth/TA_LenaLiang.jpg";
 import TA_IanYou from "@/public/images/execution-group/eighth/TA_IanYou.jpg";
@@ -93,11 +94,19 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
   },
   {
     team: Team.PM,
-    name: "蘇耘萱",
+    name: "蘇耘萱 Zoe",
     title: "第八屆 PM組 助教",
     subTitle: ["第七屆 Marketing 水手"],
     quote: "",
     imageUrl: TA_ZoeSu.src,
+  },
+    {
+    team: Team.UIUX,
+    name: "Iris Wei",
+    title: "第八屆 UIUX組 助教",
+    subTitle: ["第七屆 UIUX 航海士"],
+    quote: "",
+    imageUrl: TA_IrisWei.src,
   },
   {
     team: Team.UIUX,
