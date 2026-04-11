@@ -10,7 +10,7 @@ interface ISelectOption {
 interface ISelectProps {
   label?: string;
   options: ISelectOption[];
-  selectedValue: string;
+  selectedValue: string | null;
   onChange: (selectedValue: string) => void;
   name?: string;
   id?: string;
