@@ -27,6 +27,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 BD 航海士"],
     quote: "",
     imageUrl: TA_AlexChen.src,
+    session: "8",
   },
   {
     team: Team.BD,
@@ -35,6 +36,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 BD 水手"],
     quote: "",
     imageUrl: TA_LindaChen.src,
+    session: "8",
   },
   {
     team: Team.DATA,
@@ -43,6 +45,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Data 水手"],
     quote: "",
     imageUrl: TA_CarlYang.src,
+    session: "8",
   },
   {
     team: Team.DATA,
@@ -51,6 +54,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Data 航海士"],
     quote: "",
     imageUrl: TA_JeffKao.src,
+    session: "8",
   },
   {
     team: Team.ENGINEER,
@@ -59,6 +63,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Engineering 航海士"],
     quote: "",
     imageUrl: TA_JayChou.src,
+    session: "8",
   },
   {
     team: Team.ENGINEER,
@@ -67,6 +72,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Engineering 水手"],
     quote: "",
     imageUrl: TA_SereneShen.src,
+    session: "8",
   },
   {
     team: Team.MKT,
@@ -75,6 +81,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第六屆 Marketing 水手"],
     quote: "",
     imageUrl: TA_EthanChen.src,
+    session: "8",
   },
   {
     team: Team.MKT,
@@ -83,6 +90,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Marketing 航海士"],
     quote: "",
     imageUrl: TA_TimTsai.src,
+    session: "8",
   },
   {
     team: Team.PM,
@@ -91,6 +99,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 PM 水手"],
     quote: "",
     imageUrl: TA_WillyChiu.src,
+    session: "8",
   },
   {
     team: Team.PM,
@@ -99,14 +108,16 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Marketing 水手"],
     quote: "",
     imageUrl: TA_ZoeSu.src,
+    session: "8",
   },
-    {
+  {
     team: Team.UIUX,
     name: "Iris Wei",
     title: "第八屆 UIUX組 助教",
     subTitle: ["第七屆 UIUX 航海士"],
     quote: "",
     imageUrl: TA_IrisWei.src,
+    session: "8",
   },
   {
     team: Team.UIUX,
@@ -115,6 +126,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第四屆 UIUX 水手"],
     quote: "",
     imageUrl: TA_KatyLiu.src,
+    session: "8",
   },
   {
     team: Team.UIUX,
@@ -123,6 +135,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 UIUX 水手"],
     quote: "",
     imageUrl: TA_LenaLiang.src,
+    session: "8",
   },
   {
     team: Team.DATA,
@@ -131,6 +144,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Data 水手"],
     quote: "",
     imageUrl: TA_IanYou.src,
+    session: "8",
   },
   {
     team: Team.ENGINEER,
@@ -139,6 +153,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Engineering 水手"],
     quote: "",
     imageUrl: TA_LawrenceWu.src,
+    session: "8",
   },
   {
     team: Team.ENGINEER,
@@ -147,6 +162,7 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Engineering 水手"],
     quote: "",
     imageUrl: TA_AliceYen.src,
+    session: "8",
   },
   {
     team: Team.ENGINEER,
@@ -155,5 +171,6 @@ export const EIGHTH_ASSISTANTS: IProfileInfo[] = [
     subTitle: ["第七屆 Engineering 水手"],
     quote: "",
     imageUrl: TA_HannahWang.src,
+    session: "8",
   },
 ];
