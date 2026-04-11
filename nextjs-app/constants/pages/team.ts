@@ -1,5 +1,6 @@
 import { Role, Team } from "@/types";
 import { ExecutionGroupType } from "@/types/filter-option";
+import type { AssistantCohort, IProfileInfo } from "@/types/team";
 
 // Captain
 import NathanAvatar from "@/public/images/execution-group/eighth/Nathan.jpg";
@@ -19,7 +20,6 @@ import AndreaAvatar from "@/public/images/execution-group/eighth/Andrea.jpg";
 import EmilyNewAvatar from "@/public/images/execution-group/eighth/Emily.jpg";
 import { EIGHTH_ASSISTANTS } from "./assistants/eighth";
 import { SEVENTH_ASSISTANTS } from "./assistants/seventh";
-import { AssistantCohort, IProfileInfo } from "@/types/team";
 
 import { roleDisplayTextMap } from "../role-display-text-map";
 
@@ -42,8 +42,8 @@ const ASSISTANTS_BY_COHORT: Record<AssistantCohort, IProfileInfo[]> = {
   eighth: EIGHTH_ASSISTANTS,
 };
 
-const genAssistantProfiles = (cohorts: AssistantCohort): IProfileInfo[] =>
-  [cohorts].flatMap(cohort => ASSISTANTS_BY_COHORT[cohort]);
+const genAssistantProfiles = (cohort: AssistantCohort): IProfileInfo[] =>
+  [cohort].flatMap(cohort => ASSISTANTS_BY_COHORT[cohort]);
 
 export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
   [Role.CAPTAIN]: [
