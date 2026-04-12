@@ -125,11 +125,11 @@ export const allActivitiesQuery = defineQuery(`*[_type == "activity"]{
 export const staffQuery = defineQuery(`
   *[_type == "staff" && isVisible == true] {
     _id,
-    name,
-    title,
-    subTitle,
+    nameZh,
+    nameEn,
+    role,
     team,
     quote,
-    "imageUrl": imageUrl.asset->url,
+    "photo": photo.asset->url,
   }
 `);
