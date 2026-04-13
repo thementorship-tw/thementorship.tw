@@ -123,7 +123,9 @@ export const allActivitiesQuery = defineQuery(`*[_type == "activity"]{
 }`);
 
 export const staffQuery = defineQuery(`
-  *[_type == "staff" && isVisible == true] {
+  *[_type == "staff" && isVisible == true &&
+    _id in *[_type == "session" && status == "published"].staff[]._ref
+  ] {
     _id,
     nameZh,
     nameEn,
