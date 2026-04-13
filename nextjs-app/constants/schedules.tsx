@@ -1,14 +1,14 @@
 import { ButtonColor } from "@/components/common/Button/Button";
 import {
   IScheduleDetail,
-  SchedulePhase,
   IScheduleStep,
   ScheduleType,
 } from "@/types/schedule";
+import { getSchedulePhaseByMonth } from "@/utils/schedule";
 
 export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 2, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -26,10 +26,10 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 3, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
-      title: "3 月",
+      title: "3月",
       description: "(面試複審)",
     },
     event: [
@@ -38,28 +38,30 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
         title: "面試名單揭曉",
         description: "屆時將寄信通知第一階段審核結果",
       },
+    ],
+  },
+  {
+    phase: getSchedulePhaseByMonth({ startMonth: 4, endMonth: 4 }),
+    type: ScheduleType.HIGHLIGHT,
+    timeline: {
+      title: "4月",
+      description: "(面試複審)",
+    },
+    event: [
       {
         date: "2026/04/13 (Mon) - 2026/04/17 (Fri)",
         title: "線上面試",
         description: "進行第二階段面試複審",
       },
+      {
+        date: "2026/04/19 (Sun)",
+        title: "面試結果揭曉",
+        description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
+      },
     ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
-    type: ScheduleType.DEFAULT,
-    timeline: {
-      title: "4 月",
-      description: "(面試複審)",
-    },
-    event: {
-      date: "2026/04/19 (Sun)",
-      title: "面試結果揭曉",
-      description: "屆時將寄信通知第二階段審核結果，通過者得以進入海選",
-    },
-  },
-  {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 5, endMonth: 5 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -82,7 +84,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.ONGOING,
+    phase: getSchedulePhaseByMonth({ startMonth: 6, endMonth: 9 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -97,7 +99,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: getSchedulePhaseByMonth({ startMonth: 11, endMonth: 11 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
@@ -114,7 +116,7 @@ export const SCHEDULE_DETAIL_DATA_NAVIGATOR: IScheduleDetail[] = [
 
 export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 2, endMonth: 3 }),
     type: ScheduleType.DEFAULT,
     timeline: {
       title: "2月 - 3月",
@@ -132,7 +134,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 4, endMonth: 4 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "4月",
@@ -147,7 +149,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.EXPIRED,
+    phase: getSchedulePhaseByMonth({ startMonth: 5, endMonth: 5 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "5月",
@@ -170,7 +172,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     ],
   },
   {
-    phase: SchedulePhase.ONGOING,
+    phase: getSchedulePhaseByMonth({ startMonth: 6, endMonth: 9 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "6月 - 9月",
@@ -185,7 +187,7 @@ export const SCHEDULE_DETAIL_DATA_SAILOR: IScheduleDetail[] = [
     },
   },
   {
-    phase: SchedulePhase.ACTIVE,
+    phase: getSchedulePhaseByMonth({ startMonth: 11, endMonth: 11 }),
     type: ScheduleType.HIGHLIGHT,
     timeline: {
       title: "11月",
