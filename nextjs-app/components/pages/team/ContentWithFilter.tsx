@@ -1,24 +1,42 @@
 "use client";
 
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Select from "@/components/common/Select";
 import TagFilter from "@/components/common/TagFilter/TagFilter";
 import ProfileCard from "@/components/common/ProfileCard";
 import ComingSoonCard from "@/components/common/ComingSoonCard";
 import {
-  EXECUTION_GROUP,
   EXECUTION_GROUP_FILTER_OPTIONS,
   CURRENT_SESSION,
-  COMING_SOON_ROLES,
   SESSION_FILTER_OPTIONS,
   SessionFilterOptionType,
 } from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
+import { client } from "@/sanity/lib/client";
+import { staffQuery } from "@/sanity/lib/queries";
 
 type FilterOptionType = ExecutionGroupType | "all";
 
+type Staff = {
+  _id: string;
+  name: string;
+  role: ExecutionGroupType;
+  team: string;
+  quote: string;
+  photo?: string;
+};
+
 const ContentWithFilter = () => {
+  const [staffList, setStaffList] = useState<Staff[]>([]);
+
+  useEffect(() => {
+    async function fetchStaff() {
+      const data = await client.fetch(staffQuery);
+      setStaffList(data);
+    }
+    fetchStaff();
+  }, []);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -69,39 +87,28 @@ const ContentWithFilter = () => {
     updateUrlWithSearchParams(nextSearchParams);
   }, [hasValidRole, hasValidSession, updateUrlWithSearchParams, searchParams]);
 
-  const displayedGroups = EXECUTION_GROUP_FILTER_OPTIONS.reduce<
-    {
-      key: ExecutionGroupType;
-      groupName: string;
-      isComingSoon: boolean;
-      profileList: (typeof EXECUTION_GROUP)[ExecutionGroupType];
-    }[]
-  >((acc, { key, name: groupName }) => {
-    if (key === "all") return acc;
-
-    const groupKey = key as ExecutionGroupType;
-    const matchesRole = selectedFilter === "all" || groupKey === selectedFilter;
-
-    if (!matchesRole) return acc;
-
-    const isComingSoon = COMING_SOON_ROLES.includes(groupKey);
-    const profileList = EXECUTION_GROUP[groupKey].filter(
-      (profile) =>
-        selectedSession === "all" || profile.session === selectedSession
-    );
-
-    const hasNoProfile = profileList.length === 0;
-    const showComingSoon =
-      isComingSoon && selectedSession === CURRENT_SESSION && hasNoProfile;
-    if (hasNoProfile && !showComingSoon) return acc;
-
-    return acc.concat({
-      key: groupKey,
-      groupName,
-      isComingSoon: showComingSoon,
-      profileList,
-    });
-  }, []);
+  const displayedGroups = EXECUTION_GROUP_FILTER_OPTIONS.filter(
+    (opt) => opt.key !== "all"
+  )
+    .map(({ key, name: groupName }) => {
+      const matchesRole = selectedFilter === "all" || key === selectedFilter;
+      if (!matchesRole) return null;
+      const profileList = staffList.filter(
+        (staff) =>
+          staff.role === key &&
+          (selectedSession === "all" || staff.session === selectedSession)
+      );
+      const isComingSoon =
+        profileList.length === 0 && selectedSession === CURRENT_SESSION;
+      if (profileList.length === 0 && !isComingSoon) return null;
+      return {
+        key,
+        groupName,
+        profileList,
+        isComingSoon,
+      };
+    })
+    .filter(Boolean);
 
   const handleRoleSelect = (selectedOption: FilterOptionType) => {
     updateSearchParam("role", selectedOption);
@@ -135,46 +142,33 @@ const ContentWithFilter = () => {
         </div>
       </div>
 
-      {displayedGroups.map(({ key, groupName, isComingSoon, profileList }) => {
-        return (
-          <div key={key}>
-            <div className="mb-9 relative after:content-[''] after:absolute after:bottom-0 after:rounded-2 after:block after:w-[260px] after:h-[3px] after:bg-yellow-6">
-              <p className="py-4 text-h3 text-blue-8 border-b-[1px] border-neutral-2">
-                {groupName}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-              {isComingSoon ? (
-                <ComingSoonCard title={groupName} />
-              ) : (
-                profileList.map(
-                  ({
-                    team,
-                    name,
-                    title,
-                    subTitle,
-                    quote,
-                    imageUrl,
-                    hashTags,
-                  }) => (
-                    <ProfileCard
-                      key={name}
-                      team={team}
-                      name={name}
-                      title={title}
-                      subTitle={subTitle}
-                      quote={quote}
-                      imageUrl={imageUrl}
-                      hashTags={hashTags}
-                    />
-                  )
-                )
-              )}
-            </div>
+      {displayedGroups.map(({ key, groupName, isComingSoon, profileList }) => (
+        <div key={key}>
+          <div className="mb-9 relative after:content-[''] after:absolute after:bottom-0 after:rounded-2 after:block after:w-[260px] after:h-[3px] after:bg-yellow-6">
+            <p className="py-4 text-h3 text-blue-8 border-b-[1px] border-neutral-2">
+              {groupName}
+            </p>
           </div>
-        );
-      })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {isComingSoon ? (
+              <ComingSoonCard title={groupName} />
+            ) : (
+              profileList.map((staff) => (
+                <ProfileCard
+                  key={staff._id}
+                  team={staff.team}
+                  name={staff.name}
+                  title={""}
+                  subTitle={[]}
+                  quote={staff.quote}
+                  imageUrl={staff.photo || ""}
+                  hashTags={[]}
+                />
+              ))
+            )}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
