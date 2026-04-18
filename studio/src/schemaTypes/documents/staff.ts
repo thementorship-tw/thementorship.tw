@@ -72,6 +72,16 @@ export default defineType({
       initialValue: true,
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'session',
+      title: '屆次',
+      type: 'array',
+      of: [
+        { type: 'reference', to: [{ type: 'session' }] }
+      ],
+      description: '此工作人員參與的屆次，可複選',
+      validation: (rule) => rule.required().min(1),
+    }),
   ],
   // 預覽設定：在 Studio 列表中顯示姓名與角色
   preview: {
