@@ -127,8 +127,7 @@ export const staffQuery = defineQuery(`
     _id in *[_type == "session" && status == "published"].staff[]._ref
   ] {
     _id,
-    nameZh,
-    nameEn,
+    name,
     role,
     team,
     quote,
