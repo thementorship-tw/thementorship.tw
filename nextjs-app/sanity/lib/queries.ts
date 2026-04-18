@@ -133,5 +133,6 @@ export const staffQuery = defineQuery(`
     team,
     quote,
     "photo": photo.asset->url,
+    "session": session->session
   }
 `);
