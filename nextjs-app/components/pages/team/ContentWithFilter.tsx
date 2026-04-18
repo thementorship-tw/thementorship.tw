@@ -25,6 +25,7 @@ type Staff = {
   team: string;
   quote: string;
   photo?: string;
+  session: number;
 };
 
 const ContentWithFilter = () => {
@@ -96,7 +97,8 @@ const ContentWithFilter = () => {
       const profileList = staffList.filter(
         (staff) =>
           staff.role === key &&
-          (selectedSession === "all" || staff.session === selectedSession)
+          (selectedSession === "all" ||
+            String(staff.session) === selectedSession)
       );
       const isComingSoon =
         profileList.length === 0 && selectedSession === CURRENT_SESSION;
