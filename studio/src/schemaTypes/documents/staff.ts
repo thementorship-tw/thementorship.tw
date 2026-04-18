@@ -6,17 +6,10 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'nameZh',
-      title: '中文姓名',
+      name: 'name',
+      title: '姓名',
       type: 'string',
-      description: '工作人員的中文姓名',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'nameEn',
-      title: '英文姓名',
-      type: 'string',
-      description: '工作人員的英文姓名',
+      description: '工作人員的顯示姓名',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -69,7 +62,7 @@ export default defineType({
       type: 'text',
       description: '一句話介紹自己，最多 200 字',
       rows: 3,
-      validation: (rule) => rule.required().max(200),
+      validation: (rule) => rule.max(200),
     }),
     defineField({
       name: 'isVisible',
@@ -83,7 +76,7 @@ export default defineType({
   // 預覽設定：在 Studio 列表中顯示姓名與角色
   preview: {
     select: {
-      title: 'nameZh',
+      title: 'name',
       role: 'role',
       team: 'team',
       media: 'photo',
