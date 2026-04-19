@@ -30,7 +30,7 @@ export default defineType({
       options: {
         layout: 'dropdown',
       },
-      description: '此工作人員參與的屆次',
+      description: '此工作人員參與的屆次 (請於 session 裡的 Staff List 把此人加入，才會顯示在前台)',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -48,6 +48,17 @@ export default defineType({
         layout: 'dropdown',
       },
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'title',
+      title: '任職公司 或 當前在曼陀號的負責職務',
+      type: 'string',
+    }),
+    defineField({
+      name: 'subtitle',
+      title: '職稱 或 過去在曼陀號參加過什麼',
+      type: 'array',
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'team',

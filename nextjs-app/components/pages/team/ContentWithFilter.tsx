@@ -15,26 +15,19 @@ import {
 import { ExecutionGroupType } from "@/types/filter-option";
 import { client } from "@/sanity/lib/client";
 import { staffQuery } from "@/sanity/lib/queries";
+import type { Staff } from "@/types/team";
 
 type FilterOptionType = ExecutionGroupType | "all";
 
-type Staff = {
-  _id: string;
-  name: string;
-  role: ExecutionGroupType;
-  team: string;
-  quote: string;
-  photo?: string;
-  session: number;
-};
-
 const ContentWithFilter = () => {
   const [staffList, setStaffList] = useState<Staff[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchStaff() {
       const data = await client.fetch(staffQuery);
       setStaffList(data);
+      setIsLoading(false);
     }
     fetchStaff();
   }, []);
@@ -98,10 +91,12 @@ const ContentWithFilter = () => {
         (staff) =>
           staff.role === key &&
           (selectedSession === "all" ||
-            String(staff.session) === selectedSession)
+            String(staff.session) === String(selectedSession))
       );
       const isComingSoon =
-        profileList.length === 0 && selectedSession === CURRENT_SESSION;
+        !isLoading &&
+        profileList.length === 0 &&
+        selectedSession === CURRENT_SESSION;
       if (profileList.length === 0 && !isComingSoon) return null;
       return {
         key,
@@ -121,7 +116,7 @@ const ContentWithFilter = () => {
   };
 
   return (
-    <div className="container space-y-10 px-5 md:px-10 xl:px-0 mb-[112px] md:mb-[120px]">
+    <div className="container space-y-10 px-5 md:px-10 xl:px-0 mb-[112px] md:mb-[120px] min-h-[500px]">
       <TagFilter
         filterOptions={EXECUTION_GROUP_FILTER_OPTIONS}
         selectedFilter={selectedFilter}
@@ -160,11 +155,10 @@ const ContentWithFilter = () => {
                   key={staff._id}
                   team={staff.team}
                   name={staff.name}
-                  title={""}
-                  subTitle={[]}
+                  title={staff.title}
+                  subTitle={staff.subtitle}
                   quote={staff.quote}
-                  imageUrl={staff.photo || ""}
-                  hashTags={[]}
+                  imageUrl={staff.photo}
                 />
               ))
             )}

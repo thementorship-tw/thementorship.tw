@@ -8,9 +8,9 @@ import type { FC } from "react";
 interface IProfileCardProps {
   team: Team;
   name: string;
-  title: string;
-  subTitle: string[];
-  quote: string;
+  title?: string;
+  subTitle?: string[];
+  quote?: string;
   imageUrl: string;
   hashTags?: string[];
   hasBorder?: boolean;
@@ -18,9 +18,9 @@ interface IProfileCardProps {
 
 const ProfileCard: FC<IProfileCardProps> = ({
   name,
-  quote,
-  title,
-  subTitle,
+  quote = "",
+  title = "",
+  subTitle = [],
   imageUrl,
   hashTags = [],
   team,
@@ -60,17 +60,19 @@ const ProfileCard: FC<IProfileCardProps> = ({
 
       <div className="flex flex-col gap-3">
         <div>
-          <p className="text-h5 text-neutral-10">{title}</p>
-          <div className="flex flex-col">
-            {subTitle.map((sub) => (
-              <p
-                key={`${name}-${sub}`}
-                className="text-subtitle-lg text-neutral-10"
-              >
-                {sub}
-              </p>
-            ))}
-          </div>
+          {title && <p className="text-h5 text-neutral-10">{title}</p>}
+          {subTitle?.length > 0 && (
+            <div className="flex flex-col">
+              {subTitle.map((sub) => (
+                <p
+                  key={`${name}-${sub}`}
+                  className="text-subtitle-lg text-neutral-10"
+                >
+                  {sub}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
 
         <p className="py-3 border-t-[1px] border-b-[1px] border-yellow-6 text-h3 text-yellow-6">
