@@ -83,29 +83,22 @@ const ContentWithFilter = () => {
 
   const displayedGroups = EXECUTION_GROUP_FILTER_OPTIONS.filter(
     (opt) => opt.key !== "all"
-  )
-    .map(({ key, name: groupName }) => {
-      const matchesRole = selectedFilter === "all" || key === selectedFilter;
-      if (!matchesRole) return null;
-      const profileList = staffList.filter(
-        (staff) =>
-          staff.role === key &&
-          (selectedSession === "all" ||
-            String(staff.session) === String(selectedSession))
-      );
-      const isComingSoon =
-        !isLoading &&
-        profileList.length === 0 &&
-        selectedSession === CURRENT_SESSION;
-      if (profileList.length === 0 && !isComingSoon) return null;
-      return {
-        key,
-        groupName,
-        profileList,
-        isComingSoon,
-      };
-    })
-    .filter(Boolean);
+  ).flatMap(({ key, name: groupName }) => {
+    const matchesRole = selectedFilter === "all" || key === selectedFilter;
+    if (!matchesRole) return [];
+    const profileList = staffList.filter(
+      (staff) =>
+        staff.role === key &&
+        (selectedSession === "all" ||
+          String(staff.session) === String(selectedSession))
+    );
+    const isComingSoon =
+      !isLoading &&
+      profileList.length === 0 &&
+      selectedSession === CURRENT_SESSION;
+    if (profileList.length === 0 && !isComingSoon) return [];
+    return [{ key, groupName, profileList, isComingSoon }];
+  });
 
   const handleRoleSelect = (selectedOption: FilterOptionType) => {
     updateSearchParam("role", selectedOption);
@@ -155,9 +148,9 @@ const ContentWithFilter = () => {
                   key={staff._id}
                   team={staff.team}
                   name={staff.name}
-                  title={staff.title}
-                  subTitle={staff.subtitle}
-                  quote={staff.quote}
+                  title={staff.title ?? ""}
+                  subTitle={staff.subtitle ?? []}
+                  quote={staff.quote ?? ""}
                   imageUrl={staff.photo}
                 />
               ))

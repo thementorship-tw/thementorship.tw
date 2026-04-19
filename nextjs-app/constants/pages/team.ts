@@ -1,6 +1,5 @@
 import { Role } from "@/types";
 import { ExecutionGroupType } from "@/types/filter-option";
-import type { AssistantCohort } from "@/types/team";
 import { roleDisplayTextMap } from "../role-display-text-map";
 
 export const EXECUTION_GROUP_FILTER_OPTIONS: {
@@ -28,5 +27,3 @@ export const SESSION_FILTER_OPTIONS: {
 ];
 
 export const COMING_SOON_ROLES: ExecutionGroupType[] = [];
-
-export const ACTIVE_ASSISTANT: AssistantCohort = "eighth";

@@ -7,6 +7,7 @@ import ProfileCard from "@/components/common/ProfileCard";
 import Wave from "@/components/common/Wave";
 import { SloganContainer, SloganPopup } from "@/components/common/SloganPopup";
 import type { Staff } from "@/types/team";
+import { Team } from "@/types";
 import { client } from "@/sanity/lib/client";
 import { staffQuery } from "@/sanity/lib/queries";
 import { CURRENT_SESSION } from "@/constants/pages/team";
@@ -51,12 +52,12 @@ const Captains = () => {
               <div key={captain._id} className="relative flex">
                 <ProfileCard
                   hasBorder
-                  team={captain.team}
+                  team={captain.team as Team}
                   name={captain.name}
-                  title={captain.title}
-                  subTitle={captain.subtitle}
-                  quote={captain.quote}
-                  imageUrl={captain.photo}
+                  title={captain.title ?? ""}
+                  subTitle={captain.subtitle ?? []}
+                  quote={captain.quote ?? ""}
+                  imageUrl={captain.photo ?? ""}
                   hashTags={[]}
                 />
                 <SloganPopup
