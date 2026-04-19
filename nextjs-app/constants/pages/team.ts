@@ -28,9 +28,10 @@ export const EXECUTION_GROUP_FILTER_OPTIONS: {
   name: string;
 }[] = [
   { key: "all", name: "全部" },
-  { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
   { key: Role.CAPTAIN, name: roleDisplayTextMap[Role.CAPTAIN] },
+  { key: Role.HARBOUR_PILOT, name: roleDisplayTextMap[Role.HARBOUR_PILOT] },
   { key: Role.ASSISTANT, name: roleDisplayTextMap[Role.ASSISTANT] },
+  { key: Role.VOLUNTEER, name: roleDisplayTextMap[Role.VOLUNTEER] },
 ];
 
 export type SessionFilterOptionType = "all" | "7" | "8";
@@ -49,10 +50,14 @@ export const SESSION_FILTER_OPTIONS: {
 export const COMING_SOON_ROLES: ExecutionGroupType[] = [];
 
 export const ACTIVE_ASSISTANT: AssistantCohort = "eighth";
-const ALL_ASSISTANT_PROFILES: IProfileInfo[] = [
-  ...SEVENTH_ASSISTANTS,
-  ...EIGHTH_ASSISTANTS,
-];
+
+const ASSISTANTS_BY_COHORT: Record<AssistantCohort, IProfileInfo[]> = {
+  seventh: SEVENTH_ASSISTANTS,
+  eighth: EIGHTH_ASSISTANTS,
+};
+
+const genAssistantProfiles = (cohort: AssistantCohort): IProfileInfo[] =>
+  [cohort].flatMap((cohort) => ASSISTANTS_BY_COHORT[cohort]);
 
 export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
   [Role.CAPTAIN]: [
@@ -187,5 +192,7 @@ export const EXECUTION_GROUP: Record<ExecutionGroupType, IProfileInfo[]> = {
       session: "8",
     },
   ],
-  [Role.ASSISTANT]: ALL_ASSISTANT_PROFILES,
+  [Role.ASSISTANT]: genAssistantProfiles(ACTIVE_ASSISTANT),
+  // TODO: 暫時給空陣列，會在下一個 Session Filter 移除
+  [Role.VOLUNTEER]: [],
 };
