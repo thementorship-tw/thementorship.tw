@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
@@ -7,6 +9,7 @@ import { SloganContainer, SloganPopup } from "@/components/common/SloganPopup";
 import type { Staff } from "@/types/team";
 import { client } from "@/sanity/lib/client";
 import { staffQuery } from "@/sanity/lib/queries";
+import { CURRENT_SESSION } from "@/constants/pages/team";
 
 const SLOGAN_LIST = [
   "趕快來報名 🙌",
@@ -23,7 +26,10 @@ const Captains = () => {
   useEffect(() => {
     async function fetchCaptains() {
       const data = await client.fetch(staffQuery);
-      const filtered = data.filter((staff) => staff.role === "Captain");
+      const filtered = data.filter(
+        (staff) =>
+          staff.role === "Captain" && String(staff.session) === CURRENT_SESSION
+      );
       setCaptains(filtered);
     }
     fetchCaptains();
