@@ -25,7 +25,7 @@ const Captains = () => {
 
   useEffect(() => {
     async function fetchCaptains() {
-      const data = await client.fetch(staffQuery);
+      const data = await client.fetch<Staff[]>(staffQuery);
       const filtered = data.filter(
         (staff) =>
           staff.role === "Captain" && String(staff.session) === CURRENT_SESSION
