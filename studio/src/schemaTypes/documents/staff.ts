@@ -23,6 +23,17 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'session',
+      title: '屆次',
+      type: 'reference',
+      to: [{ type: 'session' }],
+      options: {
+        layout: 'dropdown',
+      },
+      description: '此工作人員參與的屆次',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'role',
       title: '角色類型',
       type: 'string',
@@ -70,17 +81,6 @@ export default defineType({
       type: 'boolean',
       description: '關閉後此筆資料將不會顯示在前台網站',
       initialValue: true,
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'session',
-      title: '屆次',
-      type: 'reference',
-      to: [{ type: 'session' }],
-      options: {
-        layout: 'dropdown',
-      },
-      description: '此工作人員參與的屆次',
       validation: (rule) => rule.required(),
     }),
   ],
