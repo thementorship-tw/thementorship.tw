@@ -13,24 +13,16 @@ import {
   SessionFilterOptionType,
 } from "@/constants/pages/team";
 import { ExecutionGroupType } from "@/types/filter-option";
-import { client } from "@/sanity/lib/client";
-import { staffQuery } from "@/sanity/lib/queries";
 import type { Staff } from "@/types/team";
 
 type FilterOptionType = ExecutionGroupType | "all";
 
-const ContentWithFilter = () => {
-  const [staffList, setStaffList] = useState<Staff[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+type Props = {
+  initialStaffList: Staff[];
+};
 
-  useEffect(() => {
-    async function fetchStaff() {
-      const data = await client.fetch(staffQuery);
-      setStaffList(data);
-      setIsLoading(false);
-    }
-    fetchStaff();
-  }, []);
+const ContentWithFilter = ({ initialStaffList }: Props) => {
+  const [staffList] = useState<Staff[]>(initialStaffList);
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -93,9 +85,7 @@ const ContentWithFilter = () => {
           String(staff.session) === String(selectedSession))
     );
     const isComingSoon =
-      !isLoading &&
-      profileList.length === 0 &&
-      selectedSession === CURRENT_SESSION;
+      profileList.length === 0 && selectedSession === CURRENT_SESSION;
     if (profileList.length === 0 && !isComingSoon) return [];
     return [{ key, groupName, profileList, isComingSoon }];
   });
