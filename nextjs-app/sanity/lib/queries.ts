@@ -124,13 +124,16 @@ export const allActivitiesQuery = defineQuery(`*[_type == "activity"]{
 
 export const staffQuery = defineQuery(`
   *[_type == "staff" && isVisible == true &&
-    _id in *[_type == "session" && status == "published"].staff[]._ref
-  ] {
+    session->status == "published"
+  ] | order(session->session desc) {
     _id,
     name,
     role,
+    title,
+    subtitle,
     team,
     quote,
     "photo": photo.asset->url,
+    "session": session->session
   }
 `);

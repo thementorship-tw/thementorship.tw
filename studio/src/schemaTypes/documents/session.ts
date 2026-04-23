@@ -13,13 +13,12 @@ export default defineType({
         rule.required().integer().custom(async (value, context) => {
           const { getClient } = context;
           if (!getClient) return true;
-
           // Sanity client，apiVersion 必須指定日期（官方要求，避免查詢錯誤）
           const client = getClient({apiVersion: '2021-06-07'});
-          const id = context.document?._id;
-          const query = '*[_type == "session" && session == $value && _id != $id][0]._id';
-          const duplicate = await client.fetch(query, {value, id});
-          if (duplicate) return 'Session already exists.';
+          const docId = (context.document?._id ?? '').replace(/^drafts\./, '');
+          const query = `count(*[_type == "session" && session == $value && !(_id in [$id, "drafts." + $id])]) > 0`;
+          const isDuplicate = await client.fetch(query, {value, id: docId});
+          if (isDuplicate) return 'Session already exists.';
 
           return true;
         }),

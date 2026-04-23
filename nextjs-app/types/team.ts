@@ -1,13 +1,14 @@
 import { Team } from "@/types";
+import { ExecutionGroupType } from "@/types/filter-option";
 
-export interface IProfileInfo {
-  team: Team;
+export type Staff = {
+  _id: string;
   name: string;
-  title: string;
-  subTitle: string[];
-  quote: string;
-  imageUrl: string;
-  hashTags?: string[];
-}
-
-export type AssistantCohort = "seventh" | "eighth";
+  role: ExecutionGroupType;
+  team: Team;
+  quote: string | null;
+  photo: string;
+  title: string | null;
+  subtitle: string[] | null;
+  session: number;
+};

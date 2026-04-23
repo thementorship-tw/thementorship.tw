@@ -1,8 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import SectionTitle from "@/components/pages/program-rules/SectionTitle";
 import ProfileCard from "@/components/common/ProfileCard";
-import { EXECUTION_GROUP } from "@/constants/pages/team";
 import Wave from "@/components/common/Wave";
 import { SloganContainer, SloganPopup } from "@/components/common/SloganPopup";
+import type { Staff } from "@/types/team";
+import { Team } from "@/types";
+import { client } from "@/sanity/lib/client";
+import { staffQuery } from "@/sanity/lib/queries";
+import { CURRENT_SESSION } from "@/constants/pages/team";
 
 const SLOGAN_LIST = [
   "趕快來報名 🙌",
@@ -13,12 +21,21 @@ const SLOGAN_LIST = [
   "船要開了快上船 🛳️",
 ];
 
-const PROFILE_LIST = EXECUTION_GROUP.Captain.map((captainInfo, index) => ({
-  ...captainInfo,
-  slogan: SLOGAN_LIST[index],
-}));
-
 const Captains = () => {
+  const [captains, setCaptains] = useState<Staff[]>([]);
+
+  useEffect(() => {
+    async function fetchCaptains() {
+      const data = await client.fetch<Staff[]>(staffQuery);
+      const filtered = data.filter(
+        (staff) =>
+          staff.role === "Captain" && String(staff.session) === CURRENT_SESSION
+      );
+      setCaptains(filtered);
+    }
+    fetchCaptains();
+  }, []);
+
   return (
     <section className="w-full bg-yellow-1 relative">
       <Wave color="yellow" />
@@ -29,37 +46,26 @@ const Captains = () => {
           serial="05"
           variant="light"
         />
-        <SloganContainer slogans={PROFILE_LIST.map(({ slogan }) => slogan)}>
+        <SloganContainer slogans={SLOGAN_LIST.slice(0, captains.length)}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mt-11">
-            {PROFILE_LIST.map(
-              ({
-                team,
-                name,
-                title,
-                subTitle,
-                quote,
-                imageUrl,
-                hashTags,
-                slogan,
-              }) => (
-                <div key={name} className="relative flex">
-                  <ProfileCard
-                    hasBorder
-                    team={team}
-                    name={name}
-                    title={title}
-                    subTitle={subTitle}
-                    quote={quote}
-                    imageUrl={imageUrl}
-                    hashTags={hashTags}
-                  />
-                  <SloganPopup
-                    className="top-[116px] right-[10px] tracking-[4px]"
-                    slogan={slogan}
-                  />
-                </div>
-              )
-            )}
+            {captains.map((captain, index) => (
+              <div key={captain._id} className="relative flex">
+                <ProfileCard
+                  hasBorder
+                  team={captain.team as Team}
+                  name={captain.name}
+                  title={captain.title ?? ""}
+                  subTitle={captain.subtitle ?? []}
+                  quote={captain.quote ?? ""}
+                  imageUrl={captain.photo ?? ""}
+                  hashTags={[]}
+                />
+                <SloganPopup
+                  className="top-[116px] right-[10px] tracking-[4px]"
+                  slogan={SLOGAN_LIST[index]}
+                />
+              </div>
+            ))}
           </div>
         </SloganContainer>
       </div>
