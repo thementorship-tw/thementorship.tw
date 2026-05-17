@@ -1,7 +1,7 @@
 export enum Team {
   BD = "BD",
   DATA = "Data",
-  ENGINEER = "Engineer",
+  ENGINEER = "Engineering",
   MKT = "MKT",
   PM = "PM",
   UIUX = "UIUX",
