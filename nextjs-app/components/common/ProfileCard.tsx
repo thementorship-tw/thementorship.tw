@@ -27,10 +27,12 @@ const ProfileCard: FC<IProfileCardProps> = ({
   hasBorder = false,
 }) => {
   const hasTags = hashTags.length > 0;
-  const teamInfo = teamDisplayTextMap[team as Team] ?? {
-    zhGroupName: team,
-    enGroupName: team,
-  };
+  const validTeam = (Object.values(Team) as string[]).includes(team)
+    ? (team as Team)
+    : null;
+  const teamInfo = validTeam
+    ? teamDisplayTextMap[validTeam]
+    : { zhGroupName: team, enGroupName: team };
   const { zhGroupName, enGroupName, shortName } = teamInfo;
 
   return (
