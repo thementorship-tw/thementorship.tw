@@ -20,7 +20,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'session',
@@ -67,12 +66,16 @@ export default defineType({
       description: '工作人員所屬的職能組別',
       options: {
         list: [
-          {title: 'Engineer', value: 'Engineer'},
+          {title: 'Engineering', value: 'Engineering'},
           {title: 'PM', value: 'PM'},
           {title: 'UIUX', value: 'UIUX'},
           {title: 'MKT', value: 'MKT'},
           {title: 'Data', value: 'Data'},
           {title: 'BD', value: 'BD'},
+          {title: 'Entrepreneurship (歷史組別)', value: 'Entrepreneurship'},
+          {title: 'Martech (歷史組別)', value: 'Martech'},
+          {title: '領導力小學堂 (歷史組別)', value: '領導力小學堂'},
+          {title: 'Operation (歷史組別)', value: 'Operation'},
         ],
         layout: 'dropdown',
       },

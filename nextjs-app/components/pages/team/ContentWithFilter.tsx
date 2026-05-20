@@ -78,12 +78,13 @@ const ContentWithFilter = ({ initialStaffList }: Props) => {
   ).flatMap(({ key, name: groupName }) => {
     const matchesRole = selectedFilter === "all" || key === selectedFilter;
     if (!matchesRole) return [];
-    const profileList = staffList.filter(
-      (staff) =>
-        staff.role === key &&
-        (selectedSession === "all" ||
-          String(staff.session) === String(selectedSession))
-    );
+    const profileList = staffList
+      .filter(
+        (staff) =>
+          staff.role === key &&
+          String(staff.session) === String(selectedSession)
+      )
+      .sort((a, b) => (a.team ?? "").localeCompare(b.team ?? ""));
     const isComingSoon =
       profileList.length === 0 && selectedSession === CURRENT_SESSION;
     if (profileList.length === 0 && !isComingSoon) return [];

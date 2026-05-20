@@ -6,12 +6,12 @@ import HashTag from "./HashTag";
 import type { FC } from "react";
 
 interface IProfileCardProps {
-  team: Team;
+  team: string;
   name: string;
   title?: string;
   subTitle?: string[];
   quote?: string;
-  imageUrl: string;
+  imageUrl?: string | null;
   hashTags?: string[];
   hasBorder?: boolean;
 }
@@ -27,7 +27,13 @@ const ProfileCard: FC<IProfileCardProps> = ({
   hasBorder = false,
 }) => {
   const hasTags = hashTags.length > 0;
-  const { zhGroupName, enGroupName, shortName } = teamDisplayTextMap[team];
+  const validTeam = (Object.values(Team) as string[]).includes(team)
+    ? (team as Team)
+    : null;
+  const teamInfo = validTeam
+    ? teamDisplayTextMap[validTeam]
+    : { zhGroupName: team, enGroupName: team };
+  const { zhGroupName, enGroupName, shortName } = teamInfo;
 
   return (
     <div
@@ -49,7 +55,7 @@ const ProfileCard: FC<IProfileCardProps> = ({
       <div className="px-2">
         <div className="w-full aspect-square rounded-circle relative overflow-hidden">
           <Image
-            src={imageUrl}
+            src={imageUrl || "/images/user.png"}
             alt={name}
             sizes="330px"
             fill

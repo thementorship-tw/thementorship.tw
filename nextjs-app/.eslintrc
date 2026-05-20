@@ -11,6 +11,14 @@
   "parserOptions": {
     "projectService": true,
   },
+  "overrides": [
+    {
+      "files": ["types/index.ts"],
+      "rules": {
+        "@typescript-eslint/no-duplicate-enum-values": "off"
+      }
+    }
+  ],
   "rules": {
     "require-await": "off",
     "import/order": [
