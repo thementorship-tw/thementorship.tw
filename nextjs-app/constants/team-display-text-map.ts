@@ -54,8 +54,4 @@ export const teamDisplayTextMap: Record<
     zhGroupName: "營運",
     enGroupName: "Operation",
   },
-  [Team.LEADERSHIP_LEGACY]: {
-    zhGroupName: "領導力小學堂",
-    enGroupName: "Leadership Academy",
-  },
 };

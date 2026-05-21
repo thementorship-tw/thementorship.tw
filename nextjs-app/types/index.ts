@@ -5,11 +5,10 @@ export enum Team {
   MKT = "MKT",
   PM = "PM",
   UIUX = "UIUX",
-  LEADERSHIP = "Leadership",
+  LEADERSHIP = "領導力小學堂",
   ENTREPRENEURSHIP = "Entrepreneurship",
   MARTECH = "Martech",
   OPERATION = "Operation",
-  LEADERSHIP_LEGACY = "領導力小學堂",
 }
 
 export enum Role {
