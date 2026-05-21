@@ -5,7 +5,7 @@ export type Staff = {
   _id: string;
   name: string;
   role: ExecutionGroupType;
-  team: Team;
+  team: Team | null;
   quote: string | null;
   photo: string;
   title: string | null;
