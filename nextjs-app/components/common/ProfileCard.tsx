@@ -6,7 +6,7 @@ import HashTag from "./HashTag";
 import type { FC } from "react";
 
 interface IProfileCardProps {
-  team: string;
+  team?: string | null;
   name: string;
   title?: string;
   subTitle?: string[];
@@ -27,13 +27,15 @@ const ProfileCard: FC<IProfileCardProps> = ({
   hasBorder = false,
 }) => {
   const hasTags = hashTags.length > 0;
-  const validTeam = (Object.values(Team) as string[]).includes(team)
-    ? (team as Team)
+  const validTeam =
+    team && (Object.values(Team) as string[]).includes(team)
+      ? (team as Team)
+      : null;
+  const teamInfo = team
+    ? validTeam
+      ? teamDisplayTextMap[validTeam]
+      : { zhGroupName: team, enGroupName: team }
     : null;
-  const teamInfo = validTeam
-    ? teamDisplayTextMap[validTeam]
-    : { zhGroupName: team, enGroupName: team };
-  const { zhGroupName, enGroupName, shortName } = teamInfo;
 
   return (
     <div
@@ -42,15 +44,17 @@ const ProfileCard: FC<IProfileCardProps> = ({
         hasBorder && "border-[1px] border-yellow-6"
       )}
     >
-      <div>
-        <p className="text-neutral-10 text-h5">
-          <span>{zhGroupName}</span>
-        </p>
-        <p className="text-neutral-10 text-subtitle-lg">
-          <span>{enGroupName}</span>
-          {shortName && <span> ({shortName})</span>}
-        </p>
-      </div>
+      {teamInfo && (
+        <div>
+          <p className="text-neutral-10 text-h5">
+            <span>{teamInfo.zhGroupName}</span>
+          </p>
+          <p className="text-neutral-10 text-subtitle-lg">
+            <span>{teamInfo.enGroupName}</span>
+            {teamInfo.shortName && <span> ({teamInfo.shortName})</span>}
+          </p>
+        </div>
+      )}
 
       <div className="px-2">
         <div className="w-full aspect-square rounded-circle relative overflow-hidden">

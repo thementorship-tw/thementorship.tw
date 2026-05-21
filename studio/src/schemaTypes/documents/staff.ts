@@ -79,7 +79,6 @@ export default defineType({
         ],
         layout: 'dropdown',
       },
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'quote',
