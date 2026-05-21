@@ -124,6 +124,18 @@ const teamDisplayTextMap: Record<Team, { name: string; fullName: string }> = {
     name: "UIUX",
     fullName: "User Interface & Experience",
   },
+  [Team.ENTREPRENEURSHIP]: {
+    name: "Entrepreneurship",
+    fullName: "Entrepreneurship",
+  },
+  [Team.MARTECH]: {
+    name: "Martech",
+    fullName: "Marketing Technology",
+  },
+  [Team.OPERATION]: {
+    name: "Operation",
+    fullName: "Operation",
+  },
 };
 
 const WhoWeAre: FC = () => {
