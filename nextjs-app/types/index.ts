@@ -5,7 +5,7 @@ export enum Team {
   MKT = "MKT",
   PM = "PM",
   UIUX = "UIUX",
-  LEADERSHIP = "領導力小學堂",
+  LEADERSHIP = "Leadership",
   ENTREPRENEURSHIP = "Entrepreneurship",
   MARTECH = "Martech",
   OPERATION = "Operation",
