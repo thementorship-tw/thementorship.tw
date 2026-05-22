@@ -74,7 +74,7 @@ export default defineType({
           {title: 'BD', value: 'BD'},
           {title: 'Entrepreneurship (歷史組別)', value: 'Entrepreneurship'},
           {title: 'Martech (歷史組別)', value: 'Martech'},
-          {title: '領導力小學堂 (歷史組別)', value: '領導力小學堂'},
+          {title: '領導力小學堂 (歷史組別)', value: 'Leadership'},
           {title: 'Operation (歷史組別)', value: 'Operation'},
         ],
         layout: 'dropdown',

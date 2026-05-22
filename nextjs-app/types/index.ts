@@ -6,6 +6,9 @@ export enum Team {
   PM = "PM",
   UIUX = "UIUX",
   LEADERSHIP = "Leadership",
+  ENTREPRENEURSHIP = "Entrepreneurship",
+  MARTECH = "Martech",
+  OPERATION = "Operation",
 }
 
 export enum Role {

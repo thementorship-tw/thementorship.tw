@@ -41,4 +41,17 @@ export const teamDisplayTextMap: Record<
     zhGroupName: "領導力小學堂",
     enGroupName: "Leadership Academy",
   },
+  [Team.ENTREPRENEURSHIP]: {
+    zhGroupName: "創業",
+    enGroupName: "Entrepreneurship",
+  },
+  [Team.MARTECH]: {
+    zhGroupName: "行銷科技",
+    enGroupName: "Marketing Technology",
+    shortName: "Martech",
+  },
+  [Team.OPERATION]: {
+    zhGroupName: "營運",
+    enGroupName: "Operation",
+  },
 };
