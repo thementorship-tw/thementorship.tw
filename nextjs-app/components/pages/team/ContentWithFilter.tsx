@@ -86,17 +86,6 @@ const ContentWithFilter = ({ initialStaffList }: Props) => {
       )
       .sort((a, b) => (a.team ?? "").localeCompare(b.team ?? ""));
 
-    if (process.env.NODE_ENV === "development") {
-      console.log(
-        `[ContentWithFilter] ${key} session ${selectedSession} (sorted by team):`,
-        profileList.map((staff, index) => ({
-          index,
-          name: staff.name,
-          team: staff.team,
-        }))
-      );
-    }
-
     const isComingSoon =
       profileList.length === 0 && selectedSession === CURRENT_SESSION;
     if (profileList.length === 0 && !isComingSoon) return [];
