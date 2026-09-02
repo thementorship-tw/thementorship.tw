@@ -85,6 +85,7 @@ const ContentWithFilter = ({ initialStaffList }: Props) => {
           String(staff.session) === String(selectedSession)
       )
       .sort((a, b) => (a.team ?? "").localeCompare(b.team ?? ""));
+
     const isComingSoon =
       profileList.length === 0 && selectedSession === CURRENT_SESSION;
     if (profileList.length === 0 && !isComingSoon) return [];
