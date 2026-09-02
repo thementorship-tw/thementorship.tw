@@ -17,6 +17,18 @@ export const metadata: Metadata = {
 export default async function TeamPage() {
   const { data: staffList } = await sanityFetch({ query: staffQuery });
 
+  if (process.env.NODE_ENV === "development") {
+    console.log(
+      "[TeamPage] staff from Sanity (query order):",
+      staffList.map((staff) => ({
+        name: staff.name,
+        role: staff.role,
+        team: staff.team,
+        session: staff.session,
+      }))
+    );
+  }
+
   return (
     <div>
       <Breadcrumb items={["HOME", "關於曼陀號", "執行團隊"]} />

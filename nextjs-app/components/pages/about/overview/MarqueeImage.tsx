@@ -6,11 +6,16 @@ import Wave from "@/components/common/Wave/Wave";
 import type { FC } from "react";
 
 const MARQUEE_IMAGE_LIST = [
-  "/images/marquee-image/marquee-image-0.jpg",
   "/images/marquee-image/marquee-image-1.jpg",
   "/images/marquee-image/marquee-image-2.jpg",
-  "/images/marquee-image/marquee-image-3.jpg",
   "/images/marquee-image/marquee-image-4.jpg",
+  "/images/marquee-image/marquee-image-5.jpg",
+  "/images/marquee-image/marquee-image-6.jpg",
+  "/images/marquee-image/marquee-image-7.jpg",
+  "/images/marquee-image/marquee-image-8.jpg",
+  "/images/marquee-image/marquee-image-9.jpg",
+  "/images/marquee-image/marquee-image-10.jpg",
+  "/images/marquee-image/marquee-image-11.jpg",
 ];
 
 const MarqueeImage: FC = () => {
