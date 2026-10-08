@@ -8,4 +8,5 @@ export default {
   PROGRAM_RULES: "/program-rules",
   FAQ: "/faq",
   ACTIVITY: "/activity",
+  EXCHANGE: "/exchange",
 } as const;

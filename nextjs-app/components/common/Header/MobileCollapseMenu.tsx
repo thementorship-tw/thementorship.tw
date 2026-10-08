@@ -111,28 +111,31 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
         </div>
 
         <div className="grow">
-          {navigationMenu.map(({ title, subtitle, subMenu, href }) =>
-            !!subMenu && subMenu.length > 0 ? (
-              <Accordion
-                key={title}
-                title={title}
-                shouldShowMobileMenu={shouldShowMobileMenu}
-                subtitle={subtitle}
-                subMenu={subMenu}
-                onMenuItemClick={handleNavigation}
-              />
-            ) : (
-              <NavigationMenuItem
-                key={title}
-                title={title}
-                subtitle={subtitle}
-                onClick={() => {
-                  if (href) {
-                    handleNavigation(href);
-                  }
-                }}
-              />
-            )
+          {navigationMenu.map(
+            ({ title, subtitle, subMenu, href, isExternalApp }) =>
+              !!subMenu && subMenu.length > 0 ? (
+                <Accordion
+                  key={title}
+                  title={title}
+                  shouldShowMobileMenu={shouldShowMobileMenu}
+                  subtitle={subtitle}
+                  subMenu={subMenu}
+                  onMenuItemClick={handleNavigation}
+                />
+              ) : (
+                <NavigationMenuItem
+                  key={title}
+                  title={title}
+                  subtitle={subtitle}
+                  onClick={() => {
+                    if (href && isExternalApp) {
+                      window.location.href = href;
+                    } else if (href) {
+                      handleNavigation(href);
+                    }
+                  }}
+                />
+              )
           )}
 
           <div className="px-7 py-8 flex flex-col gap-4">
