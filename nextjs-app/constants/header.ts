@@ -4,6 +4,8 @@ interface IMenuItem {
   title: string;
   subtitle: string;
   href?: string;
+  // 技能交換平台是另一個 app（透過 rewrite 掛在 /exchange），需要整頁跳轉，不能用站內切換
+  isExternalApp?: boolean;
   subMenu?: {
     title: string;
     href: string;
@@ -43,5 +45,11 @@ export const navigationMenu: IMenuItem[] = [
     href: Routes.FAQ,
     title: "FAQ",
     subtitle: "常見問題",
+  },
+  {
+    href: Routes.EXCHANGE,
+    title: "Exchange",
+    subtitle: "技能交換",
+    isExternalApp: true,
   },
 ];
