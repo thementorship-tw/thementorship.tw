@@ -3,6 +3,7 @@ import Routes from "@/constants/routes";
 interface IMenuItem {
   title: string;
   subtitle: string;
+  badgeText?: string;
   href?: string;
   // 技能交換平台是另一個 app（透過 rewrite 掛在 /exchange），需要整頁跳轉，不能用站內切換
   isExternalApp?: boolean;
@@ -50,6 +51,7 @@ export const navigationMenu: IMenuItem[] = [
     href: Routes.EXCHANGE,
     title: "Exchange",
     subtitle: "技能交換",
+    badgeText: "八屆限定",
     isExternalApp: true,
   },
 ];

@@ -17,6 +17,7 @@ import { default as LinkedInIcon } from "@/public/images/social-media/linkedin-f
 import { default as InstagramIcon } from "@/public/images/social-media/instagram-filled.svg";
 import { default as CompassIcon } from "@/public/images/compass.svg";
 import HamburgerButton from "./HamburgerButton";
+import MenuBadge from "./MenuBadge";
 import type { FC } from "react";
 
 const socialLinks = [
@@ -97,16 +98,30 @@ export default function Header() {
           <nav className="hidden lg:block mr-8">
             <ul className="flex gap-8">
               {navigationMenu.map(
-                ({ title, subtitle, subMenu, href, isExternalApp }) => {
+                ({
+                  title,
+                  subtitle,
+                  badgeText,
+                  subMenu,
+                  href,
+                  isExternalApp,
+                }) => {
                   const hasSubMenu = !!subMenu && subMenu.length > 0;
 
                   const MenuItem: FC = () => (
                     <>
-                      <div className="flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
+                      <div className="relative flex flex-col justify-center items-center gap-1 py-7 text-blue-8 ">
                         <p className="text-h4-title font-eb-garamond">
                           {title}
                         </p>
                         <p className="text-subtitle-md">{subtitle}</p>
+                        {/* 徽章以絕對定位掛在標題右上方，不擠壓原本文字；右側空間由 li 的 mr-6 預留 */}
+                        {badgeText && (
+                          <MenuBadge
+                            text={badgeText}
+                            className="absolute left-full top-5 -ml-5 rotate-[30deg]"
+                          />
+                        )}
                       </div>
 
                       <span className="hidden absolute left-0 right-0 bottom-0 h-1 bg-yellow-2 group-hover:block" />
@@ -114,7 +129,10 @@ export default function Header() {
                   );
 
                   return (
-                    <li key={title} className="relative group">
+                    <li
+                      key={title}
+                      className={`relative group ${badgeText ? "mr-6" : ""}`}
+                    >
                       {href && isExternalApp ? (
                         <a href={href}>
                           <MenuItem />
