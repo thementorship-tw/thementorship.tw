@@ -22,6 +22,7 @@ import { default as InstagramIcon } from "@/public/images/social-media/instagram
 import { default as EnvelopeIcon } from "@/public/images/social-media/email-outline.svg";
 
 import Accordion from "./Accordion";
+import MenuBadge from "./MenuBadge";
 
 const socialLinks = [
   {
@@ -49,15 +50,19 @@ const socialLinks = [
 const NavigationMenuItem: FC<{
   title: string;
   subtitle: string;
+  badgeText?: string;
   onClick: () => void;
-}> = ({ title, subtitle, onClick }) => {
+}> = ({ title, subtitle, badgeText, onClick }) => {
   return (
     <div
       className="cursor-pointer px-7 py-5 text-white flex items-center gap-3 border-b-[1px] border-neutral-8"
       onClick={onClick}
     >
       <p className="text-h4-title font-eb-garamond">{title}</p>
-      <p className="text-body-md">{subtitle}</p>
+      <div className="flex items-center gap-2">
+        <p className="text-body-md">{subtitle}</p>
+        {badgeText && <MenuBadge text={badgeText} />}
+      </div>
     </div>
   );
 };
@@ -112,7 +117,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
 
         <div className="grow">
           {navigationMenu.map(
-            ({ title, subtitle, subMenu, href, isExternalApp }) =>
+            ({ title, subtitle, badgeText, subMenu, href, isExternalApp }) =>
               !!subMenu && subMenu.length > 0 ? (
                 <Accordion
                   key={title}
@@ -127,6 +132,7 @@ const MobileCollapseMenu: FC<IMobileCollapseMenuProps> = ({
                   key={title}
                   title={title}
                   subtitle={subtitle}
+                  badgeText={badgeText}
                   onClick={() => {
                     if (href && isExternalApp) {
                       window.location.href = href;
